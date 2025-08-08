@@ -81,15 +81,15 @@ jobs:
         shell: bash
         run: |
           cd /tmp/RNApp
-          yarn add ${{ inputs.library-npm-package }}
+          yarn add ${{ matrix.library }}
 
       # iOS
       - name: Setup xcode
-        if: ${{ inputs.platform == 'ios' }}
+        if: ${{ matrix.platform == 'ios' }}
         uses: ./.github/actions/setup-xcode
       - name: Build iOS
         shell: bash
-        if: ${{ inputs.platform == 'ios' }}
+        if: ${{ matrix.platform == 'ios' }}
         run: |
           cd /tmp/RNApp/ios
           bundle install
@@ -101,14 +101,14 @@ jobs:
 
       # Android
       - name: Setup Java for Android
-        if: ${{ inputs.platform == 'android' }}
+        if: ${{ matrix.platform == 'android' }}
         uses: actions/setup-java@v2
         with:
           java-version: '17'
           distribution: 'zulu'
       - name: Build Android
         shell: bash
-        if: ${{ inputs.platform == 'android' }}
+        if: ${{ matrix.platform == 'android' }}
         run: |
           cd /tmp/RNApp/android
           ./gradlew assembleDebug
