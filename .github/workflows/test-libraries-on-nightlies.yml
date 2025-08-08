@@ -71,50 +71,12 @@ jobs:
         with:
           node-version: '22.14.0'
           cache: yarn
-      
-      - name: Create new app
-        shell: bash
-        run: |
-          cd /tmp
-          npx @react-native-community/cli init RNApp --skip-install --version nightly
-      - name: Add library
-        shell: bash
-        run: |
-          cd /tmp/RNApp
-          yarn add ${{ matrix.library }}
-
-      # iOS
-      - name: Setup xcode
-        if: ${{ matrix.platform == 'ios' }}
-        uses: maxim-lobanov/setup-xcode@60606e260d2fc5762a71e64e74b2174e8ea3c8bd
+      - name: Test ${{ matrix.library }}
+        id: run-test
+        uses: ./.github/actions/test-library-on-nightly
         with:
-          xcode-version: '16.2.0'
-      - name: Build iOS
-        shell: bash
-        if: ${{ matrix.platform == 'ios' }}
-        run: |
-          cd /tmp/RNApp/ios
-          bundle install
-          RCT_USE_RN_DEP=1 RCT_USE_PREBUILT_RNCORE=1 bundle exec pod install
-          xcodebuild build \
-            -workspace RNApp.xcworkspace \
-            -scheme RNApp \
-            -sdk iphonesimulator
-
-      # Android
-      - name: Setup Java for Android
-        if: ${{ matrix.platform == 'android' }}
-        uses: actions/setup-java@v2
-        with:
-          java-version: '17'
-          distribution: 'zulu'
-      - name: Build Android
-        shell: bash
-        if: ${{ matrix.platform == 'android' }}
-        run: |
-          cd /tmp/RNApp/android
-          ./gradlew assembleDebug
-
+          library-npm-package: ${{ matrix.library }}
+          platform: ${{ matrix.platform }}
       - name: Save outcome
         id: save-outcome
         if: always()
