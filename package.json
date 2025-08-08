@@ -1,0 +1,15 @@
+{
+  "name": "nightly-tests",
+  "version": "0.0.0",
+  "description": "Nightly integration tests for React Native",
+  "homepage": "https://github.com/react-native-community/nightly-tests#readme",
+  "bugs": {
+    "url": "https://github.com/react-native-community/nightly-tests/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-native-community/nightly-tests.git"
+  },
+  "license": "MIT",
+  "author": ""
+}
