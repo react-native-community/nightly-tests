@@ -10,6 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/react-native-community/nightly-tests.git"
   },
+  "devDependencies": {
+    "jest": "^27.0.0",
+    "babel-jest": "^27.0.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "scripts": {
+    "test": "jest --config jest.config.js",
+    "test:watch": "jest --watch --config jest.config.js"
+  },
   "license": "MIT",
   "author": ""
 }
