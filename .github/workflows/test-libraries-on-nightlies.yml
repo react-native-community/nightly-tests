@@ -22,8 +22,18 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       runners: '{"ios":"macos-latest", "android": "ubuntu-latest"}'
+      libraries: ${{ steps.read-libraries.outputs.libraries }}
+      library-data: ${{ steps.read-libraries.outputs.library-data }}
     steps:
-      - run: echo no-op
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Read libraries from JSON
+        id: read-libraries
+        run: |
+          # Extract just the library names (keys) for the matrix
+          echo "libraries=$(cat libraries.json | jq -c 'keys')" >> $GITHUB_OUTPUT
+          # Keep the full library data for accessing commands and other metadata
+          echo "library-data=$(cat libraries.json | tr -d '\n')" >> $GITHUB_OUTPUT
 
   test-library-on-nightly:
     name: "[${{ matrix.platform }}] ${{ matrix.library }}"
@@ -32,36 +42,7 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
-        library: [
-          "react-native-async-storage",
-          "react-native-blob-util",
-          "@react-native-clipboard/clipboard",
-          "@react-native-community/datetimepicker",
-          "react-native-gesture-handler",
-          "react-native-image-picker",
-          "react-native-linear-gradient",
-          "@react-native-masked-view/masked-view",
-          # "react-native-maps", React Native Maps with the New Arch support has a complex cocoapods setup for iOS. It needs a dedicated workflow.
-          "@react-native-community/netinfo",
-          "react-native-reanimated@nightly react-native-worklets@nightly", #reanimated requires worklet to be explicitly installed as a separate package
-          "react-native-svg",
-          "react-native-video",
-          "react-native-webview",
-          "react-native-mmkv",
-          "react-native-screens",
-          "react-native-pager-view",
-          "@react-native-community/slider",
-          # additional OSS libs used internally
-          "scandit-react-native-datacapture-barcode scandit-react-native-datacapture-core",
-          "react-native-contacts",
-          "react-native-device-info",
-          "react-native-email-link",
-          "@dr.pogodin/react-native-fs",
-          "react-native-permissions",
-          "react-native-vector-icons",
-          "react-native-masked-view",
-          "@react-native-community/image-editor",
-        ]
+        library: ${{ fromJSON(needs.runner-setup.outputs.libraries) }}
         platform: [ios, android]
     steps:
       - name: Checkout
@@ -75,7 +56,7 @@ jobs:
         id: run-test
         uses: ./.github/actions/test-library-on-nightly
         with:
-          library-npm-package: ${{ matrix.library }}
+          library-npm-package: ${{ fromJSON(needs.runner-setup.outputs.library-data)[matrix.library].installCommand }}
           platform: ${{ matrix.platform }}
       - name: Save outcome
         id: save-outcome

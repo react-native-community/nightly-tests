@@ -1,0 +1,210 @@
+{
+  "react-native-async-storage": {
+    "description": "Asynchronous, persistent key-value storage system for React Native",
+    "installCommand": "react-native-async-storage",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-blob-util": {
+    "description": "A module provides upload, download, and files access API",
+    "installCommand": "react-native-blob-util",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "@react-native-clipboard/clipboard": {
+    "description": "React Native Clipboard API for iOS and Android",
+    "installCommand": "@react-native-clipboard/clipboard",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "@react-native-community/datetimepicker": {
+    "description": "React Native date & time picker component for iOS, Android and Windows",
+    "installCommand": "@react-native-community/datetimepicker",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-gesture-handler": {
+    "description": "Declarative API exposing platform native touch and gesture system to React Native",
+    "installCommand": "react-native-gesture-handler",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-image-picker": {
+    "description": "A React Native module that allows you to use native UI to select media from the device library or directly from the camera",
+    "installCommand": "react-native-image-picker",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-linear-gradient": {
+    "description": "A <LinearGradient /> component for react-native",
+    "installCommand": "react-native-linear-gradient",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "@react-native-masked-view/masked-view": {
+    "description": "React Native MaskedView component",
+    "installCommand": "@react-native-masked-view/masked-view",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "@react-native-community/netinfo": {
+    "description": "React Native Network Info API for iOS & Android",
+    "installCommand": "@react-native-community/netinfo",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-reanimated": {
+    "description": "React Native's Animated library reimplemented",
+    "installCommand": "react-native-reanimated@nightly react-native-worklets@nightly",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-svg": {
+    "description": "SVG library for React Native, React Native Web, and plain React web projects",
+    "installCommand": "react-native-svg",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-video": {
+    "description": "A <Video /> component for react-native",
+    "installCommand": "react-native-video",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-webview": {
+    "description": "React Native WebView component for iOS, Android, macOS, and Windows",
+    "installCommand": "react-native-webview",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-mmkv": {
+    "description": "The fastest key/value storage for React Native",
+    "installCommand": "react-native-mmkv",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-screens": {
+    "description": "Native navigation primitives for your React Native app",
+    "installCommand": "react-native-screens",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-pager-view": {
+    "description": "React Native wrapper for the Android ViewPager and iOS UIPageViewController",
+    "installCommand": "react-native-pager-view",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "@react-native-community/slider": {
+    "description": "React Native component used to select a single value from a range of values",
+    "installCommand": "@react-native-community/slider",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "scandit-react-native": {
+    "description": "Scandit Data Capture SDK for React Native",
+    "installCommand": "scandit-react-native-datacapture-barcode scandit-react-native-datacapture-core",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "react-native-contacts": {
+    "description": "React Native Contacts for iOS and Android",
+    "installCommand": "react-native-contacts",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "react-native-device-info": {
+    "description": "Device Information for React Native iOS and Android",
+    "installCommand": "react-native-device-info",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "react-native-email-link": {
+    "description": "An easy way to open an email app from a react native app",
+    "installCommand": "react-native-email-link",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "@dr.pogodin/react-native-fs": {
+    "description": "Native filesystem access for react-native",
+    "installCommand": "@dr.pogodin/react-native-fs",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "react-native-permissions": {
+    "description": "An unified permissions API for React Native on iOS, Android and Windows",
+    "installCommand": "react-native-permissions",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "react-native-vector-icons": {
+    "description": "Customizable Icons for React Native with support for NavBar/TabBar, image source and full styling",
+    "installCommand": "react-native-vector-icons",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "react-native-masked-view": {
+    "description": "React Native MaskedView component",
+    "installCommand": "react-native-masked-view",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "@react-native-community/image-editor": {
+    "description": "Image Editor Native Module for React Native",
+    "installCommand": "@react-native-community/image-editor",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  }
+}
