@@ -1,5 +1,7 @@
 # React Native Nightly Tests 🌑🌓🌔🌕🌖🌗
 
+[![Check Nightlies](https://github.com/react-native-community/nightly-tests/actions/workflows/check-nightly.yml/badge.svg)](https://github.com/react-native-community/nightly-tests/actions/workflows/check-nightly.yml)
+
 Automated GitHub Actions workflows for testing React Native ecosystem libraries against nightly builds
 
 ## Overview
