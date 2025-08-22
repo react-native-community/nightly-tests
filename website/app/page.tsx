@@ -11,7 +11,7 @@ export default function Home() {
         Results of automated GitHub Actions workflows testing React Native
         ecosystem libraries against nightly builds:
       </h2>
-      <Link href="#android">
+      <Link href="#android" className="w-fit inline-flex">
         <h3
           id="android"
           className="text-lg font-semibold inline-flex items-center gap-3 transition-colors scroll-m-20 hover:text-secondary"
@@ -21,7 +21,7 @@ export default function Home() {
         </h3>
       </Link>
       <Table platform="android" />
-      <Link href="#ios">
+      <Link href="#ios" className="w-fit inline-flex">
         <h3
           id="ios"
           className="text-lg font-semibold inline-flex items-center gap-3 transition-colors scroll-m-20 hover:text-secondary"

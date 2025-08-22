@@ -19,11 +19,11 @@ const columnHelper = createColumnHelper<LibraryType>();
 function formatStatus(info: CellContext<LibraryType, any>) {
   switch (info.getValue()) {
     case "success":
-      return "🟢";
+      return <span className="select-none">🟢</span>;
     case "failure":
-      return "🔴";
+      return <span className="select-none">🔴</span>;
     default:
-      return <span className="text-secondary">-</span>;
+      return <span className="text-secondary select-none">-</span>;
   }
 }
 
