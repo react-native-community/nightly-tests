@@ -445,7 +445,7 @@
         "ios": "success"
       },
       "2025-08-22": {
-        "android": "success",
+        "android": "failure",
         "ios": "success"
       }
     }
