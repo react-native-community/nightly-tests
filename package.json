@@ -1,16 +1,19 @@
 {
   "name": "nightly-tests",
-  "version": "0.0.0",
   "description": "Nightly integration tests for React Native",
+  "version": "0.0.0",
+  "private": "true",
+  "workspaces": ["website"],
+  "engines": {
+    "node": ">=22"
+  },
   "homepage": "https://github.com/react-native-community/nightly-tests#readme",
   "bugs": {
     "url": "https://github.com/react-native-community/nightly-tests/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/react-native-community/nightly-tests.git"
-  },
+  "repository": "github:react-native-community/nightly-tests",
   "devDependencies": {
+    "@babel/core": "^7.28.3",
     "jest": "^27.0.0",
     "babel-jest": "^27.0.0",
     "babel-preset-env": "^1.7.0"

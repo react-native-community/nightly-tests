@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+/* Font */
+
+@font-face {
+  font-family: "Optimistic Display";
+  src: url("https://facebookmicrosites.github.io/design/public/fonts/OptimisticDisplayLight-199be98cf48e5b4c688356b08a02362c.woff2")
+  format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Optimistic Display";
+  src: url("https://facebookmicrosites.github.io/design/public/fonts/OptimisticDisplayRegular-b0e4e99f91efd0021c3ab8e4df0e6e1b.woff2")
+  format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Optimistic Display";
+  src: url("https://facebookmicrosites.github.io/design/public/fonts/OptimisticDisplayBold-3a50548145f36de582c3b36d9626f4d6.woff2")
+  format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Setup */
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-hover: #f0f1f2;
+  --text-primary: #23272f;
+  --text-secondary: #505461;
+  --border-primary: #23272f1a;
+  --brand: #087ea4;
+  --selection: #58c4dc28;
+}
+
+[data-theme=dark] {
+  --bg-primary: #23272f;
+  --bg-secondary: #1f2329;
+  --bg-hover: #303440;
+  --text-primary: #ededed;
+  --text-secondary: #949ab3;
+  --border-primary: #343a46;
+  --brand: #58c4dc;
+}
+
+@theme {
+  --color-background: var(--bg-primary);
+  --color-subtle: var(--bg-secondary);
+  --color-hover: var(--bg-hover);
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+  --color-brand: var(--brand);
+  --color-border: var(--border-primary);
+  --font-sans: "Optimistic Display", system-ui, -apple-system, sans-serif;
+  --font-mono: Source Code Pro, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace;
+}
+
+/* Global styles */
+
+body {
+  @apply selection:bg-[var(--selection)];
+}
+
+* {
+  @apply focus-visible:outline-brand/50 focus-visible:outline-offset-4;
+}
