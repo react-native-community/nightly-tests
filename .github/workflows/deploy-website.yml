@@ -1,0 +1,45 @@
+name: Deploy website
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - Test Libraries on Nightlies
+    types:
+      - completed
+    conclusions:
+      - success
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'yarn'
+
+      - name: ⬇️ Fetch the latest test results
+        working-directory: website
+        run: yarn data:fetch
+        env:
+          FIREBASE_APP_PROJECTNAME: ${{ secrets.firebase_app_projectname }}
+          FIREBASE_SERVICE_KEY: ${{ secrets.firebase_service_key }}
+
+      - name: 📦️ Install & build app
+        working-directory: website
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+
+      - name: 🚀 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./website/out

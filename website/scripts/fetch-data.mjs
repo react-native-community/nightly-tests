@@ -11,13 +11,15 @@ dotenv.config({
 });
 
 const credential = JSON.parse(
-  Buffer.from(process.env.FIREBASE_KEY, "base64").toString(ENCODING),
+  Buffer.from(process.env.FIREBASE_APP_SERVICE_KEY, "base64").toString(
+    ENCODING,
+  ),
 );
 
 async function main() {
   firebase.initializeApp({
     credential: firebase.credential.cert(credential),
-    databaseURL: `https://${process.env.FIREBASE_PROJECT}.firebaseio.com`,
+    databaseURL: `https://${process.env.FIREBASE_APP_PROJECTNAME}.firebaseio.com`,
   });
 
   const rootDb = firebase.database().ref("/");

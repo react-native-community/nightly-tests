@@ -41,9 +41,9 @@ website/
 
 ## Credentials
 
-To setup credentials for data fetching you will need to add `.env` file in `website` directory, which includes `FIREBASE_PROJECT` and `FIREBASE_KEY` environment variables. For example:
+To set up credentials for data fetching you will need to add `.env` file in `website` directory, which includes `FIREBASE_APP_PROJECTNAME` and `FIREBASE_APP_SERVICE_KEY` environment variables. For example:
 
 ```bash
-FIREBASE_PROJECT=my-nightly-tests-project
-FIREBASE_KEY=[Base64 encoded Firebase Service Key JSON]
+FIREBASE_APP_PROJECTNAME=[my-nightly-tests-project]
+FIREBASE_APP_SERVICE_KEY=[Base64 encoded Firebase Service Key JSON]
 ```
