@@ -1,20 +1,21 @@
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
+import InlineLink from "~/components/InlineLink";
 
 export default function Footer() {
   return (
-    <footer className="py-8 border-t border-t-border shadow-xs">
+    <footer className="py-12 border-t border-t-border shadow-xs">
       <div
         className={twMerge(
           "w-full max-w-[1280px] grid grid-cols-4 px-4 mx-auto",
           "max-md:grid-cols-1 max-md:items-center max-md:gap-y-6 max-md:text-center",
         )}
       >
-        <div className="flex flex-col gap-1.5 pt-1.5">
+        <div className="flex flex-col gap-2 pt-1.5">
           <Link
             href="https://opensource.fb.com/"
+            className="w-fit"
             target="_blank"
-            className="pb-0.5"
           >
             <picture>
               <img
@@ -33,45 +34,31 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-2 text-sm">
           <p className="font-semibold text-base">Participate</p>
-          <Link
-            href="https://reactnative.dev/community/overview"
-            target="_blank"
-          >
+          <InlineLink href="https://reactnative.dev/community/overview">
             Community
-          </Link>
-          <Link
-            href="https://reactnative.dev/contributing/overview"
-            target="_blank"
-          >
+          </InlineLink>
+          <InlineLink href="https://reactnative.dev/contributing/overview">
             Contributing
-          </Link>
-          <Link href="https://reactnative.directory" target="_blank">
+          </InlineLink>
+          <InlineLink href="https://reactnative.directory">
             Directory
-          </Link>
+          </InlineLink>
         </div>
         <div className="flex flex-col gap-2 text-sm">
           <p className="font-semibold text-base">Find us</p>
-          <Link href="https://reactnative.dev/blog" target="_blank">
-            Blog
-          </Link>
-          <Link href="https://github.com/facebook/react-native" target="_blank">
+          <InlineLink href="https://reactnative.dev/blog">Blog</InlineLink>
+          <InlineLink href="https://github.com/facebook/react-native">
             GitHub
-          </Link>
-          <Link href="https://bsky.app/profile/reactnative.dev" target="_blank">
+          </InlineLink>
+          <InlineLink href="https://bsky.app/profile/reactnative.dev">
             Bluesky
-          </Link>
-          <Link href="https://x.com/reactnative" target="_blank">
-            X
-          </Link>
+          </InlineLink>
+          <InlineLink href="https://x.com/reactnative">X</InlineLink>
         </div>
         <div className="flex flex-col gap-2 text-sm">
           <p className="font-semibold text-base">More</p>
-          <Link href="https://react.dev" target="_blank">
-            React
-          </Link>
-          <Link href="https://reactnative.dev" target="_blank">
-            React Native
-          </Link>
+          <InlineLink href="https://react.dev">React</InlineLink>
+          <InlineLink href="https://reactnative.dev">React Native</InlineLink>
         </div>
       </div>
     </footer>

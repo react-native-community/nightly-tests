@@ -4,6 +4,7 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import reactPlugin from "eslint-plugin-react";
 import prettierPlugin from "eslint-plugin-prettier/recommended";
 import typescriptESLint from "typescript-eslint";
+import { parserPlain, plugin as pluginSVGO } from "eslint-plugin-svgo";
 
 export default defineConfig([
   globalIgnores([
@@ -53,6 +54,41 @@ export default defineConfig([
           jsx: true,
         },
       },
+    },
+  },
+
+  {
+    files: ["**/*.svg"],
+    plugins: {
+      svgo: pluginSVGO,
+    },
+    languageOptions: {
+      parser: parserPlain,
+    },
+    rules: {
+      "prettier/prettier": "off",
+      "svgo/svgo": [
+        "error",
+        {
+          floatPrecision: 2,
+          js2svg: {
+            pretty: true,
+          },
+          plugins: [
+            "preset-default",
+            {
+              name: "preset-default",
+              params: {
+                overrides: {
+                  cleanupIds: {
+                    minify: false,
+                  },
+                },
+              },
+            },
+          ],
+        },
+      ],
     },
   },
 ]);
