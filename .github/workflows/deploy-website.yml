@@ -43,6 +43,8 @@ jobs:
       - name: 📦️ Build website app
         working-directory: website
         run: yarn build
+        env:
+          REPOSITORY_NAME: 'nightly-tests'
 
       - name: 🚀 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
