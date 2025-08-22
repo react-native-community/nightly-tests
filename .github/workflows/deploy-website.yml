@@ -13,6 +13,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -25,18 +29,20 @@ jobs:
           node-version: '22'
           cache: 'yarn'
 
+      - name: 🚚️ Install dependencies
+        working-directory: website
+        run: yarn install --frozen-lockfile
+
       - name: ⬇️ Fetch the latest test results
         working-directory: website
         run: yarn data:fetch
         env:
-          FIREBASE_APP_PROJECTNAME: ${{ secrets.firebase_app_projectname }}
-          FIREBASE_APP_SERVICE_KEY: ${{ secrets.firebase_app_service_key }}
+          FIREBASE_APP_PROJECTNAME: ${{ secrets.FIREBASE_APP_PROJECTNAME }}
+          FIREBASE_APP_SERVICE_KEY: ${{ secrets.FIREBASE_APP_SERVICE_KEY }}
 
-      - name: 📦️ Install & build app
+      - name: 📦️ Build website app
         working-directory: website
-        run: |
-          yarn install --frozen-lockfile
-          yarn build
+        run: yarn build
 
       - name: 🚀 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

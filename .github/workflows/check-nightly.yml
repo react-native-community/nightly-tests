@@ -12,6 +12,10 @@ on:
   schedule:
     - cron: '15 4 * * *'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check-nightly:
     runs-on: ubuntu-latest
