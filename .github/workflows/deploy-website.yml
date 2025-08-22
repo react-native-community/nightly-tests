@@ -30,7 +30,7 @@ jobs:
         run: yarn data:fetch
         env:
           FIREBASE_APP_PROJECTNAME: ${{ secrets.firebase_app_projectname }}
-          FIREBASE_SERVICE_KEY: ${{ secrets.firebase_service_key }}
+          FIREBASE_APP_SERVICE_KEY: ${{ secrets.firebase_app_service_key }}
 
       - name: 📦️ Install & build app
         working-directory: website
