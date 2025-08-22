@@ -23,7 +23,7 @@ function formatStatus(info: CellContext<LibraryType, any>) {
     case "failure":
       return "🔴";
     default:
-      return <span className="text-gray-400">-</span>;
+      return <span className="text-secondary">-</span>;
   }
 }
 
@@ -56,7 +56,8 @@ export default function Table({ platform }: Props) {
       .reverse()
       .slice(0, 7)
       .map((date) =>
-        columnHelper.accessor(`results.${date}.${platform}`, {
+        columnHelper.accessor((row) => row.results?.[date]?.[platform], {
+          id: `results.${date}.${platform}`,
           header: () => <span className="block text-xs">{date}</span>,
           cell: formatStatus,
         }),
@@ -87,7 +88,9 @@ export default function Table({ platform }: Props) {
                   className={twMerge(
                     "text-sm px-2 py-2 whitespace-nowrap border-r border-border",
                     "last:!border-r-0",
-                    header.index === 0 ? "text-left pl-3" : "text-center",
+                    header.index === 0
+                      ? "text-left pl-3 min-w-[300px]"
+                      : "text-center",
                   )}
                   colSpan={header.colSpan}
                   rowSpan={header.index === 0 ? 2 : 1}

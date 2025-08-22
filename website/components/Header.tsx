@@ -24,14 +24,16 @@ export default function Header() {
           <p className="whitespace-nowrap">React Native Nightly Tests</p>
         </div>
         <div className="relative w-full">
-          <SearchIcon className="absolute left-3.5 top-[11px] size-4 text-secondary/50 pointer-events-none" />
+          <SearchIcon className="absolute left-3.5 top-[11px] size-4 text-secondary/60 pointer-events-none" />
           <input
             type="text"
+            id="search"
+            autoComplete="off"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             className={twMerge(
               "w-full bg-subtle border border-border rounded-3xl pl-10 pr-3 py-1.5",
-              "placeholder:text-secondary/50",
+              "placeholder:text-secondary/60",
             )}
             placeholder="Search libraries…"
           />
