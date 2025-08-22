@@ -1,30 +1,39 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { PropsWithChildren } from "react";
-
-import "~/styles/globals.css";
 
 import Footer from "~/components/Footer";
 import Header from "~/components/Header";
-import { ThemeProvider } from "next-themes";
 import { SearchProvider } from "~/context/SearchContext";
+import getAssetPath from "~/utils/getAssetPath";
+
+import "~/styles/globals.css";
+
+const metadataBase = process.env.REPOSITORY_NAME
+  ? new URL("https://react-native-community.github.io/")
+  : undefined;
 
 export const metadata: Metadata = {
   title: "React Native Nightly Tests",
   description: "Nightly integration tests results for React Native",
+  metadataBase,
   icons: {
     icon: [
       {
-        url: "/favicon-32x32.png",
+        url: getAssetPath("favicon-32x32.png"),
         type: "image/png",
         sizes: "32x32",
       },
       {
-        url: "/favicon-16x16.png",
+        url: getAssetPath("/favicon-16x16.png"),
         type: "image/png",
         sizes: "16x16",
       },
     ],
-    shortcut: "/favicon-32x32.png",
+    shortcut: getAssetPath("favicon-32x32.png"),
+  },
+  openGraph: {
+    images: getAssetPath("opengraph-image.png"),
   },
 };
 
