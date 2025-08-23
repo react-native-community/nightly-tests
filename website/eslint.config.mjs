@@ -5,6 +5,7 @@ import reactPlugin from "eslint-plugin-react";
 import prettierPlugin from "eslint-plugin-prettier/recommended";
 import typescriptESLint from "typescript-eslint";
 import { parserPlain, plugin as pluginSVGO } from "eslint-plugin-svgo";
+import importPlugin from "eslint-plugin-import";
 
 export default defineConfig([
   globalIgnores([
@@ -16,33 +17,59 @@ export default defineConfig([
   ]),
 
   prettierPlugin,
+  importPlugin.flatConfigs.recommended,
 
   {
-    files: ["**/*.js", "**/*.mjs"],
+    files: ["**/*.{js,mjs}"],
     plugins: {
       js: jsPlugin,
     },
     extends: ["js/recommended"],
     languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module",
       globals: {
         Buffer: "readonly",
         console: "readonly",
         process: "readonly",
       },
     },
+    rules: {
+      "import/no-unresolved": "off",
+    },
   },
 
   {
-    files: ["**/*.ts", "**/*.tsx"],
+    files: ["**/*.{ts,tsx}"],
     plugins: {
       "@next/next": nextPlugin,
       react: reactPlugin,
     },
+    extends: [importPlugin.flatConfigs.typescript],
     rules: {
       ...reactPlugin.configs["jsx-runtime"].rules,
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs["core-web-vitals"].rules,
+
       "@next/next/no-img-element": "off",
+
+      "import/no-unresolved": "off",
+      "import/order": [
+        "error",
+        {
+          groups: [["external", "builtin"], "internal", ["parent", "sibling"]],
+          "newlines-between": "always",
+          alphabetize: {
+            order: "asc",
+          },
+          pathGroups: [
+            {
+              pattern: "~/**",
+              group: "internal",
+            },
+          ],
+        },
+      ],
     },
     languageOptions: {
       parser: typescriptESLint.parser,
@@ -74,19 +101,7 @@ export default defineConfig([
           js2svg: {
             pretty: true,
           },
-          plugins: [
-            "preset-default",
-            {
-              name: "preset-default",
-              params: {
-                overrides: {
-                  cleanupIds: {
-                    minify: false,
-                  },
-                },
-              },
-            },
-          ],
+          plugins: ["preset-default"],
         },
       ],
     },

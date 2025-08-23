@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
+
 import InlineLink from "~/components/InlineLink";
 
 export default function Footer() {

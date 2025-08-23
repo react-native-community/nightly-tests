@@ -7,6 +7,7 @@ on:
       - main
     paths-ignore:
       - 'website/**'
+      - '.github/workflows/deploy-website.yml'
   workflow_dispatch:
   # nightly build @ 4:15 AM UTC
   schedule:

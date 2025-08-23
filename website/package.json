@@ -10,8 +10,7 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "data:fetch": "node ./scripts/fetch-data.mjs",
-    "deploy:gh": "yarn build && gh-pages -d ./out"
+    "data:fetch": "node ./scripts/fetch-data.mjs"
   },
   "dependencies": {
     "@tanstack/react-table": "^8.21.3",
@@ -33,11 +32,11 @@
     "dotenv": "^17.2.1",
     "eslint": "^9.33.0",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-svgo": "^0.11.1",
     "firebase-admin": "^13.4.0",
-    "gh-pages": "^6.3.0",
     "prettier": "^3.6.2",
     "tailwindcss": "^4.1.12",
     "typescript": "^5.9.2",

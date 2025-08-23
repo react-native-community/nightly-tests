@@ -1,0 +1,31 @@
+name: Website app checks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'yarn'
+
+      - name: 🚚️ Install dependencies
+        working-directory: website
+        run: yarn install --frozen-lockfile
+
+      - name: ✅ Run lint checks
+        working-directory: website
+        run: yarn lint
