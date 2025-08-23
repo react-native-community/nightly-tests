@@ -7,7 +7,7 @@
   "engines": {
     "node": ">=22"
   },
-  "homepage": "https://github.com/react-native-community/nightly-tests#readme",
+  "homepage": "https://react-native-community.github.io/nightly-tests",
   "bugs": {
     "url": "https://github.com/react-native-community/nightly-tests/issues"
   },

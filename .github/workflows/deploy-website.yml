@@ -7,8 +7,6 @@ on:
       - Test Libraries on Nightlies
     types:
       - completed
-    conclusions:
-      - success
   push:
     branches:
       - main

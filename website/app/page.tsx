@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Table from "~/components/Table";
 
+import Table from "~/components/Table";
 import AndroidIcon from "~/public/android-icon.svg";
 import IOSIcon from "~/public/ios-icon.svg";
 

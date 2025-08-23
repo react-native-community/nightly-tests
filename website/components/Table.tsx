@@ -1,18 +1,18 @@
 "use client";
 
 import {
-  useReactTable,
-  getCoreRowModel,
-  flexRender,
-  createColumnHelper,
   type CellContext,
+  createColumnHelper,
+  flexRender,
+  getCoreRowModel,
   getFilteredRowModel,
+  useReactTable,
 } from "@tanstack/react-table";
 import { twMerge } from "tailwind-merge";
 
+import { useSearch } from "~/context/SearchContext";
 import data from "~/public/data.json";
 import { type LibraryType } from "~/types/data-types";
-import { useSearch } from "~/context/SearchContext";
 
 const columnHelper = createColumnHelper<LibraryType>();
 

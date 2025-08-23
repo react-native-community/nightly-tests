@@ -5,12 +5,11 @@ import { useTheme } from "next-themes";
 import { twMerge } from "tailwind-merge";
 
 import { useSearch } from "~/context/SearchContext";
-
-import Logo from "~/public/logo.svg";
 import GitHubLogo from "~/public/github.svg";
-import ThemeLightIcon from "~/public/theme-light.svg";
-import ThemeDarkIcon from "~/public/theme-dark.svg";
+import Logo from "~/public/logo.svg";
 import SearchIcon from "~/public/search-icon.svg";
+import ThemeDarkIcon from "~/public/theme-dark.svg";
+import ThemeLightIcon from "~/public/theme-light.svg";
 
 export default function Header() {
   const { resolvedTheme, setTheme } = useTheme();

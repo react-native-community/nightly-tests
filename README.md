@@ -2,7 +2,7 @@
 
 [![Check Nightlies](https://github.com/react-native-community/nightly-tests/actions/workflows/check-nightly.yml/badge.svg)](https://github.com/react-native-community/nightly-tests/actions/workflows/check-nightly.yml)
 
-Automated GitHub Actions workflows for testing React Native ecosystem libraries against nightly builds
+Automated GitHub Actions workflows for testing React Native ecosystem libraries against nightly builds.
 
 ## Overview
 
@@ -15,9 +15,16 @@ Specifically this repo will:
   - `react-native-gesture-handler`
   - `react-native-reanimated`
   - And many more...
-- Run a build for both iOS and Android
+- Run a build for both Android and iOS
 - Send a Discord message for failure alerts and status updates
 - Store results in Firebase for historical tracking and run comparison to identify newly broken or recovered libraries
+
+### Website
+
+The test results are also published on the website, which is available on the following address:
+* https://react-native-community.github.io/nightly-tests/
+
+To learn more about website app, see [the README file](./website/README.md) in the `website` directory.
 
 ## Contributing
 
