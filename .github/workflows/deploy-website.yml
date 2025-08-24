@@ -2,11 +2,9 @@ name: Deploy website
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows:
-      - Test Libraries on Nightlies
-    types:
-      - completed
+  # deploy daily @ 4:55 AM UTC
+  schedule:
+    - cron: '55 4 * * *'
   push:
     branches:
       - main
