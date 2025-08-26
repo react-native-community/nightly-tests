@@ -49,6 +49,10 @@
       "2025-08-25": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-08-26": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -100,6 +104,10 @@
         "ios": "success"
       },
       "2025-08-25": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-08-26": {
         "android": "success",
         "ios": "success"
       }
@@ -155,6 +163,10 @@
       "2025-08-25": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-08-26": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -206,6 +218,10 @@
         "ios": "success"
       },
       "2025-08-25": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-08-26": {
         "android": "success",
         "ios": "success"
       }
@@ -261,6 +277,10 @@
       "2025-08-25": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-08-26": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -312,6 +332,10 @@
         "ios": "success"
       },
       "2025-08-25": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-08-26": {
         "android": "success",
         "ios": "success"
       }
@@ -367,6 +391,10 @@
       "2025-08-25": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-08-26": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -418,6 +446,10 @@
         "ios": "success"
       },
       "2025-08-25": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-08-26": {
         "android": "success",
         "ios": "success"
       }
@@ -473,6 +505,10 @@
       "2025-08-25": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-08-26": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -524,6 +560,10 @@
         "ios": "success"
       },
       "2025-08-25": {
+        "android": "failure",
+        "ios": "success"
+      },
+      "2025-08-26": {
         "android": "failure",
         "ios": "success"
       }
@@ -579,6 +619,10 @@
       "2025-08-25": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-08-26": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -630,6 +674,10 @@
         "ios": "success"
       },
       "2025-08-25": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-08-26": {
         "android": "success",
         "ios": "success"
       }
@@ -685,6 +733,10 @@
       "2025-08-25": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-08-26": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -736,6 +788,10 @@
         "ios": "success"
       },
       "2025-08-25": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-08-26": {
         "android": "success",
         "ios": "success"
       }
@@ -791,6 +847,10 @@
       "2025-08-25": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-08-26": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -842,6 +902,10 @@
         "ios": "success"
       },
       "2025-08-25": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-08-26": {
         "android": "success",
         "ios": "success"
       }
@@ -897,6 +961,10 @@
       "2025-08-25": {
         "android": "failure",
         "ios": "success"
+      },
+      "2025-08-26": {
+        "android": "failure",
+        "ios": "success"
       }
     }
   },
@@ -948,6 +1016,10 @@
         "ios": "success"
       },
       "2025-08-25": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-08-26": {
         "android": "success",
         "ios": "success"
       }
@@ -1003,6 +1075,10 @@
       "2025-08-25": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-08-26": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1042,6 +1118,10 @@
         "ios": "success"
       },
       "2025-08-25": {
+        "android": "failure",
+        "ios": "success"
+      },
+      "2025-08-26": {
         "android": "failure",
         "ios": "success"
       }
@@ -1114,6 +1194,10 @@
       "2025-08-25": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-08-26": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1165,6 +1249,10 @@
         "ios": "success"
       },
       "2025-08-25": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-08-26": {
         "android": "success",
         "ios": "success"
       }
@@ -1220,6 +1308,10 @@
       "2025-08-25": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-08-26": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1271,6 +1363,10 @@
         "ios": "success"
       },
       "2025-08-25": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-08-26": {
         "android": "success",
         "ios": "success"
       }
@@ -1326,6 +1422,10 @@
       "2025-08-25": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-08-26": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1365,6 +1465,10 @@
         "ios": "success"
       },
       "2025-08-25": {
+        "android": "failure",
+        "ios": "success"
+      },
+      "2025-08-26": {
         "android": "failure",
         "ios": "success"
       }
