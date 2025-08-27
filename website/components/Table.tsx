@@ -54,7 +54,6 @@ export default function Table({ platform }: Props) {
     }),
     ...Object.keys(data[0].results)
       .reverse()
-      .slice(0, 7)
       .map((date) =>
         columnHelper.accessor((row) => row.results?.[date]?.[platform], {
           id: `results.${date}.${platform}`,

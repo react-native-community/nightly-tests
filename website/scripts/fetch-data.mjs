@@ -3,6 +3,7 @@ import firebase from "firebase-admin";
 import fs from "node:fs/promises";
 import path from "node:path";
 
+const DAYS_TO_SHOW = 7;
 const ENCODING = "utf8";
 
 dotenv.config({
@@ -23,13 +24,15 @@ async function main() {
   });
 
   const rootDb = firebase.database().ref("/");
-
   const snapshot = await rootDb.once("value");
   const data = snapshot.val() ?? {};
 
   const tableDataMap = new Map();
+  const trimmedData = Object.entries(data["nightly-results"]).slice(
+    -DAYS_TO_SHOW,
+  );
 
-  for (const [date, entries] of Object.entries(data["nightly-results"])) {
+  for (const [date, entries] of trimmedData) {
     for (const { library, platform, status } of entries) {
       if (!tableDataMap.has(library)) {
         tableDataMap.set(library, { library, results: {} });
@@ -42,18 +45,12 @@ async function main() {
     }
   }
 
-  const outPath = path.resolve("public/data.json");
-  await fs.writeFile(
-    outPath,
-    JSON.stringify(
-      Array.from(tableDataMap.values()).sort((a, b) =>
-        a.library.localeCompare(b.library),
-      ),
-      null,
-      2,
-    ),
-    ENCODING,
+  const sortedData = Array.from(tableDataMap.values()).sort((a, b) =>
+    a.library.localeCompare(b.library),
   );
+
+  const outPath = path.resolve("public/data.json");
+  await fs.writeFile(outPath, JSON.stringify(sortedData, null, 2), ENCODING);
 
   console.log(`✅ Data export completed: ${outPath}`);
   process.exit(0);

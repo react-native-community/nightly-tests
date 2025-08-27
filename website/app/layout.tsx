@@ -11,7 +11,7 @@ import "~/styles/globals.css";
 
 const metadataBase = process.env.REPOSITORY_NAME
   ? new URL("https://react-native-community.github.io/")
-  : undefined;
+  : new URL("http://localhost:3000");
 
 export const metadata: Metadata = {
   title: "React Native Nightly Tests",
