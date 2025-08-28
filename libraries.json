@@ -206,5 +206,13 @@
     "ios": true,
     "maintainersUsernames": [],
     "notes": "Additional OSS libs used internally"
+  },
+  "@shopify/react-native-skia": {
+    "description": "High-performance React Native Graphics using Skia",
+    "installCommand": "@shopify/react-native-skia",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
   }
 }
