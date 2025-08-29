@@ -13,22 +13,18 @@ jobs:
     steps:
       - name: Checkout PR
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Save base libraries.json from main
-        run: |
-          git fetch origin main:refs/remotes/origin/main
-          git show origin/main:./libraries.json > base.json
       - name: Diff and extract only changed libraries from JSON
         id: read-libraries
         run: |
+          # Fetch base libraries.json and compare with PR file
           jq -n \
-            --slurpfile base base.json \
-            --slurpfile pr libraries.json \
+            --argjson base "$(curl -s https://raw.githubusercontent.com/react-native-community/nightly-tests/refs/heads/main/libraries.json)" \
+            --argjson pr   "$(jq -c . libraries.json)" \
             '
-            ($pr | to_entries) as $pr_entries
-            | ($base | to_entries) as $base_entries
-            | reduce $pr_entries[] as $item ({}; 
+              ($base | to_entries) as $base_entries |
+              ($pr | to_entries) as $pr_entries |
+          
+              reduce $pr_entries[] as $item ({}; 
                 if ($base[$item.key] // null) != $item.value
                 then . + { ($item.key): $item.value }
                 else . end
