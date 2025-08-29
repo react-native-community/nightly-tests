@@ -23,8 +23,8 @@ jobs:
         id: read-libraries
         run: |
           jq -n \
-            --argfile base base.json \
-            --argfile pr libraries.json \
+            --slurpfile base base.json \
+            --slurpfile pr libraries.json \
             '
             ($pr | to_entries) as $pr_entries
             | ($base | to_entries) as $base_entries
