@@ -2,10 +2,6 @@
   {
     "library": "@dr.pogodin/react-native-fs",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -27,6 +23,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -35,10 +35,6 @@
   {
     "library": "@react-native-clipboard/clipboard",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -60,6 +56,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -68,10 +68,6 @@
   {
     "library": "@react-native-community/datetimepicker",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -93,6 +89,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -101,10 +101,6 @@
   {
     "library": "@react-native-community/image-editor",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -126,6 +122,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -134,10 +134,6 @@
   {
     "library": "@react-native-community/netinfo",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -159,6 +155,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -167,10 +167,6 @@
   {
     "library": "@react-native-community/slider",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -192,6 +188,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -200,10 +200,6 @@
   {
     "library": "@react-native-masked-view/masked-view",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -225,6 +221,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -233,10 +233,6 @@
   {
     "library": "react-native-async-storage",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -258,6 +254,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -266,10 +266,6 @@
   {
     "library": "react-native-blob-util",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -291,6 +287,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -299,10 +299,6 @@
   {
     "library": "react-native-contacts",
     "results": {
-      "2025-08-24": {
-        "android": "failure",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "failure",
         "ios": "success"
@@ -324,6 +320,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "failure",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "failure",
         "ios": "success"
       }
@@ -332,10 +332,6 @@
   {
     "library": "react-native-device-info",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -357,6 +353,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -365,10 +365,6 @@
   {
     "library": "react-native-email-link",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -390,6 +386,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -398,10 +398,6 @@
   {
     "library": "react-native-gesture-handler",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -423,6 +419,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -431,10 +431,6 @@
   {
     "library": "react-native-image-picker",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -456,6 +452,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -464,10 +464,6 @@
   {
     "library": "react-native-linear-gradient",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -489,6 +485,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -497,10 +497,6 @@
   {
     "library": "react-native-masked-view",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -522,6 +518,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -530,10 +530,6 @@
   {
     "library": "react-native-mmkv",
     "results": {
-      "2025-08-24": {
-        "android": "failure",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "failure",
         "ios": "success"
@@ -555,6 +551,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "failure",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "failure",
         "ios": "success"
       }
@@ -563,10 +563,6 @@
   {
     "library": "react-native-pager-view",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -588,6 +584,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -596,10 +596,6 @@
   {
     "library": "react-native-permissions",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -621,6 +617,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -629,10 +629,6 @@
   {
     "library": "react-native-reanimated",
     "results": {
-      "2025-08-24": {
-        "android": "failure",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "failure",
         "ios": "success"
@@ -654,6 +650,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "failure",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "failure",
         "ios": "success"
       }
@@ -662,10 +662,6 @@
   {
     "library": "react-native-screens",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -687,6 +683,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -695,10 +695,6 @@
   {
     "library": "react-native-svg",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -720,6 +716,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -728,10 +728,6 @@
   {
     "library": "react-native-vector-icons",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -753,6 +749,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -761,10 +761,6 @@
   {
     "library": "react-native-video",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -786,6 +782,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -794,10 +794,6 @@
   {
     "library": "react-native-webview",
     "results": {
-      "2025-08-24": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "success",
         "ios": "success"
@@ -819,6 +815,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "success",
         "ios": "success"
       }
@@ -827,10 +827,6 @@
   {
     "library": "scandit-react-native",
     "results": {
-      "2025-08-24": {
-        "android": "failure",
-        "ios": "success"
-      },
       "2025-08-25": {
         "android": "failure",
         "ios": "success"
@@ -852,6 +848,10 @@
         "ios": "success"
       },
       "2025-08-30": {
+        "android": "failure",
+        "ios": "success"
+      },
+      "2025-09-01": {
         "android": "failure",
         "ios": "success"
       }
