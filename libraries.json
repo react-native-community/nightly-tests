@@ -229,5 +229,13 @@
     "ios": true,
     "maintainersUsernames": [],
     "notes": "One of top most used libraries according to the npm stats"
+  },
+  "@react-native-async-storage/async-storage": {
+    "description": "An asynchronous, persistent, key-value storage system for React Native",
+    "installCommand": "@react-native-async-storage/async-storage",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
   }
 }
