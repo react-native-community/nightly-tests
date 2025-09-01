@@ -207,6 +207,29 @@
     "maintainersUsernames": [],
     "notes": "Additional OSS libs used internally"
   },
+  "@sentry/react-native": {
+    "description": "Official Sentry SDK for React Native",
+    "installCommand": "@sentry/react-native",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-edge-to-edge": {
+    "description": "Enable edge-to-edge display in React Native",
+    "installCommand": "react-native-edge-to-edge",
+    "android": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-share": {
+    "description": "Social share, sending simple data to other apps",
+    "installCommand": "react-native-share",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
   "@react-native-async-storage/async-storage": {
     "description": "An asynchronous, persistent, key-value storage system for React Native",
     "installCommand": "@react-native-async-storage/async-storage",

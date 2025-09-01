@@ -1,5 +1,7 @@
 export type LibraryType = {
   library: string;
+  installCommand: string;
+  repositoryURLs?: Record<string, string>;
   results: Record<
     string,
     {
