@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import firebase from "firebase-admin";
 import fs from "node:fs/promises";
 import path from "node:path";
+import getCleanPackageName from "../utils/getCleanPackageName";
 
 const DAYS_TO_SHOW = 7;
 const ENCODING = "utf8";
@@ -16,6 +17,34 @@ const credential = JSON.parse(
     ENCODING,
   ),
 );
+
+const definitions = await fs.readFile("../libraries.json", ENCODING);
+const definitionsJSON = JSON.parse(definitions);
+
+async function fetchDirectoryData(libraries) {
+  return Promise.all(
+    libraries.map(async (lib) => {
+      const packageName = getCleanPackageName(lib);
+      try {
+        const response = await fetch(
+          `https://reactnative.directory/api/libraries?search=${packageName}`,
+        );
+
+        if (!response.ok) {
+          throw new Error(
+            `❌ HTTP ${response.status} - Cannot fetch directory data for ${packageName}`,
+          );
+        }
+
+        const data = await response.json();
+        return data.libraries.find(({ npmPkg }) => npmPkg === packageName);
+      } catch (error) {
+        console.error(error);
+        process.exit(1);
+      }
+    }),
+  );
+}
 
 async function main() {
   firebase.initializeApp({
@@ -35,7 +64,27 @@ async function main() {
   for (const [date, entries] of trimmedData) {
     for (const { library, platform, status } of entries) {
       if (!tableDataMap.has(library)) {
-        tableDataMap.set(library, { library, results: {} });
+        const installCommand = definitionsJSON[library].installCommand;
+        const directoryData = await fetchDirectoryData(
+          installCommand.includes(" ")
+            ? installCommand.split(" ")
+            : [installCommand],
+        );
+
+        if (directoryData.filter(Boolean).length > 0) {
+          const repositoryURLs = Object.fromEntries(
+            directoryData.map((lib) => [lib.npmPkg, lib.githubUrl]),
+          );
+
+          tableDataMap.set(library, {
+            library,
+            installCommand,
+            repositoryURLs,
+            results: {},
+          });
+        } else {
+          tableDataMap.set(library, { library, installCommand, results: {} });
+        }
       }
       const rec = tableDataMap.get(library);
       if (!rec.results[date]) {
