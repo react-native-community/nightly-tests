@@ -2,7 +2,6 @@ import dotenv from "dotenv";
 import firebase from "firebase-admin";
 import fs from "node:fs/promises";
 import path from "node:path";
-import getCleanPackageName from "../utils/getCleanPackageName";
 
 const DAYS_TO_SHOW = 7;
 const ENCODING = "utf8";
@@ -44,6 +43,12 @@ async function fetchDirectoryData(libraries) {
       }
     }),
   );
+}
+
+function getCleanPackageName(packageName) {
+  return packageName.includes("@") && !packageName.startsWith("@")
+    ? packageName.split("@")[0]
+    : packageName;
 }
 
 async function main() {
