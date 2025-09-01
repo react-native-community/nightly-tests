@@ -10,9 +10,11 @@ import {
 } from "@tanstack/react-table";
 import { twMerge } from "tailwind-merge";
 
+import { GitHubRepoLink } from "~/components/GitHubRepoLink";
 import { useSearch } from "~/context/SearchContext";
 import data from "~/public/data.json";
 import { type LibraryType } from "~/types/data-types";
+import getCleanPackageName from "~/utils/getCleanPackageName";
 
 const columnHelper = createColumnHelper<LibraryType>();
 
@@ -35,18 +37,34 @@ export default function Table({ platform }: Props) {
   const { query } = useSearch();
 
   const columns = [
-    columnHelper.accessor(`library`, {
+    columnHelper.accessor(`installCommand`, {
       header: () => <span className="block">Library</span>,
       cell: (info) => {
         const entry = info.getValue();
+
         if (!entry.includes(" ")) {
-          return entry;
+          const repositoryURL =
+            info.row.original.repositoryURLs?.[getCleanPackageName(entry)];
+          return (
+            <div className="flex items-center">
+              {entry}
+              <GitHubRepoLink repositoryURL={repositoryURL} />
+            </div>
+          );
         }
+
         return (
           <div className="flex flex-col">
-            {entry.split(" ").map((lib: string) => (
-              <span key={lib}>{lib}</span>
-            ))}
+            {entry.split(" ").map((lib: string) => {
+              const repositoryURL =
+                info.row.original.repositoryURLs?.[getCleanPackageName(lib)];
+              return (
+                <div className="flex items-center" key={lib}>
+                  {lib}
+                  <GitHubRepoLink repositoryURL={repositoryURL} />
+                </div>
+              );
+            })}
           </div>
         );
       },
