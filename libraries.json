@@ -237,5 +237,13 @@
     "ios": true,
     "maintainersUsernames": [],
     "notes": "One of top most used libraries according to the npm stats"
+  },
+  "lottie-react-native/lottie-react-native": {
+    "description": "Lottie wrapper for React Native.",
+    "installCommand": "lottie-react-native",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
   }
 }
