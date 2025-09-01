@@ -214,5 +214,12 @@
     "ios": true,
     "maintainersUsernames": [],
     "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-edge-to-edge": {
+    "description": "Enable edge-to-edge display in React Native",
+    "installCommand": "react-native-edge-to-edge",
+    "android": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
   }
 }
