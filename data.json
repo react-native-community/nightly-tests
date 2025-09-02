@@ -566,6 +566,19 @@
     }
   },
   {
+    "library": "react-native-keyboard-controller",
+    "installCommand": "react-native-keyboard-controller",
+    "repositoryURLs": {
+      "react-native-keyboard-controller": "https://github.com/kirillzyusko/react-native-keyboard-controller"
+    },
+    "results": {
+      "2025-09-02": {
+        "android": "success",
+        "ios": "success"
+      }
+    }
+  },
+  {
     "library": "react-native-linear-gradient",
     "installCommand": "react-native-linear-gradient",
     "repositoryURLs": {
@@ -787,7 +800,7 @@
   },
   {
     "library": "react-native-screens",
-    "installCommand": "react-native-screens",
+    "installCommand": "react-native-screens@nightly",
     "repositoryURLs": {
       "react-native-screens": "https://github.com/software-mansion/react-native-screens"
     },
