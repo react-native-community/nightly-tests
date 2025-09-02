@@ -48,9 +48,9 @@ function readOutcomes() {
     } else if (fullPath.endsWith('outcome')) {
       const [library, status, url] = String(fs.readFileSync(fullPath, 'utf8'))
         .trim()
-        .split(':');
+        .split('|');
       const platform = file.includes('android') ? 'Android' : 'iOS';
-      const runUrl = status.trim() === 'failure' ? url : undefined;
+      const runUrl = status.trim() === 'failure' ? url.trim() : undefined;
       console.log(`[${platform}] ${library} completed with status ${status}`);
       outcomes.push({
         library: library.trim(),
