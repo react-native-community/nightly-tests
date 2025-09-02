@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/definitions/LibraryDefinition"
+  },
+  "definitions": {
+    "LibraryDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "General description of the library just to know what the library does.",
+          "examples": [
+            "A React Native library to display fancy animations",
+            "A <Video /> component for React Native"
+          ]
+        },
+        "installCommand": {
+          "type": "string",
+          "description": "Command used to install packages in the test project. It will be prepended with 'npm install' command. If your library publishes nightlies or betas, please use the '@nightly' and '@beta' suffix, so we’ll test against the latest version. If your library has multiple NPM package that requires testing, please include all of them as space separated string.",
+          "examples": [
+            "react-native-gesture-handler",
+            "react-native-reanimated@nightly react-native-worklets@nightly"
+          ]
+        },
+        "android": {
+          "type": "boolean",
+          "description": "Boolean toggle if the test on Android should be executed."
+        },
+        "ios": {
+          "type": "boolean",
+          "description": "Boolean toggle if the test on iOS should be executed."
+        },
+        "maintainersUsernames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Array of GitHub usernames. We will use it in the future to communicate with library maintainers (e.g. ping for build failures).",
+          "examples": [
+            ["frodo", "bilbo", "pippin", "merry", "sam"]
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "description": "Notes about the state of the library or reason why it has been added.",
+          "examples": [
+            "Build currently broken due to X reason.",
+            "One of top most used libraries according to the npm stats."
+          ]
+        }
+      },
+      "required": [
+        "description",
+        "installCommand",
+        "maintainersUsernames",
+        "notes"
+      ],
+      "title": "LibraryDefinition"
+    }
+  }
+}

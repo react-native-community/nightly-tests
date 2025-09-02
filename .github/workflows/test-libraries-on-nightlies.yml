@@ -63,7 +63,7 @@ jobs:
         if: always()
         run: |
           LIB_FOLDER=$(echo "${{matrix.library}}"  | tr ' ' '_' | tr '/' '_')
-          echo "${{matrix.library}}: ${{steps.run-test.outcome}}" > "/tmp/$LIB_FOLDER-${{ matrix.platform }}-outcome"
+          echo "${{matrix.library}}|${{steps.run-test.outcome}}|${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" > "/tmp/$LIB_FOLDER-${{ matrix.platform }}-outcome"
           echo "lib_folder=$LIB_FOLDER" >> $GITHUB_OUTPUT
       - name: Upload Artifact
         if: always()
