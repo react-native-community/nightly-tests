@@ -2,6 +2,8 @@ name: Check only new libraries.json entries
 
 on:
   pull_request:
+    paths:
+      - 'libraries.json'
 
 jobs:
   runner-setup:
