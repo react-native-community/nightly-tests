@@ -37,7 +37,6 @@ jobs:
           echo "libraries=$(jq -c 'keys' changed.json)" >> $GITHUB_OUTPUT
           # Keep the full data of changed entries
           echo "library-data=$(jq -c '.' changed.json)"  >> $GITHUB_OUTPUT
-          echo "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}/job/${{ github.job }}"
 
   test-library-on-nightly:
     name: "[${{ matrix.platform }}] ${{ matrix.library }}"
