@@ -79,6 +79,14 @@
     "maintainersUsernames": [],
     "notes": ""
   },
+  "react-native-worklets": {
+    "description": "Powerful multithreading engine",
+    "installCommand": "react-native-worklets@nightly",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
   "react-native-svg": {
     "description": "SVG library for React Native, React Native Web, and plain React web projects",
     "installCommand": "react-native-svg",
