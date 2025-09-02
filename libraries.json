@@ -113,7 +113,7 @@
   },
   "react-native-screens": {
     "description": "Native navigation primitives for your React Native app",
-    "installCommand": "react-native-screens",
+    "installCommand": "react-native-screens@nightly",
     "android": true,
     "ios": true,
     "maintainersUsernames": [],
