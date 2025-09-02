@@ -269,5 +269,13 @@
     "ios": true,
     "maintainersUsernames": [],
     "notes": "One of top most used libraries according to the npm stats"
+  },
+  "@react-native-firebase/app": {
+    "description": "A well tested, feature rich Firebase implementation for React Native",
+    "installCommand": "@react-native-firebase/app",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
   }
 }
