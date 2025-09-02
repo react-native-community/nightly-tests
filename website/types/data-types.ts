@@ -7,6 +7,7 @@ export type LibraryType = {
     {
       android?: "success" | "failure";
       ios?: "success" | "failure";
+      runUrl?: string;
     }
   >;
 };

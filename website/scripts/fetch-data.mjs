@@ -67,7 +67,7 @@ async function main() {
   );
 
   for (const [date, entries] of trimmedData) {
-    for (const { library, platform, status } of entries) {
+    for (const { library, platform, status, runUrl } of entries) {
       if (!tableDataMap.has(library)) {
         const installCommand = definitionsJSON[library].installCommand;
         const directoryData = await fetchDirectoryData(
@@ -96,6 +96,9 @@ async function main() {
         rec.results[date] = {};
       }
       rec.results[date][platform.toLowerCase()] = status;
+      if (status === "failure") {
+        rec.results[date].runUrl = runUrl;
+      }
     }
   }
 

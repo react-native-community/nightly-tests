@@ -16,6 +16,8 @@ import data from "~/public/data.json";
 import { type LibraryType } from "~/types/data-types";
 import getCleanPackageName from "~/utils/getCleanPackageName";
 
+import Tooltip from "./Tooltip";
+
 const columnHelper = createColumnHelper<LibraryType>();
 
 function formatStatus(info: CellContext<LibraryType, any>) {
@@ -23,6 +25,17 @@ function formatStatus(info: CellContext<LibraryType, any>) {
     case "success":
       return <span className="select-none">🟢</span>;
     case "failure":
+      const runUrl =
+        info.row.original.results[info.cell.id.split(".")[1]]?.runUrl;
+      if (runUrl) {
+        return (
+          <Tooltip content="See the GitHub action run" delayDuration={0}>
+            <a href={runUrl} target="_blank">
+              <span className="select-none">🔴</span>
+            </a>
+          </Tooltip>
+        );
+      }
       return <span className="select-none">🔴</span>;
     default:
       return <span className="text-secondary select-none">-</span>;
