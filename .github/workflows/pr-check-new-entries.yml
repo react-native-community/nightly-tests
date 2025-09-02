@@ -2,6 +2,8 @@ name: Check only new libraries.json entries
 
 on:
   pull_request:
+    paths:
+      - 'libraries.json'
 
 jobs:
   runner-setup:
@@ -54,6 +56,7 @@ jobs:
           node-version: '22.14.0'
           cache: yarn
       - name: Test ${{ matrix.library }}
+        if: ${{ fromJSON(needs.runner-setup.outputs.library-data)[matrix.library][matrix.platform] == true }}
         id: run-test
         uses: ./.github/actions/test-library-on-nightly
         with:

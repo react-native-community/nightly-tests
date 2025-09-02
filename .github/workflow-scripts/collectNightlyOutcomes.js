@@ -17,7 +17,6 @@ const {
 const {
   FirebaseClient,
   compareResults,
-  getYesterdayDate,
   getTodayDate,
 } = require('./firebaseUtils');
 
@@ -30,10 +29,11 @@ function readOutcomes() {
       fs.readdirSync(fullPath).forEach(subFile => {
         const subFullPath = path.join(fullPath, subFile);
         if (subFullPath.endsWith('outcome')) {
-          const [library, status] = String(fs.readFileSync(subFullPath, 'utf8'))
+          const [library, status, url] = String(fs.readFileSync(subFullPath, 'utf8'))
             .trim()
             .split(':');
           const platform = subFile.includes('android') ? 'Android' : 'iOS';
+          const runUrl = status.trim() === 'failure' ? url : undefined;
           console.log(
             `[${platform}] ${library} completed with status ${status}`,
           );
@@ -41,19 +41,22 @@ function readOutcomes() {
             library: library.trim(),
             platform,
             status: status.trim(),
+            runUrl
           });
         }
       });
     } else if (fullPath.endsWith('outcome')) {
-      const [library, status] = String(fs.readFileSync(fullPath, 'utf8'))
+      const [library, status, url] = String(fs.readFileSync(fullPath, 'utf8'))
         .trim()
-        .split(':');
+        .split('|');
       const platform = file.includes('android') ? 'Android' : 'iOS';
+      const runUrl = status.trim() === 'failure' ? url.trim() : undefined;
       console.log(`[${platform}] ${library} completed with status ${status}`);
       outcomes.push({
         library: library.trim(),
         platform,
         status: status.trim(),
+        runUrl
       });
     }
   });
