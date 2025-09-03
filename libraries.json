@@ -270,6 +270,14 @@
     "maintainersUsernames": [],
     "notes": "One of top most used libraries according to the npm stats"
   },
+  "react-native-vision-camera": {
+    "description": "A powerful, high-performance React Native Camera library",
+    "installCommand": "react-native-vision-camera",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
   "@testing-library/react-native": {
     "description": "Simple and complete React Native testing utilities that encourage good testing practices",
     "installCommand": "--dev @testing-library/react-native",

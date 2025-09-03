@@ -31,7 +31,7 @@ function readOutcomes() {
         if (subFullPath.endsWith('outcome')) {
           const [library, status, url] = String(fs.readFileSync(subFullPath, 'utf8'))
             .trim()
-            .split(':');
+            .split('|');
           const platform = subFile.includes('android') ? 'Android' : 'iOS';
           const runUrl = status.trim() === 'failure' ? url : undefined;
           console.log(
