@@ -19,7 +19,7 @@
         },
         "installCommand": {
           "type": "string",
-          "description": "Command used to install packages in the test project. It will be prepended with 'npm install' command. If your library publishes nightlies or betas, please use the '@nightly' and '@beta' suffix, so we’ll test against the latest version. If your library has multiple NPM package that requires testing, please include all of them as space separated string.",
+          "description": "Command used to install packages in the test project. It will be prepended with 'yarn add' command. If your library publishes nightlies or betas, please use the '@nightly' and '@beta' suffix, so we’ll test against the latest version. If your library has multiple NPM package that requires testing, please include all of them as space separated string.",
           "examples": [
             "react-native-gesture-handler",
             "react-native-reanimated@nightly react-native-worklets@nightly"

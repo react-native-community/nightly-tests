@@ -79,6 +79,14 @@
     "maintainersUsernames": [],
     "notes": ""
   },
+  "react-native-worklets": {
+    "description": "Powerful multithreading engine",
+    "installCommand": "react-native-worklets@nightly",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
   "react-native-svg": {
     "description": "SVG library for React Native, React Native Web, and plain React web projects",
     "installCommand": "react-native-svg",
@@ -113,7 +121,7 @@
   },
   "react-native-screens": {
     "description": "Native navigation primitives for your React Native app",
-    "installCommand": "react-native-screens",
+    "installCommand": "react-native-screens@nightly",
     "android": true,
     "ios": true,
     "maintainersUsernames": [],
@@ -233,6 +241,30 @@
   "@react-native-async-storage/async-storage": {
     "description": "An asynchronous, persistent, key-value storage system for React Native",
     "installCommand": "@react-native-async-storage/async-storage",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-keyboard-controller": {
+    "description": "Keyboard manager which works in identical way on both Android and iOS",
+    "installCommand": "react-native-keyboard-controller",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "@shopify/react-native-skia": {
+    "description": "High-performance React Native Graphics using Skia",
+    "installCommand": "@shopify/react-native-skia",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "lottie-react-native/lottie-react-native": {
+    "description": "Lottie wrapper for React Native.",
+    "installCommand": "lottie-react-native",
     "android": true,
     "ios": true,
     "maintainersUsernames": [],
