@@ -434,10 +434,12 @@
       },
       "2025-09-02": {
         "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17411668912",
         "ios": "success"
       },
       "2025-09-03": {
         "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17430383238",
         "ios": "success"
       }
     }
@@ -728,10 +730,12 @@
       },
       "2025-09-02": {
         "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17411668912",
         "ios": "success"
       },
       "2025-09-03": {
         "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17430383238",
         "ios": "success"
       }
     }
@@ -840,6 +844,7 @@
       },
       "2025-09-02": {
         "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17411668912",
         "ios": "success"
       },
       "2025-09-03": {
@@ -1015,6 +1020,19 @@
     }
   },
   {
+    "library": "react-native-vision-camera",
+    "installCommand": "react-native-vision-camera",
+    "repositoryURLs": {
+      "react-native-vision-camera": "https://github.com/mrousavy/react-native-vision-camera/tree/main/package"
+    },
+    "results": {
+      "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      }
+    }
+  },
+  {
     "library": "react-native-webview",
     "installCommand": "react-native-webview",
     "repositoryURLs": {
@@ -1060,6 +1078,7 @@
     "results": {
       "2025-09-02": {
         "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17411668912",
         "ios": "success"
       },
       "2025-09-03": {
@@ -1098,10 +1117,12 @@
       },
       "2025-09-02": {
         "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17411668912",
         "ios": "success"
       },
       "2025-09-03": {
         "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17430383238",
         "ios": "success"
       }
     }
