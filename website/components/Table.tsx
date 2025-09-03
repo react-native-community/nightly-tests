@@ -35,8 +35,9 @@ function formatStatus(info: CellContext<LibraryType, any>) {
             </a>
           </Tooltip>
         );
+      } else {
+        return <span className="select-none">🔴</span>;
       }
-      return <span className="select-none">🔴</span>;
     default:
       return <span className="text-secondary select-none">-</span>;
   }
