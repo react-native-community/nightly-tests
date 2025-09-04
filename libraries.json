@@ -143,9 +143,17 @@
     "maintainersUsernames": [],
     "notes": ""
   },
-  "scandit-react-native": {
+  "scandit libraries (@stable)": {
     "description": "Scandit Data Capture SDK for React Native",
     "installCommand": "scandit-react-native-datacapture-barcode scandit-react-native-datacapture-core",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "scandit libraries (@beta)": {
+    "description": "Scandit Data Capture SDK for React Native - @beta releases",
+    "installCommand": "scandit-react-native-datacapture-barcode@next scandit-react-native-datacapture-core@next",
     "android": true,
     "ios": true,
     "maintainersUsernames": [],
