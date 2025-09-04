@@ -111,12 +111,20 @@
     "maintainersUsernames": [],
     "notes": ""
   },
-  "react-native-mmkv": {
+  "react-native-mmkv (@stable)": {
     "description": "The fastest key/value storage for React Native",
     "installCommand": "react-native-mmkv",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
+    "maintainersUsernames": ["mrousavy"],
+    "notes": ""
+  },
+  "react-native-mmkv (@beta) + nitro-modules": {
+    "description": "The fastest key/value storage for React Native",
+    "installCommand": "react-native-mmkv@beta react-native-nitro-modules",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["mrousavy"],
     "notes": ""
   },
   "react-native-screens": {
