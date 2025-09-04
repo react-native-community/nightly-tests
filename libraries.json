@@ -153,7 +153,7 @@
   },
   "scandit libraries (@beta)": {
     "description": "Scandit Data Capture SDK for React Native - @beta releases",
-    "installCommand": "scandit-react-native-datacapture-barcode@beta scandit-react-native-datacapture-core@beta",
+    "installCommand": "scandit-react-native-datacapture-barcode@next scandit-react-native-datacapture-core@next",
     "android": true,
     "ios": true,
     "maintainersUsernames": [],
