@@ -68,36 +68,39 @@ async function main() {
 
   for (const [date, entries] of trimmedData) {
     for (const { library, platform, status, runUrl } of entries) {
-      if (!tableDataMap.has(library)) {
-        const installCommand = definitionsJSON[library].installCommand;
-        const directoryData = await fetchDirectoryData(
-          installCommand.includes(" ")
-            ? installCommand.split(" ")
-            : [installCommand],
-        );
-
-        if (directoryData.filter(Boolean).length > 0) {
-          const repositoryURLs = Object.fromEntries(
-            directoryData.map((lib) => [lib.npmPkg, lib.githubUrl]),
+      if (definitionsJSON[library]) {
+        if (!tableDataMap.has(library)) {
+          const installCommand = definitionsJSON[library].installCommand.replace('--dev', '').trim();
+          const directoryData = await fetchDirectoryData(
+            installCommand.includes(" ")
+              ? installCommand.split(" ")
+              : [installCommand],
           );
+          const cleanDirectoryData = directoryData.filter(Boolean);
 
-          tableDataMap.set(library, {
-            library,
-            installCommand,
-            repositoryURLs,
-            results: {},
-          });
-        } else {
-          tableDataMap.set(library, { library, installCommand, results: {} });
+          if (cleanDirectoryData.length > 0) {
+            const repositoryURLs = Object.fromEntries(
+              cleanDirectoryData.map((lib) => [lib.npmPkg, lib.githubUrl]),
+            );
+
+            tableDataMap.set(library, {
+              library,
+              installCommand,
+              repositoryURLs,
+              results: {},
+            });
+          } else {
+            tableDataMap.set(library, { library, installCommand, results: {} });
+          }
         }
-      }
-      const rec = tableDataMap.get(library);
-      if (!rec.results[date]) {
-        rec.results[date] = {};
-      }
-      rec.results[date][platform.toLowerCase()] = status;
-      if (status === "failure") {
-        rec.results[date].runUrl = runUrl;
+        const rec = tableDataMap.get(library);
+        if (!rec.results[date]) {
+          rec.results[date] = {};
+        }
+        rec.results[date][platform.toLowerCase()] = status;
+        if (status === "failure") {
+          rec.results[date].runUrl = runUrl;
+        }
       }
     }
   }
