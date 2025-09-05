@@ -280,7 +280,7 @@
   },
   "react-native-iap": {
     "description": "In-app purchases for React Native (StoreKit 2 / Play Billing v8).",
-    "installCommand": "react-native-iap",
+    "installCommand": "react-native-nitro-modules react-native-iap",
     "android": true,
     "ios": true,
     "maintainersUsernames": ["hyochan"],
@@ -296,7 +296,7 @@
   },
   "react-native-audio-recorder-player": {
     "description": "Cross-platform audio recorder & player with native backends.",
-    "installCommand": "react-native-audio-recorder-player",
+    "installCommand": "react-native-nitro-modules react-native-audio-recorder-player",
     "android": true,
     "ios": true,
     "maintainersUsernames": ["hyochan"],
