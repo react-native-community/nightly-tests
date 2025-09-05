@@ -309,5 +309,13 @@
     "ios": true,
     "maintainersUsernames": ["mdjastrzebski"],
     "notes": "One of top most used libraries according to the npm stats"
+  },
+  "@react-native-seoul/naver-login": {
+    "description": "One of the biggest SNS Auth Platform in Korea, Naver login for React Native",
+    "installCommand": "@react-native-seoul/naver-login",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["chanwoong528"],
+    "notes": ""
   }
 }
