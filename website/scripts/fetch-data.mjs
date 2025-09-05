@@ -70,7 +70,11 @@ async function main() {
     for (const { library, platform, status, runUrl } of entries) {
       if (definitionsJSON[library]) {
         if (!tableDataMap.has(library)) {
-          const installCommand = definitionsJSON[library].installCommand.replace('--dev', '').trim();
+          const installCommand = definitionsJSON[library].installCommand
+            .replace("--dev", "")
+            .trim();
+          const notes = definitionsJSON[library].notes;
+
           const directoryData = await fetchDirectoryData(
             installCommand.includes(" ")
               ? installCommand.split(" ")
@@ -87,10 +91,16 @@ async function main() {
               library,
               installCommand,
               repositoryURLs,
+              notes,
               results: {},
             });
           } else {
-            tableDataMap.set(library, { library, installCommand, results: {} });
+            tableDataMap.set(library, {
+              library,
+              installCommand,
+              notes,
+              results: {},
+            });
           }
         }
         const rec = tableDataMap.get(library);

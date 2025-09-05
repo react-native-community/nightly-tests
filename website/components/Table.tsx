@@ -10,6 +10,7 @@ import {
 } from "@tanstack/react-table";
 import { twMerge } from "tailwind-merge";
 
+import { EntryNotes } from "~/components/EntryNotes";
 import { GitHubRepoLink } from "~/components/GitHubRepoLink";
 import { useSearch } from "~/context/SearchContext";
 import data from "~/public/data.json";
@@ -29,7 +30,7 @@ function formatStatus(info: CellContext<LibraryType, any>) {
         info.row.original.results[info.cell.id.split(".")[1]]?.runUrl;
       if (runUrl) {
         return (
-          <Tooltip content="See the GitHub action run" delayDuration={0}>
+          <Tooltip content="See the GitHub action run">
             <a href={runUrl} target="_blank">
               <span className="select-none">🔴</span>
             </a>
@@ -55,6 +56,7 @@ export default function Table({ platform }: Props) {
       header: () => <span className="block">Library</span>,
       cell: (info) => {
         const entry = info.getValue();
+        const notes = info.row.original.notes;
 
         if (!entry.includes(" ")) {
           const repositoryURL =
@@ -62,7 +64,10 @@ export default function Table({ platform }: Props) {
           return (
             <div className="flex items-center">
               {entry}
-              <GitHubRepoLink repositoryURL={repositoryURL} />
+              <div className="flex items-center gap-1.5 ml-auto">
+                <EntryNotes notes={notes} />
+                <GitHubRepoLink repositoryURL={repositoryURL} />
+              </div>
             </div>
           );
         }
@@ -75,7 +80,10 @@ export default function Table({ platform }: Props) {
               return (
                 <div className="flex items-center" key={lib}>
                   {lib}
-                  <GitHubRepoLink repositoryURL={repositoryURL} />
+                  <div className="flex items-center gap-1.5 ml-auto">
+                    <EntryNotes notes={notes} />
+                    <GitHubRepoLink repositoryURL={repositoryURL} />
+                  </div>
                 </div>
               );
             })}

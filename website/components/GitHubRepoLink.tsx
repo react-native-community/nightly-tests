@@ -1,5 +1,7 @@
 import GitHubLogo from "~/public/github.svg";
 
+import Tooltip from "./Tooltip";
+
 type Props = { repositoryURL?: string };
 
 export function GitHubRepoLink({ repositoryURL }: Props) {
@@ -8,12 +10,14 @@ export function GitHubRepoLink({ repositoryURL }: Props) {
   }
 
   return (
-    <a
-      href={repositoryURL}
-      target="_blank"
-      className="ml-auto transition-opacity hover:opacity-70"
-    >
-      <GitHubLogo className="size-3.5 text-secondary" />
-    </a>
+    <Tooltip content="Visit GitHub repository">
+      <a
+        href={repositoryURL}
+        target="_blank"
+        className="transition-opacity hover:opacity-70"
+      >
+        <GitHubLogo className="size-3.5 text-secondary" />
+      </a>
+    </Tooltip>
   );
 }

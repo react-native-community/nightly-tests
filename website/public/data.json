@@ -5,6 +5,7 @@
     "repositoryURLs": {
       "@dr.pogodin/react-native-fs": "https://github.com/birdofpreyru/react-native-fs"
     },
+    "notes": "Additional OSS libs used internally",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -42,6 +43,7 @@
     "repositoryURLs": {
       "@react-native-async-storage/async-storage": "https://github.com/react-native-async-storage/async-storage/tree/main/packages/default-storage"
     },
+    "notes": "One of top most used libraries according to the npm stats",
     "results": {
       "2025-09-01": {
         "android": "success",
@@ -71,6 +73,7 @@
     "repositoryURLs": {
       "@react-native-clipboard/clipboard": "https://github.com/react-native-clipboard/clipboard"
     },
+    "notes": "",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -108,6 +111,7 @@
     "repositoryURLs": {
       "@react-native-community/datetimepicker": "https://github.com/react-native-datetimepicker/datetimepicker"
     },
+    "notes": "",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -145,6 +149,7 @@
     "repositoryURLs": {
       "@react-native-community/image-editor": "https://github.com/callstack/react-native-image-editor"
     },
+    "notes": "Additional OSS libs used internally",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -182,6 +187,7 @@
     "repositoryURLs": {
       "@react-native-community/netinfo": "https://github.com/react-native-netinfo/react-native-netinfo"
     },
+    "notes": "",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -219,6 +225,7 @@
     "repositoryURLs": {
       "@react-native-community/slider": "https://github.com/callstack/react-native-slider/tree/main/package"
     },
+    "notes": "",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -256,6 +263,7 @@
     "repositoryURLs": {
       "@react-native-masked-view/masked-view": "https://github.com/react-native-masked-view/masked-view"
     },
+    "notes": "",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -293,6 +301,7 @@
     "repositoryURLs": {
       "@sentry/react-native": "https://github.com/getsentry/sentry-react-native/tree/main/packages/core"
     },
+    "notes": "One of top most used libraries according to the npm stats",
     "results": {
       "2025-09-01": {
         "android": "success",
@@ -322,6 +331,7 @@
     "repositoryURLs": {
       "@shopify/react-native-skia": "https://github.com/Shopify/react-native-skia/tree/main/packages/skia"
     },
+    "notes": "One of top most used libraries according to the npm stats",
     "results": {
       "2025-09-02": {
         "android": "success",
@@ -347,6 +357,7 @@
     "repositoryURLs": {
       "@testing-library/react-native": "https://github.com/callstack/react-native-testing-library"
     },
+    "notes": "One of top most used libraries according to the npm stats",
     "results": {
       "2025-09-03": {
         "android": "success",
@@ -368,6 +379,7 @@
     "repositoryURLs": {
       "lottie-react-native": "https://github.com/lottie-react-native/lottie-react-native/tree/master/packages/core"
     },
+    "notes": "One of top most used libraries according to the npm stats",
     "results": {
       "2025-09-02": {
         "android": "success",
@@ -390,6 +402,7 @@
   {
     "library": "react-native-async-storage",
     "installCommand": "react-native-async-storage",
+    "notes": "",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -427,6 +440,7 @@
     "repositoryURLs": {
       "react-native-blob-util": "https://github.com/RonRadtke/react-native-blob-util"
     },
+    "notes": "",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -464,6 +478,7 @@
     "repositoryURLs": {
       "react-native-contacts": "https://github.com/rt2zz/react-native-contacts"
     },
+    "notes": "Additional OSS libs used internally",
     "results": {
       "2025-08-29": {
         "android": "failure",
@@ -503,6 +518,7 @@
     "repositoryURLs": {
       "react-native-device-info": "https://github.com/react-native-device-info/react-native-device-info"
     },
+    "notes": "Additional OSS libs used internally",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -540,6 +556,7 @@
     "repositoryURLs": {
       "react-native-edge-to-edge": "https://github.com/zoontek/react-native-edge-to-edge"
     },
+    "notes": "One of top most used libraries according to the npm stats",
     "results": {
       "2025-09-01": {
         "android": "success",
@@ -569,6 +586,7 @@
     "repositoryURLs": {
       "react-native-email-link": "https://github.com/flexible-agency/react-native-email-link"
     },
+    "notes": "Additional OSS libs used internally",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -606,6 +624,7 @@
     "repositoryURLs": {
       "react-native-gesture-handler": "https://github.com/software-mansion/react-native-gesture-handler/tree/main/packages/react-native-gesture-handler"
     },
+    "notes": "",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -643,6 +662,7 @@
     "repositoryURLs": {
       "react-native-image-picker": "https://github.com/react-native-image-picker/react-native-image-picker"
     },
+    "notes": "",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -680,6 +700,7 @@
     "repositoryURLs": {
       "react-native-keyboard-controller": "https://github.com/kirillzyusko/react-native-keyboard-controller"
     },
+    "notes": "One of top most used libraries according to the npm stats",
     "results": {
       "2025-09-02": {
         "android": "success",
@@ -705,6 +726,7 @@
     "repositoryURLs": {
       "react-native-linear-gradient": "https://github.com/react-native-linear-gradient/react-native-linear-gradient"
     },
+    "notes": "",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -739,6 +761,7 @@
   {
     "library": "react-native-masked-view",
     "installCommand": "react-native-masked-view",
+    "notes": "Additional OSS libs used internally",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -776,6 +799,7 @@
     "repositoryURLs": {
       "react-native-mmkv": "https://github.com/mrousavy/react-native-mmkv/tree/main/packages/react-native-mmkv"
     },
+    "notes": "",
     "results": {
       "2025-08-29": {
         "android": "failure",
@@ -815,6 +839,7 @@
     "repositoryURLs": {
       "react-native-pager-view": "https://github.com/callstack/react-native-pager-view"
     },
+    "notes": "",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -852,6 +877,7 @@
     "repositoryURLs": {
       "react-native-permissions": "https://github.com/yonahforst/react-native-permissions"
     },
+    "notes": "Additional OSS libs used internally",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -890,6 +916,7 @@
       "react-native-reanimated": "https://github.com/software-mansion/react-native-reanimated/tree/main/packages/react-native-reanimated",
       "react-native-worklets": "https://github.com/software-mansion/react-native-reanimated/tree/main/packages/react-native-worklets"
     },
+    "notes": "",
     "results": {
       "2025-08-29": {
         "android": "failure",
@@ -929,6 +956,7 @@
     "repositoryURLs": {
       "react-native-screens": "https://github.com/software-mansion/react-native-screens"
     },
+    "notes": "",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -966,6 +994,7 @@
     "repositoryURLs": {
       "react-native-share": "https://github.com/react-native-share/react-native-share"
     },
+    "notes": "One of top most used libraries according to the npm stats",
     "results": {
       "2025-09-01": {
         "android": "success",
@@ -995,6 +1024,7 @@
     "repositoryURLs": {
       "react-native-svg": "https://github.com/software-mansion/react-native-svg"
     },
+    "notes": "",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -1029,6 +1059,7 @@
   {
     "library": "react-native-vector-icons",
     "installCommand": "react-native-vector-icons",
+    "notes": "Additional OSS libs used internally",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -1066,6 +1097,7 @@
     "repositoryURLs": {
       "react-native-video": "https://github.com/TheWidlarzGroup/react-native-video"
     },
+    "notes": "",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -1103,6 +1135,7 @@
     "repositoryURLs": {
       "react-native-vision-camera": "https://github.com/mrousavy/react-native-vision-camera/tree/main/package"
     },
+    "notes": "One of top most used libraries according to the npm stats",
     "results": {
       "2025-09-03": {
         "android": "success",
@@ -1124,6 +1157,7 @@
     "repositoryURLs": {
       "react-native-webview": "https://github.com/react-native-webview/react-native-webview"
     },
+    "notes": "",
     "results": {
       "2025-08-29": {
         "android": "success",
@@ -1161,6 +1195,7 @@
     "repositoryURLs": {
       "react-native-worklets": "https://github.com/software-mansion/react-native-reanimated/tree/main/packages/react-native-worklets"
     },
+    "notes": "",
     "results": {
       "2025-09-02": {
         "android": "failure",
@@ -1189,6 +1224,7 @@
       "scandit-react-native-datacapture-barcode": "https://github.com/Scandit/scandit-react-native-datacapture-barcode",
       "scandit-react-native-datacapture-core": "https://github.com/Scandit/scandit-react-native-datacapture-core"
     },
+    "notes": "Additional OSS libs used internally",
     "results": {
       "2025-09-04": {
         "android": "success",
@@ -1207,6 +1243,7 @@
       "scandit-react-native-datacapture-barcode": "https://github.com/Scandit/scandit-react-native-datacapture-barcode",
       "scandit-react-native-datacapture-core": "https://github.com/Scandit/scandit-react-native-datacapture-core"
     },
+    "notes": "Additional OSS libs used internally",
     "results": {
       "2025-09-04": {
         "android": "failure",
