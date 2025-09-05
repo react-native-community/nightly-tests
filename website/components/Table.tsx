@@ -62,7 +62,7 @@ export default function Table({ platform }: Props) {
           const repositoryURL =
             info.row.original.repositoryURLs?.[getCleanPackageName(entry)];
           return (
-            <div className="flex items-center">
+            <div className="flex items-center gap-1.5">
               {entry}
               <div className="flex items-center gap-1.5 ml-auto">
                 <EntryNotes notes={notes} />
@@ -78,7 +78,7 @@ export default function Table({ platform }: Props) {
               const repositoryURL =
                 info.row.original.repositoryURLs?.[getCleanPackageName(lib)];
               return (
-                <div className="flex items-center" key={lib}>
+                <div className="flex items-center gap-1.5" key={lib}>
                   {lib}
                   <div className="flex items-center gap-1.5 ml-auto">
                     <EntryNotes notes={notes} />

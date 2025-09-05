@@ -6,7 +6,9 @@ type Props = { repositoryURL?: string };
 
 export function GitHubRepoLink({ repositoryURL }: Props) {
   if (!repositoryURL) {
-    return null;
+    return (
+      <span className="w-3.5 text-center text-secondary select-none">-</span>
+    );
   }
 
   return (
