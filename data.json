@@ -6,14 +6,6 @@
       "@dr.pogodin/react-native-fs": "https://github.com/birdofpreyru/react-native-fs"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -31,6 +23,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -54,6 +54,14 @@
       "2025-09-03": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -64,14 +72,6 @@
       "@react-native-clipboard/clipboard": "https://github.com/react-native-clipboard/clipboard"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -89,6 +89,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -101,14 +109,6 @@
       "@react-native-community/datetimepicker": "https://github.com/react-native-datetimepicker/datetimepicker"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -126,6 +126,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -138,14 +146,6 @@
       "@react-native-community/image-editor": "https://github.com/callstack/react-native-image-editor"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -163,6 +163,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -175,14 +183,6 @@
       "@react-native-community/netinfo": "https://github.com/react-native-netinfo/react-native-netinfo"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -200,6 +200,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -212,14 +220,6 @@
       "@react-native-community/slider": "https://github.com/callstack/react-native-slider/tree/main/package"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -237,6 +237,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -249,14 +257,6 @@
       "@react-native-masked-view/masked-view": "https://github.com/react-native-masked-view/masked-view"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -274,6 +274,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -297,6 +305,14 @@
       "2025-09-03": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -312,6 +328,35 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      }
+    }
+  },
+  {
+    "library": "@testing-library/react-native",
+    "installCommand": "@testing-library/react-native",
+    "repositoryURLs": {
+      "@testing-library/react-native": "https://github.com/callstack/react-native-testing-library"
+    },
+    "results": {
+      "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -331,6 +376,14 @@
       "2025-09-03": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -338,14 +391,6 @@
     "library": "react-native-async-storage",
     "installCommand": "react-native-async-storage",
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -363,6 +408,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -375,14 +428,6 @@
       "react-native-blob-util": "https://github.com/RonRadtke/react-native-blob-util"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -402,6 +447,14 @@
       "2025-09-03": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -412,14 +465,6 @@
       "react-native-contacts": "https://github.com/rt2zz/react-native-contacts"
     },
     "results": {
-      "2025-08-27": {
-        "android": "failure",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "failure",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "failure",
         "ios": "success"
@@ -439,7 +484,15 @@
       },
       "2025-09-03": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17430383238",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17432206380",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
+        "android": "success",
         "ios": "success"
       }
     }
@@ -451,14 +504,6 @@
       "react-native-device-info": "https://github.com/react-native-device-info/react-native-device-info"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -476,6 +521,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -499,6 +552,14 @@
       "2025-09-03": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -509,14 +570,6 @@
       "react-native-email-link": "https://github.com/flexible-agency/react-native-email-link"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -534,6 +587,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -546,14 +607,6 @@
       "react-native-gesture-handler": "https://github.com/software-mansion/react-native-gesture-handler/tree/main/packages/react-native-gesture-handler"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -571,6 +624,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -583,14 +644,6 @@
       "react-native-image-picker": "https://github.com/react-native-image-picker/react-native-image-picker"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -608,6 +661,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -627,6 +688,14 @@
       "2025-09-03": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -637,14 +706,6 @@
       "react-native-linear-gradient": "https://github.com/react-native-linear-gradient/react-native-linear-gradient"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -662,6 +723,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -671,14 +740,6 @@
     "library": "react-native-masked-view",
     "installCommand": "react-native-masked-view",
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -698,6 +759,14 @@
       "2025-09-03": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -705,17 +774,9 @@
     "library": "react-native-mmkv",
     "installCommand": "react-native-mmkv",
     "repositoryURLs": {
-      "react-native-mmkv": "https://github.com/mrousavy/react-native-mmkv/tree/main/package"
+      "react-native-mmkv": "https://github.com/mrousavy/react-native-mmkv/tree/main/packages/react-native-mmkv"
     },
     "results": {
-      "2025-08-27": {
-        "android": "failure",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "failure",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "failure",
         "ios": "success"
@@ -735,7 +796,15 @@
       },
       "2025-09-03": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17430383238",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17432206380",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
+        "android": "success",
         "ios": "success"
       }
     }
@@ -747,14 +816,6 @@
       "react-native-pager-view": "https://github.com/callstack/react-native-pager-view"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -772,6 +833,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -784,14 +853,6 @@
       "react-native-permissions": "https://github.com/yonahforst/react-native-permissions"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -809,6 +870,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -822,14 +891,6 @@
       "react-native-worklets": "https://github.com/software-mansion/react-native-reanimated/tree/main/packages/react-native-worklets"
     },
     "results": {
-      "2025-08-27": {
-        "android": "failure",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "failure",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "failure",
         "ios": "success"
@@ -850,6 +911,15 @@
       "2025-09-03": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17483761504",
+        "ios": "success"
       }
     }
   },
@@ -860,14 +930,6 @@
       "react-native-screens": "https://github.com/software-mansion/react-native-screens"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -885,6 +947,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -908,6 +978,14 @@
       "2025-09-03": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -918,14 +996,6 @@
       "react-native-svg": "https://github.com/software-mansion/react-native-svg"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -943,6 +1013,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -952,14 +1030,6 @@
     "library": "react-native-vector-icons",
     "installCommand": "react-native-vector-icons",
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -977,6 +1047,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -989,14 +1067,6 @@
       "react-native-video": "https://github.com/TheWidlarzGroup/react-native-video"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -1016,6 +1086,14 @@
       "2025-09-03": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1029,6 +1107,14 @@
       "2025-09-03": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1039,14 +1125,6 @@
       "react-native-webview": "https://github.com/react-native-webview/react-native-webview"
     },
     "results": {
-      "2025-08-27": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-08-28": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-29": {
         "android": "success",
         "ios": "success"
@@ -1064,6 +1142,14 @@
         "ios": "success"
       },
       "2025-09-03": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
         "android": "success",
         "ios": "success"
       }
@@ -1084,45 +1170,52 @@
       "2025-09-03": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17483761504",
+        "ios": "success"
       }
     }
   },
   {
-    "library": "scandit-react-native",
+    "library": "scandit libraries (@beta)",
+    "installCommand": "scandit-react-native-datacapture-barcode@next scandit-react-native-datacapture-core@next",
+    "repositoryURLs": {
+      "scandit-react-native-datacapture-barcode": "https://github.com/Scandit/scandit-react-native-datacapture-barcode",
+      "scandit-react-native-datacapture-core": "https://github.com/Scandit/scandit-react-native-datacapture-core"
+    },
+    "results": {
+      "2025-09-04": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      }
+    }
+  },
+  {
+    "library": "scandit libraries (@stable)",
     "installCommand": "scandit-react-native-datacapture-barcode scandit-react-native-datacapture-core",
     "repositoryURLs": {
       "scandit-react-native-datacapture-barcode": "https://github.com/Scandit/scandit-react-native-datacapture-barcode",
       "scandit-react-native-datacapture-core": "https://github.com/Scandit/scandit-react-native-datacapture-core"
     },
     "results": {
-      "2025-08-27": {
+      "2025-09-04": {
         "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17465571842",
         "ios": "success"
       },
-      "2025-08-28": {
+      "2025-09-05": {
         "android": "failure",
-        "ios": "success"
-      },
-      "2025-08-29": {
-        "android": "failure",
-        "ios": "success"
-      },
-      "2025-08-30": {
-        "android": "failure",
-        "ios": "success"
-      },
-      "2025-09-01": {
-        "android": "failure",
-        "ios": "success"
-      },
-      "2025-09-02": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17411668912",
-        "ios": "success"
-      },
-      "2025-09-03": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17430383238",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17483761504",
         "ios": "success"
       }
     }
