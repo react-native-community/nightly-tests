@@ -278,6 +278,22 @@
     "maintainersUsernames": [],
     "notes": "One of top most used libraries according to the npm stats"
   },
+  "react-native-iap": {
+    "description": "In-app purchases for React Native (StoreKit 2 / Play Billing v8).",
+    "installCommand": "react-native-nitro-modules react-native-iap",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["hyochan"],
+    "notes": ""
+  },
+  "react-native-audio-recorder-player": {
+    "description": "Cross-platform audio recorder & player with native backends.",
+    "installCommand": "react-native-nitro-modules react-native-audio-recorder-player",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["hyochan"],
+    "notes": ""
+  },
   "react-native-vision-camera": {
     "description": "A powerful, high-performance React Native Camera library",
     "installCommand": "react-native-vision-camera",
