@@ -278,6 +278,14 @@
     "maintainersUsernames": ["hyochan"],
     "notes": ""
   },
+  "react-native-nitro-modules": {
+    "description": "Insanely fast native C++, Swift or Kotlin modules with a statically compiled binding layer to JSI",
+    "installCommand": "react-native-nitro-modules",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Required dependency for react-native-audio-recorder-player"
+  },
   "react-native-audio-recorder-player": {
     "description": "Cross-platform audio recorder & player with native backends.",
     "installCommand": "react-native-audio-recorder-player",
