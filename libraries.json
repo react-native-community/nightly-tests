@@ -293,5 +293,13 @@
     "ios": true,
     "maintainersUsernames": ["mdjastrzebski"],
     "notes": "One of top most used libraries according to the npm stats"
+  },
+  "@hot-updater/react-native": {
+    "description": "A self-hostable OTA update solution for React Native (Alternative to CodePush)",
+    "installCommand": "@hot-updater/react-native",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["gronxb"],
+    "notes": ""
   }
 }
