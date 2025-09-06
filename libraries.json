@@ -317,5 +317,13 @@
     "ios": true,
     "maintainersUsernames": ["mdjastrzebski"],
     "notes": "One of top most used libraries according to the npm stats"
+  },
+  "@react-native-picker/picker": {
+    "description": "Picker is a cross-platform UI component for selecting an item from a list of options",
+    "installCommand": "@react-native-picker/picker",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [""],
+    "notes": "One of top most used libraries according to the npm stats"
   }
 }
