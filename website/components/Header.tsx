@@ -16,11 +16,14 @@ export default function Header() {
   const { query, setQuery } = useSearch();
 
   return (
-    <header className="border-b border-b-border sticky bg-background/80 backdrop-blur-lg top-0">
+    <header className="border-b border-b-border sticky bg-background/75 backdrop-blur-lg top-0">
       <div className="flex flex-row min-h-[58px] items-center gap-6 max-w-[1280px] w-full mx-auto px-4">
         <div className="flex gap-2 items-center">
           <Logo className="text-brand size-8" />
-          <p className="whitespace-nowrap">React Native Nightly Tests</p>
+          <p className="whitespace-nowrap max-sm:hidden">
+            React Native Nightly Tests
+          </p>
+          <p className="whitespace-nowrap hidden max-sm:block">RNNT</p>
         </div>
         <div className="relative w-full">
           <SearchIcon className="absolute left-3.5 top-[11px] size-4 text-secondary/60 pointer-events-none" />
@@ -34,7 +37,7 @@ export default function Header() {
               "w-full bg-subtle border border-border rounded-3xl pl-10 pr-3 py-1.5",
               "placeholder:text-secondary/60",
             )}
-            placeholder="Search libraries…"
+            placeholder="Search…"
           />
         </div>
         <div className="flex flex-row gap-2 ml-auto">

@@ -8,14 +8,14 @@ export default function Footer() {
     <footer className="py-12 border-t border-t-border shadow-xs">
       <div
         className={twMerge(
-          "w-full max-w-[1280px] grid grid-cols-4 px-4 mx-auto",
-          "max-md:grid-cols-1 max-md:items-center max-md:gap-y-6 max-md:text-center",
+          "w-full max-w-[1280px] grid grid-cols-4 px-4 mx-auto gap-6",
+          "max-md:grid-cols-1 max-md:items-center max-md:text-center",
         )}
       >
         <div className="flex flex-col gap-2 pt-1.5">
           <Link
             href="https://opensource.fb.com/"
-            className="w-fit"
+            className="w-fit max-md:mx-auto"
             target="_blank"
           >
             <picture>
@@ -31,9 +31,11 @@ export default function Footer() {
               />
             </picture>
           </Link>
-          <p className="text-xs">Copyright © Meta Platforms, Inc</p>
+          <p className="text-xs text-secondary">
+            Copyright © Meta Platforms, Inc
+          </p>
         </div>
-        <div className="flex flex-col gap-2 text-sm">
+        <div className="flex flex-col gap-2 text-sm max-md:items-center">
           <p className="font-semibold text-base">Participate</p>
           <InlineLink href="https://reactnative.dev/community/overview">
             Community
@@ -45,7 +47,7 @@ export default function Footer() {
             Directory
           </InlineLink>
         </div>
-        <div className="flex flex-col gap-2 text-sm">
+        <div className="flex flex-col gap-2 text-sm max-md:items-center">
           <p className="font-semibold text-base">Find us</p>
           <InlineLink href="https://reactnative.dev/blog">Blog</InlineLink>
           <InlineLink href="https://github.com/facebook/react-native">
@@ -56,7 +58,7 @@ export default function Footer() {
           </InlineLink>
           <InlineLink href="https://x.com/reactnative">X</InlineLink>
         </div>
-        <div className="flex flex-col gap-2 text-sm">
+        <div className="flex flex-col gap-2 text-sm max-md:items-center">
           <p className="font-semibold text-base">More</p>
           <InlineLink href="https://react.dev">React</InlineLink>
           <InlineLink href="https://reactnative.dev">React Native</InlineLink>
