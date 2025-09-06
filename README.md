@@ -1,6 +1,7 @@
 # React Native Nightly Tests 🌑🌓🌔🌕🌖🌗
 
 [![Check Nightlies](https://github.com/react-native-community/nightly-tests/actions/workflows/check-nightly.yml/badge.svg)](https://github.com/react-native-community/nightly-tests/actions/workflows/check-nightly.yml)
+[![Website Deployment](https://github.com/react-native-community/nightly-tests/actions/workflows/deploy-website.yml/badge.svg)](https://github.com/react-native-community/nightly-tests/actions/workflows/deploy-website.yml)
 
 Automated GitHub Actions workflows for testing React Native ecosystem libraries against nightly builds.
 
@@ -18,6 +19,11 @@ Specifically this repo will:
 - Run a build for both Android and iOS
 - Send a Discord message for failure alerts and status updates
 - Store results in Firebase for historical tracking and run comparison to identify newly broken or recovered libraries
+
+#### How to apply?
+
+If you're a library maintainer, you can now sign up to be part of our nightly testing to make sure your library will keep on working. Read more in the Discussions and Proposals discussion:
+* https://github.com/react-native-community/discussions-and-proposals/discussions/931
 
 ### Website
 
