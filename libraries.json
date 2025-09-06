@@ -119,6 +119,14 @@
     "maintainersUsernames": [],
     "notes": ""
   },
+  "react-native-nitro-modules": {
+    "description": "Insanely fast native C++, Swift or Kotlin modules with a statically compiled binding layer to JSI",
+    "installCommand": "react-native-nitro-modules",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["mrousavy"],
+    "notes": ""
+  },
   "react-native-screens": {
     "description": "Native navigation primitives for your React Native app",
     "installCommand": "react-native-screens@nightly",
