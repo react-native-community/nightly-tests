@@ -900,6 +900,20 @@
     }
   },
   {
+    "library": "react-native-nitro-modules",
+    "installCommand": "react-native-nitro-modules",
+    "repositoryURLs": {
+      "react-native-nitro-modules": "https://github.com/mrousavy/nitro/tree/main/packages/react-native-nitro-modules"
+    },
+    "notes": "",
+    "results": {
+      "2025-09-06": {
+        "android": "success",
+        "ios": "success"
+      }
+    }
+  },
+  {
     "library": "react-native-pager-view",
     "installCommand": "react-native-pager-view",
     "repositoryURLs": {
@@ -1012,7 +1026,7 @@
       },
       "2025-09-06": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17510008058",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17516150679",
         "ios": "success"
       }
     }
@@ -1292,7 +1306,7 @@
       },
       "2025-09-06": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17510008058",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17516150679",
         "ios": "success"
       }
     }
@@ -1341,7 +1355,7 @@
       },
       "2025-09-06": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17510008058",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17516150679",
         "ios": "success"
       }
     }
