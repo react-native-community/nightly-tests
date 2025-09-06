@@ -317,5 +317,13 @@
     "ios": true,
     "maintainersUsernames": ["mdjastrzebski"],
     "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-maps": {
+    "description": "React Native Mapview component for Android and iOS",
+    "installCommand": "react-native-maps",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [""],
+    "notes": "One of top most used libraries according to the npm stats"
   }
 }
