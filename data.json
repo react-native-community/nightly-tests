@@ -7,10 +7,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -32,6 +28,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -64,6 +64,10 @@
       "2025-09-05": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-06": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -75,10 +79,6 @@
     },
     "notes": "",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -100,6 +100,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -113,10 +117,6 @@
     },
     "notes": "",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -138,6 +138,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -151,10 +155,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -176,6 +176,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -189,10 +193,6 @@
     },
     "notes": "",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -214,6 +214,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -227,10 +231,6 @@
     },
     "notes": "",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -252,6 +252,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -265,10 +269,6 @@
     },
     "notes": "",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -290,6 +290,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -322,6 +326,10 @@
       "2025-09-05": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-06": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -348,6 +356,10 @@
       "2025-09-05": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-06": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -368,6 +380,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -396,6 +412,10 @@
       "2025-09-05": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-06": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -404,10 +424,6 @@
     "installCommand": "react-native-async-storage",
     "notes": "",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -429,6 +445,29 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
+        "android": "success",
+        "ios": "success"
+      }
+    }
+  },
+  {
+    "library": "react-native-audio-recorder-player",
+    "installCommand": "react-native-nitro-modules react-native-audio-recorder-player",
+    "repositoryURLs": {
+      "react-native-nitro-modules": "https://github.com/mrousavy/nitro/tree/main/packages/react-native-nitro-modules",
+      "react-native-audio-recorder-player": "https://github.com/dooboolab/react-native-audio-recorder-player"
+    },
+    "notes": "",
+    "results": {
+      "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -442,10 +481,6 @@
     },
     "notes": "",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -469,6 +504,10 @@
       "2025-09-05": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-06": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -480,10 +519,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2025-08-29": {
-        "android": "failure",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "failure",
         "ios": "success"
@@ -509,6 +544,10 @@
       "2025-09-05": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-06": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -520,10 +559,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -545,6 +580,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -577,6 +616,10 @@
       "2025-09-05": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-06": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -588,10 +631,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -613,6 +652,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -626,10 +669,6 @@
     },
     "notes": "",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -651,6 +690,29 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
+        "android": "success",
+        "ios": "success"
+      }
+    }
+  },
+  {
+    "library": "react-native-iap",
+    "installCommand": "react-native-nitro-modules react-native-iap",
+    "repositoryURLs": {
+      "react-native-nitro-modules": "https://github.com/mrousavy/nitro/tree/main/packages/react-native-nitro-modules",
+      "react-native-iap": "https://github.com/dooboolab/react-native-iap"
+    },
+    "notes": "",
+    "results": {
+      "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -664,10 +726,6 @@
     },
     "notes": "",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -689,6 +747,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -717,6 +779,10 @@
       "2025-09-05": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-06": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -728,10 +794,6 @@
     },
     "notes": "",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -753,6 +815,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -763,10 +829,6 @@
     "installCommand": "react-native-masked-view",
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -788,6 +850,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -801,10 +867,6 @@
     },
     "notes": "",
     "results": {
-      "2025-08-29": {
-        "android": "failure",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "failure",
         "ios": "success"
@@ -830,6 +892,10 @@
       "2025-09-05": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-06": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -841,10 +907,6 @@
     },
     "notes": "",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -866,6 +928,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -879,10 +945,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -904,6 +966,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -918,10 +984,6 @@
     },
     "notes": "",
     "results": {
-      "2025-08-29": {
-        "android": "failure",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "failure",
         "ios": "success"
@@ -945,7 +1007,12 @@
       },
       "2025-09-05": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17486351093",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17490601170",
+        "ios": "success"
+      },
+      "2025-09-06": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17510008058",
         "ios": "success"
       }
     }
@@ -958,10 +1025,6 @@
     },
     "notes": "",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -983,6 +1046,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -1015,6 +1082,10 @@
       "2025-09-05": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-06": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1026,10 +1097,6 @@
     },
     "notes": "",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -1051,6 +1118,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -1061,10 +1132,6 @@
     "installCommand": "react-native-vector-icons",
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -1086,6 +1153,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -1099,10 +1170,6 @@
     },
     "notes": "",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -1124,6 +1191,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -1148,6 +1219,10 @@
       "2025-09-05": {
         "android": "success",
         "ios": "success"
+      },
+      "2025-09-06": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1159,10 +1234,6 @@
     },
     "notes": "",
     "results": {
-      "2025-08-29": {
-        "android": "success",
-        "ios": "success"
-      },
       "2025-08-30": {
         "android": "success",
         "ios": "success"
@@ -1184,6 +1255,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -1212,7 +1287,12 @@
       },
       "2025-09-05": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17486351093",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17490601170",
+        "ios": "success"
+      },
+      "2025-09-06": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17510008058",
         "ios": "success"
       }
     }
@@ -1231,6 +1311,10 @@
         "ios": "success"
       },
       "2025-09-05": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-09-06": {
         "android": "success",
         "ios": "success"
       }
@@ -1252,7 +1336,12 @@
       },
       "2025-09-05": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17486351093",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17490601170",
+        "ios": "success"
+      },
+      "2025-09-06": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17510008058",
         "ios": "success"
       }
     }
