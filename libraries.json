@@ -294,9 +294,9 @@
     "maintainersUsernames": ["hyochan"],
     "notes": ""
   },
-  "react-native-audio-recorder-player": {
-    "description": "Cross-platform audio recorder & player with native backends.",
-    "installCommand": "react-native-nitro-modules react-native-audio-recorder-player",
+  "react-native-nitro-sound": {
+    "description": "Audio recorder & player with native backends. Provides modern hook APIs, supports multiple instances, and ensures stable performance.",
+    "installCommand": "react-native-nitro-sound react-native-nitro-modules",
     "android": true,
     "ios": true,
     "maintainersUsernames": ["hyochan"],
