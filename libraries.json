@@ -317,5 +317,13 @@
     "ios": true,
     "maintainersUsernames": ["mdjastrzebski"],
     "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-unistyles": {
+    "description": "Superset of React Native StyleSheet",
+    "installCommand": "react-native-unistyles",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["jpudysz", "brentlok"],
+    "notes": "Popular styling library for React Native"
   }
 }
