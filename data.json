@@ -475,28 +475,6 @@
     }
   },
   {
-    "library": "react-native-audio-recorder-player",
-    "installCommand": "react-native-nitro-modules react-native-audio-recorder-player",
-    "repositoryURLs": {
-      "react-native-nitro-modules": "https://github.com/mrousavy/nitro/tree/main/packages/react-native-nitro-modules"
-    },
-    "notes": "",
-    "results": {
-      "2025-09-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-09-06": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-09-07": {
-        "android": "success",
-        "ios": "success"
-      }
-    }
-  },
-  {
     "library": "react-native-blob-util",
     "installCommand": "react-native-blob-util",
     "repositoryURLs": {
