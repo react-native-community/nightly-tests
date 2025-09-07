@@ -320,7 +320,7 @@
   },
   "react-native-unistyles": {
     "description": "Superset of React Native StyleSheet",
-    "installCommand": "react-native-unistyles",
+    "installCommand": "react-native-unistyles react-native-nitro-modules react-native-edge-to-edge",
     "android": true,
     "ios": true,
     "maintainersUsernames": ["jpudysz", "brentlok"],
