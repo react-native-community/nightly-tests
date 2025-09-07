@@ -838,6 +838,20 @@
     }
   },
   {
+    "library": "react-native-maps",
+    "installCommand": "react-native-maps",
+    "repositoryURLs": {
+      "react-native-maps": "https://github.com/react-native-maps/react-native-maps"
+    },
+    "notes": "One of top most used libraries according to the npm stats",
+    "results": {
+      "2025-09-07": {
+        "android": "success",
+        "ios": "success"
+      }
+    }
+  },
+  {
     "library": "react-native-masked-view",
     "installCommand": "react-native-masked-view",
     "notes": "Additional OSS libs used internally",
@@ -1059,7 +1073,7 @@
       },
       "2025-09-07": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17528148850",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17529768142",
         "ios": "success"
       }
     }
@@ -1352,7 +1366,7 @@
       },
       "2025-09-07": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17528148850",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17529768142",
         "ios": "success"
       }
     }
@@ -1410,7 +1424,7 @@
       },
       "2025-09-07": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17528148850",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17529768142",
         "ios": "success"
       }
     }
