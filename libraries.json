@@ -325,5 +325,21 @@
     "ios": true,
     "maintainersUsernames": [""],
     "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-bootsplash": {
+    "description": "Show a splash screen during app startup",
+    "installCommand": "react-native-bootsplash",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["zoontek"],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-localize": {
+    "description": "A toolbox for your React Native app localization",
+    "installCommand": "react-native-localize",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["zoontek"],
+    "notes": "One of top most used libraries according to the npm stats"
   }
 }
