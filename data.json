@@ -513,6 +513,20 @@
     }
   },
   {
+    "library": "react-native-bootsplash",
+    "installCommand": "react-native-bootsplash",
+    "repositoryURLs": {
+      "react-native-bootsplash": "https://github.com/zoontek/react-native-bootsplash"
+    },
+    "notes": "One of top most used libraries according to the npm stats",
+    "results": {
+      "2025-09-07": {
+        "android": "success",
+        "ios": "success"
+      }
+    }
+  },
+  {
     "library": "react-native-contacts",
     "installCommand": "react-native-contacts",
     "repositoryURLs": {
@@ -838,6 +852,20 @@
     }
   },
   {
+    "library": "react-native-localize",
+    "installCommand": "react-native-localize",
+    "repositoryURLs": {
+      "react-native-localize": "https://github.com/zoontek/react-native-localize"
+    },
+    "notes": "One of top most used libraries according to the npm stats",
+    "results": {
+      "2025-09-07": {
+        "android": "success",
+        "ios": "success"
+      }
+    }
+  },
+  {
     "library": "react-native-maps",
     "installCommand": "react-native-maps",
     "repositoryURLs": {
@@ -1073,7 +1101,7 @@
       },
       "2025-09-07": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17529768142",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17533880009",
         "ios": "success"
       }
     }
@@ -1366,7 +1394,7 @@
       },
       "2025-09-07": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17529768142",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17533880009",
         "ios": "success"
       }
     }
@@ -1424,7 +1452,7 @@
       },
       "2025-09-07": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17529768142",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17533880009",
         "ios": "success"
       }
     }
