@@ -349,5 +349,13 @@
     "ios": true,
     "maintainersUsernames": ["jpudysz", "brentlok"],
     "notes": "Popular styling library for React Native"
+  },
+  "react-native-fast-image": {
+    "description": "A high-performance image component for React Native",
+    "installCommand": "@d11/react-native-fast-image",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
   }
 }
