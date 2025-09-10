@@ -349,5 +349,21 @@
     "ios": true,
     "maintainersUsernames": ["jpudysz", "brentlok"],
     "notes": "Popular styling library for React Native"
+  },
+  "@react-native-picker/picker": {
+    "description": "Picker is a cross-platform UI component for selecting an item from a list of options",
+    "installCommand": "@react-native-picker/picker",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["Naturalclar"],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-fast-image": {
+    "description": "A high-performance image component for React Native",
+    "installCommand": "@d11/react-native-fast-image",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
   }
 }
