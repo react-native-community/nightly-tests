@@ -2,9 +2,9 @@ name: Deploy website
 
 on:
   workflow_dispatch:
-  # deploy daily @ 4:55 AM UTC
+  # deploy daily @ 5:30 AM UTC
   schedule:
-    - cron: '55 4 * * *'
+    - cron: '30 5 * * *'
   push:
     branches:
       - main
