@@ -304,6 +304,20 @@
     }
   },
   {
+    "library": "@react-native-picker/picker",
+    "installCommand": "@react-native-picker/picker",
+    "repositoryURLs": {
+      "@react-native-picker/picker": "https://github.com/react-native-picker/picker"
+    },
+    "notes": "One of top most used libraries according to the npm stats",
+    "results": {
+      "2025-09-10": {
+        "android": "success",
+        "ios": "success"
+      }
+    }
+  },
+  {
     "library": "@sentry/react-native",
     "installCommand": "@sentry/react-native",
     "repositoryURLs": {
@@ -776,7 +790,7 @@
       "2025-09-10": {
         "android": "success",
         "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17603262149"
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17615502581"
       }
     }
   },
@@ -1604,7 +1618,7 @@
       },
       "2025-09-10": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17603262149",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17615502581",
         "ios": "success"
       }
     }
