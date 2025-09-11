@@ -729,6 +729,20 @@
     }
   },
   {
+    "library": "react-native-fast-image",
+    "installCommand": "@d11/react-native-fast-image",
+    "repositoryURLs": {
+      "@d11/react-native-fast-image": "https://github.com/dream-sports-labs/react-native-fast-image"
+    },
+    "notes": "",
+    "results": {
+      "2025-09-11": {
+        "android": "success",
+        "ios": "success"
+      }
+    }
+  },
+  {
     "library": "react-native-gesture-handler",
     "installCommand": "react-native-gesture-handler",
     "repositoryURLs": {
@@ -1650,7 +1664,7 @@
       },
       "2025-09-11": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17634085152",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/17636578281",
         "ios": "success"
       }
     }
