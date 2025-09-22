@@ -114,13 +114,11 @@ async function collectResults(discordWebHook) {
   const failures = printFailures(outcomes);
 
   // Send failure notification if there are current failures
-  if (failures.length > 0) {
-    if (discordWebHook) {
-      console.log('Sending current failures to Discord...');
-      await notifyDiscord(discordWebHook, failures);
-    } else {
-      console.log('Discord webhook not set');
-    }
+  if (discordWebHook) {
+    console.log('Sending current failures to Discord...');
+    await notifyDiscord(discordWebHook, failures);
+  } else {
+    console.log('Discord webhook not set');
   }
 
   // Initialize Firebase client

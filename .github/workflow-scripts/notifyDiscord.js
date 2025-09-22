@@ -71,7 +71,7 @@ function prepareFailurePayload(failures) {
   if (!failures || failures.length === 0) {
     return {
       content:
-        '⚠️ **React Native Nightly Integration Failures** ⚠️\n\nNo failures to report.',
+        '✅ **React Native Nightly Integration Success** ✅\n\nAll builds are green on both platforms.',
     };
   }
 
