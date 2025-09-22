@@ -92,11 +92,6 @@ async function notifyDiscord(webHook, failures) {
     return;
   }
 
-  if (!failures || failures.length === 0) {
-    console.log('No failures to report to Discord');
-    return;
-  }
-
   try {
     // Use the prepareFailurePayload function to format the message
     const message = prepareFailurePayload(failures);

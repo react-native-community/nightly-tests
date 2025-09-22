@@ -19,7 +19,7 @@ describe('prepareFailurePayload', () => {
     const message = prepareFailurePayload(undefined);
     expect(message).toEqual({
       content:
-        '⚠️ **React Native Nightly Integration Failures** ⚠️\n\nNo failures to report.',
+        '✅ **React Native Nightly Integration Success** ✅\n\nAll builds are green on both platforms.',
     });
   });
 
@@ -27,7 +27,7 @@ describe('prepareFailurePayload', () => {
     const message = prepareFailurePayload([]);
     expect(message).toEqual({
       content:
-        '⚠️ **React Native Nightly Integration Failures** ⚠️\n\nNo failures to report.',
+        '✅ **React Native Nightly Integration Success** ✅\n\nAll builds are green on both platforms.',
     });
   });
 
