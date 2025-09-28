@@ -27,11 +27,6 @@ runs:
         retry_wait_seconds: 15
         shell: bash
         command: |
-          # Random failure simulation for yarn (30% chance)
-          if [ $((RANDOM % 10)) -lt 3 ]; then
-            echo "🎲 Simulating random yarn failure for testing"
-            exit 1
-          fi
           cd /tmp/RNApp
           yarn add ${{ inputs.library-npm-package }}
         on_retry_command: |
@@ -55,11 +50,6 @@ runs:
         retry_wait_seconds: 30
         shell: bash
         command: |
-          # Random failure simulation for iOS (25% chance)
-          if [ $((RANDOM % 10)) -lt 2 ]; then
-            echo "🎲 Simulating random iOS build failure for testing"
-            exit 1
-          fi
           cd /tmp/RNApp/ios
           bundle install
           RCT_USE_RN_DEP=1 RCT_USE_PREBUILT_RNCORE=1 bundle exec pod install
@@ -89,11 +79,6 @@ runs:
         retry_wait_seconds: 30
         shell: bash
         command: |
-          # Random failure simulation for Android (20% chance)
-          if [ $((RANDOM % 10)) -lt 2 ]; then
-            echo "🎲 Simulating random Android build failure for testing"
-            exit 1
-          fi
           cd /tmp/RNApp/android
           ./gradlew assembleDebug
         on_retry_command: |
