@@ -7,6 +7,10 @@ inputs:
   platform:
     description: whether we want to build for iOS or Android
     required: true
+  retry-count:
+    description: Number of retry attempts for failed operations
+    required: false
+    default: '3'
 runs:
   using: composite
   steps:
@@ -15,11 +19,21 @@ runs:
       run: |
         cd /tmp
         npx @react-native-community/cli init RNApp --skip-install --version nightly
-    - name: Add library
-      shell: bash
-      run: |
-        cd /tmp/RNApp
-        yarn add ${{ inputs.library-npm-package }}
+    - name: Add library with retry
+      uses: nick-fields/retry@v3
+      with:
+        timeout_minutes: 10
+        max_attempts: ${{ inputs.retry-count }}
+        retry_wait_seconds: 15
+        shell: bash
+        command: |
+          cd /tmp/RNApp
+          yarn add ${{ inputs.library-npm-package }}
+        on_retry_command: |
+          echo "Cleaning up for yarn retry..."
+          cd /tmp/RNApp
+          rm -rf node_modules yarn.lock || true
+          yarn cache clean || true
 
     # iOS
     - name: Setup xcode
@@ -27,17 +41,27 @@ runs:
       uses: maxim-lobanov/setup-xcode@v1
       with:
         xcode-version: 16.4.0
-    - name: Build iOS
-      shell: bash
+    - name: Build iOS with retry
       if: ${{ inputs.platform == 'ios' }}
-      run: |
-        cd /tmp/RNApp/ios
-        bundle install
-        RCT_USE_RN_DEP=1 RCT_USE_PREBUILT_RNCORE=1 bundle exec pod install
-        xcodebuild build \
-          -workspace RNApp.xcworkspace \
-          -scheme RNApp \
-          -sdk iphonesimulator
+      uses: nick-fields/retry@v3
+      with:
+        timeout_minutes: 30
+        max_attempts: ${{ inputs.retry-count }}
+        retry_wait_seconds: 30
+        shell: bash
+        command: |
+          cd /tmp/RNApp/ios
+          bundle install
+          RCT_USE_RN_DEP=1 RCT_USE_PREBUILT_RNCORE=1 bundle exec pod install
+          xcodebuild build \
+            -workspace RNApp.xcworkspace \
+            -scheme RNApp \
+            -sdk iphonesimulator
+        on_retry_command: |
+          echo "Cleaning up for iOS retry..."
+          cd /tmp/RNApp/ios
+          rm -rf Pods Podfile.lock build
+          rm -rf ~/Library/Developer/Xcode/DerivedData/* || true
 
     # Android
     - name: Setup Java for Android
@@ -46,9 +70,19 @@ runs:
       with:
         java-version: '17'
         distribution: 'zulu'
-    - name: Build Android
-      shell: bash
+    - name: Build Android with retry
       if: ${{ inputs.platform == 'android' }}
-      run: |
-        cd /tmp/RNApp/android
-        ./gradlew assembleDebug
+      uses: nick-fields/retry@v3
+      with:
+        timeout_minutes: 30
+        max_attempts: ${{ inputs.retry-count }}
+        retry_wait_seconds: 30
+        shell: bash
+        command: |
+          cd /tmp/RNApp/android
+          ./gradlew assembleDebug
+        on_retry_command: |
+          echo "Cleaning up for Android retry..."
+          cd /tmp/RNApp/android
+          ./gradlew clean || true
+          rm -rf build app/build .gradle || true
