@@ -7,13 +7,364 @@
     "maintainersUsernames": [],
     "notes": ""
   },
-  "react-native-nitro-image": {
-    "description": "A high-performance image component for React Native",
-    "installCommand": "react-native-nitro-image",
+  "react-native-blob-util": {
+    "description": "A module provides upload, download, and files access API",
+    "installCommand": "react-native-blob-util",
     "android": true,
     "ios": true,
     "maintainersUsernames": [],
-    "notes": "Test library for React Native Nitro Image",
-    "patchFile": "patches/nitro-image.patch"
+    "notes": ""
+  },
+  "@react-native-clipboard/clipboard": {
+    "description": "React Native Clipboard API for iOS and Android",
+    "installCommand": "@react-native-clipboard/clipboard",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "@react-native-community/datetimepicker": {
+    "description": "React Native date & time picker component for iOS, Android and Windows",
+    "installCommand": "@react-native-community/datetimepicker",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-gesture-handler": {
+    "description": "Declarative API exposing platform native touch and gesture system to React Native",
+    "installCommand": "react-native-gesture-handler",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-image-picker": {
+    "description": "A React Native module that allows you to use native UI to select media from the device library or directly from the camera",
+    "installCommand": "react-native-image-picker",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-linear-gradient": {
+    "description": "A <LinearGradient /> component for react-native",
+    "installCommand": "react-native-linear-gradient",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "@react-native-masked-view/masked-view": {
+    "description": "React Native MaskedView component",
+    "installCommand": "@react-native-masked-view/masked-view",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "@react-native-community/netinfo": {
+    "description": "React Native Network Info API for iOS & Android",
+    "installCommand": "@react-native-community/netinfo",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-reanimated": {
+    "description": "React Native's Animated library reimplemented",
+    "installCommand": "react-native-reanimated@nightly react-native-worklets@nightly",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "",
+    "patchFile": "patches/reanimated.patch"
+  },
+  "react-native-worklets": {
+    "description": "Powerful multithreading engine",
+    "installCommand": "react-native-worklets@nightly",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-svg": {
+    "description": "SVG library for React Native, React Native Web, and plain React web projects",
+    "installCommand": "react-native-svg",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-video": {
+    "description": "A <Video /> component for react-native",
+    "installCommand": "react-native-video",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-webview": {
+    "description": "React Native WebView component for iOS, Android, macOS, and Windows",
+    "installCommand": "react-native-webview",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-mmkv": {
+    "description": "The fastest key/value storage for React Native",
+    "installCommand": "react-native-mmkv",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-nitro-modules": {
+    "description": "Insanely fast native C++, Swift or Kotlin modules with a statically compiled binding layer to JSI",
+    "installCommand": "react-native-nitro-modules",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["mrousavy"],
+    "notes": ""
+  },
+  "react-native-screens": {
+    "description": "Native navigation primitives for your React Native app",
+    "installCommand": "react-native-screens@nightly",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "react-native-pager-view": {
+    "description": "React Native wrapper for the Android ViewPager and iOS UIPageViewController",
+    "installCommand": "react-native-pager-view",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "@react-native-community/slider": {
+    "description": "React Native component used to select a single value from a range of values",
+    "installCommand": "@react-native-community/slider",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
+  },
+  "scandit libraries (@stable)": {
+    "description": "Scandit Data Capture SDK for React Native",
+    "installCommand": "scandit-react-native-datacapture-barcode scandit-react-native-datacapture-core",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "scandit libraries (@beta)": {
+    "description": "Scandit Data Capture SDK for React Native - @beta releases",
+    "installCommand": "scandit-react-native-datacapture-barcode@next scandit-react-native-datacapture-core@next",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "react-native-contacts": {
+    "description": "React Native Contacts for iOS and Android",
+    "installCommand": "react-native-contacts",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "react-native-device-info": {
+    "description": "Device Information for React Native iOS and Android",
+    "installCommand": "react-native-device-info",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "react-native-email-link": {
+    "description": "An easy way to open an email app from a react native app",
+    "installCommand": "react-native-email-link",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "@dr.pogodin/react-native-fs": {
+    "description": "Native filesystem access for react-native",
+    "installCommand": "@dr.pogodin/react-native-fs",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "react-native-permissions": {
+    "description": "An unified permissions API for React Native on iOS, Android and Windows",
+    "installCommand": "react-native-permissions",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "react-native-vector-icons": {
+    "description": "Customizable Icons for React Native with support for NavBar/TabBar, image source and full styling",
+    "installCommand": "react-native-vector-icons",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "react-native-masked-view": {
+    "description": "React Native MaskedView component",
+    "installCommand": "react-native-masked-view",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "@react-native-community/image-editor": {
+    "description": "Image Editor Native Module for React Native",
+    "installCommand": "@react-native-community/image-editor",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Additional OSS libs used internally"
+  },
+  "@sentry/react-native": {
+    "description": "Official Sentry SDK for React Native",
+    "installCommand": "@sentry/react-native",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-edge-to-edge": {
+    "description": "Enable edge-to-edge display in React Native",
+    "installCommand": "react-native-edge-to-edge",
+    "android": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-share": {
+    "description": "Social share, sending simple data to other apps",
+    "installCommand": "react-native-share",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "@react-native-async-storage/async-storage": {
+    "description": "An asynchronous, persistent, key-value storage system for React Native",
+    "installCommand": "@react-native-async-storage/async-storage",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-keyboard-controller": {
+    "description": "Keyboard manager which works in identical way on both Android and iOS",
+    "installCommand": "react-native-keyboard-controller",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "@shopify/react-native-skia": {
+    "description": "High-performance React Native Graphics using Skia",
+    "installCommand": "@shopify/react-native-skia",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "lottie-react-native/lottie-react-native": {
+    "description": "Lottie wrapper for React Native.",
+    "installCommand": "lottie-react-native",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-iap": {
+    "description": "In-app purchases for React Native (StoreKit 2 / Play Billing v8).",
+    "installCommand": "react-native-nitro-modules react-native-iap",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["hyochan"],
+    "notes": ""
+  },
+  "react-native-nitro-sound": {
+    "description": "Audio recorder & player with native backends. Provides modern hook APIs, supports multiple instances, and ensures stable performance.",
+    "installCommand": "react-native-nitro-sound react-native-nitro-modules",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["hyochan"],
+    "notes": ""
+  },
+  "react-native-vision-camera": {
+    "description": "A powerful, high-performance React Native Camera library",
+    "installCommand": "react-native-vision-camera",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "@testing-library/react-native": {
+    "description": "Simple and complete React Native testing utilities that encourage good testing practices",
+    "installCommand": "--dev @testing-library/react-native",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["mdjastrzebski"],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-maps": {
+    "description": "React Native Mapview component for Android and iOS",
+    "installCommand": "react-native-maps",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [""],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-bootsplash": {
+    "description": "Show a splash screen during app startup",
+    "installCommand": "react-native-bootsplash",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["zoontek"],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-localize": {
+    "description": "A toolbox for your React Native app localization",
+    "installCommand": "react-native-localize",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["zoontek"],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-unistyles": {
+    "description": "Superset of React Native StyleSheet",
+    "installCommand": "react-native-unistyles react-native-nitro-modules react-native-edge-to-edge",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["jpudysz", "brentlok"],
+    "notes": "Popular styling library for React Native"
+  },
+  "@react-native-picker/picker": {
+    "description": "Picker is a cross-platform UI component for selecting an item from a list of options",
+    "installCommand": "@react-native-picker/picker",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["Naturalclar"],
+    "notes": "One of top most used libraries according to the npm stats"
+  },
+  "react-native-fast-image": {
+    "description": "A high-performance image component for React Native",
+    "installCommand": "@d11/react-native-fast-image",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
   }
 }
