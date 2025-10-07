@@ -23,6 +23,22 @@ runs:
       run: |
         cd /tmp
         npx @react-native-community/cli init RNApp --skip-install --version nightly
+    
+    
+    - name: Apply patch if specified
+      if: ${{ inputs.patch-file != '' }}
+      shell: bash
+      run: |
+        if [ -f "$GITHUB_WORKSPACE/${{ inputs.patch-file }}" ]; then
+          echo "Applying patch: ${{ inputs.patch-file }}"
+          cd /tmp/RNApp
+          node "$GITHUB_WORKSPACE/scripts/apply-patch.js" "$GITHUB_WORKSPACE/${{ inputs.patch-file }}"
+          echo "✅ Patch applied successfully"
+        else
+          echo "⚠️  Warning: Patch file not found: ${{ inputs.patch-file }}"
+          echo "Continuing without patch..."
+        fi
+    
     - name: Add library with retry
       uses: nick-fields/retry@v3
       with:
@@ -38,20 +54,6 @@ runs:
           cd /tmp/RNApp
           rm -rf node_modules yarn.lock || true
           yarn cache clean || true
-    
-    - name: Apply patch if specified
-      if: ${{ inputs.patch-file != '' }}
-      shell: bash
-      run: |
-        if [ -f "$GITHUB_WORKSPACE/${{ inputs.patch-file }}" ]; then
-          echo "Applying patch: ${{ inputs.patch-file }}"
-          cd /tmp/RNApp
-          node "$GITHUB_WORKSPACE/scripts/apply-patch.js" "$GITHUB_WORKSPACE/${{ inputs.patch-file }}"
-          echo "✅ Patch applied successfully"
-        else
-          echo "⚠️  Warning: Patch file not found: ${{ inputs.patch-file }}"
-          echo "Continuing without patch..."
-        fi
 
     # iOS
     - name: Setup xcode

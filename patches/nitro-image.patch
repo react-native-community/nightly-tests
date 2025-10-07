@@ -1,29 +1,24 @@
-diff --git a/ios/Podfile b/ios/Podfile
-index 319ed7b..fc92314 100644
---- a/ios/Podfile
-+++ b/ios/Podfile
-@@ -16,6 +16,7 @@ end
+diff --git a/App.tsx b/App.tsx
+index 5e963b1..230be79 100644
+--- a/App.tsx
++++ b/App.tsx
+@@ -43,3 +43,4 @@ const styles = StyleSheet.create({
+ });
  
- target 'FindMeiphone' do
-   config = use_native_modules!
-+  pod 'SDWebImage', :modular_headers => true
- 
-   use_react_native!(
-     :path => config[:reactNativePath],
+ export default App;
++// Test comment
 diff --git a/package.json b/package.json
-index 2c66697..2bacf73 100644
+index fa9d8b1..f1ea7fc 100644
 --- a/package.json
 +++ b/package.json
-@@ -10,9 +10,11 @@
-     "test": "jest"
-   },
-   "dependencies": {
-+    "@react-native/new-app-screen": "0.81.0",
-     "react": "19.1.0",
-     "react-native": "0.81.0",
--    "@react-native/new-app-screen": "0.81.0",
+@@ -13,7 +13,9 @@
+     "react": "19.1.1",
+     "react-native": "nightly",
+     "@react-native/new-app-screen": "nightly",
+-    "react-native-safe-area-context": "^5.5.2"
++    "react-native-safe-area-context": "^5.5.2",
 +    "react-native-nitro-image": "^0.6.1",
-+    "react-native-nitro-modules": "^0.29.8",
-     "react-native-safe-area-context": "^5.5.2"
++    "react-native-nitro-modules": "^0.29.8"
    },
    "devDependencies": {
+     "@babel/core": "^7.25.2",
