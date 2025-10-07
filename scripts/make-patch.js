@@ -1,83 +1,55 @@
 #!/usr/bin/env node
 /**
  * make-patch.js
- * Generates a patch of staged + unstaged changes, including NEW files,
- * excluding this script and any extra --exclude patterns.
+ * Creates a patch file from all current changes (staged and unstaged)
+ * 
+ * Usage:
+ *   node scripts/make-patch.js [output-filename]
+ * 
+ * If no filename is provided, generates one with timestamp.
  */
 
-const { spawnSync } = require("child_process");
+const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-function ts() {
-  const d = new Date(), p = n => String(n).padStart(2, "0");
-  return `patch-${d.getFullYear()}${p(d.getMonth()+1)}${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}${p(d.getSeconds())}.patch`;
-}
-
-function must(cmd, args, opts = {}) {
-  const res = spawnSync(cmd, args, { encoding: "utf8", ...opts });
-  if (res.status !== 0) {
-    const msg = (res.stderr || res.stdout || "").trim();
-    throw new Error(`${cmd} ${args.join(" ")}\n${msg}`);
-  }
-  return res.stdout.trim();
-}
-
-// Parse args
-const argv = process.argv.slice(2);
-let outName = null;
-const excludes = [];
-for (let i = 0; i < argv.length; i++) {
-  const a = argv[i];
-  if (a === "--exclude") {
-    excludes.push(argv[++i] ?? "");
-  } else if (a.startsWith("--exclude=")) {
-    excludes.push(a.slice("--exclude=".length));
-  } else if (!outName) {
-    outName = a;
-  } else {
-    console.error(`Unrecognized argument: ${a}`);
-    process.exit(1);
-  }
-}
+// Get output filename from args or generate timestamp-based name
+const outputFile = process.argv[2] || (() => {
+  const d = new Date();
+  const pad = n => String(n).padStart(2, "0");
+  return `patch-${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}-${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}.patch`;
+})();
 
 try {
-  // Ensure we’re in a repo and get root
-  must("git", ["rev-parse", "--is-inside-work-tree"]);
-  const toplevel = must("git", ["rev-parse", "--show-toplevel"]);
+  // Check if we're in a git repository
+  execSync("git rev-parse --is-inside-work-tree", { stdio: "ignore" });
 
-  // Make untracked files appear in diff without staging content
-  spawnSync("git", ["add", "-N", "."], { stdio: "ignore" });
+  // Create diff of all changes (staged + unstaged + untracked)
+  console.log("Creating patch from all changes...");
+  
+  // Stage untracked files temporarily (without content)
+  execSync("git add -N .", { stdio: "ignore" });
+  
+  // Generate the patch
+  const patch = execSync("git diff HEAD --binary", { 
+    encoding: "utf8",
+    maxBuffer: 100 * 1024 * 1024 // 100MB buffer
+  });
 
-  // Build pathspecs
-  const relSelf = path
-    .relative(toplevel, path.resolve(process.argv[1]))
-    .split(path.sep)
-    .join("/");
-
-  const pathspecs = [
-    ".",                        // start at repo root
-    `:(exclude)${relSelf}`,     // exclude this script
-    ...excludes.map(p => `:(exclude)${p.replace(/\\/g, "/")}`),
-  ];
-
-  // Run: git diff --binary HEAD -- <pathspecs...>
-  const args = ["diff", "--binary", "HEAD", "--", ...pathspecs];
-  const diff = must("git", args, { maxBuffer: 1024 * 1024 * 100 }); // 100MB buffer
-
-  if (!diff) {
-    console.log("No changes found (after exclusions). Nothing to write.");
+  if (!patch.trim()) {
+    console.log("No changes found. Nothing to patch.");
     process.exit(0);
   }
 
-  const filename = (outName && outName.trim()) || ts();
-  const outPath = path.resolve(process.cwd(), filename);
-  fs.writeFileSync(outPath, diff, "utf8");
+  // Write patch file
+  const outputPath = path.resolve(process.cwd(), outputFile);
+  fs.writeFileSync(outputPath, patch, "utf8");
 
-  console.log(`Patch written: ${outPath}`);
-  console.log(`Apply with: git apply ${JSON.stringify(filename)}`);
-  console.log("Excluded:", [relSelf, ...excludes].join(", "));
+  console.log(`✅ Patch created successfully: ${outputPath}`);
+  console.log(`   To apply: node scripts/apply-patch.js ${outputFile}`);
+
 } catch (err) {
-  console.error("Unexpected error:\n" + err.message);
+  console.error("❌ Error creating patch:");
+  console.error(err.message);
   process.exit(1);
 }
