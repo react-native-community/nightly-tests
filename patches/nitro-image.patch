@@ -11,7 +11,7 @@ index 319ed7b..fc92314 100644
    use_react_native!(
      :path => config[:reactNativePath],
 diff --git a/package.json b/package.json
-index 2c66697..8fdbd91 100644
+index 2c66697..2bacf73 100644
 --- a/package.json
 +++ b/package.json
 @@ -10,9 +10,11 @@
@@ -27,10 +27,3 @@ index 2c66697..8fdbd91 100644
      "react-native-safe-area-context": "^5.5.2"
    },
    "devDependencies": {
-@@ -38,4 +40,4 @@
-   "engines": {
-     "node": ">=18"
-   }
--}
-\ No newline at end of file
-+}
