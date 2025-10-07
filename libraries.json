@@ -365,5 +365,13 @@
     "ios": true,
     "maintainersUsernames": [],
     "notes": ""
+  },
+  "react-native-nitro-image": {
+    "description": "A high-performance image component for React Native",
+    "installCommand": "react-native-nitro-image",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "Test library for React Native Nitro Image"
   }
 }

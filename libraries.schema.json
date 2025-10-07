@@ -50,6 +50,14 @@
             "Build currently broken due to X reason.",
             "One of top most used libraries according to the npm stats."
           ]
+        },
+        "patchFile": {
+          "type": "string",
+          "description": "Optional path to a patch file (relative to repo root) to apply after installing the library but before building. Patch should be created using 'git diff --binary' format (e.g., using scripts/make-patch.js).",
+          "examples": [
+            "patches/react-native-reanimated.patch",
+            "patches/library-name-fix.patch"
+          ]
         }
       },
       "required": [
