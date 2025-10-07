@@ -21,7 +21,6 @@ concurrency:
 jobs:
   check-nightly:
     runs-on: ubuntu-latest
-    if: github.repository == 'react-native-community/nightly-tests'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
