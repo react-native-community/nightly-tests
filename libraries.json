@@ -372,6 +372,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": [],
-    "notes": "Test library for React Native Nitro Image"
+    "notes": "Test library for React Native Nitro Image",
+    "patchFile": "patches/nitro-image.patch"
   }
 }

@@ -1,0 +1,36 @@
+diff --git a/ios/Podfile b/ios/Podfile
+index 319ed7b..fc92314 100644
+--- a/ios/Podfile
++++ b/ios/Podfile
+@@ -16,6 +16,7 @@ end
+ 
+ target 'FindMeiphone' do
+   config = use_native_modules!
++  pod 'SDWebImage', :modular_headers => true
+ 
+   use_react_native!(
+     :path => config[:reactNativePath],
+diff --git a/package.json b/package.json
+index 2c66697..8fdbd91 100644
+--- a/package.json
++++ b/package.json
+@@ -10,9 +10,11 @@
+     "test": "jest"
+   },
+   "dependencies": {
++    "@react-native/new-app-screen": "0.81.0",
+     "react": "19.1.0",
+     "react-native": "0.81.0",
+-    "@react-native/new-app-screen": "0.81.0",
++    "react-native-nitro-image": "^0.6.1",
++    "react-native-nitro-modules": "^0.29.8",
+     "react-native-safe-area-context": "^5.5.2"
+   },
+   "devDependencies": {
+@@ -38,4 +40,4 @@
+   "engines": {
+     "node": ">=18"
+   }
+-}
+\ No newline at end of file
++}
