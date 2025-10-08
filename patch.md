@@ -58,7 +58,7 @@ node ../../scripts/apply-patch.js ../../patches/react-native-turbo-encryption.pa
     "ios": true,
     "maintainersUsernames": [],
     "notes": "",
-    "patchFile": "patches/reanimated.patch"
+    "patchFile": "patches/reanimated.patch" # <-- Path to patch file
   }
 ```
 
