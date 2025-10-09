@@ -125,7 +125,7 @@
     "installCommand": "react-native-mmkv",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
+    "maintainersUsernames": ["mrousavy"],
     "notes": ""
   },
   "react-native-nitro-modules": {
