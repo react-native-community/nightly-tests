@@ -62,3 +62,4 @@ jobs:
         with:
           library-npm-package: ${{ fromJSON(needs.runner-setup.outputs.library-data)[matrix.library].installCommand }}
           platform: ${{ matrix.platform }}
+          patch-file: ${{ fromJSON(needs.runner-setup.outputs.library-data)[matrix.library].patchFile || '' }}
