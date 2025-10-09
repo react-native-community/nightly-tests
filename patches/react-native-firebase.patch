@@ -1,0 +1,13 @@
+diff --git a/ios/Podfile b/ios/Podfile
+index b4aa3be..cb46b59 100644
+--- a/ios/Podfile
++++ b/ios/Podfile
+@@ -17,6 +17,8 @@ end
+ target 'RNApp' do
+   config = use_native_modules!
+ 
++  use_frameworks! :linkage => :static
++  $RNFirebaseAsStaticFramework = true
+   use_react_native!(
+     :path => config[:reactNativePath],
+     # An absolute path to your application root.

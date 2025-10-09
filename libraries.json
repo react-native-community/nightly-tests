@@ -77,8 +77,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": [],
-    "notes": "",
-    "patchFile": "patches/reanimated.patch"
+    "notes": ""
   },
   "react-native-worklets": {
     "description": "Powerful multithreading engine",
@@ -87,6 +86,15 @@
     "ios": true,
     "maintainersUsernames": [],
     "notes": ""
+  },
+  "react-native-firebase": {
+    "description": "React Native Firebase",
+    "installCommand": "@react-native-firebase/app",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "",
+    "patchFile": "patches/react-native-firebase.patch"
   },
   "react-native-svg": {
     "description": "SVG library for React Native, React Native Web, and plain React web projects",

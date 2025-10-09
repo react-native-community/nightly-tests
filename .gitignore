@@ -60,6 +60,7 @@ jspm_packages/
 !.yarn/sdks
 !.yarn/versions
 
-
 #Tmp Templates
-/tmp
+tmp/
+
+

@@ -36,7 +36,7 @@ runs:
           echo "✅ Patch applied successfully"
         else
           echo "⚠️  Warning: Patch file not found: ${{ inputs.patch-file }}"
-          echo "Continuing without patch..."
+          exit 1
         fi
     
     - name: Add library with retry
