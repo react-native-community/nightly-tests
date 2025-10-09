@@ -88,7 +88,7 @@
     "notes": ""
   },
   "react-native-firebase": {
-    "description": "React Native Firebase",
+    "description": "🔥 A well-tested feature-rich modular Firebase implementation for React Native",
     "installCommand": "@react-native-firebase/app",
     "android": true,
     "ios": true,
