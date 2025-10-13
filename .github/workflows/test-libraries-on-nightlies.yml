@@ -58,6 +58,7 @@ jobs:
         with:
           library-npm-package: ${{ fromJSON(needs.runner-setup.outputs.library-data)[matrix.library].installCommand }}
           platform: ${{ matrix.platform }}
+          patch-file: ${{ fromJSON(needs.runner-setup.outputs.library-data)[matrix.library].patchFile || '' }}
       - name: Save outcome
         id: save-outcome
         if: always()
@@ -71,7 +72,7 @@ jobs:
         with:
           name: ${{ steps.save-outcome.outputs.lib_folder }}-${{ matrix.platform }}-outcome
           path: /tmp/${{ steps.save-outcome.outputs.lib_folder }}-${{ matrix.platform }}-outcome
-
+          
   collect-results:
     runs-on: ubuntu-latest
     needs: [test-library-on-nightly]

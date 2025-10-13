@@ -40,6 +40,10 @@ The repository includes Jest tests for the workflow scripts. To run the tests lo
 yarn install && yarn test
 ```
 
+### Working with Patch Files
+
+Some libraries may require modifications to the React Native template (e.g., editing pod files, manifest files) to work properly with nightly builds. For detailed instructions on creating and applying patch files, see the [Patch Instructions](patch.md) guide.
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

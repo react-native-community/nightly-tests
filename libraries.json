@@ -87,6 +87,15 @@
     "maintainersUsernames": [],
     "notes": ""
   },
+  "react-native-firebase": {
+    "description": "🔥 A well-tested feature-rich modular Firebase implementation for React Native",
+    "installCommand": "@react-native-firebase/app",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "",
+    "patchFile": "patches/react-native-firebase.patch"
+  },
   "react-native-svg": {
     "description": "SVG library for React Native, React Native Web, and plain React web projects",
     "installCommand": "react-native-svg",
@@ -116,7 +125,7 @@
     "installCommand": "react-native-mmkv",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
+    "maintainersUsernames": ["mrousavy"],
     "notes": ""
   },
   "react-native-nitro-modules": {
