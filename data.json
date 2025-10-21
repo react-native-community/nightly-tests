@@ -1136,9 +1136,10 @@
   },
   {
     "library": "react-native-mmkv",
-    "installCommand": "react-native-mmkv",
+    "installCommand": "react-native-mmkv react-native-nitro-modules",
     "repositoryURLs": {
-      "react-native-mmkv": "https://github.com/mrousavy/react-native-mmkv/tree/main/packages/react-native-mmkv"
+      "react-native-mmkv": "https://github.com/mrousavy/react-native-mmkv/tree/main/packages/react-native-mmkv",
+      "react-native-nitro-modules": "https://github.com/mrousavy/nitro/tree/main/packages/react-native-nitro-modules"
     },
     "notes": "",
     "results": {
