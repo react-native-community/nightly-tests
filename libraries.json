@@ -122,7 +122,7 @@
   },
   "react-native-mmkv": {
     "description": "The fastest key/value storage for React Native",
-    "installCommand": "react-native-mmkv",
+    "installCommand": "react-native-mmkv react-native-nitro-modules",
     "android": true,
     "ios": true,
     "maintainersUsernames": ["mrousavy"],
