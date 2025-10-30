@@ -374,5 +374,13 @@
     "ios": true,
     "maintainersUsernames": [],
     "notes": ""
+  },
+  "@braze/react-native-sdk": {
+    "description": "A customer engagement platform for delivering cross-channel messaging experiences",
+    "installCommand": "@braze/react-native-sdk",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": ""
   }
 }
