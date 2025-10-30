@@ -33,7 +33,7 @@
   },
   "react-native-gesture-handler": {
     "description": "Declarative API exposing platform native touch and gesture system to React Native",
-    "installCommand": "react-native-gesture-handler",
+    "installCommand": "react-native-gesture-handler@nightly",
     "android": true,
     "ios": true,
     "maintainersUsernames": [],
