@@ -834,7 +834,7 @@
   },
   {
     "library": "react-native-gesture-handler",
-    "installCommand": "react-native-gesture-handler",
+    "installCommand": "react-native-gesture-handler@nightly",
     "repositoryURLs": {
       "react-native-gesture-handler": "https://github.com/software-mansion/react-native-gesture-handler/tree/main/packages/react-native-gesture-handler"
     },
