@@ -7,6 +7,7 @@ const basePath = process.env.REPOSITORY_NAME
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  reactCompiler: true,
   poweredByHeader: false,
   output: "export",
   basePath,
@@ -19,6 +20,9 @@ const nextConfig: NextConfig = {
         loaders: ["@svgr/webpack"],
       },
     },
+  },
+  experimental: {
+    turbopackFileSystemCacheForDev: true,
   },
 };
 
