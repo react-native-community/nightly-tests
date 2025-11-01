@@ -94,13 +94,12 @@ export default function Table({ platform }: Props) {
     }),
     ...Object.keys(data[data.length - 1].results)
       .reverse()
-      .map((date) => {
-          return columnHelper.accessor((row) => row.results?.[date]?.[platform], {
-            id: `results.${date}.${platform}`,
-            header: () => <span className="block text-xs">{date}</span>,
-            cell: formatStatus,
-          })
-        },
+      .map((date) =>
+        columnHelper.accessor((row) => row.results?.[date]?.[platform], {
+          id: `results.${date}.${platform}`,
+          header: () => <span className="block text-xs">{date}</span>,
+          cell: formatStatus,
+        }),
       ),
   ];
 
