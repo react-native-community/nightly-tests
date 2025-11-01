@@ -297,7 +297,7 @@
   },
   "react-native-iap": {
     "description": "In-app purchases for React Native (StoreKit 2 / Play Billing v8).",
-    "installCommand": "react-native-nitro-modules react-native-iap",
+    "installCommand": "react-native-iap react-native-nitro-modules",
     "android": true,
     "ios": true,
     "maintainersUsernames": ["hyochan"],

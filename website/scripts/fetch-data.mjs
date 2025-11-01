@@ -116,7 +116,7 @@ async function main() {
   }
 
   const sortedData = Array.from(tableDataMap.values()).sort((a, b) =>
-    a.library.localeCompare(b.library),
+    a.installCommand.localeCompare(b.installCommand),
   );
 
   const outPath = path.resolve("public/data.json");
