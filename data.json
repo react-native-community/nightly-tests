@@ -14,6 +14,44 @@
     }
   },
   {
+    "library": "react-native-fast-image",
+    "installCommand": "@d11/react-native-fast-image",
+    "repositoryURLs": {
+      "@d11/react-native-fast-image": "https://github.com/dream-sports-labs/react-native-fast-image"
+    },
+    "notes": "",
+    "results": {
+      "2025-10-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-10-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-10-24": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-10-28": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-10-29": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-10-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-11-01": {
+        "android": "success",
+        "ios": "success"
+      }
+    }
+  },
+  {
     "library": "@dr.pogodin/react-native-fs",
     "installCommand": "@dr.pogodin/react-native-fs",
     "repositoryURLs": {
@@ -246,6 +284,44 @@
     "installCommand": "@react-native-community/slider",
     "repositoryURLs": {
       "@react-native-community/slider": "https://github.com/callstack/react-native-slider/tree/main/package"
+    },
+    "notes": "",
+    "results": {
+      "2025-10-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-10-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-10-24": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-10-28": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-10-29": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-10-30": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2025-11-01": {
+        "android": "success",
+        "ios": "success"
+      }
+    }
+  },
+  {
+    "library": "react-native-firebase",
+    "installCommand": "@react-native-firebase/app",
+    "repositoryURLs": {
+      "@react-native-firebase/app": "https://github.com/invertase/react-native-firebase/tree/main/packages/app"
     },
     "notes": "",
     "results": {
@@ -771,82 +847,6 @@
     }
   },
   {
-    "library": "react-native-fast-image",
-    "installCommand": "@d11/react-native-fast-image",
-    "repositoryURLs": {
-      "@d11/react-native-fast-image": "https://github.com/dream-sports-labs/react-native-fast-image"
-    },
-    "notes": "",
-    "results": {
-      "2025-10-21": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-10-22": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-10-24": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-10-28": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-10-29": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-10-30": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-11-01": {
-        "android": "success",
-        "ios": "success"
-      }
-    }
-  },
-  {
-    "library": "react-native-firebase",
-    "installCommand": "@react-native-firebase/app",
-    "repositoryURLs": {
-      "@react-native-firebase/app": "https://github.com/invertase/react-native-firebase/tree/main/packages/app"
-    },
-    "notes": "",
-    "results": {
-      "2025-10-21": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-10-22": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-10-24": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-10-28": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-10-29": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-10-30": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2025-11-01": {
-        "android": "success",
-        "ios": "success"
-      }
-    }
-  },
-  {
     "library": "react-native-gesture-handler",
     "installCommand": "react-native-gesture-handler@nightly",
     "repositoryURLs": {
@@ -886,10 +886,10 @@
   },
   {
     "library": "react-native-iap",
-    "installCommand": "react-native-nitro-modules react-native-iap",
+    "installCommand": "react-native-iap react-native-nitro-modules",
     "repositoryURLs": {
-      "react-native-nitro-modules": "https://github.com/mrousavy/nitro/tree/main/packages/react-native-nitro-modules",
-      "react-native-iap": "https://github.com/dooboolab/react-native-iap"
+      "react-native-iap": "https://github.com/dooboolab/react-native-iap",
+      "react-native-nitro-modules": "https://github.com/mrousavy/nitro/tree/main/packages/react-native-nitro-modules"
     },
     "notes": "",
     "results": {
@@ -1721,8 +1721,8 @@
     }
   },
   {
-    "library": "scandit libraries (@beta)",
-    "installCommand": "scandit-react-native-datacapture-barcode@next scandit-react-native-datacapture-core@next",
+    "library": "scandit libraries (@stable)",
+    "installCommand": "scandit-react-native-datacapture-barcode scandit-react-native-datacapture-core",
     "repositoryURLs": {
       "scandit-react-native-datacapture-barcode": "https://github.com/Scandit/scandit-react-native-datacapture-barcode",
       "scandit-react-native-datacapture-core": "https://github.com/Scandit/scandit-react-native-datacapture-core"
@@ -1730,9 +1730,8 @@
     "notes": "Additional OSS libs used internally",
     "results": {
       "2025-10-21": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/18676874081",
-        "ios": "failure"
+        "android": "success",
+        "ios": "success"
       },
       "2025-10-22": {
         "android": "success",
@@ -1761,8 +1760,8 @@
     }
   },
   {
-    "library": "scandit libraries (@stable)",
-    "installCommand": "scandit-react-native-datacapture-barcode scandit-react-native-datacapture-core",
+    "library": "scandit libraries (@beta)",
+    "installCommand": "scandit-react-native-datacapture-barcode@next scandit-react-native-datacapture-core@next",
     "repositoryURLs": {
       "scandit-react-native-datacapture-barcode": "https://github.com/Scandit/scandit-react-native-datacapture-barcode",
       "scandit-react-native-datacapture-core": "https://github.com/Scandit/scandit-react-native-datacapture-core"
@@ -1770,8 +1769,9 @@
     "notes": "Additional OSS libs used internally",
     "results": {
       "2025-10-21": {
-        "android": "success",
-        "ios": "success"
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/18676874081",
+        "ios": "failure"
       },
       "2025-10-22": {
         "android": "success",
