@@ -92,14 +92,15 @@ export default function Table({ platform }: Props) {
       },
       filterFn: "includesString",
     }),
-    ...Object.keys(data[0].results)
+    ...Object.keys(data[data.length - 1].results)
       .reverse()
-      .map((date) =>
-        columnHelper.accessor((row) => row.results?.[date]?.[platform], {
-          id: `results.${date}.${platform}`,
-          header: () => <span className="block text-xs">{date}</span>,
-          cell: formatStatus,
-        }),
+      .map((date) => {
+          return columnHelper.accessor((row) => row.results?.[date]?.[platform], {
+            id: `results.${date}.${platform}`,
+            header: () => <span className="block text-xs">{date}</span>,
+            cell: formatStatus,
+          })
+        },
       ),
   ];
 
