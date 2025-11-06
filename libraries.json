@@ -380,7 +380,7 @@
     "installCommand": "@braze/react-native-sdk",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
+    "maintainersUsernames": ["jerielng", "sircelsius", "hokstuff"],
     "notes": ""
   }
 }
