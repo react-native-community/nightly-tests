@@ -1,0 +1,42 @@
+diff --git a/android/gradle.properties b/android/gradle.properties
+index 9afe615..4168d4e 100644
+--- a/android/gradle.properties
++++ b/android/gradle.properties
+@@ -37,6 +37,7 @@ newArchEnabled=true
+ # Use this property to enable or disable the Hermes JS engine.
+ # If set to false, you will be using JSC instead.
+ hermesEnabled=true
++hermesV1Enabled=true
+ 
+ # Use this property to enable edge-to-edge display support.
+ # This allows your app to draw behind system bars for an immersive UI.
+diff --git a/android/settings.gradle b/android/settings.gradle
+index 63b5d4e..a3a2550 100644
+--- a/android/settings.gradle
++++ b/android/settings.gradle
+@@ -4,3 +4,11 @@ extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> ex.autoli
+ rootProject.name = 'RNApp'
+ include ':app'
+ includeBuild('../node_modules/@react-native/gradle-plugin')
++
++includeBuild('../node_modules/react-native') {
++  dependencySubstitution {
++    substitute(module("com.facebook.react:react-android")).using(project(":packages:react-native:ReactAndroid"))
++    substitute(module("com.facebook.react:react-native")).using(project(":packages:react-native:ReactAndroid"))
++    substitute(project(":packages:react-native:ReactAndroid:hermes-engine")).using(module("com.facebook.hermes:hermes-android:250829098.0.2"))
++  }
++}
+diff --git a/package.json b/package.json
+index f05d51b..56be47f 100644
+--- a/package.json
++++ b/package.json
+@@ -35,6 +35,9 @@
+     "react-test-renderer": "19.2.0",
+     "typescript": "^5.8.3"
+   },
++  "resolutions": {
++    "hermes-compiler": "250829098.0.2"
++  },
+   "engines": {
+     "node": ">=20"
+   }
