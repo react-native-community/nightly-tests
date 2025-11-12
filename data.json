@@ -1796,51 +1796,5 @@
         "ios": "success"
       }
     }
-  },
-  {
-    "library": "scandit libraries (@beta)",
-    "installCommand": "scandit-react-native-datacapture-barcode@next scandit-react-native-datacapture-core@next",
-    "repositoryURLs": {
-      "scandit-react-native-datacapture-barcode": "https://github.com/Scandit/scandit-react-native-datacapture-barcode",
-      "scandit-react-native-datacapture-core": "https://github.com/Scandit/scandit-react-native-datacapture-core"
-    },
-    "notes": "Additional OSS libs used internally",
-    "results": {
-      "2025-11-05": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/19091396083",
-        "ios": "failure"
-      },
-      "2025-11-06": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/19138796572",
-        "ios": "failure"
-      },
-      "2025-11-07": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/19158313686",
-        "ios": "failure"
-      },
-      "2025-11-08": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/19188027086",
-        "ios": "failure"
-      },
-      "2025-11-09": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/19203400215",
-        "ios": "failure"
-      },
-      "2025-11-11": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/19255095811",
-        "ios": "failure"
-      },
-      "2025-11-12": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/19286522104",
-        "ios": "failure"
-      }
-    }
   }
 ]
