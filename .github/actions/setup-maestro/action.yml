@@ -1,0 +1,21 @@
+name: setup-maestro
+description: Sets up the Maestro testing environment
+runs:
+  using: composite
+  steps:
+    - name: Setup Java
+      uses: actions/setup-java@v2
+      with:
+        java-version: '17'
+        distribution: 'zulu'
+
+    - name: Install Maestro
+      shell: bash
+      run: export MAESTRO_VERSION=1.40.0; curl -Ls "https://get.maestro.mobile.dev" | bash
+
+    - name: Install Maestro dependencies
+      if: runner.os == 'macOS'
+      shell: bash
+      run: |
+        brew tap facebook/fb
+        brew install facebook/fb/idb-companion

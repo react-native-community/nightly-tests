@@ -1,0 +1,42 @@
+name: prepare-hermes-v1-app
+description: Prepares a React Native app with Hermes V1 enabled
+inputs:
+  retry-count:
+    description: 'Number of times to retry the yarn install on failure'
+runs:
+  using: composite
+  steps:
+    - name: Create new app
+      shell: bash
+      run: |
+        cd /tmp
+        npx @react-native-community/cli init RNApp --skip-install --version nightly
+    
+    - name: Apply patch if specified
+      shell: bash
+      run: |
+        if [ -f "$GITHUB_WORKSPACE/patches/hermes-v1.patch" ]; then
+          echo "Applying patch: hermes-v1.patch"
+          cd /tmp/RNApp
+          node "$GITHUB_WORKSPACE/scripts/apply-patch.js" "$GITHUB_WORKSPACE/patches/hermes-v1.patch"
+          echo "✅ Patch applied successfully"
+        else
+          echo "⚠️  Warning: Patch file not found: patches/hermes-v1.patch"
+          exit 1
+        fi
+    
+    - name: Install app dependencies with retry
+      uses: nick-fields/retry@v3
+      with:
+        timeout_minutes: 10
+        max_attempts: ${{ inputs.retry-count }}
+        retry_wait_seconds: 15
+        shell: bash
+        command: |
+          cd /tmp/RNApp
+          yarn install
+        on_retry_command: |
+          echo "Cleaning up for yarn retry..."
+          cd /tmp/RNApp
+          rm -rf node_modules yarn.lock || true
+          yarn cache clean || true

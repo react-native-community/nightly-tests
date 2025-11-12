@@ -1,0 +1,129 @@
+name: Test Hermes V1 with nightly on iOS
+
+on:
+  workflow_call:
+    inputs:
+      retry-count:
+        description: 'Number of times to retry the build on failure'
+        required: false
+        type: number
+        default: 3
+
+jobs:
+  test-hermes-v1-ios:
+    name: Test Hermes V1 on iOS
+    runs-on: macos-15-large
+    strategy:
+      matrix:
+        flavor: [debug, release]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.14.0'
+          cache: yarn
+
+      - name: Prepare capitalized flavor
+        id: prepare-flavor
+        shell: bash
+        run: |
+          CAPITALIZED_FLAVOR=$(echo "${{ inputs.flavor }}" | awk '{print toupper(substr($0, 1, 1)) substr($0, 2)}')
+          echo "capitalized_flavor=$CAPITALIZED_FLAVOR" >> $GITHUB_OUTPUT
+
+      - name: Setup Maestro
+        uses: ./.github/actions/setup-maestro
+
+      - name: Prepare the app with Hermes V1
+        uses: ./.github/actions/prepare-hermes-v1-app
+        with:
+          retry-count: ${{ inputs.retry-count }}
+
+      - name: Setup xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: 16.4.0
+
+      - name: Build iOS with retry
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 45
+          max_attempts: ${{ inputs.retry-count }}
+          retry_wait_seconds: 30
+          shell: bash
+          command: |
+            cd /tmp/RNApp/ios
+            bundle install
+            RCT_HERMES_V1_ENABLED=1 bundle exec pod install
+            xcodebuild build \
+              -workspace "RNApp.xcworkspace" \
+              -scheme "RNApp" \
+              -configuration "${{ steps.prepare-flavor.outputs.capitalized_flavor }}" \
+              -sdk "iphonesimulator" \
+              -destination "generic/platform=iOS Simulator" \
+              -derivedDataPath "/tmp/RNApp" \
+              -quiet
+          on_retry_command: |
+            echo "Cleaning up for iOS retry..."
+            cd /tmp/RNApp/ios
+            rm -rf Pods Podfile.lock build
+            rm -rf ~/Library/Developer/Xcode/DerivedData/* || true
+
+      - name: Start Metro in debug
+        if: ${{ matrix.flavor == 'debug' }}
+        shell: bash
+        run: |
+          cd /tmp/RNApp
+          yarn start &
+          echo $! > /tmp/metro.pid
+          sleep 5
+
+      - name: Run iOS E2E Tests
+        id: run-test
+        shell: bash
+        run: |
+          node .github/workflow-scripts/maestro-ios.js \
+            "/tmp/RNApp/Build/Products/${{ steps.prepare-flavor.outputs.capitalized_flavor }}-iphonesimulator/RNApp.app" \
+            "org.reactjs.native.example.RNApp" \
+            "./.github/workflow-scripts/e2e/.maestro/" \
+            "Hermes" \
+            "${{ steps.prepare-flavor.outputs.capitalized_flavor }}" \
+            "/tmp/RNApp"
+
+      - name: Store iOS tests result
+        if: success() || failure())
+        uses: actions/upload-artifact@v4.3.4
+        with:
+          name: e2e_ios_hermes_v1_report_${{ matrix.flavor }}
+          path: |
+            video_record_1.mov
+            video_record_2.mov
+            video_record_3.mov
+            video_record_4.mov
+            video_record_5.mov
+            report.xml
+
+      - name: Save outcome
+        id: save-outcome
+        if: always()
+        run: |
+          LIB_FOLDER=$(echo "Hermes_V1")
+          echo "Hermes V1 (${{ matrix.flavor }})|${{steps.run-test.outcome}}|${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" > "/tmp/$LIB_FOLDER-ios-${{ matrix.flavor }}-outcome"
+          echo "lib_folder=$LIB_FOLDER" >> $GITHUB_OUTPUT
+
+      - name: Upload outcome
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.save-outcome.outputs.lib_folder }}-ios-${{ matrix.flavor }}-outcome
+          path: /tmp/${{ steps.save-outcome.outputs.lib_folder }}-ios-${{ matrix.flavor }}-outcome
+
+      - name: Stop Metro in debug
+        if: ${{ matrix.flavor == 'debug' && always() }}
+        shell: bash
+        run: |
+          METRO_PID=$(cat /tmp/metro.pid)
+          kill $METRO_PID || true
+          echo "Metro process $METRO_PID stopped."

@@ -46,3 +46,34 @@ jobs:
       firebase_app_pass: ${{ secrets.FIREBASE_APP_PASS }}
       firebase_app_projectname: ${{ secrets.FIREBASE_APP_PROJECTNAME }}
       firebase_app_apikey: ${{ secrets.FIREBASE_APP_APIKEY }}
+
+  test-hermes-v1-ios:
+    uses: ./.github/workflows/test-hermes-v1-ios.yml
+    needs: check-nightly
+
+  test-hermes-v1-android:
+    uses: ./.github/workflows/test-hermes-v1-android.yml
+    needs: check-nightly
+
+  collect-results:
+    runs-on: ubuntu-latest
+    needs: [test-libraries, test-hermes-v1-ios, test-hermes-v1-android]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Restore outcomes
+        uses: actions/download-artifact@v4
+        with:
+          pattern: '*-outcome'
+          path: /tmp
+      - name: Collect failures
+        uses: actions/github-script@v6
+        env:
+          FIREBASE_APP_EMAIL: ${{ secrets.firebase_app_email }}
+          FIREBASE_APP_PASS: ${{ secrets.firebase_app_pass }}
+          FIREBASE_APP_APIKEY: ${{ secrets.firebase_app_apikey }}
+          FIREBASE_APP_PROJECTNAME: ${{ secrets.firebase_app_projectname }}
+        with:
+          script: |
+            const {collectResults} = require('./.github/workflow-scripts/collectNightlyOutcomes.js');
+            await collectResults('${{secrets.discord_webhook_url}}');

@@ -1,0 +1,122 @@
+name: Test Hermes V1 with nightly on Android
+
+on:
+  workflow_call:
+    inputs:
+      retry-count:
+        description: 'Number of times to retry the build on failure'
+        required: false
+        type: number
+        default: 3
+
+jobs:
+  test-hermes-v1-android:
+    name: Test Hermes V1 on Android
+    runs-on: 4-core-ubuntu
+    strategy:
+      matrix:
+        flavor: [debug, release]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.14.0'
+          cache: yarn
+
+      # Maestro will also setup Java
+      - name: Setup Maestro
+        uses: ./.github/actions/setup-maestro
+
+      - name: Prepare the app with Hermes V1
+        uses: ./.github/actions/prepare-hermes-v1-app
+        with:
+          retry-count: ${{ inputs.retry-count }}
+
+      - name: Build Android with retry
+        uses: nick-fields/retry@v3
+        env:
+          CMAKE_VERSION: 3.31.5
+          ORG_GRADLE_PROJECT_reactNativeArchitectures: x86_64
+        with:
+          timeout_minutes: 45
+          max_attempts: ${{ inputs.retry-count }}
+          retry_wait_seconds: 30
+          shell: bash
+          command: |
+            cd /tmp/RNApp/android
+            CAPITALIZED_FLAVOR=$(echo "${{ matrix.flavor }}" | awk '{print toupper(substr($0, 1, 1)) substr($0, 2)}')
+            ./gradlew assemble${CAPITALIZED_FLAVOR}
+          on_retry_command: |
+            echo "Cleaning up for Android retry..."
+            cd /tmp/RNApp/android
+            ./gradlew clean || true
+            rm -rf build app/build .gradle || true
+
+      - name: Enable KVM group perms
+        shell: bash
+        run: |
+          # ubuntu machines have hardware acceleration available and when we try to create an emulator, the script pauses asking for user input
+          # These lines set the rules to reply automatically to that question and unblock the creation of the emulator.
+          # source: https://github.com/ReactiveCircus/android-emulator-runner?tab=readme-ov-file#running-hardware-accelerated-emulators-on-linux-runners
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Start Metro in debug
+        if: ${{ matrix.flavor == 'debug' }}
+        shell: bash
+        run: |
+          cd /tmp/RNApp
+          yarn start &
+          echo $! > /tmp/metro.pid
+          sleep 5
+
+      - name: Run Android E2E tests
+        id: run-test
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 24
+          arch: x86_64
+          ram-size: '8192M'
+          heap-size: '4096M'
+          disk-size: '6G'
+          cores: '4'
+          disable-animations: false
+          avd-name: e2e_emulator
+          script: |
+            node .github/workflow-scripts/maestro-android.js /tmp/RNApp/android/app/build/outputs/apk/${{ matrix.flavor }}/app-${{ matrix.flavor }}.apk com.rnapp ./.github/workflow-scripts/e2e/.maestro/ ${{ matrix.flavor }} /tmp/RNApp
+
+      - name: Store Android tests result
+        uses: actions/upload-artifact@v4.3.4
+        if: success() || failure()
+        with:
+          name: e2e_android_hermes_v1_report_${{ matrix.flavor }}
+          path: |
+            report.xml
+            screen.mp4
+
+      - name: Save outcome
+        id: save-outcome
+        if: always()
+        run: |
+          LIB_FOLDER=$(echo "Hermes_V1")
+          echo "Hermes V1 (${{ matrix.flavor }})|${{steps.run-test.outcome}}|${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" > "/tmp/$LIB_FOLDER-android-${{ matrix.flavor }}-outcome"
+          echo "lib_folder=$LIB_FOLDER" >> $GITHUB_OUTPUT
+
+      - name: Upload outcome
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.save-outcome.outputs.lib_folder }}-android-${{ matrix.flavor }}-outcome
+          path: /tmp/${{ steps.save-outcome.outputs.lib_folder }}-android-${{ matrix.flavor }}-outcome
+
+      - name: Stop Metro in debug
+        if: ${{ matrix.flavor == 'debug' && always() }}
+        shell: bash
+        run: |
+          METRO_PID=$(cat /tmp/metro.pid)
+          kill $METRO_PID || true
+          echo "Metro process $METRO_PID stopped."
