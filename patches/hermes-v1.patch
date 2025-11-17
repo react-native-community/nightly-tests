@@ -23,7 +23,7 @@ index 63b5d4e..a3a2550 100644
 +  dependencySubstitution {
 +    substitute(module("com.facebook.react:react-android")).using(project(":packages:react-native:ReactAndroid"))
 +    substitute(module("com.facebook.react:react-native")).using(project(":packages:react-native:ReactAndroid"))
-+    substitute(project(":packages:react-native:ReactAndroid:hermes-engine")).using(module("com.facebook.hermes:hermes-android:250829098.0.2"))
++    substitute(project(":packages:react-native:ReactAndroid:hermes-engine")).using(module("com.facebook.hermes:hermes-android:$HERMES_V1_VERSION"))
 +  }
 +}
 diff --git a/package.json b/package.json
@@ -35,7 +35,7 @@ index f05d51b..56be47f 100644
      "typescript": "^5.8.3"
    },
 +  "resolutions": {
-+    "hermes-compiler": "250829098.0.2"
++    "hermes-compiler": "$HERMES_V1_VERSION"
 +  },
    "engines": {
      "node": ">=20"

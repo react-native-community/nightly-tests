@@ -12,7 +12,12 @@ runs:
         cd /tmp
         npx @react-native-community/cli init RNApp --skip-install --version nightly
     
-    - name: Apply patch if specified
+    - name: Select latest Hermes V1 version
+      shell: bash
+      run: |
+        node "$GITHUB_WORKSPACE/.github/workflow-scripts/collectNightlyOutcomes.js"
+
+    - name: Apply patch to enable Hermes V1
       shell: bash
       run: |
         if [ -f "$GITHUB_WORKSPACE/patches/hermes-v1.patch" ]; then
@@ -21,7 +26,7 @@ runs:
           node "$GITHUB_WORKSPACE/scripts/apply-patch.js" "$GITHUB_WORKSPACE/patches/hermes-v1.patch"
           echo "✅ Patch applied successfully"
         else
-          echo "⚠️  Warning: Patch file not found: patches/hermes-v1.patch"
+          echo "⚠️ Warning: Patch file not found: patches/hermes-v1.patch"
           exit 1
         fi
     
