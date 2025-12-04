@@ -22,7 +22,7 @@ class FirebaseClient {
   async authenticate() {
     if (!this.email || !this.password) {
       throw new Error(
-        'Firebase credentials not found in environment variables',
+        'Firebase credentials not found in environment variables'
       );
     }
 
@@ -36,11 +36,10 @@ class FirebaseClient {
       'identitytoolkit.googleapis.com',
       `/v1/accounts:signInWithPassword?key=${this.apiKey}`,
       'POST',
-      authData,
+      authData
     );
 
     this.idToken = response.idToken;
-    return;
   }
 
   /**
@@ -105,16 +104,16 @@ class FirebaseClient {
       const checkDateStr = checkDate.toISOString().split('T')[0];
 
       console.log(
-        `Checking for results on ${checkDateStr} (${daysBack} days back)...`,
+        `Checking for results on ${checkDateStr} (${daysBack} days back)...`
       );
 
       try {
         const results = await this.getResults(checkDateStr);
         if (results && results.length > 0) {
           console.log(
-            `Found results from ${checkDateStr} (${daysBack} days back)`,
+            `Found results from ${checkDateStr} (${daysBack} days back)`
           );
-          return {results, date: checkDateStr};
+          return { results, date: checkDateStr };
         }
       } catch (error) {
         console.log(`No results found for ${checkDateStr}: ${error.message}`);
@@ -123,9 +122,9 @@ class FirebaseClient {
     }
 
     console.log(
-      `No previous results found within the last ${maxDaysBack} days`,
+      `No previous results found within the last ${maxDaysBack} days`
     );
-    return {results: null, date: null};
+    return { results: null, date: null };
   }
 
   async makeRequest(hostname, path, method, data = null) {
@@ -231,7 +230,7 @@ function compareResults(currentResults, previousResults) {
     }
   }
 
-  return {broken, recovered};
+  return { broken, recovered };
 }
 
 /**

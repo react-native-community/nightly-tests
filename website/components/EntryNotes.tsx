@@ -1,6 +1,6 @@
-import InfoIcon from "~/public/info-icon.svg";
+import InfoIcon from '~/public/info-icon.svg';
 
-import Tooltip from "./Tooltip";
+import Tooltip from './Tooltip';
 
 type Props = { notes: string };
 

@@ -1,10 +1,10 @@
-import dotenv from "dotenv";
-import firebase from "firebase-admin";
-import fs from "node:fs/promises";
-import path from "node:path";
+import dotenv from 'dotenv';
+import firebase from 'firebase-admin';
+import fs from 'node:fs/promises';
+import path from 'node:path';
 
 const DAYS_TO_SHOW = 7;
-const ENCODING = "utf8";
+const ENCODING = 'utf8';
 
 dotenv.config({
   encoding: ENCODING,
@@ -12,10 +12,10 @@ dotenv.config({
 });
 
 const credential = JSON.parse(
-  Buffer.from(process.env.FIREBASE_APP_SERVICE_KEY, "base64").toString(ENCODING)
+  Buffer.from(process.env.FIREBASE_APP_SERVICE_KEY, 'base64').toString(ENCODING)
 );
 
-const definitions = await fs.readFile("../libraries.json", ENCODING);
+const definitions = await fs.readFile('../libraries.json', ENCODING);
 const definitionsJSON = JSON.parse(definitions);
 
 async function fetchDirectoryData(libraries) {
@@ -44,8 +44,8 @@ async function fetchDirectoryData(libraries) {
 }
 
 function getCleanPackageName(packageName) {
-  return packageName.includes("@") && !packageName.startsWith("@")
-    ? packageName.split("@")[0]
+  return packageName.includes('@') && !packageName.startsWith('@')
+    ? packageName.split('@')[0]
     : packageName;
 }
 
@@ -55,12 +55,12 @@ async function main() {
     databaseURL: `https://${process.env.FIREBASE_APP_PROJECTNAME}.firebaseio.com`,
   });
 
-  const rootDb = firebase.database().ref("/");
-  const snapshot = await rootDb.once("value");
+  const rootDb = firebase.database().ref('/');
+  const snapshot = await rootDb.once('value');
   const data = snapshot.val() ?? {};
 
   const tableDataMap = new Map();
-  const trimmedData = Object.entries(data["nightly-results"]).slice(
+  const trimmedData = Object.entries(data['nightly-results']).slice(
     -DAYS_TO_SHOW
   );
 
@@ -69,13 +69,13 @@ async function main() {
       if (definitionsJSON[library]) {
         if (!tableDataMap.has(library)) {
           const installCommand = definitionsJSON[library].installCommand
-            .replace("--dev", "")
+            .replace('--dev', '')
             .trim();
           const notes = definitionsJSON[library].notes;
 
           const directoryData = await fetchDirectoryData(
-            installCommand.includes(" ")
-              ? installCommand.split(" ")
+            installCommand.includes(' ')
+              ? installCommand.split(' ')
               : [installCommand]
           );
           const cleanDirectoryData = directoryData.filter(Boolean);
@@ -106,7 +106,7 @@ async function main() {
           rec.results[date] = {};
         }
         rec.results[date][platform.toLowerCase()] = status;
-        if (status === "failure") {
+        if (status === 'failure') {
           rec.results[date].runUrl = runUrl;
         }
       }
@@ -117,7 +117,7 @@ async function main() {
     a.installCommand.localeCompare(b.installCommand)
   );
 
-  const outPath = path.resolve("public/data.json");
+  const outPath = path.resolve('public/data.json');
   await fs.writeFile(outPath, JSON.stringify(sortedData, null, 2), ENCODING);
 
   console.log(`✅ Data export completed: ${outPath}`);
@@ -125,6 +125,6 @@ async function main() {
 }
 
 main().catch(error => {
-  console.error("❌ Error exporting data:", error);
+  console.error('❌ Error exporting data:', error);
   process.exit(1);
 });

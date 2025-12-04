@@ -1,8 +1,8 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import Table from "~/components/Table";
-import AndroidIcon from "~/public/android-icon.svg";
-import IOSIcon from "~/public/ios-icon.svg";
+import Table from '~/components/Table';
+import AndroidIcon from '~/public/android-icon.svg';
+import IOSIcon from '~/public/ios-icon.svg';
 
 export default function Home() {
   return (

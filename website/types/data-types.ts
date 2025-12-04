@@ -6,8 +6,8 @@ export type LibraryType = {
   results: Record<
     string,
     {
-      android?: "success" | "failure";
-      ios?: "success" | "failure";
+      android?: 'success' | 'failure';
+      ios?: 'success' | 'failure';
       runUrl?: string;
     }
   >;

@@ -1,6 +1,6 @@
-import GitHubLogo from "~/public/github.svg";
+import GitHubLogo from '~/public/github.svg';
 
-import Tooltip from "./Tooltip";
+import Tooltip from './Tooltip';
 
 type Props = { repositoryURL?: string };
 

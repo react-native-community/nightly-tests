@@ -1,15 +1,15 @@
-import Link from "next/link";
-import { twMerge } from "tailwind-merge";
+import Link from 'next/link';
+import { twMerge } from 'tailwind-merge';
 
-import InlineLink from "~/components/InlineLink";
+import InlineLink from '~/components/InlineLink';
 
 export default function Footer() {
   return (
     <footer className="py-12 border-t border-t-border shadow-xs">
       <div
         className={twMerge(
-          "w-full max-w-[1280px] grid grid-cols-4 px-4 mx-auto gap-6",
-          "max-md:grid-cols-1 max-md:items-center max-md:text-center"
+          'w-full max-w-[1280px] grid grid-cols-4 px-4 mx-auto gap-6',
+          'max-md:grid-cols-1 max-md:items-center max-md:text-center'
         )}>
         <div className="flex flex-col gap-2 pt-1.5">
           <Link

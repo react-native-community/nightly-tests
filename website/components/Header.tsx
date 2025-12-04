@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { useTheme } from "next-themes";
-import { twMerge } from "tailwind-merge";
+import Link from 'next/link';
+import { useTheme } from 'next-themes';
+import { twMerge } from 'tailwind-merge';
 
-import { useSearch } from "~/context/SearchContext";
-import GitHubLogo from "~/public/github.svg";
-import Logo from "~/public/logo.svg";
-import SearchIcon from "~/public/search-icon.svg";
-import ThemeDarkIcon from "~/public/theme-dark.svg";
-import ThemeLightIcon from "~/public/theme-light.svg";
+import { useSearch } from '~/context/SearchContext';
+import GitHubLogo from '~/public/github.svg';
+import Logo from '~/public/logo.svg';
+import SearchIcon from '~/public/search-icon.svg';
+import ThemeDarkIcon from '~/public/theme-dark.svg';
+import ThemeLightIcon from '~/public/theme-light.svg';
 
 export default function Header() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -34,8 +34,8 @@ export default function Header() {
             value={query}
             onChange={event => setQuery(event.target.value)}
             className={twMerge(
-              "w-full bg-subtle border border-border rounded-3xl pl-10 pr-3 py-1.5",
-              "placeholder:text-secondary/60"
+              'w-full bg-subtle border border-border rounded-3xl pl-10 pr-3 py-1.5',
+              'placeholder:text-secondary/60'
             )}
             placeholder="Search…"
           />
@@ -46,7 +46,7 @@ export default function Header() {
             tabIndex={0}
             className="cursor-pointer p-1.5 rounded-full hover:bg-hover"
             onClick={() => {
-              resolvedTheme === "dark" ? setTheme("light") : setTheme("dark");
+              resolvedTheme === 'dark' ? setTheme('light') : setTheme('dark');
             }}>
             <ThemeLightIcon className="text-secondary size-6 hidden dark:block" />
             <ThemeDarkIcon className="text-secondary size-6 dark:hidden" />

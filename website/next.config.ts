@@ -1,5 +1,5 @@
-import type { NextConfig } from "next";
-import path from "node:path";
+import type { NextConfig } from 'next';
+import path from 'node:path';
 
 const basePath = process.env.REPOSITORY_NAME
   ? `/${process.env.REPOSITORY_NAME}`
@@ -9,15 +9,15 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   reactCompiler: true,
   poweredByHeader: false,
-  output: "export",
+  output: 'export',
   basePath,
   assetPrefix: basePath,
   turbopack: {
-    root: path.join(import.meta.dirname, ".."),
+    root: path.join(import.meta.dirname, '..'),
     rules: {
-      "*.svg": {
-        as: "*.js",
-        loaders: ["@svgr/webpack"],
+      '*.svg': {
+        as: '*.js',
+        loaders: ['@svgr/webpack'],
       },
     },
   },

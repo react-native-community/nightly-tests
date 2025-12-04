@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   type CellContext,
@@ -7,27 +7,27 @@ import {
   getCoreRowModel,
   getFilteredRowModel,
   useReactTable,
-} from "@tanstack/react-table";
-import { twMerge } from "tailwind-merge";
+} from '@tanstack/react-table';
+import { twMerge } from 'tailwind-merge';
 
-import { EntryNotes } from "~/components/EntryNotes";
-import { GitHubRepoLink } from "~/components/GitHubRepoLink";
-import { useSearch } from "~/context/SearchContext";
-import data from "~/public/data.json";
-import { type LibraryType } from "~/types/data-types";
-import getCleanPackageName from "~/utils/getCleanPackageName";
+import { EntryNotes } from '~/components/EntryNotes';
+import { GitHubRepoLink } from '~/components/GitHubRepoLink';
+import { useSearch } from '~/context/SearchContext';
+import data from '~/public/data.json';
+import { type LibraryType } from '~/types/data-types';
+import getCleanPackageName from '~/utils/getCleanPackageName';
 
-import Tooltip from "./Tooltip";
+import Tooltip from './Tooltip';
 
 const columnHelper = createColumnHelper<LibraryType>();
 
 function formatStatus(info: CellContext<LibraryType, any>) {
   switch (info.getValue()) {
-    case "success":
+    case 'success':
       return <span className="select-none">🟢</span>;
-    case "failure":
+    case 'failure':
       const runUrl =
-        info.row.original.results[info.cell.id.split(".")[1]]?.runUrl;
+        info.row.original.results[info.cell.id.split('.')[1]]?.runUrl;
       if (runUrl) {
         return (
           <Tooltip content="See the GitHub action run">
@@ -45,7 +45,7 @@ function formatStatus(info: CellContext<LibraryType, any>) {
 }
 
 type Props = {
-  platform: "android" | "ios";
+  platform: 'android' | 'ios';
 };
 
 export default function Table({ platform }: Props) {
@@ -58,7 +58,7 @@ export default function Table({ platform }: Props) {
         const entry = info.getValue();
         const notes = info.row.original.notes;
 
-        if (!entry.includes(" ")) {
+        if (!entry.includes(' ')) {
           const repositoryURL =
             info.row.original.repositoryURLs?.[getCleanPackageName(entry)];
           return (
@@ -74,7 +74,7 @@ export default function Table({ platform }: Props) {
 
         return (
           <div className="flex flex-col">
-            {entry.split(" ").map((lib: string) => {
+            {entry.split(' ').map((lib: string) => {
               const repositoryURL =
                 info.row.original.repositoryURLs?.[getCleanPackageName(lib)];
               return (
@@ -90,7 +90,7 @@ export default function Table({ platform }: Props) {
           </div>
         );
       },
-      filterFn: "includesString",
+      filterFn: 'includesString',
     }),
     ...Object.keys(data[data.length - 1].results)
       .reverse()
@@ -111,7 +111,7 @@ export default function Table({ platform }: Props) {
     },
     getCoreRowModel: getCoreRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
-    globalFilterFn: "includesString",
+    globalFilterFn: 'includesString',
   });
 
   const rowsCount = table.getRowModel().rows.length;
@@ -125,11 +125,11 @@ export default function Table({ platform }: Props) {
               {headerGroup.headers.map(header => (
                 <th
                   className={twMerge(
-                    "text-sm px-2 py-2 whitespace-nowrap border-r border-border",
-                    "last:!border-r-0",
+                    'text-sm px-2 py-2 whitespace-nowrap border-r border-border',
+                    'last:!border-r-0',
                     header.index === 0
-                      ? "text-left pl-3 min-w-[300px]"
-                      : "text-center"
+                      ? 'text-left pl-3 min-w-[300px]'
+                      : 'text-center'
                   )}
                   colSpan={header.colSpan}
                   rowSpan={header.index === 0 ? 2 : 1}
@@ -151,13 +151,13 @@ export default function Table({ platform }: Props) {
                   <td
                     key={cell.id}
                     className={twMerge(
-                      "text-sm px-2 py-0.5 border-r border-border",
-                      "last:!border-r-0",
-                      row.index === 0 && "pt-1",
-                      row.index === rowsCount - 1 && "pb-1",
+                      'text-sm px-2 py-0.5 border-r border-border',
+                      'last:!border-r-0',
+                      row.index === 0 && 'pt-1',
+                      row.index === rowsCount - 1 && 'pb-1',
                       cell.column.getIsFirstColumn()
-                        ? "text-left whitespace-nowrap pl-3"
-                        : "text-center"
+                        ? 'text-left whitespace-nowrap pl-3'
+                        : 'text-center'
                     )}>
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </td>

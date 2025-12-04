@@ -19,6 +19,8 @@ jobs:
           node-version: 24
           cache: 'yarn'
       - name: Install deps
-        run: npm install
+        run: yarn install --frozen-lockfile
+      - name: Lint code
+        run: yarn lint
       - name: Run tests
-        run: npm test
+        run: yarn test
