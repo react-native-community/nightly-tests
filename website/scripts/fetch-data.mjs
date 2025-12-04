@@ -12,9 +12,7 @@ dotenv.config({
 });
 
 const credential = JSON.parse(
-  Buffer.from(process.env.FIREBASE_APP_SERVICE_KEY, "base64").toString(
-    ENCODING,
-  ),
+  Buffer.from(process.env.FIREBASE_APP_SERVICE_KEY, "base64").toString(ENCODING)
 );
 
 const definitions = await fs.readFile("../libraries.json", ENCODING);
@@ -22,16 +20,16 @@ const definitionsJSON = JSON.parse(definitions);
 
 async function fetchDirectoryData(libraries) {
   return Promise.all(
-    libraries.map(async (lib) => {
+    libraries.map(async lib => {
       const packageName = getCleanPackageName(lib);
       try {
         const response = await fetch(
-          `https://reactnative.directory/api/libraries?search=${packageName}`,
+          `https://reactnative.directory/api/libraries?search=${packageName}`
         );
 
         if (!response.ok) {
           throw new Error(
-            `❌ HTTP ${response.status} - Cannot fetch directory data for ${packageName}`,
+            `❌ HTTP ${response.status} - Cannot fetch directory data for ${packageName}`
           );
         }
 
@@ -41,7 +39,7 @@ async function fetchDirectoryData(libraries) {
         console.error(error);
         process.exit(1);
       }
-    }),
+    })
   );
 }
 
@@ -63,7 +61,7 @@ async function main() {
 
   const tableDataMap = new Map();
   const trimmedData = Object.entries(data["nightly-results"]).slice(
-    -DAYS_TO_SHOW,
+    -DAYS_TO_SHOW
   );
 
   for (const [date, entries] of trimmedData) {
@@ -78,13 +76,13 @@ async function main() {
           const directoryData = await fetchDirectoryData(
             installCommand.includes(" ")
               ? installCommand.split(" ")
-              : [installCommand],
+              : [installCommand]
           );
           const cleanDirectoryData = directoryData.filter(Boolean);
 
           if (cleanDirectoryData.length > 0) {
             const repositoryURLs = Object.fromEntries(
-              cleanDirectoryData.map((lib) => [lib.npmPkg, lib.githubUrl]),
+              cleanDirectoryData.map(lib => [lib.npmPkg, lib.githubUrl])
             );
 
             tableDataMap.set(library, {
@@ -116,7 +114,7 @@ async function main() {
   }
 
   const sortedData = Array.from(tableDataMap.values()).sort((a, b) =>
-    a.installCommand.localeCompare(b.installCommand),
+    a.installCommand.localeCompare(b.installCommand)
   );
 
   const outPath = path.resolve("public/data.json");
@@ -126,7 +124,7 @@ async function main() {
   process.exit(0);
 }
 
-main().catch((error) => {
+main().catch(error => {
   console.error("❌ Error exporting data:", error);
   process.exit(1);
 });

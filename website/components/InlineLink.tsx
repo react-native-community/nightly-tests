@@ -22,10 +22,9 @@ export default function InlineLink({
       className={twMerge(
         "w-fit border-b border-b-transparent transition-[border] inline-flex gap-1 items-center",
         "hover:border-b-border",
-        className,
+        className
       )}
-      {...rest}
-    >
+      {...rest}>
       {children}
       {computedTarget === "_blank" && (
         <ExternalLinkIcon className="size-3.5 text-secondary/50" />

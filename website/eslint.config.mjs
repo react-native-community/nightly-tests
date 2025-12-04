@@ -20,6 +20,22 @@ export default defineConfig([
   importPlugin.flatConfigs.recommended,
 
   {
+    rules: {
+      "prettier/prettier": [
+        "error",
+        {
+          arrowParens: "avoid",
+          bracketSameLine: true,
+          printWidth: 80,
+          singleQuote: false,
+          trailingComma: "es5",
+          endOfLine: "auto",
+        },
+      ],
+    },
+  },
+
+  {
     files: ["**/*.{js,mjs}"],
     plugins: {
       js: jsPlugin,

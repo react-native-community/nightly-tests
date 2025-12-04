@@ -16,8 +16,7 @@ export function GitHubRepoLink({ repositoryURL }: Props) {
       <a
         href={repositoryURL}
         target="_blank"
-        className="transition-opacity hover:opacity-70"
-      >
+        className="transition-opacity hover:opacity-70">
         <GitHubLogo className="size-3.5 text-secondary" />
       </a>
     </Tooltip>

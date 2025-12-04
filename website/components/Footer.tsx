@@ -9,15 +9,13 @@ export default function Footer() {
       <div
         className={twMerge(
           "w-full max-w-[1280px] grid grid-cols-4 px-4 mx-auto gap-6",
-          "max-md:grid-cols-1 max-md:items-center max-md:text-center",
-        )}
-      >
+          "max-md:grid-cols-1 max-md:items-center max-md:text-center"
+        )}>
         <div className="flex flex-col gap-2 pt-1.5">
           <Link
             href="https://opensource.fb.com/"
             className="w-fit max-md:mx-auto"
-            target="_blank"
-          >
+            target="_blank">
             <picture>
               <img
                 src="oss-logo.svg"
