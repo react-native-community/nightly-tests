@@ -53,6 +53,7 @@ jobs:
       - name: Setup node.js
         uses: actions/setup-node@v6
         with:
+          node-version: 24
           cache: yarn
       - name: Test ${{ matrix.library }}
         if: ${{ fromJSON(needs.runner-setup.outputs.library-data)[matrix.library][matrix.platform] == true }}

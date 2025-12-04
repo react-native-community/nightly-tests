@@ -50,6 +50,7 @@ jobs:
       - name: Setup node.js
         uses: actions/setup-node@v6
         with:
+          node-version: 24
           cache: yarn
       - name: Test ${{ matrix.library }}
         id: run-test
@@ -67,7 +68,7 @@ jobs:
           echo "lib_folder=$LIB_FOLDER" >> $GITHUB_OUTPUT
       - name: Upload Artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ steps.save-outcome.outputs.lib_folder }}-${{ matrix.platform }}-outcome
           path: /tmp/${{ steps.save-outcome.outputs.lib_folder }}-${{ matrix.platform }}-outcome
