@@ -14,8 +14,7 @@ export default function Home() {
       <Link href="#android" className="w-fit inline-flex">
         <h3
           id="android"
-          className="text-lg font-semibold inline-flex items-center gap-3 transition-colors scroll-m-20 hover:text-secondary"
-        >
+          className="text-lg font-semibold inline-flex items-center gap-3 transition-colors scroll-m-20 hover:text-secondary">
           <AndroidIcon className="border border-border size-10 text-secondary bg-subtle p-2 rounded-lg" />
           Android
         </h3>
@@ -24,8 +23,7 @@ export default function Home() {
       <Link href="#ios" className="w-fit inline-flex">
         <h3
           id="ios"
-          className="text-lg font-semibold inline-flex items-center gap-3 transition-colors scroll-m-20 hover:text-secondary"
-        >
+          className="text-lg font-semibold inline-flex items-center gap-3 transition-colors scroll-m-20 hover:text-secondary">
           <IOSIcon className="border border-border size-10 text-secondary bg-subtle p-2 rounded-lg" />
           iOS
         </h3>

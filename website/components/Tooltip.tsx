@@ -31,8 +31,7 @@ export default function Tooltip({
           <Content
             className="bg-black px-2.5 py-1 rounded-md text-xs text-white max-w-[220px] text-center"
             sideOffset={sideOffset}
-            side={side}
-          >
+            side={side}>
             {content}
             <Arrow />
           </Content>

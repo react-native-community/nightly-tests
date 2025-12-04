@@ -54,7 +54,7 @@ export default function Table({ platform }: Props) {
   const columns = [
     columnHelper.accessor(`installCommand`, {
       header: () => <span className="block">Library</span>,
-      cell: (info) => {
+      cell: info => {
         const entry = info.getValue();
         const notes = info.row.original.notes;
 
@@ -94,12 +94,12 @@ export default function Table({ platform }: Props) {
     }),
     ...Object.keys(data[data.length - 1].results)
       .reverse()
-      .map((date) =>
-        columnHelper.accessor((row) => row.results?.[date]?.[platform], {
+      .map(date =>
+        columnHelper.accessor(row => row.results?.[date]?.[platform], {
           id: `results.${date}.${platform}`,
           header: () => <span className="block text-xs">{date}</span>,
           cell: formatStatus,
-        }),
+        })
       ),
   ];
 
@@ -120,24 +120,23 @@ export default function Table({ platform }: Props) {
     <div className="border border-border rounded-lg shadow-xs overflow-hidden overflow-x-auto mb-4">
       <table className="w-full">
         <thead className="bg-subtle">
-          {table.getHeaderGroups().map((headerGroup) => (
+          {table.getHeaderGroups().map(headerGroup => (
             <tr key={headerGroup.id} className="border-b border-border">
-              {headerGroup.headers.map((header) => (
+              {headerGroup.headers.map(header => (
                 <th
                   className={twMerge(
                     "text-sm px-2 py-2 whitespace-nowrap border-r border-border",
                     "last:!border-r-0",
                     header.index === 0
                       ? "text-left pl-3 min-w-[300px]"
-                      : "text-center",
+                      : "text-center"
                   )}
                   colSpan={header.colSpan}
                   rowSpan={header.index === 0 ? 2 : 1}
-                  key={header.id}
-                >
+                  key={header.id}>
                   {flexRender(
                     header.column.columnDef.header,
-                    header.getContext(),
+                    header.getContext()
                   )}
                 </th>
               ))}
@@ -146,9 +145,9 @@ export default function Table({ platform }: Props) {
         </thead>
         <tbody>
           {rowsCount > 0 ? (
-            table.getRowModel().rows.map((row) => (
+            table.getRowModel().rows.map(row => (
               <tr key={row.id} className="even:bg-subtle hover:bg-hover">
-                {row.getVisibleCells().map((cell) => (
+                {row.getVisibleCells().map(cell => (
                   <td
                     key={cell.id}
                     className={twMerge(
@@ -158,9 +157,8 @@ export default function Table({ platform }: Props) {
                       row.index === rowsCount - 1 && "pb-1",
                       cell.column.getIsFirstColumn()
                         ? "text-left whitespace-nowrap pl-3"
-                        : "text-center",
-                    )}
-                  >
+                        : "text-center"
+                    )}>
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </td>
                 ))}

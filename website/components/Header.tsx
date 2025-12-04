@@ -32,10 +32,10 @@ export default function Header() {
             id="search"
             autoComplete="off"
             value={query}
-            onChange={(event) => setQuery(event.target.value)}
+            onChange={event => setQuery(event.target.value)}
             className={twMerge(
               "w-full bg-subtle border border-border rounded-3xl pl-10 pr-3 py-1.5",
-              "placeholder:text-secondary/60",
+              "placeholder:text-secondary/60"
             )}
             placeholder="Search…"
           />
@@ -47,16 +47,14 @@ export default function Header() {
             className="cursor-pointer p-1.5 rounded-full hover:bg-hover"
             onClick={() => {
               resolvedTheme === "dark" ? setTheme("light") : setTheme("dark");
-            }}
-          >
+            }}>
             <ThemeLightIcon className="text-secondary size-6 hidden dark:block" />
             <ThemeDarkIcon className="text-secondary size-6 dark:hidden" />
           </div>
           <Link
             href="https://github.com/react-native-community/nightly-tests"
             target="_blank"
-            className="p-1.5 rounded-full hover:bg-hover"
-          >
+            className="p-1.5 rounded-full hover:bg-hover">
             <GitHubLogo className="text-secondary size-6" />
           </Link>
         </div>
