@@ -26,7 +26,7 @@ jobs:
       library-data: ${{ steps.read-libraries.outputs.library-data }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Read libraries from JSON
         id: read-libraries
         run: |
@@ -46,11 +46,11 @@ jobs:
         platform: [ios, android]
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Setup node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: '22.14.0'
+          node-version: 24
           cache: yarn
       - name: Test ${{ matrix.library }}
         id: run-test
@@ -68,24 +68,24 @@ jobs:
           echo "lib_folder=$LIB_FOLDER" >> $GITHUB_OUTPUT
       - name: Upload Artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ steps.save-outcome.outputs.lib_folder }}-${{ matrix.platform }}-outcome
           path: /tmp/${{ steps.save-outcome.outputs.lib_folder }}-${{ matrix.platform }}-outcome
-          
+
   collect-results:
     runs-on: ubuntu-latest
     needs: [test-library-on-nightly]
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Restore outcomes
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           pattern: '*-outcome'
           path: /tmp
       - name: Collect failures
-        uses: actions/github-script@v6
+        uses: actions/github-script@v8
         env:
           FIREBASE_APP_EMAIL: ${{ secrets.firebase_app_email }}
           FIREBASE_APP_PASS: ${{ secrets.firebase_app_pass }}

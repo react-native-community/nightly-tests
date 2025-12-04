@@ -14,7 +14,7 @@ jobs:
       library-data: ${{ steps.read-libraries.outputs.library-data }}
     steps:
       - name: Checkout PR
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Diff and extract only changed libraries from JSON
         id: read-libraries
         run: |
@@ -49,11 +49,11 @@ jobs:
         platform: [ios, android]
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Setup node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: '22.14.0'
+          node-version: 24
           cache: yarn
       - name: Test ${{ matrix.library }}
         if: ${{ fromJSON(needs.runner-setup.outputs.library-data)[matrix.library][matrix.platform] == true }}
