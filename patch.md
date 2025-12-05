@@ -29,11 +29,12 @@ node ../../scripts/make-patch.js ../../patches/{libraryName}.patch
 ```
 
 For example:
+
 ```sh
 node ../../scripts/make-patch.js ../../patches/react-native-turbo-encryption.patch
 ```
 
-This will generate a patch file in the patches folder.
+This will generate a patch file in the `patches` folder.
 
 **Note:** Remove any lock files like `yarn.lock`, `Podfile.lock`, or any generated files that are tracked before generating the patch file, as these can lead to an excessively long patch file.
 
@@ -42,24 +43,25 @@ This will generate a patch file in the patches folder.
 ```sh
 node ../../scripts/apply-patch.js ../../patches/{libraryName}.patch
 ```
+
 For example:
+
 ```sh
 node ../../scripts/apply-patch.js ../../patches/react-native-turbo-encryption.patch
 ```
 
-
 ### Step 6: Add the Patch File to `libraries.json`
 
-```json
+```jsonc
 "react-native-reanimated": {
-    "description": "React Native's Animated library reimplemented",
-    "installCommand": "react-native-reanimated@nightly react-native-worklets@nightly",
-    "android": true,
-    "ios": true,
-    "maintainersUsernames": [],
-    "notes": "",
-    "patchFile": "patches/reanimated.patch" # <-- Path to patch file
-  }
+  "description": "React Native's Animated library reimplemented",
+  "installCommand": "react-native-reanimated@nightly react-native-worklets@nightly",
+  "android": true,
+  "ios": true,
+  "maintainersUsernames": [],
+  "notes": "",
+  "patchFile": "patches/reanimated.patch" # <-- Path to patch file
+}
 ```
 
 ### Step 7: Submit Your Changes

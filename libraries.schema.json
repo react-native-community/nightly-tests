@@ -39,9 +39,7 @@
             "type": "string"
           },
           "description": "Array of GitHub usernames. We will use it in the future to communicate with library maintainers (e.g. ping for build failures).",
-          "examples": [
-            ["frodo", "bilbo", "pippin", "merry", "sam"]
-          ]
+          "examples": [["frodo", "bilbo", "pippin", "merry", "sam"]]
         },
         "notes": {
           "type": "string",

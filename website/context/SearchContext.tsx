@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Dispatch,
@@ -7,7 +7,7 @@ import {
   createContext,
   useContext,
   useState,
-} from "react";
+} from 'react';
 
 type SearchContextValue = {
   query: string;
@@ -17,7 +17,7 @@ type SearchContextValue = {
 const SearchContext = createContext<SearchContextValue | undefined>(undefined);
 
 export function SearchProvider({ children }: PropsWithChildren) {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState('');
 
   return (
     <SearchContext.Provider value={{ query, setQuery }}>
@@ -30,7 +30,7 @@ export function useSearch() {
   const ctx = useContext(SearchContext);
 
   if (!ctx) {
-    throw new Error("useSearch must be used within a SearchProvider");
+    throw new Error('useSearch must be used within a SearchProvider');
   }
 
   return ctx;

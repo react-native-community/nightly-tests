@@ -7,19 +7,19 @@ import {
   Arrow,
   type TooltipProps,
   type TooltipContentProps,
-} from "@radix-ui/react-tooltip";
-import { type ReactNode } from "react";
+} from '@radix-ui/react-tooltip';
+import { type ReactNode } from 'react';
 
 type Props = TooltipProps & {
   content?: ReactNode;
-  side?: TooltipContentProps["side"];
-  sideOffset?: TooltipContentProps["sideOffset"];
+  side?: TooltipContentProps['side'];
+  sideOffset?: TooltipContentProps['sideOffset'];
 };
 
 export default function Tooltip({
   children,
   content,
-  side = "top",
+  side = 'top',
   sideOffset = 1,
   delayDuration = 0,
 }: Props) {
