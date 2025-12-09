@@ -1,4 +1,4 @@
-import InfoIcon from '~/public/info-icon.svg';
+import InfoIcon from '~/public/icons/info-icon.svg';
 
 import Tooltip from './Tooltip';
 

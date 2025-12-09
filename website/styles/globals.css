@@ -33,12 +33,12 @@
 :root {
   --bg-primary: #ffffff;
   --bg-secondary: #f8f9fa;
-  --bg-hover: #f0f1f2;
+  --bg-hover: #e8e9eb;
   --text-primary: #23272f;
   --text-secondary: #505461;
   --border-primary: #23272f1a;
   --brand: #087ea4;
-  --selection: #58c4dc28;
+  --selection: #58c4dc40;
 }
 
 [data-theme=dark] {
@@ -66,7 +66,7 @@
 /* Global styles */
 
 body {
-  @apply selection:bg-[var(--selection)];
+  @apply selection:bg-(--selection);
 }
 
 * {

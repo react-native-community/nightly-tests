@@ -2,7 +2,7 @@ import Link, { type LinkProps } from 'next/link';
 import { AnchorHTMLAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-import ExternalLinkIcon from '~/public/external-link-icon.svg';
+import ExternalLinkIcon from '~/public/icons/external-link-icon.svg';
 
 type Props = LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>;
 

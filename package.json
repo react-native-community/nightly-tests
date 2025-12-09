@@ -2,7 +2,7 @@
   "name": "nightly-tests",
   "description": "Nightly integration tests for React Native",
   "version": "0.0.0",
-  "private": "true",
+  "private": true,
   "workspaces": [
     "website"
   ],
