@@ -1,4 +1,4 @@
-import GitHubLogo from '~/public/github.svg';
+import GitHubLogo from '~/public/icons/github-icon.svg';
 
 import Tooltip from './Tooltip';
 
