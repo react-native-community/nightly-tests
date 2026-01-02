@@ -36,7 +36,7 @@ export default function Header() {
           <p className="whitespace-nowrap hidden max-sm:block">RNNT</p>
         </div>
         <div className="relative w-full">
-          <SearchIcon className="absolute left-3.5 top-[11px] size-4 text-secondary/60 pointer-events-none" />
+          <SearchIcon className="absolute left-3.5 top-2.75 size-4 text-secondary/60 pointer-events-none" />
           <input
             type="text"
             id="search"
@@ -58,8 +58,8 @@ export default function Header() {
                 setInputValue('');
                 startTransition(() => setQuery(''));
               }}
-              className="absolute right-1.5 top-[5px] cursor-pointer p-1.5 rounded-full hover:bg-hover">
-              <PlusIcon className=" text-secondary size-4 rotate-45" />
+              className="absolute right-1.5 top-1.25 cursor-pointer p-1.5 rounded-full hover:bg-hover">
+              <PlusIcon className="text-secondary size-4 rotate-45" />
             </div>
           )}
         </div>
