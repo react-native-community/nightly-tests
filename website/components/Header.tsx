@@ -19,7 +19,7 @@ export default function Header() {
   const { query, setQuery } = useSearch();
 
   return (
-    <header className="border-b border-b-border sticky bg-background/75 backdrop-blur-lg top-0">
+    <header className="border-b border-b-border sticky bg-background/75 backdrop-blur-lg top-0 z-10">
       <div className="flex flex-row min-h-[58px] items-center gap-6 max-w-[1280px] w-full mx-auto px-4">
         <div className="flex gap-2 items-center">
           <Logo className="text-brand size-8" />
