@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, Suspense } from 'react';
 
 import Footer from '~/components/Footer';
 import Header from '~/components/Header';
@@ -42,13 +42,15 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang="en" suppressHydrationWarning>
       <body className="relative min-h-dvh antialiased font-sans text-primary bg-background">
         <ThemeProvider attribute="data-theme">
-          <SearchProvider>
-            <Header />
-            <div className="min-h-[calc(100dvh-58px)] grid grid-rows-[1fr_min-content]">
-              {children}
-              <Footer />
-            </div>
-          </SearchProvider>
+          <Suspense>
+            <SearchProvider>
+              <Header />
+              <div className="min-h-[calc(100dvh-58px)] grid grid-rows-[1fr_min-content]">
+                {children}
+                <Footer />
+              </div>
+            </SearchProvider>
+          </Suspense>
         </ThemeProvider>
       </body>
     </html>
