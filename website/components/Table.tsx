@@ -10,6 +10,7 @@ import {
 } from '@tanstack/react-table';
 import { twMerge } from 'tailwind-merge';
 
+import { DirectoryLink } from '~/components/DirectoryLink';
 import { EntryNotes } from '~/components/EntryNotes';
 import { GitHubRepoLink } from '~/components/GitHubRepoLink';
 import { useSearch } from '~/context/SearchContext';
@@ -59,13 +60,16 @@ export default function Table({ platform }: Props) {
         const notes = info.row.original.notes;
 
         if (!entry.includes(' ')) {
-          const repositoryURL =
-            info.row.original.repositoryURLs?.[getCleanPackageName(entry)];
+          const packageName = getCleanPackageName(entry);
+          const repositoryURL = info.row.original.repositoryURLs?.[packageName];
           return (
             <div className="flex items-center gap-1.5">
               {entry}
               <div className="flex items-center gap-1.5 ml-auto">
                 <EntryNotes notes={notes} />
+                <DirectoryLink
+                  packageName={repositoryURL ? packageName : undefined}
+                />
                 <GitHubRepoLink repositoryURL={repositoryURL} />
               </div>
             </div>
@@ -75,13 +79,17 @@ export default function Table({ platform }: Props) {
         return (
           <div className="flex flex-col">
             {entry.split(' ').map((lib: string) => {
+              const packageName = getCleanPackageName(lib);
               const repositoryURL =
-                info.row.original.repositoryURLs?.[getCleanPackageName(lib)];
+                info.row.original.repositoryURLs?.[packageName];
               return (
                 <div className="flex items-center gap-1.5" key={lib}>
                   {lib}
                   <div className="flex items-center gap-1.5 ml-auto">
                     <EntryNotes notes={notes} />
+                    <DirectoryLink
+                      packageName={repositoryURL ? packageName : undefined}
+                    />
                     <GitHubRepoLink repositoryURL={repositoryURL} />
                   </div>
                 </div>
@@ -117,7 +125,7 @@ export default function Table({ platform }: Props) {
   const rowsCount = table.getRowModel().rows.length;
 
   return (
-    <div className="border border-border rounded-lg shadow-xs overflow-hidden overflow-x-auto mb-4">
+    <div className="border border-border rounded-lg shadow-xs overflow-hidden overflow-x-auto mb-4 dark:shadow-sm">
       <table className="w-full">
         <thead className="bg-subtle">
           {table.getHeaderGroups().map(headerGroup => (
@@ -126,7 +134,7 @@ export default function Table({ platform }: Props) {
                 <th
                   className={twMerge(
                     'text-sm px-2 py-2 whitespace-nowrap border-r border-border',
-                    'last:!border-r-0',
+                    'last:border-r-0!',
                     header.index === 0
                       ? 'text-left pl-3 min-w-[300px]'
                       : 'text-center'
@@ -152,7 +160,7 @@ export default function Table({ platform }: Props) {
                     key={cell.id}
                     className={twMerge(
                       'text-sm px-2 py-0.5 border-r border-border',
-                      'last:!border-r-0',
+                      'last:border-r-0!',
                       row.index === 0 && 'pt-1',
                       row.index === rowsCount - 1 && 'pb-1',
                       cell.column.getIsFirstColumn()
