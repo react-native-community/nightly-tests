@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
+import { useEffect, useState, useTransition } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import { useSearch } from '~/context/SearchContext';
@@ -17,6 +18,12 @@ import Tooltip from './Tooltip';
 export default function Header() {
   const { resolvedTheme, setTheme } = useTheme();
   const { query, setQuery } = useSearch();
+  const [inputValue, setInputValue] = useState(query);
+  const [, startTransition] = useTransition();
+
+  useEffect(() => {
+    setInputValue(query);
+  }, [query]);
 
   return (
     <header className="border-b border-b-border sticky bg-background/75 backdrop-blur-lg top-0 z-10">
@@ -29,19 +36,32 @@ export default function Header() {
           <p className="whitespace-nowrap hidden max-sm:block">RNNT</p>
         </div>
         <div className="relative w-full">
-          <SearchIcon className="absolute left-3.5 top-[11px] size-4 text-secondary/60 pointer-events-none" />
+          <SearchIcon className="absolute left-3.5 top-2.75 size-4 text-secondary/60 pointer-events-none" />
           <input
             type="text"
             id="search"
             autoComplete="off"
-            value={query}
-            onChange={event => setQuery(event.target.value)}
+            value={inputValue}
+            onChange={event => {
+              setInputValue(event.target.value);
+              startTransition(() => setQuery(event.target.value));
+            }}
             className={twMerge(
               'w-full bg-subtle border border-border rounded-3xl pl-10 pr-3 py-1.5',
               'placeholder:text-secondary/60'
             )}
             placeholder="Search…"
           />
+          {inputValue.length > 0 && (
+            <div
+              onClick={() => {
+                setInputValue('');
+                startTransition(() => setQuery(''));
+              }}
+              className="absolute right-1.5 top-1.25 cursor-pointer p-1.5 rounded-full hover:bg-hover">
+              <PlusIcon className="text-secondary size-4 rotate-45" />
+            </div>
+          )}
         </div>
         <div className="flex flex-row gap-2 ml-auto">
           <Tooltip
