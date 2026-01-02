@@ -70,5 +70,5 @@ body {
 }
 
 * {
-  @apply focus-visible:outline-brand/50 focus-visible:outline-offset-4;
+  @apply focus-visible:outline-brand/75 focus-visible:outline-offset-[3px];
 }
