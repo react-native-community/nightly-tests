@@ -8,6 +8,7 @@ const basePath = process.env.REPOSITORY_NAME
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   reactCompiler: true,
+  trailingSlash: true,
   poweredByHeader: false,
   output: 'export',
   basePath,
