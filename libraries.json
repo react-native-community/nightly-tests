@@ -374,5 +374,13 @@
     "ios": true,
     "maintainersUsernames": ["jerielng", "sircelsius", "hokstuff"],
     "notes": ""
+  },
+  "react-native-pdf": {
+    "description": "A <Pdf /> component for react-native",
+    "installCommand": "react-native-pdf",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["wonday"],
+    "notes": ""
   }
 }
