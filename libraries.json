@@ -374,5 +374,13 @@
     "ios": true,
     "maintainersUsernames": ["jerielng", "sircelsius", "hokstuff"],
     "notes": ""
+  },
+  "@react-native-google-signin/google-signin": {
+    "description": "Google Sign-in for your React Native applications",
+    "installCommand": "@react-native-google-signin/google-signin",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["vonovak"],
+    "notes": ""
   }
 }
