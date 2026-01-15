@@ -19,28 +19,23 @@ const definitions = await fs.readFile('../libraries.json', ENCODING);
 const definitionsJSON = JSON.parse(definitions);
 
 async function fetchDirectoryData(libraries) {
-  return Promise.all(
-    libraries.map(async lib => {
-      const packageName = getCleanPackageName(lib);
-      try {
-        const response = await fetch(
-          `https://reactnative.directory/api/libraries?search=${packageName}`
-        );
+  const packageNames = libraries.map(lib => getCleanPackageName(lib));
+  try {
+    const response = await fetch(
+      `https://reactnative.directory/api/library?name=${packageNames.join(',')}`
+    );
 
-        if (!response.ok) {
-          throw new Error(
-            `❌ HTTP ${response.status} - Cannot fetch directory data for ${packageName}`
-          );
-        }
+    if (!response.ok) {
+      throw new Error(
+        `❌ HTTP ${response.status} - Cannot fetch directory data for ${packageNames.join(', ')}`
+      );
+    }
 
-        const data = await response.json();
-        return data.libraries.find(({ npmPkg }) => npmPkg === packageName);
-      } catch (error) {
-        console.error(error);
-        process.exit(1);
-      }
-    })
-  );
+    return await response.json();
+  } catch (error) {
+    console.error(error);
+    process.exit(1);
+  }
 }
 
 function getCleanPackageName(packageName) {
@@ -78,11 +73,13 @@ async function main() {
               ? installCommand.split(' ')
               : [installCommand]
           );
-          const cleanDirectoryData = directoryData.filter(Boolean);
 
-          if (cleanDirectoryData.length > 0) {
+          if (Object.keys(directoryData).length > 0) {
             const repositoryURLs = Object.fromEntries(
-              cleanDirectoryData.map(lib => [lib.npmPkg, lib.githubUrl])
+              Object.values(directoryData).map(lib => [
+                lib.npmPkg,
+                lib.githubUrl,
+              ])
             );
 
             tableDataMap.set(library, {
