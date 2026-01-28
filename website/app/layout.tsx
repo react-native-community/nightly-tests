@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import localFont from 'next/font/local';
 import { ThemeProvider } from 'next-themes';
 import { PropsWithChildren, Suspense } from 'react';
 
@@ -8,6 +9,28 @@ import { SearchProvider } from '~/context/SearchContext';
 import getAssetPath from '~/utils/getAssetPath';
 
 import '~/styles/globals.css';
+
+const optimisticDisplay = localFont({
+  src: [
+    {
+      path: '../public/fonts/Optimistic-Display-Light.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Optimistic-Display-Regular.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Optimistic-Display-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  display: 'swap',
+  variable: '--font-optimistic-display',
+});
 
 const metadataBase = process.env.REPOSITORY_NAME
   ? new URL('https://react-native-community.github.io/')
@@ -25,7 +48,7 @@ export const metadata: Metadata = {
         sizes: '32x32',
       },
       {
-        url: getAssetPath('/favicon-16x16.png'),
+        url: getAssetPath('favicon-16x16.png'),
         type: 'image/png',
         sizes: '16x16',
       },
@@ -39,30 +62,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <link
-          rel="preload"
-          href="/fonts/Optimistic-Display-Regular.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Optimistic-Display-Light.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Optimistic-Display-Bold.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-      </head>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={optimisticDisplay.className}>
       <body className="relative min-h-dvh antialiased font-sans text-primary bg-background">
         <ThemeProvider attribute="data-theme">
           <Suspense>
