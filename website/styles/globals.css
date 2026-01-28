@@ -2,32 +2,6 @@
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-/* Font */
-
-@font-face {
-  font-family: 'Optimistic Display';
-  src: url('/fonts/Optimistic-Display-Light.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Optimistic Display';
-  src: url('/fonts/Optimistic-Display-Regular.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Optimistic Display';
-  src: url('/fonts/Optimistic-Display-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* Setup */
 
 :root {
@@ -59,7 +33,7 @@
   --color-secondary: var(--text-secondary);
   --color-brand: var(--brand);
   --color-border: var(--border-primary);
-  --font-sans: "Optimistic Display", system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-optimistic-display), "Optimistic Display", system-ui, -apple-system, sans-serif;
   --font-mono: Source Code Pro, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace;
 }
 

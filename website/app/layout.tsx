@@ -65,7 +65,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={optimisticDisplay.className}>
+      className={optimisticDisplay.variable}>
       <body className="relative min-h-dvh antialiased font-sans text-primary bg-background">
         <ThemeProvider attribute="data-theme">
           <Suspense>
