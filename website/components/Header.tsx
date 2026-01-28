@@ -71,6 +71,7 @@ export default function Header() {
             <Link
               href="https://github.com/react-native-community/discussions-and-proposals/discussions/931#discussion-8827727"
               target="_blank"
+              aria-label="Add package to the program"
               className="p-1.5 rounded-full hover:bg-hover">
               <PlusIcon className="text-secondary size-6" />
             </Link>
@@ -79,6 +80,7 @@ export default function Header() {
             <div
               role="button"
               tabIndex={0}
+              aria-label="Toggle theme"
               className="cursor-pointer p-1.5 rounded-full hover:bg-hover"
               onClick={() => {
                 resolvedTheme === 'dark' ? setTheme('light') : setTheme('dark');
@@ -91,6 +93,7 @@ export default function Header() {
             <Link
               href="https://github.com/react-native-community/nightly-tests"
               target="_blank"
+              aria-label="Visit GitHub repository"
               className="p-1.5 rounded-full hover:bg-hover">
               <GitHubLogo className="text-secondary size-6" />
             </Link>
