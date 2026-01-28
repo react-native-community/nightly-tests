@@ -18,6 +18,7 @@ export function DirectoryLink({ packageName }: Props) {
       <a
         href={`https://reactnative.directory/package/${packageName}`}
         target="_blank"
+        aria-label="Visit React Native Directory page"
         className="transition-opacity hover:opacity-70">
         <DirectoryLogo className="size-3.5 text-secondary" />
       </a>

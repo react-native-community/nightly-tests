@@ -18,6 +18,7 @@ export function GitHubRepoLink({ repositoryURL }: Props) {
       <a
         href={repositoryURL}
         target="_blank"
+        aria-label="Visit package GitHub repository"
         className="transition-opacity hover:opacity-70">
         <GitHubLogo className="size-3.5 text-secondary" />
       </a>
