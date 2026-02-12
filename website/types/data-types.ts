@@ -6,9 +6,11 @@ export type LibraryType = {
   results: Record<
     string,
     {
-      android?: 'success' | 'failure';
-      ios?: 'success' | 'failure';
+      android: PlatformStatus;
+      ios: PlatformStatus;
       runUrl?: string;
     }
   >;
 };
+
+export type PlatformStatus = 'success' | 'failure' | undefined;

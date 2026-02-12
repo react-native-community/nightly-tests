@@ -15,14 +15,14 @@ import { EntryNotes } from '~/components/EntryNotes';
 import { GitHubRepoLink } from '~/components/GitHubRepoLink';
 import { useSearch } from '~/context/SearchContext';
 import data from '~/public/data.json';
-import { type LibraryType } from '~/types/data-types';
+import { type LibraryType, PlatformStatus } from '~/types/data-types';
 import getCleanPackageName from '~/utils/getCleanPackageName';
 
 import Tooltip from './Tooltip';
 
 const columnHelper = createColumnHelper<LibraryType>();
 
-function formatStatus(info: CellContext<LibraryType, any>) {
+function formatStatus(info: CellContext<LibraryType, PlatformStatus>) {
   switch (info.getValue()) {
     case 'success':
       return <span className="select-none">🟢</span>;
