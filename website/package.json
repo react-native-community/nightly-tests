@@ -25,14 +25,14 @@
     "@next/eslint-plugin-next": "16.1.6",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4.1.18",
-    "@types/node": "^22.18.13",
-    "@types/react": "^19.2.10",
+    "@types/node": "^22.19.11",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "babel-plugin-react-compiler": "^1.0.0",
-    "dotenv": "^17.2.3",
+    "dotenv": "^17.2.4",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-svgo": "^0.11.3",
-    "firebase-admin": "^13.6.0",
+    "firebase-admin": "^13.6.1",
     "tailwindcss": "^4.1.18"
   }
 }

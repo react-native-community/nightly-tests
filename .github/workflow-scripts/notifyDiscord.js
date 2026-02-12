@@ -30,7 +30,6 @@ async function sendMessageToDiscord(webHook, message) {
   // Handle the response
   if (response.ok) {
     console.log('Successfully sent message to Discord');
-    return;
   } else {
     const errorText = await response.text();
     console.error(
