@@ -1,0 +1,18 @@
+diff --git a/android/build.gradle b/android/build.gradle
+index dad99b0..f3cba6f 100644
+--- a/android/build.gradle
++++ b/android/build.gradle
+@@ -18,4 +18,13 @@ buildscript {
+     }
+ }
+ 
++
++allprojects {
++    repositories {
++        maven {
++            url = uri(project(":react-native-async-storage_async-storage").file("local_repo"))
++        }
++    }
++}
++
+ apply plugin: "com.facebook.react.rootproject"
