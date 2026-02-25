@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   type CellContext,
@@ -7,27 +7,28 @@ import {
   getCoreRowModel,
   getFilteredRowModel,
   useReactTable,
-} from "@tanstack/react-table";
-import { twMerge } from "tailwind-merge";
+} from '@tanstack/react-table';
+import { twMerge } from 'tailwind-merge';
 
-import { EntryNotes } from "~/components/EntryNotes";
-import { GitHubRepoLink } from "~/components/GitHubRepoLink";
-import { useSearch } from "~/context/SearchContext";
-import data from "~/public/data.json";
-import { type LibraryType } from "~/types/data-types";
-import getCleanPackageName from "~/utils/getCleanPackageName";
+import { DirectoryLink } from '~/components/DirectoryLink';
+import { EntryNotes } from '~/components/EntryNotes';
+import { GitHubRepoLink } from '~/components/GitHubRepoLink';
+import { useSearch } from '~/context/SearchContext';
+import data from '~/public/data.json';
+import { type LibraryType, PlatformStatus } from '~/types/data-types';
+import getCleanPackageName from '~/utils/getCleanPackageName';
 
-import Tooltip from "./Tooltip";
+import Tooltip from './Tooltip';
 
 const columnHelper = createColumnHelper<LibraryType>();
 
-function formatStatus(info: CellContext<LibraryType, any>) {
+function formatStatus(info: CellContext<LibraryType, PlatformStatus>) {
   switch (info.getValue()) {
-    case "success":
+    case 'success':
       return <span className="select-none">🟢</span>;
-    case "failure":
+    case 'failure':
       const runUrl =
-        info.row.original.results[info.cell.id.split(".")[1]]?.runUrl;
+        info.row.original.results[info.cell.id.split('.')[1]]?.runUrl;
       if (runUrl) {
         return (
           <Tooltip content="See the GitHub action run">
@@ -45,7 +46,7 @@ function formatStatus(info: CellContext<LibraryType, any>) {
 }
 
 type Props = {
-  platform: "android" | "ios";
+  platform: 'android' | 'ios';
 };
 
 export default function Table({ platform }: Props) {
@@ -54,18 +55,21 @@ export default function Table({ platform }: Props) {
   const columns = [
     columnHelper.accessor(`installCommand`, {
       header: () => <span className="block">Library</span>,
-      cell: (info) => {
+      cell: info => {
         const entry = info.getValue();
         const notes = info.row.original.notes;
 
-        if (!entry.includes(" ")) {
-          const repositoryURL =
-            info.row.original.repositoryURLs?.[getCleanPackageName(entry)];
+        if (!entry.includes(' ')) {
+          const packageName = getCleanPackageName(entry);
+          const repositoryURL = info.row.original.repositoryURLs?.[packageName];
           return (
             <div className="flex items-center gap-1.5">
               {entry}
               <div className="flex items-center gap-1.5 ml-auto">
                 <EntryNotes notes={notes} />
+                <DirectoryLink
+                  packageName={repositoryURL ? packageName : undefined}
+                />
                 <GitHubRepoLink repositoryURL={repositoryURL} />
               </div>
             </div>
@@ -74,14 +78,18 @@ export default function Table({ platform }: Props) {
 
         return (
           <div className="flex flex-col">
-            {entry.split(" ").map((lib: string) => {
+            {entry.split(' ').map((lib: string) => {
+              const packageName = getCleanPackageName(lib);
               const repositoryURL =
-                info.row.original.repositoryURLs?.[getCleanPackageName(lib)];
+                info.row.original.repositoryURLs?.[packageName];
               return (
                 <div className="flex items-center gap-1.5" key={lib}>
                   {lib}
                   <div className="flex items-center gap-1.5 ml-auto">
                     <EntryNotes notes={notes} />
+                    <DirectoryLink
+                      packageName={repositoryURL ? packageName : undefined}
+                    />
                     <GitHubRepoLink repositoryURL={repositoryURL} />
                   </div>
                 </div>
@@ -90,16 +98,16 @@ export default function Table({ platform }: Props) {
           </div>
         );
       },
-      filterFn: "includesString",
+      filterFn: 'includesString',
     }),
-    ...Object.keys(data[0].results)
+    ...Object.keys(data[data.length - 1].results)
       .reverse()
-      .map((date) =>
-        columnHelper.accessor((row) => row.results?.[date]?.[platform], {
+      .map(date =>
+        columnHelper.accessor(row => row.results?.[date]?.[platform], {
           id: `results.${date}.${platform}`,
           header: () => <span className="block text-xs">{date}</span>,
           cell: formatStatus,
-        }),
+        })
       ),
   ];
 
@@ -111,33 +119,32 @@ export default function Table({ platform }: Props) {
     },
     getCoreRowModel: getCoreRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
-    globalFilterFn: "includesString",
+    globalFilterFn: 'includesString',
   });
 
   const rowsCount = table.getRowModel().rows.length;
 
   return (
-    <div className="border border-border rounded-lg shadow-xs overflow-hidden overflow-x-auto mb-4">
+    <div className="border border-border rounded-lg shadow-xs overflow-hidden overflow-x-auto mb-4 dark:shadow-sm">
       <table className="w-full">
         <thead className="bg-subtle">
-          {table.getHeaderGroups().map((headerGroup) => (
+          {table.getHeaderGroups().map(headerGroup => (
             <tr key={headerGroup.id} className="border-b border-border">
-              {headerGroup.headers.map((header) => (
+              {headerGroup.headers.map(header => (
                 <th
                   className={twMerge(
-                    "text-sm px-2 py-2 whitespace-nowrap border-r border-border",
-                    "last:!border-r-0",
+                    'text-sm px-2 py-2 whitespace-nowrap border-r border-border',
+                    'last:border-r-0!',
                     header.index === 0
-                      ? "text-left pl-3 min-w-[300px]"
-                      : "text-center",
+                      ? 'text-left pl-3 min-w-[300px]'
+                      : 'text-center'
                   )}
                   colSpan={header.colSpan}
                   rowSpan={header.index === 0 ? 2 : 1}
-                  key={header.id}
-                >
+                  key={header.id}>
                   {flexRender(
                     header.column.columnDef.header,
-                    header.getContext(),
+                    header.getContext()
                   )}
                 </th>
               ))}
@@ -146,21 +153,20 @@ export default function Table({ platform }: Props) {
         </thead>
         <tbody>
           {rowsCount > 0 ? (
-            table.getRowModel().rows.map((row) => (
+            table.getRowModel().rows.map(row => (
               <tr key={row.id} className="even:bg-subtle hover:bg-hover">
-                {row.getVisibleCells().map((cell) => (
+                {row.getVisibleCells().map(cell => (
                   <td
                     key={cell.id}
                     className={twMerge(
-                      "text-sm px-2 py-0.5 border-r border-border",
-                      "last:!border-r-0",
-                      row.index === 0 && "pt-1",
-                      row.index === rowsCount - 1 && "pb-1",
+                      'text-sm px-2 py-0.5 border-r border-border',
+                      'last:border-r-0!',
+                      row.index === 0 && 'pt-1',
+                      row.index === rowsCount - 1 && 'pb-1',
                       cell.column.getIsFirstColumn()
-                        ? "text-left whitespace-nowrap pl-3"
-                        : "text-center",
-                    )}
-                  >
+                        ? 'text-left whitespace-nowrap pl-3'
+                        : 'text-center'
+                    )}>
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </td>
                 ))}

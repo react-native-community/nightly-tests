@@ -7,18 +7,19 @@
  * @format
  */
 
-const fs = require('fs');
-const path = require('path');
-const {
-  prepareFailurePayload,
-  prepareComparisonPayload,
-  sendMessageToDiscord,
-} = require('./notifyDiscord');
+const fs = require('node:fs');
+const path = require('node:path');
+
 const {
   FirebaseClient,
   compareResults,
   getTodayDate,
 } = require('./firebaseUtils');
+const {
+  prepareFailurePayload,
+  prepareComparisonPayload,
+  sendMessageToDiscord,
+} = require('./notifyDiscord');
 
 function readOutcomes() {
   const baseDir = '/tmp';
@@ -29,19 +30,21 @@ function readOutcomes() {
       fs.readdirSync(fullPath).forEach(subFile => {
         const subFullPath = path.join(fullPath, subFile);
         if (subFullPath.endsWith('outcome')) {
-          const [library, status, url] = String(fs.readFileSync(subFullPath, 'utf8'))
+          const [library, status, url] = String(
+            fs.readFileSync(subFullPath, 'utf8')
+          )
             .trim()
             .split('|');
           const platform = subFile.includes('android') ? 'Android' : 'iOS';
           const runUrl = status.trim() === 'failure' ? url : undefined;
           console.log(
-            `[${platform}] ${library} completed with status ${status}`,
+            `[${platform}] ${library} completed with status ${status}`
           );
           outcomes.push({
             library: library.trim(),
             platform,
             status: status.trim(),
-            runUrl
+            runUrl,
           });
         }
       });
@@ -56,7 +59,7 @@ function readOutcomes() {
         library: library.trim(),
         platform,
         status: status.trim(),
-        runUrl
+        runUrl,
       });
     }
   });
@@ -69,7 +72,7 @@ function printFailures(outcomes) {
   outcomes.forEach(entry => {
     if (entry.status !== 'success') {
       console.log(
-        `❌ [${entry.platform}] ${entry.library} failed with status ${entry.status}`,
+        `❌ [${entry.platform}] ${entry.library} failed with status ${entry.status}`
       );
       failedLibraries.push({
         library: entry.library,
@@ -127,7 +130,7 @@ async function collectResults(discordWebHook) {
 
     // Get the most recent previous results for comparison
     console.log(`Looking for most recent previous results before ${today}...`);
-    const {results: previousResults, date: previousDate} =
+    const { results: previousResults, date: previousDate } =
       await firebaseClient.getLatestResults(today);
 
     let broken = [];
@@ -141,11 +144,11 @@ async function collectResults(discordWebHook) {
       recovered = comparison.recovered;
 
       console.log(
-        `Found ${broken.length} newly broken jobs and ${recovered.length} recovered jobs compared to ${previousDate}`,
+        `Found ${broken.length} newly broken jobs and ${recovered.length} recovered jobs compared to ${previousDate}`
       );
     } else {
       console.log(
-        'No previous results found for comparison - this might be the first run or no recent data available',
+        'No previous results found for comparison - this might be the first run or no recent data available'
       );
     }
 

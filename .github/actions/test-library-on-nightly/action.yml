@@ -11,6 +11,10 @@ inputs:
     description: Number of retry attempts for failed operations
     required: false
     default: '3'
+  patch-file:
+    description: Optional path to a patch file to apply after installing the library
+    required: false
+    default: ''
 runs:
   using: composite
   steps:
@@ -19,6 +23,22 @@ runs:
       run: |
         cd /tmp
         npx @react-native-community/cli init RNApp --skip-install --version nightly
+    
+    
+    - name: Apply patch if specified
+      if: ${{ inputs.patch-file != '' }}
+      shell: bash
+      run: |
+        if [ -f "$GITHUB_WORKSPACE/${{ inputs.patch-file }}" ]; then
+          echo "Applying patch: ${{ inputs.patch-file }}"
+          cd /tmp/RNApp
+          node "$GITHUB_WORKSPACE/scripts/apply-patch.js" "$GITHUB_WORKSPACE/${{ inputs.patch-file }}"
+          echo "✅ Patch applied successfully"
+        else
+          echo "⚠️  Warning: Patch file not found: ${{ inputs.patch-file }}"
+          exit 1
+        fi
+    
     - name: Add library with retry
       uses: nick-fields/retry@v3
       with:

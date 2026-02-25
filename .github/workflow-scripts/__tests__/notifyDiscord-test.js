@@ -122,7 +122,7 @@ describe('sendMessageToDiscord', () => {
 
   it('should throw an error if webhook URL is missing', async () => {
     await expect(sendMessageToDiscord(null, {})).rejects.toThrow(
-      'Discord webhook URL is missing',
+      'Discord webhook URL is missing'
     );
   });
 
@@ -134,7 +134,7 @@ describe('sendMessageToDiscord', () => {
     });
 
     const webhook = 'https://discord.com/api/webhooks/123/abc';
-    const message = {content: 'Test message'};
+    const message = { content: 'Test message' };
 
     await expect(sendMessageToDiscord(webhook, message)).resolves.not.toThrow();
 
@@ -149,7 +149,7 @@ describe('sendMessageToDiscord', () => {
 
     // Verify console.log was called
     expect(console.log).toHaveBeenCalledWith(
-      'Successfully sent message to Discord',
+      'Successfully sent message to Discord'
     );
   });
 
@@ -162,15 +162,15 @@ describe('sendMessageToDiscord', () => {
     });
 
     const webhook = 'https://discord.com/api/webhooks/123/abc';
-    const message = {content: 'Test message'};
+    const message = { content: 'Test message' };
 
     await expect(sendMessageToDiscord(webhook, message)).rejects.toThrow(
-      'HTTP status code: 400',
+      'HTTP status code: 400'
     );
 
     // Verify console.error was called
     expect(console.error).toHaveBeenCalledWith(
-      'Failed to send message to Discord: 400 Bad Request',
+      'Failed to send message to Discord: 400 Bad Request'
     );
   });
 
@@ -180,10 +180,10 @@ describe('sendMessageToDiscord', () => {
     global.fetch.mockRejectedValueOnce(networkError);
 
     const webhook = 'https://discord.com/api/webhooks/123/abc';
-    const message = {content: 'Test message'};
+    const message = { content: 'Test message' };
 
     await expect(sendMessageToDiscord(webhook, message)).rejects.toThrow(
-      'Network error',
+      'Network error'
     );
   });
 });

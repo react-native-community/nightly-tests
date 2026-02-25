@@ -30,11 +30,10 @@ async function sendMessageToDiscord(webHook, message) {
   // Handle the response
   if (response.ok) {
     console.log('Successfully sent message to Discord');
-    return;
   } else {
     const errorText = await response.text();
     console.error(
-      `Failed to send message to Discord: ${response.status} ${errorText}`,
+      `Failed to send message to Discord: ${response.status} ${errorText}`
     );
     throw new Error(`HTTP status code: ${response.status}`);
   }
@@ -125,7 +124,7 @@ function prepareComparisonPayload(broken, recovered) {
     }
   }
 
-  return {content};
+  return { content };
 }
 
 // Export the functions using CommonJS syntax

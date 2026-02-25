@@ -8,17 +8,17 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Stack
+## Stack
 
-* React
-* Next.js
-* Tailwind
+- React
+- Next.js
+- Tailwind
 
-### Directory Structure
+## Directory Structure
 
 The high-level overview of relevant files and folders.
 
-```
+```text
 website/
 ├── app/
 │   └── [Next App Router]
@@ -31,7 +31,7 @@ website/
 ├── scripts/
 │   │   // Node script for fetching and reformatting latest data from Firebase.
 │   │   // Requires Firebase Service Key in `.env` file.
-│   └── fetch-data.mjs 
+│   └── fetch-data.mjs
 ├── styles/
 │   │   // Global Styles and Tailwind Setup.
 │   └── global.css

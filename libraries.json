@@ -33,7 +33,7 @@
   },
   "react-native-gesture-handler": {
     "description": "Declarative API exposing platform native touch and gesture system to React Native",
-    "installCommand": "react-native-gesture-handler",
+    "installCommand": "react-native-gesture-handler@nightly",
     "android": true,
     "ios": true,
     "maintainersUsernames": [],
@@ -87,6 +87,15 @@
     "maintainersUsernames": [],
     "notes": ""
   },
+  "react-native-firebase": {
+    "description": "🔥 A well-tested feature-rich modular Firebase implementation for React Native",
+    "installCommand": "@react-native-firebase/app",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": [],
+    "notes": "",
+    "patchFile": "patches/react-native-firebase.patch"
+  },
   "react-native-svg": {
     "description": "SVG library for React Native, React Native Web, and plain React web projects",
     "installCommand": "react-native-svg",
@@ -113,10 +122,10 @@
   },
   "react-native-mmkv": {
     "description": "The fastest key/value storage for React Native",
-    "installCommand": "react-native-mmkv",
+    "installCommand": "react-native-mmkv react-native-nitro-modules",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
+    "maintainersUsernames": ["mrousavy"],
     "notes": ""
   },
   "react-native-nitro-modules": {
@@ -154,14 +163,6 @@
   "scandit libraries (@stable)": {
     "description": "Scandit Data Capture SDK for React Native",
     "installCommand": "scandit-react-native-datacapture-barcode scandit-react-native-datacapture-core",
-    "android": true,
-    "ios": true,
-    "maintainersUsernames": [],
-    "notes": "Additional OSS libs used internally"
-  },
-  "scandit libraries (@beta)": {
-    "description": "Scandit Data Capture SDK for React Native - @beta releases",
-    "installCommand": "scandit-react-native-datacapture-barcode@next scandit-react-native-datacapture-core@next",
     "android": true,
     "ios": true,
     "maintainersUsernames": [],
@@ -288,7 +289,7 @@
   },
   "react-native-iap": {
     "description": "In-app purchases for React Native (StoreKit 2 / Play Billing v8).",
-    "installCommand": "react-native-nitro-modules react-native-iap",
+    "installCommand": "react-native-iap react-native-nitro-modules",
     "android": true,
     "ios": true,
     "maintainersUsernames": ["hyochan"],
@@ -373,5 +374,29 @@
     "ios": true,
     "maintainersUsernames": ["ahmedawaad1804", "newarch-mansion"],
     "notes": "A popular library for React Native projects built with the New Architecture."
+  },
+  "@braze/react-native-sdk": {
+    "description": "A customer engagement platform for delivering cross-channel messaging experiences",
+    "installCommand": "@braze/react-native-sdk",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["jerielng", "sircelsius", "hokstuff"],
+    "notes": ""
+  },
+  "@react-native-google-signin/google-signin": {
+    "description": "Google Sign-in for your React Native applications",
+    "installCommand": "@react-native-google-signin/google-signin",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["vonovak"],
+    "notes": ""
+  },
+  "react-native-pdf": {
+    "description": "A <Pdf /> component for react-native",
+    "installCommand": "react-native-pdf",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["wonday"],
+    "notes": ""
   }
 }
