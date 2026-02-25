@@ -261,6 +261,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": [],
+    "patchFile": "patches/react-native-async-storage.patch",
     "notes": "One of top most used libraries according to the npm stats"
   },
   "react-native-keyboard-controller": {
