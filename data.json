@@ -117,7 +117,7 @@
     "library": "@react-native-async-storage/async-storage",
     "installCommand": "@react-native-async-storage/async-storage",
     "repositoryURLs": {
-      "@react-native-async-storage/async-storage": "https://github.com/react-native-async-storage/async-storage/tree/main/packages/default-storage"
+      "@react-native-async-storage/async-storage": "https://github.com/react-native-async-storage/async-storage/tree/main/packages/async-storage"
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
