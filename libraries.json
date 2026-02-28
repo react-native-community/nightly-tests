@@ -368,6 +368,14 @@
     "maintainersUsernames": [],
     "notes": ""
   },
+  "react-native-restart-newarch": {
+    "description": "A React Native library to restart the app using the New Architecture.",
+    "installCommand": "react-native-restart-newarch",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["ahmedawaad1804", "newarch-mansion"],
+    "notes": "A popular library for React Native projects built with the New Architecture."
+  },
   "@braze/react-native-sdk": {
     "description": "A customer engagement platform for delivering cross-channel messaging experiences",
     "installCommand": "@braze/react-native-sdk",
