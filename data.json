@@ -1605,7 +1605,7 @@
     "library": "react-native-unistyles",
     "installCommand": "react-native-unistyles react-native-nitro-modules react-native-edge-to-edge",
     "repositoryURLs": {
-      "react-native-unistyles": "https://github.com/jpudysz/react-native-unistyles",
+      "react-native-unistyles": "https://github.com/jpudysz/react-native-unistyles/tree/main/packages/unistyles",
       "react-native-nitro-modules": "https://github.com/mrousavy/nitro/tree/main/packages/react-native-nitro-modules",
       "react-native-edge-to-edge": "https://github.com/zoontek/react-native-edge-to-edge"
     },
