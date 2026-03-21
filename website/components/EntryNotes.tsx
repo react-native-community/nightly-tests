@@ -11,7 +11,7 @@ export function EntryNotes({ notes }: Props) {
 
   return (
     <Tooltip content={notes}>
-      <button type="button" aria-label="Notes">
+      <button type="button" aria-label="Notes" className="rounded-sm">
         <InfoIcon className="size-3.5 text-secondary" />
       </button>
     </Tooltip>
