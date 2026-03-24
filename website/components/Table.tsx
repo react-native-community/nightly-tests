@@ -32,7 +32,7 @@ function formatStatus(info: CellContext<LibraryType, PlatformStatus>) {
       if (runUrl) {
         return (
           <Tooltip content="See the GitHub action run">
-            <a href={runUrl} target="_blank">
+            <a href={runUrl} target="_blank" className="rounded-sm">
               <span className="select-none">🔴</span>
             </a>
           </Tooltip>

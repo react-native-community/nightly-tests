@@ -25,7 +25,7 @@
   --brand: #58c4dc;
 }
 
-@theme {
+@theme inline {
   --color-background: var(--bg-primary);
   --color-subtle: var(--bg-secondary);
   --color-hover: var(--bg-hover);
@@ -44,5 +44,5 @@ body {
 }
 
 * {
-  @apply focus-visible:outline-brand/75 focus-visible:outline-offset-[3px];
+  @apply focus-visible:outline-2 focus-visible:outline-brand/75 focus-visible:outline-offset-[3px];
 }
