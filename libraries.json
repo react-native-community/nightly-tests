@@ -399,5 +399,13 @@
     "ios": true,
     "maintainersUsernames": ["wonday"],
     "notes": ""
+  },
+  "react-native-file-access": {
+    "description": "Filesystem access for React Native",
+    "installCommand": "react-native-file-access",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["alpha0010"],
+    "notes": ""
   }
 }
