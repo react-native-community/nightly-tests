@@ -407,5 +407,13 @@
     "ios": true,
     "maintainersUsernames": ["alpha0010"],
     "notes": ""
+  },
+  "react-native-nitro-image": {
+    "description": "A superfast in-memory Image type and view component for React Native, built with Nitro!",
+    "installCommand": "react-native-nitro-image react-native-nitro-modules",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["mrousavy"],
+    "notes": ""
   }
 }
