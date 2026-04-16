@@ -60,7 +60,7 @@ runs:
       if: ${{ inputs.platform == 'ios' }}
       uses: maxim-lobanov/setup-xcode@v1
       with:
-        xcode-version: 16.4.0
+        xcode-version: 26.3.0
     - name: Build iOS with retry
       if: ${{ inputs.platform == 'ios' }}
       uses: nick-fields/retry@v3
