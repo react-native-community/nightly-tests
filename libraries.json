@@ -306,7 +306,7 @@
   },
   "react-native-vision-camera": {
     "description": "A powerful, high-performance React Native Camera library",
-    "installCommand": "react-native-vision-camera",
+    "installCommand": "react-native-vision-camera react-native-nitro-modules react-native-nitro-image",
     "android": true,
     "ios": true,
     "maintainersUsernames": [],
