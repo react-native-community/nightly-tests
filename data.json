@@ -1786,7 +1786,7 @@
     "library": "react-native-vision-camera",
     "installCommand": "react-native-vision-camera react-native-nitro-modules react-native-nitro-image",
     "repositoryURLs": {
-      "react-native-vision-camera": "https://github.com/mrousavy/react-native-vision-camera/tree/main/package",
+      "react-native-vision-camera": "https://github.com/mrousavy/react-native-vision-camera/tree/main/packages/react-native-vision-camera",
       "react-native-nitro-modules": "https://github.com/mrousavy/nitro/tree/main/packages/react-native-nitro-modules",
       "react-native-nitro-image": "https://github.com/mrousavy/react-native-nitro-image/tree/main/packages/react-native-nitro-image"
     },
