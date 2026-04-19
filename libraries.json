@@ -407,5 +407,14 @@
     "ios": true,
     "maintainersUsernames": ["alpha0010"],
     "notes": ""
+  },
+  "@maplibre/maplibre-react-native": {
+    "description": "React Native library for creating maps with MapLibre Native for Android & iOS",
+    "installCommand": "@maplibre/maplibre-react-native",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["KiwiKilian", "tyrauber"],
+    "notes": "",
+    "patchFile": "patches/maplibre-react-native.patch"
   }
 }
