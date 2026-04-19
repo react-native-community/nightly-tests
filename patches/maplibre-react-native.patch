@@ -1,0 +1,12 @@
+diff --git a/ios/Podfile b/ios/Podfile
+index b4aa3be..e93f3bc 100644
+--- a/ios/Podfile
++++ b/ios/Podfile
+@@ -30,5 +30,7 @@ target 'RNApp' do
+       :mac_catalyst_enabled => false,
+       # :ccache_enabled => true
+     )
++
++    $MLRN.post_install(installer)
+   end
+ end
