@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "scripts": {
     "dev": "next dev",
@@ -17,22 +17,22 @@
     "@tanstack/react-table": "^8.21.3",
     "next": "^16.2.6",
     "next-themes": "^0.4.6",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5",
-    "tailwind-merge": "^3.5.0"
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "16.2.3",
+    "@next/eslint-plugin-next": "16.2.6",
     "@svgr/webpack": "^8.1.0",
-    "@tailwindcss/postcss": "^4.2.2",
-    "@types/node": "^22.19.11",
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/node": "^24.12.4",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "babel-plugin-react-compiler": "^1.0.0",
-    "dotenv": "^17.4.1",
+    "dotenv": "^17.4.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-svgo": "^0.12.0",
-    "firebase-admin": "^13.8.0",
-    "tailwindcss": "^4.2.2"
+    "firebase-admin": "^13.9.0",
+    "tailwindcss": "^4.3.0"
   }
 }
