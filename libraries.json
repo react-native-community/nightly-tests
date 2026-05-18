@@ -416,5 +416,14 @@
     "maintainersUsernames": ["KiwiKilian", "tyrauber"],
     "notes": "",
     "patchFile": "patches/maplibre-react-native.patch"
+  },
+  "react-native-nitro-fetch": {
+    "description": "A general purpose network fetching library for React Native",
+    "installCommand": "react-native-nitro-fetch react-native-nitro-modules",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["riteshshukla04", "szymon20000"],
+    "notes": "",
+    "patchFile": ""
   }
 }
