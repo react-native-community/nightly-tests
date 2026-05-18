@@ -417,7 +417,7 @@
     "notes": "",
     "patchFile": "patches/maplibre-react-native.patch"
   },
-   "react-native-nitro-fetch": {
+  "react-native-nitro-fetch": {
     "description": "Awesome Fetch",
     "installCommand": "react-native-nitro-fetch react-native-nitro-modules",
     "android": true,
