@@ -425,5 +425,13 @@
     "maintainersUsernames": ["riteshshukla04", "szymon20000"],
     "notes": "",
     "patchFile": ""
+  },
+  "react-native-enriched-markdown": {
+    "description": "Markdown Input & Text for React Native",
+    "installCommand": "react-native-enriched-markdown@nightly",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["hryhoriiK97"],
+    "notes": ""
   }
 }
