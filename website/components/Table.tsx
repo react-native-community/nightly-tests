@@ -133,7 +133,7 @@ export default function Table({ platform }: Props) {
               {headerGroup.headers.map(header => (
                 <th
                   className={twMerge(
-                    'text-sm px-2 py-2 whitespace-nowrap border-r border-border',
+                    'text-sm px-2 py-2 whitespace-nowrap border-r border-border tabular-nums',
                     'last:border-r-0!',
                     header.index === 0
                       ? 'text-left pl-3 min-w-[300px]'
