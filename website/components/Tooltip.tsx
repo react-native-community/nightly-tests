@@ -29,7 +29,7 @@ export default function Tooltip({
         <Trigger asChild>{children}</Trigger>
         <Portal>
           <Content
-            className="bg-black px-2.5 py-1 rounded-md text-xs text-white max-w-[220px] text-center z-20"
+            className="bg-black/60 backdrop-blur-lg font-light px-2.5 py-1.5 rounded-md text-xs text-white max-w-[220px] text-center z-20"
             sideOffset={sideOffset}
             side={side}>
             {content}
