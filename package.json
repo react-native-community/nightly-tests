@@ -29,6 +29,9 @@
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.60.1"
   },
+  "resolutions": {
+    "postcss": "^8.5.15"
+  },
   "scripts": {
     "lint": "eslint",
     "test": "jest --config jest.config.js",
