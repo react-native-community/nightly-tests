@@ -976,7 +976,7 @@
     "library": "react-native-enriched-markdown",
     "installCommand": "react-native-enriched-markdown@nightly",
     "repositoryURLs": {
-      "react-native-enriched-markdown": "https://github.com/software-mansion-labs/react-native-enriched-markdown"
+      "react-native-enriched-markdown": "https://github.com/software-mansion/react-native-enriched-markdown"
     },
     "notes": "",
     "results": {
