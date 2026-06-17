@@ -1,17 +1,18 @@
 'use client';
 
-import Link from 'next/link';
-import { useTheme } from 'next-themes';
 import { useEffect, useState, useTransition } from 'react';
+import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
+import { useTheme } from 'next-themes';
 
 import { useSearch } from '~/context/SearchContext';
+
 import GitHubLogo from '~/public/icons/github-icon.svg';
+import Logo from '~/public/logo.svg';
 import PlusIcon from '~/public/icons/plus-icon.svg';
 import SearchIcon from '~/public/icons/search-icon.svg';
 import ThemeDarkIcon from '~/public/icons/theme-dark-icon.svg';
 import ThemeLightIcon from '~/public/icons/theme-light-icon.svg';
-import Logo from '~/public/logo.svg';
 
 import Tooltip from './Tooltip';
 
@@ -30,7 +31,7 @@ export default function Header() {
       <div className="flex flex-row min-h-[58px] items-center gap-6 max-w-[1280px] w-full mx-auto px-4">
         <div className="flex gap-2 items-center">
           <Logo className="text-brand size-8" />
-          <p className="whitespace-nowrap max-sm:hidden">
+          <p className="whitespace-nowrap font-normal max-sm:hidden">
             React Native Nightly Tests
           </p>
           <p className="whitespace-nowrap hidden max-sm:block">RNNT</p>

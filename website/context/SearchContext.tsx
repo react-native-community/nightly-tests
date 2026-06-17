@@ -1,6 +1,5 @@
 'use client';
 
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import {
   Dispatch,
   PropsWithChildren,
@@ -11,10 +10,18 @@ import {
   useRef,
   useState,
 } from 'react';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { DisplayMode } from '~/types/data-types';
+
+function parseDisplayMode(value: string | null): DisplayMode {
+  return value === 'failing' ? 'failing' : 'all';
+}
 
 type SearchContextValue = {
   query: string;
   setQuery: Dispatch<SetStateAction<string>>;
+  displayMode: DisplayMode;
+  setDisplayMode: Dispatch<SetStateAction<DisplayMode>>;
 };
 
 const SearchContext = createContext<SearchContextValue | undefined>(undefined);
@@ -25,7 +32,11 @@ export function SearchProvider({ children }: PropsWithChildren) {
   const searchParams = useSearchParams();
 
   const [query, setQuery] = useState(searchParams.get('q') ?? '');
+  const [displayMode, setDisplayMode] = useState<DisplayMode>(() =>
+    parseDisplayMode(searchParams.get('mode'))
+  );
   const previousQueryRef = useRef<string>(query);
+  const previousDisplayModeRef = useRef<DisplayMode>(displayMode);
 
   useEffect(() => {
     const searchParamsQuery = searchParams.get('q') ?? '';
@@ -40,8 +51,26 @@ export function SearchProvider({ children }: PropsWithChildren) {
   }, [searchParams, query]);
 
   useEffect(() => {
+    const searchParamsDisplayMode = parseDisplayMode(searchParams.get('mode'));
+    if (
+      searchParamsDisplayMode === previousDisplayModeRef.current ||
+      searchParamsDisplayMode === displayMode
+    ) {
+      return;
+    }
+
+    setDisplayMode(searchParamsDisplayMode);
+  }, [displayMode, searchParams]);
+
+  useEffect(() => {
     const searchParamsQuery = searchParams.get('q') ?? '';
-    if (query === searchParamsQuery) {
+    const searchParamsDisplayMode = searchParams.get('mode');
+    const expectedDisplayModeParam = displayMode === 'all' ? null : displayMode;
+
+    if (
+      query === searchParamsQuery &&
+      searchParamsDisplayMode === expectedDisplayModeParam
+    ) {
       return;
     }
 
@@ -52,16 +81,24 @@ export function SearchProvider({ children }: PropsWithChildren) {
       newSearchParams.delete('q');
     }
 
+    if (displayMode === 'all') {
+      newSearchParams.delete('mode');
+    } else {
+      newSearchParams.set('mode', displayMode);
+    }
+
     previousQueryRef.current = query;
+    previousDisplayModeRef.current = displayMode;
 
     const queryString = newSearchParams.toString();
     router.replace(queryString ? `${pathname}?${queryString}` : pathname, {
       scroll: false,
     });
-  }, [query, pathname, router, searchParams]);
+  }, [displayMode, query, pathname, router, searchParams]);
 
   return (
-    <SearchContext.Provider value={{ query, setQuery }}>
+    <SearchContext.Provider
+      value={{ query, setQuery, displayMode, setDisplayMode }}>
       {children}
     </SearchContext.Provider>
   );

@@ -1,15 +1,18 @@
 import Link from 'next/link';
 
+import DisplayModeSelector from '~/components/DisplayModeSelector';
 import Table from '~/components/Table';
+
 import AndroidIcon from '~/public/icons/android-icon.svg';
 import IOSIcon from '~/public/icons/ios-icon.svg';
 
 export default function Home() {
   return (
-    <main className="max-w-[1280px] w-full mx-auto flex flex-col gap-4 py-8 px-4 overflow-auto">
-      <h2 className="mb-2">
+    <main className="max-w-[1280px] w-full mx-auto flex flex-col gap-4 pt-6 pb-8 px-4 overflow-auto">
+      <h2 className="flex justify-between items-center max-lg:flex-col gap-x-2 max-lg:gap-y-3">
         Results of automated GitHub Actions workflows testing React Native
-        ecosystem libraries against nightly builds:
+        ecosystem libraries against nightly builds.
+        <DisplayModeSelector />
       </h2>
       <Link href="#android" className="w-fit inline-flex rounded-lg pr-2">
         <h3

@@ -1,12 +1,12 @@
 import {
+  Arrow,
+  Content,
+  Portal,
   Provider,
   Root,
-  Trigger,
-  Portal,
-  Content,
-  Arrow,
-  type TooltipProps,
   type TooltipContentProps,
+  type TooltipProps,
+  Trigger,
 } from '@radix-ui/react-tooltip';
 import { type ReactNode } from 'react';
 

@@ -13,4 +13,6 @@ export type LibraryType = {
   >;
 };
 
+export type DisplayMode = 'all' | 'failing';
+
 export type PlatformStatus = 'success' | 'failure' | undefined;
