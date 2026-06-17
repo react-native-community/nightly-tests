@@ -1,7 +1,7 @@
+import { cert, initializeApp } from 'firebase-admin';
 import dotenv from 'dotenv';
-import { initializeApp, cert } from 'firebase-admin';
-import { getDatabase } from 'firebase-admin/database';
 import fs from 'node:fs/promises';
+import { getDatabase } from 'firebase-admin/database';
 import path from 'node:path';
 
 const DAYS_TO_SHOW = 7;

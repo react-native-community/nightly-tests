@@ -1,6 +1,5 @@
 'use client';
 
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import {
   Dispatch,
   PropsWithChildren,
@@ -11,6 +10,7 @@ import {
   useRef,
   useState,
 } from 'react';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { DisplayMode } from '~/types/data-types';
 
 function parseDisplayMode(value: string | null): DisplayMode {

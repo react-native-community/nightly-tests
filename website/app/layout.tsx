@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
 import { ThemeProvider } from 'next-themes';
+import localFont from 'next/font/local';
+
 import { PropsWithChildren, Suspense } from 'react';
 
 import Footer from '~/components/Footer';

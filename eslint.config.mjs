@@ -1,11 +1,11 @@
+import { defineConfig, globalIgnores } from 'eslint/config';
+import globals from 'globals';
+import importPlugin from 'eslint-plugin-import';
+import jestPlugin from 'eslint-plugin-jest';
 import jsPlugin from '@eslint/js';
 import jsonPlugin from '@eslint/json';
 import markdownPlugin from '@eslint/markdown';
-import { defineConfig, globalIgnores } from 'eslint/config';
-import importPlugin from 'eslint-plugin-import';
-import jestPlugin from 'eslint-plugin-jest';
 import prettierPlugin from 'eslint-plugin-prettier/recommended';
-import globals from 'globals';
 
 export default defineConfig([
   globalIgnores(['website']),
@@ -41,18 +41,14 @@ export default defineConfig([
     },
     extends: ['js/recommended'],
     rules: {
-      'import/no-unresolved': 'off',
-      'import/enforce-node-protocol-usage': ['error', 'always'],
-      'import/order': [
+      'sort-imports': [
         'error',
         {
-          groups: [['external', 'builtin'], 'internal', ['parent', 'sibling']],
-          'newlines-between': 'always',
-          alphabetize: {
-            order: 'asc',
-          },
+          allowSeparatedGroups: true,
         },
       ],
+      'import/no-unresolved': 'off',
+      'import/enforce-node-protocol-usage': ['error', 'always'],
     },
   },
 

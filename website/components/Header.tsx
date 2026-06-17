@@ -1,17 +1,18 @@
 'use client';
 
-import Link from 'next/link';
-import { useTheme } from 'next-themes';
 import { useEffect, useState, useTransition } from 'react';
+import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
+import { useTheme } from 'next-themes';
 
 import { useSearch } from '~/context/SearchContext';
+
 import GitHubLogo from '~/public/icons/github-icon.svg';
+import Logo from '~/public/logo.svg';
 import PlusIcon from '~/public/icons/plus-icon.svg';
 import SearchIcon from '~/public/icons/search-icon.svg';
 import ThemeDarkIcon from '~/public/icons/theme-dark-icon.svg';
 import ThemeLightIcon from '~/public/icons/theme-light-icon.svg';
-import Logo from '~/public/logo.svg';
 
 import Tooltip from './Tooltip';
 

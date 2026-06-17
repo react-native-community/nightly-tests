@@ -1,9 +1,10 @@
 import Link from 'next/link';
 
+import DisplayModeSelector from '~/components/DisplayModeSelector';
 import Table from '~/components/Table';
+
 import AndroidIcon from '~/public/icons/android-icon.svg';
 import IOSIcon from '~/public/icons/ios-icon.svg';
-import DisplayModeSelector from '~/components/DisplayModeSelector';
 
 export default function Home() {
   return (

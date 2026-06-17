@@ -8,14 +8,16 @@ import {
   getFilteredRowModel,
   useReactTable,
 } from '@tanstack/react-table';
-import { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
+import { useMemo } from 'react';
 
 import { DirectoryLink } from '~/components/DirectoryLink';
 import { EntryNotes } from '~/components/EntryNotes';
 import { GitHubRepoLink } from '~/components/GitHubRepoLink';
 import { useSearch } from '~/context/SearchContext';
+
 import data from '~/public/data.json';
+
 import { type LibraryType, PlatformStatus } from '~/types/data-types';
 import getCleanPackageName from '~/utils/getCleanPackageName';
 
