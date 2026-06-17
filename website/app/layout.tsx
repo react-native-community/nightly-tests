@@ -71,7 +71,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           <Suspense>
             <SearchProvider>
               <Header />
-              <div className="min-h-[calc(100dvh-58px)] grid grid-rows-[1fr_min-content]">
+              <div className="min-h-[calc(100dvh-60px)] grid grid-rows-[1fr_min-content]">
                 {children}
                 <Footer />
               </div>

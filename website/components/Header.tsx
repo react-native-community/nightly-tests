@@ -30,7 +30,7 @@ export default function Header() {
       <div className="flex flex-row min-h-[58px] items-center gap-6 max-w-[1280px] w-full mx-auto px-4">
         <div className="flex gap-2 items-center">
           <Logo className="text-brand size-8" />
-          <p className="whitespace-nowrap max-sm:hidden">
+          <p className="whitespace-nowrap font-normal max-sm:hidden">
             React Native Nightly Tests
           </p>
           <p className="whitespace-nowrap hidden max-sm:block">RNNT</p>

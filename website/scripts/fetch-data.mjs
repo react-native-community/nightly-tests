@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
-import firebase from 'firebase-admin';
+import { initializeApp, cert } from 'firebase-admin';
+import { getDatabase } from 'firebase-admin/database';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
@@ -45,12 +46,12 @@ function getCleanPackageName(packageName) {
 }
 
 async function main() {
-  firebase.initializeApp({
-    credential: firebase.credential.cert(credential),
+  initializeApp({
+    credential: cert(credential),
     databaseURL: `https://${process.env.FIREBASE_APP_PROJECTNAME}.firebaseio.com`,
   });
 
-  const rootDb = firebase.database().ref('/');
+  const rootDb = getDatabase().ref('/');
   const snapshot = await rootDb.once('value');
   const data = snapshot.val() ?? {};
 

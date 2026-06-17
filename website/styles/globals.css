@@ -39,8 +39,12 @@
 
 /* Global styles */
 
+html {
+  @apply scrollbar-thin scrollbar-thumb-secondary scrollbar-track-transparent;
+}
+
 body {
-  @apply selection:bg-(--selection);
+  @apply selection:bg-(--selection) font-light;
 }
 
 * {

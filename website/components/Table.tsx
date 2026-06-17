@@ -8,6 +8,7 @@ import {
   getFilteredRowModel,
   useReactTable,
 } from '@tanstack/react-table';
+import { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import { DirectoryLink } from '~/components/DirectoryLink';
@@ -21,6 +22,10 @@ import getCleanPackageName from '~/utils/getCleanPackageName';
 import Tooltip from './Tooltip';
 
 const columnHelper = createColumnHelper<LibraryType>();
+const tableRows = data as LibraryType[];
+const resultDates = Object.keys(
+  tableRows[tableRows.length - 1].results
+).reverse();
 
 function formatStatus(info: CellContext<LibraryType, PlatformStatus>) {
   switch (info.getValue()) {
@@ -50,69 +55,81 @@ type Props = {
 };
 
 export default function Table({ platform }: Props) {
-  const { query } = useSearch();
+  const { query, displayMode } = useSearch();
+  const firstResultDate = resultDates[0];
+  const tableData = useMemo(
+    () =>
+      displayMode === 'failing'
+        ? tableRows.filter(
+            row => row.results?.[firstResultDate]?.[platform] === 'failure'
+          )
+        : tableRows,
+    [displayMode, firstResultDate, platform]
+  );
 
-  const columns = [
-    columnHelper.accessor(`installCommand`, {
-      header: () => <span className="block">Library</span>,
-      cell: info => {
-        const entry = info.getValue();
-        const notes = info.row.original.notes;
+  const columns = useMemo(
+    () => [
+      columnHelper.accessor(`installCommand`, {
+        header: () => <span className="block">Library</span>,
+        cell: info => {
+          const entry = info.getValue();
+          const notes = info.row.original.notes;
 
-        if (!entry.includes(' ')) {
-          const packageName = getCleanPackageName(entry);
-          const repositoryURL = info.row.original.repositoryURLs?.[packageName];
-          return (
-            <div className="flex items-center gap-1.5">
-              {entry}
-              <div className="flex items-center gap-1.5 ml-auto">
-                <EntryNotes notes={notes} />
-                <DirectoryLink
-                  packageName={repositoryURL ? packageName : undefined}
-                />
-                <GitHubRepoLink repositoryURL={repositoryURL} />
+          if (!entry.includes(' ')) {
+            const packageName = getCleanPackageName(entry);
+            const repositoryURL =
+              info.row.original.repositoryURLs?.[packageName];
+            return (
+              <div className="flex items-center gap-1.5">
+                {entry}
+                <div className="flex items-center gap-1.5 ml-auto">
+                  <EntryNotes notes={notes} />
+                  <DirectoryLink
+                    packageName={repositoryURL ? packageName : undefined}
+                  />
+                  <GitHubRepoLink repositoryURL={repositoryURL} />
+                </div>
               </div>
+            );
+          }
+
+          return (
+            <div className="flex flex-col">
+              {entry.split(' ').map((lib: string) => {
+                const packageName = getCleanPackageName(lib);
+                const repositoryURL =
+                  info.row.original.repositoryURLs?.[packageName];
+                return (
+                  <div className="flex items-center gap-1.5" key={lib}>
+                    {lib}
+                    <div className="flex items-center gap-1.5 ml-auto">
+                      <EntryNotes notes={notes} />
+                      <DirectoryLink
+                        packageName={repositoryURL ? packageName : undefined}
+                      />
+                      <GitHubRepoLink repositoryURL={repositoryURL} />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           );
-        }
-
-        return (
-          <div className="flex flex-col">
-            {entry.split(' ').map((lib: string) => {
-              const packageName = getCleanPackageName(lib);
-              const repositoryURL =
-                info.row.original.repositoryURLs?.[packageName];
-              return (
-                <div className="flex items-center gap-1.5" key={lib}>
-                  {lib}
-                  <div className="flex items-center gap-1.5 ml-auto">
-                    <EntryNotes notes={notes} />
-                    <DirectoryLink
-                      packageName={repositoryURL ? packageName : undefined}
-                    />
-                    <GitHubRepoLink repositoryURL={repositoryURL} />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        );
-      },
-      filterFn: 'includesString',
-    }),
-    ...Object.keys(data[data.length - 1].results)
-      .reverse()
-      .map(date =>
+        },
+        filterFn: 'includesString',
+      }),
+      ...resultDates.map(date =>
         columnHelper.accessor(row => row.results?.[date]?.[platform], {
           id: `results.${date}.${platform}`,
           header: () => <span className="block text-xs">{date}</span>,
           cell: formatStatus,
         })
       ),
-  ];
+    ],
+    [platform]
+  );
 
   const table = useReactTable({
-    data: data as LibraryType[],
+    data: tableData,
     columns,
     state: {
       globalFilter: query,
