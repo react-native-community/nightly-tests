@@ -7,11 +7,12 @@ export default function DisplayModeSelector() {
   const { displayMode, setDisplayMode } = useSearch();
 
   return (
-    <div className="flex border border-border rounded-lg p-1 gap-1 bg-subtle">
+    <div className="flex border border-border rounded-lg p-1 gap-1 bg-subtle max-lg:w-full">
       <button
         onClick={() => setDisplayMode('all')}
         className={twMerge(
-          'text-sm font-normal px-3 py-1 rounded text-secondary cursor-pointer transition-colors',
+          'text-sm font-normal px-3.5 py-1 rounded text-secondary cursor-pointer transition-colors',
+          'max-lg:w-1/2',
           displayMode === 'all'
             ? 'bg-brand/15 dark:bg-brand/10 text-brand'
             : 'hover:bg-hover hover:dark:bg-hover/50'
@@ -21,7 +22,8 @@ export default function DisplayModeSelector() {
       <button
         onClick={() => setDisplayMode('failing')}
         className={twMerge(
-          'text-sm font-normal px-3 py-1 rounded text-secondary cursor-pointer transition-colors',
+          'text-sm font-normal px-3.5 py-1 rounded text-secondary cursor-pointer transition-colors',
+          'max-lg:w-1/2',
           displayMode === 'failing'
             ? 'bg-brand/15 dark:bg-brand/10 text-brand'
             : 'hover:bg-hover hover:dark:bg-hover/50'
