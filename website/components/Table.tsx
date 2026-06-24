@@ -194,7 +194,9 @@ export default function Table({ platform }: Props) {
           ) : (
             <tr>
               <td className="text-center text-secondary/50 py-6" colSpan={8}>
-                No libraries matching "{query}" query.
+                {query.length === 0 && displayMode === 'failing'
+                  ? 'No libraries failing the checks.'
+                  : `No libraries matching "${query}" query.`}
               </td>
             </tr>
           )}
