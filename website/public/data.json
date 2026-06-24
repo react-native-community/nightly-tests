@@ -7,32 +7,31 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27003713404",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -46,31 +45,31 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -84,31 +83,31 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -122,36 +121,33 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26965384533",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27003713404",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208",
-        "ios": "success"
-      },
       "2026-06-08": {
         "android": "failure",
         "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27126981819",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
+        "android": "success",
         "ios": "success"
       }
     }
@@ -164,32 +160,31 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-05-31": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26706964841",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -203,32 +198,31 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -242,34 +236,33 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27003713404",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
         "android": "failure",
         "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27126981819",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
+        "android": "success",
         "ios": "success"
       }
     }
@@ -282,32 +275,31 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27003713404",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -321,32 +313,31 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -360,32 +351,31 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -399,31 +389,31 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -437,33 +427,39 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
         "android": "success",
         "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27816753472"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27864908871"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27898926461"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27945461075"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/28011200831"
+      },
+      "2026-06-24": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/28083690388"
       }
     }
   },
@@ -475,31 +471,31 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -513,31 +509,31 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -551,38 +547,40 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26808778947"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26965384533"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27003713404"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208"
-      },
       "2026-06-08": {
         "android": "success",
         "ios": "failure",
         "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27126981819"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27816753472"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27864908871"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27898926461"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27945461075"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/28011200831"
+      },
+      "2026-06-24": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/28083690388"
       }
     }
   },
@@ -594,40 +592,40 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26706964841"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26749466136"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26808778947"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26965384533"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27003713404"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208"
-      },
       "2026-06-08": {
         "android": "success",
         "ios": "failure",
         "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27126981819"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27816753472"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27864908871"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27898926461"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27945461075"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/28011200831"
+      },
+      "2026-06-24": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/28083690388"
       }
     }
   },
@@ -639,31 +637,31 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -677,31 +675,31 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -712,31 +710,31 @@
     "installCommand": "react-native-async-storage",
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -750,32 +748,32 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27816753472",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -789,31 +787,31 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -827,31 +825,31 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -865,31 +863,31 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -903,31 +901,31 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -941,32 +939,31 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -976,31 +973,35 @@
     "library": "react-native-enriched-markdown",
     "installCommand": "react-native-enriched-markdown@nightly",
     "repositoryURLs": {
-      "react-native-enriched-markdown": "https://github.com/software-mansion/react-native-enriched-markdown"
+      "react-native-enriched-markdown": "https://github.com/software-mansion/react-native-enriched-markdown/tree/main/packages/react-native-enriched-markdown"
     },
     "notes": "",
     "results": {
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1014,31 +1015,31 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1052,38 +1053,34 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26808778947"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26965384533"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27003713404"
-      },
-      "2026-06-06": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208",
-        "ios": "failure"
-      },
       "2026-06-08": {
         "android": "success",
         "ios": "failure",
         "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27126981819"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1096,31 +1093,31 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1134,33 +1131,32 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26965384533",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27003713404",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27816753472",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1174,38 +1170,33 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-05-31": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26706964841",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26749466136",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26965384533",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27003713404",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208",
-        "ios": "success"
-      },
       "2026-06-08": {
         "android": "failure",
         "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27126981819",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
+        "android": "success",
         "ios": "success"
       }
     }
@@ -1218,31 +1209,35 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27816753472",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27864908871",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27898926461",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27945461075",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1256,32 +1251,31 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1295,31 +1289,31 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1330,31 +1324,31 @@
     "installCommand": "react-native-masked-view",
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1369,31 +1363,34 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27816753472",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27864908871",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27898926461",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1408,31 +1405,32 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27816753472",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1446,32 +1444,31 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1486,31 +1483,31 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1524,31 +1521,31 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1562,32 +1559,31 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1601,31 +1597,31 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1640,37 +1636,33 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26808778947",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26965384533",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27003713404",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208",
-        "ios": "success"
-      },
       "2026-06-08": {
         "android": "failure",
         "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27126981819",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
+        "android": "success",
         "ios": "success"
       }
     }
@@ -1683,31 +1675,31 @@
     },
     "notes": "A popular library for React Native projects built with the New Architecture.",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1721,40 +1713,34 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26706964841"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26749466136"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26808778947"
-      },
-      "2026-06-04": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26965384533",
-        "ios": "failure"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27003713404"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208"
-      },
       "2026-06-08": {
         "android": "success",
         "ios": "failure",
         "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27126981819"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1766,32 +1752,31 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27003713404",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1805,32 +1790,31 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27003713404",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1846,32 +1830,31 @@
     },
     "notes": "Popular styling library for React Native",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1882,32 +1865,31 @@
     "installCommand": "react-native-vector-icons",
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1921,31 +1903,31 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1961,31 +1943,31 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -1999,31 +1981,31 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -2037,32 +2019,31 @@
     },
     "notes": "",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/27056124208",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
@@ -2077,32 +2058,31 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-05-31": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-01": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-02": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-04": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/26965384533",
-        "ios": "success"
-      },
-      "2026-06-05": {
-        "android": "success",
-        "ios": "success"
-      },
-      "2026-06-06": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-06-08": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-19": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-20": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-21": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-22": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-23": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-06-24": {
         "android": "success",
         "ios": "success"
       }
