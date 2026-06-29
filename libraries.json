@@ -390,7 +390,8 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["vonovak"],
-    "notes": ""
+    "notes": "",
+    "patchFile": "patches/react-native-google-signin.patch"
   },
   "react-native-pdf": {
     "description": "A <Pdf /> component for react-native",
