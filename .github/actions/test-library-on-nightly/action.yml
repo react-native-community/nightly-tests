@@ -24,7 +24,7 @@ runs:
         cd /tmp
         npx @react-native-community/cli init RNApp --skip-install --version nightly
     
-    
+
     - name: Apply patch if specified
       if: ${{ inputs.patch-file != '' }}
       shell: bash
@@ -38,9 +38,9 @@ runs:
           echo "⚠️  Warning: Patch file not found: ${{ inputs.patch-file }}"
           exit 1
         fi
-    
+
     - name: Add library with retry
-      uses: nick-fields/retry@v3
+      uses: nick-fields/retry@v4
       with:
         timeout_minutes: 10
         max_attempts: ${{ inputs.retry-count }}
@@ -63,7 +63,7 @@ runs:
         xcode-version: 26.3.0
     - name: Build iOS with retry
       if: ${{ inputs.platform == 'ios' }}
-      uses: nick-fields/retry@v3
+      uses: nick-fields/retry@v4
       with:
         timeout_minutes: 30
         max_attempts: ${{ inputs.retry-count }}
@@ -86,13 +86,13 @@ runs:
     # Android
     - name: Setup Java for Android
       if: ${{ inputs.platform == 'android' }}
-      uses: actions/setup-java@v2
+      uses: actions/setup-java@v5
       with:
         java-version: '17'
         distribution: 'zulu'
     - name: Build Android with retry
       if: ${{ inputs.platform == 'android' }}
-      uses: nick-fields/retry@v3
+      uses: nick-fields/retry@v4
       with:
         timeout_minutes: 30
         max_attempts: ${{ inputs.retry-count }}

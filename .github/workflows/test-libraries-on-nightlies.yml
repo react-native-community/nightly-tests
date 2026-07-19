@@ -46,9 +46,9 @@ jobs:
         platform: [ios, android]
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Setup node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: yarn
@@ -68,7 +68,7 @@ jobs:
           echo "lib_folder=$LIB_FOLDER" >> $GITHUB_OUTPUT
       - name: Upload Artifact
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ steps.save-outcome.outputs.lib_folder }}-${{ matrix.platform }}-outcome
           path: /tmp/${{ steps.save-outcome.outputs.lib_folder }}-${{ matrix.platform }}-outcome
@@ -80,12 +80,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
       - name: Restore outcomes
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v8
         with:
           pattern: '*-outcome'
           path: /tmp
       - name: Collect failures
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         env:
           FIREBASE_APP_EMAIL: ${{ secrets.firebase_app_email }}
           FIREBASE_APP_PASS: ${{ secrets.firebase_app_pass }}
