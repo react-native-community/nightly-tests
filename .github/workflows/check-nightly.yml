@@ -24,7 +24,7 @@ jobs:
     if: github.repository == 'react-native-community/nightly-tests'
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Check nightly
         run: |
           TODAY=$(date "+%Y%m%d")
