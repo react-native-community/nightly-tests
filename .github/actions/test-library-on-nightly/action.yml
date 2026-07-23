@@ -80,8 +80,10 @@ runs:
         on_retry_command: |
           echo "Cleaning up for iOS retry..."
           cd /tmp/RNApp/ios
+          bundle exec pod deintegrate
           rm -rf Pods Podfile.lock build
           rm -rf ~/Library/Developer/Xcode/DerivedData/* || true
+          bundle exec pod repo update
 
     # Android
     - name: Setup Java for Android
