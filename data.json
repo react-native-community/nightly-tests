@@ -2058,8 +2058,7 @@
       },
       "2026-07-23": {
         "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/29985648049"
+        "ios": "success"
       }
     }
   }
