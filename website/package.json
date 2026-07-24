@@ -13,18 +13,18 @@
     "data:fetch": "node ./scripts/fetch-data.mjs"
   },
   "dependencies": {
-    "@radix-ui/react-tooltip": "^1.2.11",
+    "@radix-ui/react-tooltip": "^1.2.14",
     "@tanstack/react-table": "^8.21.3",
-    "next": "^16.2.10",
+    "next": "^16.2.11",
     "next-themes": "^0.4.6",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "16.2.10",
+    "@next/eslint-plugin-next": "16.2.11",
     "@svgr/webpack": "^8.1.0",
-    "@tailwindcss/postcss": "^4.3.2",
+    "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^24.12.4",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
@@ -32,7 +32,7 @@
     "dotenv": "^17.4.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-svgo": "^0.12.0",
-    "firebase-admin": "^14.1.0",
-    "tailwindcss": "^4.3.2"
+    "firebase-admin": "^14.2.0",
+    "tailwindcss": "^4.3.3"
   }
 }
