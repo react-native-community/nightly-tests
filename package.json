@@ -30,7 +30,7 @@
     "typescript-eslint": "^8.62.1"
   },
   "resolutions": {
-    "postcss": "^8.5.15"
+    "postcss": "^8.5.25"
   },
   "scripts": {
     "lint": "eslint",
