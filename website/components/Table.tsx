@@ -2,11 +2,16 @@
 
 import {
   type CellContext,
+  columnFilteringFeature,
+  columnOrderingFeature,
+  columnVisibilityFeature,
   createColumnHelper,
+  createFilteredRowModel,
+  filterFn_includesString,
   flexRender,
-  getCoreRowModel,
-  getFilteredRowModel,
-  useReactTable,
+  globalFilteringFeature,
+  tableFeatures,
+  useTable,
 } from '@tanstack/react-table';
 import { twMerge } from 'tailwind-merge';
 import { useMemo } from 'react';
@@ -23,13 +28,25 @@ import getCleanPackageName from '~/utils/getCleanPackageName';
 
 import Tooltip from './Tooltip';
 
-const columnHelper = createColumnHelper<LibraryType>();
+const features = tableFeatures({
+  columnFilteringFeature,
+  columnOrderingFeature,
+  columnVisibilityFeature,
+  globalFilteringFeature,
+  filteredRowModel: createFilteredRowModel(),
+  filterFns: {
+    includesString: filterFn_includesString,
+  },
+});
+const columnHelper = createColumnHelper<typeof features, LibraryType>();
 const tableRows = data as LibraryType[];
 const resultDates = Object.keys(
   tableRows[tableRows.length - 1].results
 ).reverse();
 
-function formatStatus(info: CellContext<LibraryType, PlatformStatus>) {
+function formatStatus(
+  info: CellContext<typeof features, LibraryType, PlatformStatus>
+) {
   switch (info.getValue()) {
     case 'success':
       return <span className="select-none">🟢</span>;
@@ -70,74 +87,74 @@ export default function Table({ platform }: Props) {
   );
 
   const columns = useMemo(
-    () => [
-      columnHelper.accessor(`installCommand`, {
-        header: () => <span className="block">Library</span>,
-        cell: info => {
-          const entry = info.getValue();
-          const notes = info.row.original.notes;
+    () =>
+      columnHelper.columns([
+        columnHelper.accessor(`installCommand`, {
+          header: () => <span className="block">Library</span>,
+          cell: info => {
+            const entry = info.getValue();
+            const notes = info.row.original.notes;
 
-          if (!entry.includes(' ')) {
-            const packageName = getCleanPackageName(entry);
-            const repositoryURL =
-              info.row.original.repositoryURLs?.[packageName];
-            return (
-              <div className="flex items-center gap-1.5">
-                {entry}
-                <div className="flex items-center gap-1.5 ml-auto">
-                  <EntryNotes notes={notes} />
-                  <DirectoryLink
-                    packageName={repositoryURL ? packageName : undefined}
-                  />
-                  <GitHubRepoLink repositoryURL={repositoryURL} />
+            if (!entry.includes(' ')) {
+              const packageName = getCleanPackageName(entry);
+              const repositoryURL =
+                info.row.original.repositoryURLs?.[packageName];
+              return (
+                <div className="flex items-center gap-1.5">
+                  {entry}
+                  <div className="flex items-center gap-1.5 ml-auto">
+                    <EntryNotes notes={notes} />
+                    <DirectoryLink
+                      packageName={repositoryURL ? packageName : undefined}
+                    />
+                    <GitHubRepoLink repositoryURL={repositoryURL} />
+                  </div>
                 </div>
+              );
+            }
+
+            return (
+              <div className="flex flex-col">
+                {entry.split(' ').map((lib: string) => {
+                  const packageName = getCleanPackageName(lib);
+                  const repositoryURL =
+                    info.row.original.repositoryURLs?.[packageName];
+                  return (
+                    <div className="flex items-center gap-1.5" key={lib}>
+                      {lib}
+                      <div className="flex items-center gap-1.5 ml-auto">
+                        <EntryNotes notes={notes} />
+                        <DirectoryLink
+                          packageName={repositoryURL ? packageName : undefined}
+                        />
+                        <GitHubRepoLink repositoryURL={repositoryURL} />
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             );
-          }
-
-          return (
-            <div className="flex flex-col">
-              {entry.split(' ').map((lib: string) => {
-                const packageName = getCleanPackageName(lib);
-                const repositoryURL =
-                  info.row.original.repositoryURLs?.[packageName];
-                return (
-                  <div className="flex items-center gap-1.5" key={lib}>
-                    {lib}
-                    <div className="flex items-center gap-1.5 ml-auto">
-                      <EntryNotes notes={notes} />
-                      <DirectoryLink
-                        packageName={repositoryURL ? packageName : undefined}
-                      />
-                      <GitHubRepoLink repositoryURL={repositoryURL} />
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          );
-        },
-        filterFn: 'includesString',
-      }),
-      ...resultDates.map(date =>
-        columnHelper.accessor(row => row.results?.[date]?.[platform], {
-          id: `results.${date}.${platform}`,
-          header: () => <span className="block text-xs">{date}</span>,
-          cell: formatStatus,
-        })
-      ),
-    ],
+          },
+          filterFn: 'includesString',
+        }),
+        ...resultDates.map(date =>
+          columnHelper.accessor(row => row.results?.[date]?.[platform], {
+            id: `results.${date}.${platform}`,
+            header: () => <span className="block text-xs">{date}</span>,
+            cell: formatStatus,
+          })
+        ),
+      ]),
     [platform]
   );
 
-  const table = useReactTable({
+  const table = useTable({
     data: tableData,
     columns,
+    features,
     state: {
       globalFilter: query,
     },
-    getCoreRowModel: getCoreRowModel(),
-    getFilteredRowModel: getFilteredRowModel(),
     globalFilterFn: 'includesString',
   });
 
