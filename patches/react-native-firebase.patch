@@ -2,12 +2,14 @@ diff --git a/ios/Podfile b/ios/Podfile
 index b4aa3be..cb46b59 100644
 --- a/ios/Podfile
 +++ b/ios/Podfile
-@@ -17,6 +17,8 @@ end
+@@ -17,6 +17,10 @@ end
  target 'RNApp' do
    config = use_native_modules!
  
-+  use_frameworks! :linkage => :static
-+  $RNFirebaseAsStaticFramework = true
++  # @react-native-firebase/app v26+ uses SPM by default and requires dynamic
++  # frameworks. Static linkage needs `$RNFirebaseDisableSPM = true` first.
++  # See https://rnfirebase.io/ios-spm
++  use_frameworks! :linkage => :dynamic
    use_react_native!(
      :path => config[:reactNativePath],
      # An absolute path to your application root.
