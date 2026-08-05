@@ -5,6 +5,8 @@ const basePath = process.env.REPOSITORY_NAME
   ? `/${process.env.REPOSITORY_NAME}`
   : undefined;
 
+const PACKAGES_TO_OPTIMIZE = ['@radix-ui/*', '@tenstack/*'];
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   reactCompiler: true,
@@ -13,6 +15,7 @@ const nextConfig: NextConfig = {
   output: 'export',
   basePath,
   assetPrefix: basePath,
+  transpilePackages: PACKAGES_TO_OPTIMIZE,
   turbopack: {
     root: path.join(import.meta.dirname, '..'),
     rules: {
@@ -24,6 +27,7 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     turbopackFileSystemCacheForDev: true,
+    optimizePackageImports: PACKAGES_TO_OPTIMIZE,
   },
 };
 
