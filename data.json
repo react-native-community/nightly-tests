@@ -7,10 +7,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -32,6 +28,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -45,10 +45,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -70,6 +66,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -83,10 +83,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -108,6 +104,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -121,10 +121,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -146,6 +142,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -159,10 +159,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -184,6 +180,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -197,10 +197,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -222,6 +218,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -235,10 +235,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -260,6 +256,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -273,10 +273,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -298,6 +294,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -311,10 +311,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -336,6 +332,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -349,10 +349,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -376,6 +372,10 @@
       "2026-08-10": {
         "android": "success",
         "ios": "success"
+      },
+      "2026-08-12": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -387,11 +387,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/30737526547"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "failure",
@@ -416,6 +411,10 @@
       "2026-08-10": {
         "android": "success",
         "ios": "success"
+      },
+      "2026-08-12": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -427,11 +426,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/30737526547",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -453,6 +447,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -466,10 +464,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -491,6 +485,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -504,10 +502,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -529,6 +523,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -542,10 +540,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -567,6 +561,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -580,10 +578,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -605,6 +599,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -618,10 +616,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -643,6 +637,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -656,10 +654,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -681,6 +675,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -691,10 +689,6 @@
     "installCommand": "react-native-async-storage",
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -716,6 +710,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -729,10 +727,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -754,6 +748,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -767,10 +765,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -792,6 +786,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -805,10 +803,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -830,6 +824,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -843,10 +841,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -868,6 +862,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -881,10 +879,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -906,6 +900,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -919,10 +917,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -944,6 +938,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -957,10 +955,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -982,6 +976,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -995,10 +993,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1020,6 +1014,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1033,10 +1031,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1058,6 +1052,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1072,10 +1070,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1101,6 +1095,10 @@
         "android": "failure",
         "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/31359416017",
         "ios": "success"
+      },
+      "2026-08-12": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1112,10 +1110,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1137,6 +1131,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1150,10 +1148,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1175,6 +1169,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1188,10 +1186,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1213,6 +1207,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1226,10 +1224,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1251,6 +1245,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1264,10 +1262,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1289,6 +1283,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1299,10 +1297,6 @@
     "installCommand": "react-native-masked-view",
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1324,6 +1318,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1338,10 +1336,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1363,6 +1357,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1377,10 +1375,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1402,6 +1396,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1415,10 +1413,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1440,6 +1434,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1454,10 +1452,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1479,6 +1473,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1492,10 +1490,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1517,6 +1511,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1530,10 +1528,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1557,6 +1551,10 @@
       "2026-08-10": {
         "android": "success",
         "ios": "success"
+      },
+      "2026-08-12": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1568,10 +1566,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "failure",
         "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/31019737586",
@@ -1596,6 +1590,10 @@
       "2026-08-10": {
         "android": "success",
         "ios": "success"
+      },
+      "2026-08-12": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1608,10 +1606,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1633,6 +1627,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1646,10 +1644,6 @@
     },
     "notes": "A popular library for React Native projects built with the New Architecture.",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1671,6 +1665,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1684,10 +1682,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1709,6 +1703,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1722,10 +1720,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1747,6 +1741,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1760,10 +1758,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1785,6 +1779,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1800,10 +1798,6 @@
     },
     "notes": "Popular styling library for React Native",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1825,6 +1819,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1835,10 +1833,6 @@
     "installCommand": "react-native-vector-icons",
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1860,6 +1854,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1873,10 +1871,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1898,6 +1892,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1913,10 +1911,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1938,6 +1932,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1951,10 +1949,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -1976,6 +1970,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -1989,10 +1987,6 @@
     },
     "notes": "",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -2014,6 +2008,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
@@ -2028,10 +2026,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-08-02": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-08-05": {
         "android": "success",
         "ios": "success"
@@ -2053,6 +2047,10 @@
         "ios": "success"
       },
       "2026-08-10": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-08-12": {
         "android": "success",
         "ios": "success"
       }
