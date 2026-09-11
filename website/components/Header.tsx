@@ -36,7 +36,7 @@ export default function Header() {
           </p>
           <p className="whitespace-nowrap hidden max-sm:block">RNNT</p>
         </div>
-        <div className="relative w-full max-sm:order-3 max-sm:basis-full">
+        <div className="relative min-w-0 flex-1 max-sm:order-3 max-sm:basis-full">
           <SearchIcon className="absolute left-3.5 top-2.75 size-4 text-secondary/60 pointer-events-none" />
           <input
             type="text"
