@@ -161,7 +161,7 @@ export default function Table({ platform }: Props) {
   const rowsCount = table.getRowModel().rows.length;
 
   return (
-    <div className="border border-border rounded-lg shadow-xs overflow-hidden overflow-x-auto mb-4 dark:shadow-sm">
+    <div className="border border-border rounded-lg shadow-xs scrollbar-thin overflow-hidden overflow-x-auto mb-4 dark:shadow-sm">
       <table className="w-full">
         <thead className="bg-subtle">
           {table.getHeaderGroups().map(headerGroup => (
