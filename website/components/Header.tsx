@@ -28,15 +28,15 @@ export default function Header() {
 
   return (
     <header className="border-b border-b-border sticky bg-background/75 backdrop-blur-lg top-0 z-10">
-      <div className="flex flex-row min-h-[58px] items-center gap-6 max-w-[1280px] w-full mx-auto px-4">
-        <div className="flex gap-2 items-center">
+      <div className="flex flex-row flex-wrap min-h-[58px] items-center gap-6 max-sm:gap-x-4 max-sm:gap-y-2 max-w-[1280px] w-full mx-auto px-4 max-sm:pt-1.5 max-sm:pb-2.5">
+        <div className="flex gap-2 items-center max-sm:order-1">
           <Logo className="text-brand size-8" />
           <p className="whitespace-nowrap font-normal max-sm:hidden">
             React Native Nightly Tests
           </p>
           <p className="whitespace-nowrap hidden max-sm:block">RNNT</p>
         </div>
-        <div className="relative w-full">
+        <div className="relative min-w-0 flex-1 max-sm:order-3 max-sm:basis-full">
           <SearchIcon className="absolute left-3.5 top-2.75 size-4 text-secondary/60 pointer-events-none" />
           <input
             type="text"
@@ -64,7 +64,7 @@ export default function Header() {
             </div>
           )}
         </div>
-        <div className="flex flex-row gap-2 ml-auto">
+        <div className="flex flex-row gap-2 ml-auto max-sm:order-2">
           <Tooltip
             content="Add package to the program"
             side="bottom"
