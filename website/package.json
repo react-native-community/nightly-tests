@@ -19,7 +19,7 @@
     "next-themes": "^0.4.6",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
-    "tailwind-merge": "^3.6.0"
+    "tailwind-merge": "^3.7.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "16.3.5",
@@ -29,10 +29,10 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "babel-plugin-react-compiler": "^1.0.0",
-    "dotenv": "^17.4.2",
+    "dotenv": "^18.0.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-svgo": "^0.14.0",
-    "firebase-admin": "^14.2.0",
+    "firebase-admin": "^14.4.0",
     "tailwindcss": "^4.3.3"
   }
 }
