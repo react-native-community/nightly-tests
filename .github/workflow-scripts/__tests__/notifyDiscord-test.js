@@ -153,6 +153,30 @@ describe('sendMessageToDiscord', () => {
     );
   });
 
+  it('should split messages that exceed the Discord content limit', async () => {
+    global.fetch.mockResolvedValue({
+      ok: true,
+      status: 200,
+    });
+
+    const webhook = 'https://discord.com/api/webhooks/123/abc';
+    const message = {
+      content: Array.from(
+        { length: 100 },
+        (_, index) => `❌ [Android] react-native-library-${index}`
+      ).join('\n'),
+    };
+
+    await sendMessageToDiscord(webhook, message);
+
+    const sentContents = global.fetch.mock.calls.map(
+      ([, options]) => JSON.parse(options.body).content
+    );
+    expect(sentContents.length).toBeGreaterThan(1);
+    expect(sentContents.every(content => content.length <= 2000)).toBe(true);
+    expect(sentContents.join('\n')).toBe(message.content);
+  });
+
   it('should throw an error if the response is not ok', async () => {
     // Mock a failed response
     global.fetch.mockResolvedValueOnce({
