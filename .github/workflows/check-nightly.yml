@@ -26,16 +26,37 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
       - name: Check nightly
+        id: check-nightly
         run: |
-          TODAY=$(date "+%Y%m%d")
+          TODAY=$(date -u "+%Y%m%d")
+          echo "date=$TODAY" >> "$GITHUB_OUTPUT"
           echo "Checking nightly for $TODAY"
-          NIGHTLY="$(npm view react-native | grep $TODAY)"
-          if [[ -z $NIGHTLY ]]; then
-            echo 'Nightly job failed.'
+          if ! NIGHTLY_VERSION="$(npm view react-native@nightly version)"; then
+            echo "version=unavailable" >> "$GITHUB_OUTPUT"
+            echo 'Unable to query the current nightly version.'
+            exit 1
+          fi
+          echo "version=$NIGHTLY_VERSION" >> "$GITHUB_OUTPUT"
+          if [[ "$NIGHTLY_VERSION" != *"nightly-$TODAY-"* ]]; then
+            echo "Nightly job failed. Latest nightly is $NIGHTLY_VERSION."
             exit 1
           else
-            echo 'Nightly Worked, All Good!'
+            echo "Nightly Worked, All Good! ($NIGHTLY_VERSION)"
           fi
+      - name: Notify Discord about missing nightly
+        if: failure() && steps.check-nightly.outcome == 'failure'
+        uses: actions/github-script@v9
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.NIGHTLY_DISCORD_WEBHOOK }}
+          NIGHTLY_DATE: ${{ steps.check-nightly.outputs.date }}
+          NIGHTLY_VERSION: ${{ steps.check-nightly.outputs.version }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        with:
+          script: |
+            const {sendMessageToDiscord} = require('./.github/workflow-scripts/notifyDiscord.js');
+            await sendMessageToDiscord(process.env.DISCORD_WEBHOOK_URL, {
+              content: `🚨 **React Native Nightly Publication Missing** 🚨\n\nNo \`react-native@nightly\` release was found for ${process.env.NIGHTLY_DATE}, so library integration tests were skipped.\n\nLatest published nightly: \`${process.env.NIGHTLY_VERSION}\`\nWorkflow run: ${process.env.RUN_URL}`,
+            });
 
   test-libraries:
     uses: ./.github/workflows/test-libraries-on-nightlies.yml
