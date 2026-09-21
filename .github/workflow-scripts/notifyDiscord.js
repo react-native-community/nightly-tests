@@ -18,25 +18,62 @@ async function sendMessageToDiscord(webHook, message) {
     throw new Error('Discord webhook URL is missing');
   }
 
-  // Send the request using fetch
-  const response = await fetch(webHook, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(message),
-  });
+  const contentChunks = splitDiscordContent(message.content);
 
-  // Handle the response
-  if (response.ok) {
-    console.log('Successfully sent message to Discord');
-  } else {
-    const errorText = await response.text();
-    console.error(
-      `Failed to send message to Discord: ${response.status} ${errorText}`
-    );
-    throw new Error(`HTTP status code: ${response.status}`);
+  for (const content of contentChunks) {
+    const response = await fetch(webHook, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ ...message, content }),
+    });
+
+    if (response.ok) {
+      console.log('Successfully sent message to Discord');
+    } else {
+      const errorText = await response.text();
+      console.error(
+        `Failed to send message to Discord: ${response.status} ${errorText}`
+      );
+      throw new Error(`HTTP status code: ${response.status}`);
+    }
   }
+}
+
+const DISCORD_CONTENT_LIMIT = 2000;
+
+/**
+ * Splits Discord message content at line boundaries whenever possible.
+ * @param {string} content - Message content to split
+ * @returns {Array<string>} - Chunks within Discord's content limit
+ */
+function splitDiscordContent(content) {
+  if (typeof content !== 'string' || content.length <= DISCORD_CONTENT_LIMIT) {
+    return [content];
+  }
+
+  const chunks = [];
+  let remaining = content;
+
+  while (remaining.length > DISCORD_CONTENT_LIMIT) {
+    let splitAt = remaining.lastIndexOf('\n', DISCORD_CONTENT_LIMIT);
+    if (splitAt <= 0) {
+      splitAt = DISCORD_CONTENT_LIMIT;
+    }
+
+    chunks.push(remaining.slice(0, splitAt));
+    remaining = remaining.slice(splitAt);
+    if (remaining.startsWith('\n')) {
+      remaining = remaining.slice(1);
+    }
+  }
+
+  if (remaining.length > 0) {
+    chunks.push(remaining);
+  }
+
+  return chunks;
 }
 
 /**
