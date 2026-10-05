@@ -226,7 +226,7 @@
       "2026-10-05": {
         "android": "success",
         "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/37292280944"
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/37303019408"
       }
     }
   },
@@ -1826,7 +1826,7 @@
       },
       "2026-10-05": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/37292280944",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/37303019408",
         "ios": "success"
       }
     }
