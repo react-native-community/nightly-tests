@@ -1,10 +1,6 @@
-import Link from 'next/link';
-
 import DisplayModeSelector from '~/components/DisplayModeSelector';
+import PlatformHeading from '~/components/PlatformHeading';
 import Table from '~/components/Table';
-
-import AndroidIcon from '~/public/icons/android-icon.svg';
-import IOSIcon from '~/public/icons/ios-icon.svg';
 
 export default function Home() {
   return (
@@ -14,23 +10,9 @@ export default function Home() {
         ecosystem libraries against nightly builds.
         <DisplayModeSelector />
       </h2>
-      <Link href="#android" className="w-fit inline-flex rounded-lg pr-2">
-        <h3
-          id="android"
-          className="text-lg font-semibold inline-flex items-center gap-3 transition-colors scroll-m-20 hover:text-secondary">
-          <AndroidIcon className="border border-border size-10 text-secondary bg-subtle p-2 rounded-lg" />
-          Android
-        </h3>
-      </Link>
+      <PlatformHeading platform="android" />
       <Table platform="android" />
-      <Link href="#ios" className="w-fit inline-flex rounded-lg pr-2">
-        <h3
-          id="ios"
-          className="text-lg font-semibold inline-flex items-center gap-3 transition-colors scroll-m-20 hover:text-secondary">
-          <IOSIcon className="border border-border size-10 text-secondary bg-subtle p-2 rounded-lg" />
-          iOS
-        </h3>
-      </Link>
+      <PlatformHeading platform="ios" />
       <Table platform="ios" />
     </main>
   );

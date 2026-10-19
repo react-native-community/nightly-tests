@@ -21,6 +21,8 @@ import { EntryNotes } from '~/components/EntryNotes';
 import { GitHubRepoLink } from '~/components/GitHubRepoLink';
 import { useSearch } from '~/context/SearchContext';
 
+import CheckIcon from '~/public/icons/check-icon.svg';
+import XIcon from '~/public/icons/x-icon.svg';
 import data from '~/public/data.json';
 
 import { type LibraryType, PlatformStatus } from '~/types/data-types';
@@ -49,7 +51,9 @@ function formatStatus(
 ) {
   switch (info.getValue()) {
     case 'success':
-      return <span className="select-none">🟢</span>;
+      return (
+        <CheckIcon className="select-none size-5 text-green-500 mx-auto" />
+      );
     case 'failure':
       const runUrl =
         info.row.original.results[info.cell.id.split('.')[1]]?.runUrl;
@@ -57,12 +61,12 @@ function formatStatus(
         return (
           <Tooltip content="See the GitHub action run">
             <a href={runUrl} target="_blank" className="rounded-sm">
-              <span className="select-none">🔴</span>
+              <XIcon className="select-none size-5 text-red-500 mx-auto" />
             </a>
           </Tooltip>
         );
       } else {
-        return <span className="select-none">🔴</span>;
+        return <XIcon className="select-none size-5 text-red-500 mx-auto" />;
       }
     default:
       return <span className="text-secondary select-none">-</span>;
@@ -199,6 +203,7 @@ export default function Table({ platform }: Props) {
                       'last:border-r-0!',
                       row.index === 0 && 'pt-1',
                       row.index === rowsCount - 1 && 'pb-1',
+                      cell.getValue() === 'failure' && 'bg-red-600/10',
                       cell.column.getIsFirstColumn()
                         ? 'text-left whitespace-nowrap pl-3'
                         : 'text-center'

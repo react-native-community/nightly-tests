@@ -47,6 +47,12 @@ export default function Header() {
               setInputValue(event.target.value);
               startTransition(() => setQuery(event.target.value));
             }}
+            onKeyDown={event => {
+              if (event.key === 'Escape' && inputValue.length > 0) {
+                setInputValue('');
+                startTransition(() => setQuery(''));
+              }
+            }}
             className={twMerge(
               'w-full bg-subtle border border-border rounded-3xl pl-10 pr-3 py-1.5',
               'placeholder:text-secondary/60'
