@@ -268,7 +268,7 @@
       "2026-10-20": {
         "android": "success",
         "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/39400241804"
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/39413381931"
       }
     }
   },
@@ -606,8 +606,7 @@
         "ios": "success"
       },
       "2026-10-20": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/39400241804",
+        "android": "success",
         "ios": "success"
       }
     }
@@ -1100,8 +1099,7 @@
         "ios": "success"
       },
       "2026-10-20": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/39400241804",
+        "android": "success",
         "ios": "success"
       }
     }
@@ -1146,7 +1144,7 @@
       },
       "2026-10-20": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/39400241804",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/39413381931",
         "ios": "success"
       }
     }
@@ -1411,8 +1409,7 @@
         "ios": "success"
       },
       "2026-10-20": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/39400241804",
+        "android": "success",
         "ios": "success"
       }
     }
@@ -1642,8 +1639,7 @@
         "ios": "success"
       },
       "2026-10-20": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/39400241804",
+        "android": "success",
         "ios": "success"
       }
     }
@@ -1835,8 +1831,7 @@
         "ios": "success"
       },
       "2026-10-20": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/39400241804",
+        "android": "success",
         "ios": "success"
       }
     }
@@ -1949,8 +1944,7 @@
         "ios": "success"
       },
       "2026-10-20": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/39400241804",
+        "android": "success",
         "ios": "success"
       }
     }
@@ -2026,8 +2020,7 @@
         "ios": "success"
       },
       "2026-10-20": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/39400241804",
+        "android": "success",
         "ios": "success"
       }
     }
