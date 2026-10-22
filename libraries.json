@@ -434,5 +434,50 @@
     "ios": true,
     "maintainersUsernames": ["hryhoriiK97"],
     "notes": ""
+  },
+  "create-react-native-library (turbo-module, kotlin-objc)": {
+    "description": "Turbo Module template with Kotlin & Objective-C from create-react-native-library",
+    "installCommand": "create-react-native-library",
+    "setupScript": "scripts/create-react-native-library.js --type turbo-module --languages kotlin-objc",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["satya164"],
+    "notes": ""
+  },
+  "create-react-native-library (turbo-module, cpp)": {
+    "description": "Turbo Module template with C++ from create-react-native-library",
+    "installCommand": "create-react-native-library",
+    "setupScript": "scripts/create-react-native-library.js --type turbo-module --languages cpp",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["satya164"],
+    "notes": ""
+  },
+  "create-react-native-library (fabric-view, kotlin-objc)": {
+    "description": "Fabric View template with Kotlin & Objective-C from create-react-native-library",
+    "installCommand": "create-react-native-library",
+    "setupScript": "scripts/create-react-native-library.js --type fabric-view --languages kotlin-objc",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["satya164"],
+    "notes": ""
+  },
+  "create-react-native-library (nitro-module, kotlin-swift)": {
+    "description": "Nitro Module template with Kotlin & Swift from create-react-native-library",
+    "installCommand": "create-react-native-library",
+    "setupScript": "scripts/create-react-native-library.js --type nitro-module --languages kotlin-swift",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["satya164"],
+    "notes": ""
+  },
+  "create-react-native-library (nitro-view, kotlin-swift)": {
+    "description": "Nitro View template with Kotlin & Swift from create-react-native-library",
+    "installCommand": "create-react-native-library",
+    "setupScript": "scripts/create-react-native-library.js --type nitro-view --languages kotlin-swift",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["satya164"],
+    "notes": ""
   }
 }

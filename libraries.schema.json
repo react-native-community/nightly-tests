@@ -56,6 +56,13 @@
             "patches/react-native-reanimated.patch",
             "patches/library-name-fix.patch"
           ]
+        },
+        "setupScript": {
+          "type": "string",
+          "description": "Optional path to a Node.js script (relative to repo root) with arguments, which adds the library to the test project instead of the packages in 'installCommand'. The script runs with the test project as the current directory.",
+          "examples": [
+            "scripts/create-react-native-library.js --type turbo-module --languages kotlin-objc"
+          ]
         }
       },
       "required": [
