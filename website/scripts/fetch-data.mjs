@@ -68,6 +68,7 @@ async function main() {
             .replace('--dev', '')
             .trim();
           const notes = definitionsJSON[library].notes;
+          const setupScript = definitionsJSON[library].setupScript;
 
           const directoryData = await fetchDirectoryData(
             installCommand.includes(' ')
@@ -88,6 +89,7 @@ async function main() {
               installCommand,
               repositoryURLs,
               notes,
+              setupScript,
               results: {},
             });
           } else {
@@ -95,6 +97,7 @@ async function main() {
               library,
               installCommand,
               notes,
+              setupScript,
               results: {},
             });
           }

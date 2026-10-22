@@ -15,6 +15,10 @@ inputs:
     description: Optional path to a patch file to apply after installing the library
     required: false
     default: ''
+  setup-script:
+    description: Optional Node.js script with arguments to add the library to the app, which runs instead of adding library-npm-package
+    required: false
+    default: ''
 runs:
   using: composite
   steps:
@@ -48,7 +52,11 @@ runs:
         shell: bash
         command: |
           cd /tmp/RNApp
-          yarn add ${{ inputs.library-npm-package }}
+          if [ -n "${{ inputs.setup-script }}" ]; then
+            node $GITHUB_WORKSPACE/${{ inputs.setup-script }}
+          else
+            yarn add ${{ inputs.library-npm-package }}
+          fi
         on_retry_command: |
           echo "Cleaning up for yarn retry..."
           cd /tmp/RNApp

@@ -99,6 +99,17 @@ export default function Table({ platform }: Props) {
             const entry = info.getValue();
             const notes = info.row.original.notes;
 
+            if (info.row.original.setupScript) {
+              return (
+                <div className="flex items-center gap-1.5">
+                  {info.row.original.library}
+                  <div className="flex items-center gap-1.5 ml-auto">
+                    <EntryNotes notes={notes} />
+                  </div>
+                </div>
+              );
+            }
+
             if (!entry.includes(' ')) {
               const packageName = getCleanPackageName(entry);
               const repositoryURL =
