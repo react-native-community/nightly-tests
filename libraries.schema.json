@@ -67,9 +67,7 @@
         "githubUrl": {
           "type": "string",
           "description": "Optional URL to the GitHub repository of the library.",
-          "examples": [
-            "https://github.com/facebook/react-native"
-          ]
+          "examples": ["https://github.com/facebook/react-native"]
         }
       },
       "required": [
