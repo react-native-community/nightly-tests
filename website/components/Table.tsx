@@ -111,7 +111,7 @@ export default function Table({ platform }: Props) {
               const repositoryURL = getRepositoryURL(entryData, packageName);
               return (
                 <div className="flex items-center gap-1.5">
-                  {entry}
+                  {entryData.setupScript ? info.row.original.library : entry}
                   <div className="flex items-center gap-1.5 ml-auto">
                     <EntryNotes notes={notes} />
                     <DirectoryLink
