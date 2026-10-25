@@ -4,88 +4,77 @@
     "installCommand": "react-native-async-storage",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "react-native-blob-util": {
     "description": "A module provides upload, download, and files access API",
     "installCommand": "react-native-blob-util",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "@react-native-clipboard/clipboard": {
     "description": "React Native Clipboard API for iOS and Android",
     "installCommand": "@react-native-clipboard/clipboard",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "@react-native-community/datetimepicker": {
     "description": "React Native date & time picker component for iOS, Android and Windows",
     "installCommand": "@react-native-community/datetimepicker",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "react-native-gesture-handler": {
     "description": "Declarative API exposing platform native touch and gesture system to React Native",
     "installCommand": "react-native-gesture-handler@nightly",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "react-native-image-picker": {
     "description": "A React Native module that allows you to use native UI to select media from the device library or directly from the camera",
     "installCommand": "react-native-image-picker",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "react-native-linear-gradient": {
     "description": "A <LinearGradient /> component for react-native",
     "installCommand": "react-native-linear-gradient",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "@react-native-masked-view/masked-view": {
     "description": "React Native MaskedView component",
     "installCommand": "@react-native-masked-view/masked-view",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "@react-native-community/netinfo": {
     "description": "React Native Network Info API for iOS & Android",
     "installCommand": "@react-native-community/netinfo",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "react-native-reanimated": {
     "description": "React Native's Animated library reimplemented",
     "installCommand": "react-native-reanimated@nightly react-native-worklets@nightly",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "react-native-worklets": {
     "description": "Powerful multithreading engine",
     "installCommand": "react-native-worklets@nightly",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "react-native-firebase": {
     "description": "🔥 A well-tested feature-rich modular Firebase implementation for React Native",
@@ -93,7 +82,6 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": [],
-    "notes": "",
     "patchFile": "patches/react-native-firebase.patch"
   },
   "react-native-svg": {
@@ -101,64 +89,56 @@
     "installCommand": "react-native-svg",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "react-native-video": {
     "description": "A <Video /> component for react-native",
     "installCommand": "react-native-video",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "react-native-webview": {
     "description": "React Native WebView component for iOS, Android, macOS, and Windows",
     "installCommand": "react-native-webview",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "react-native-mmkv": {
     "description": "The fastest key/value storage for React Native",
     "installCommand": "react-native-mmkv react-native-nitro-modules",
     "android": true,
     "ios": true,
-    "maintainersUsernames": ["mrousavy"],
-    "notes": ""
+    "maintainersUsernames": ["mrousavy"]
   },
   "react-native-nitro-modules": {
     "description": "Insanely fast native C++, Swift or Kotlin modules with a statically compiled binding layer to JSI",
     "installCommand": "react-native-nitro-modules",
     "android": true,
     "ios": true,
-    "maintainersUsernames": ["mrousavy"],
-    "notes": ""
+    "maintainersUsernames": ["mrousavy"]
   },
   "react-native-screens": {
     "description": "Native navigation primitives for your React Native app",
     "installCommand": "react-native-screens@nightly",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "react-native-pager-view": {
     "description": "React Native wrapper for the Android ViewPager and iOS UIPageViewController",
     "installCommand": "react-native-pager-view",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "@react-native-community/slider": {
     "description": "React Native component used to select a single value from a range of values",
     "installCommand": "@react-native-community/slider",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "scandit libraries (@stable)": {
     "description": "Scandit Data Capture SDK for React Native",
@@ -278,6 +258,14 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": [],
+    "notes": "No longer maintained package for Skia, still used by some projects"
+  },
+  "react-native-skia": {
+    "description": "High-performance React Native Graphics using Skia",
+    "installCommand": "react-native-skia",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["wcandillon"],
     "notes": "One of top most used libraries according to the npm stats"
   },
   "lottie-react-native/lottie-react-native": {
@@ -293,16 +281,14 @@
     "installCommand": "react-native-iap react-native-nitro-modules",
     "android": true,
     "ios": true,
-    "maintainersUsernames": ["hyochan"],
-    "notes": ""
+    "maintainersUsernames": ["hyochan"]
   },
   "react-native-nitro-sound": {
     "description": "Audio recorder & player with native backends. Provides modern hook APIs, supports multiple instances, and ensures stable performance.",
     "installCommand": "react-native-nitro-sound react-native-nitro-modules",
     "android": true,
     "ios": true,
-    "maintainersUsernames": ["hyochan"],
-    "notes": ""
+    "maintainersUsernames": ["hyochan"]
   },
   "react-native-vision-camera": {
     "description": "A powerful, high-performance React Native Camera library",
@@ -365,8 +351,7 @@
     "installCommand": "@d11/react-native-fast-image",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [],
-    "notes": ""
+    "maintainersUsernames": []
   },
   "react-native-restart-newarch": {
     "description": "A React Native library to restart the app using the New Architecture.",
@@ -381,8 +366,7 @@
     "installCommand": "@braze/react-native-sdk",
     "android": true,
     "ios": true,
-    "maintainersUsernames": ["jerielng", "sircelsius", "hokstuff"],
-    "notes": ""
+    "maintainersUsernames": ["jerielng", "sircelsius", "hokstuff"]
   },
   "@react-native-google-signin/google-signin": {
     "description": "Google Sign-in for your React Native applications",
@@ -390,7 +374,6 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["vonovak"],
-    "notes": "",
     "patchFile": "patches/react-native-google-signin.patch"
   },
   "react-native-pdf": {
@@ -398,16 +381,14 @@
     "installCommand": "react-native-pdf",
     "android": true,
     "ios": true,
-    "maintainersUsernames": ["wonday"],
-    "notes": ""
+    "maintainersUsernames": ["wonday"]
   },
   "react-native-file-access": {
     "description": "Filesystem access for React Native",
     "installCommand": "react-native-file-access",
     "android": true,
     "ios": true,
-    "maintainersUsernames": ["alpha0010"],
-    "notes": ""
+    "maintainersUsernames": ["alpha0010"]
   },
   "@maplibre/maplibre-react-native": {
     "description": "React Native library for creating maps with MapLibre Native for Android & iOS",
@@ -415,7 +396,6 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["KiwiKilian", "tyrauber"],
-    "notes": "",
     "patchFile": "patches/maplibre-react-native.patch"
   },
   "react-native-nitro-fetch": {
@@ -423,17 +403,14 @@
     "installCommand": "react-native-nitro-fetch react-native-nitro-modules",
     "android": true,
     "ios": true,
-    "maintainersUsernames": ["riteshshukla04", "szymon20000"],
-    "notes": "",
-    "patchFile": ""
+    "maintainersUsernames": ["riteshshukla04", "szymon20000"]
   },
   "react-native-enriched-markdown": {
     "description": "Markdown Input & Text for React Native",
     "installCommand": "react-native-enriched-markdown@nightly",
     "android": true,
     "ios": true,
-    "maintainersUsernames": ["hryhoriiK97"],
-    "notes": ""
+    "maintainersUsernames": ["hryhoriiK97"]
   },
   "create-react-native-library (turbo-module, kotlin-objc)": {
     "description": "Turbo Module template with Kotlin & Objective-C from create-react-native-library",
@@ -442,7 +419,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["satya164"],
-    "notes": ""
+    "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library"
   },
   "create-react-native-library (turbo-module, cpp)": {
     "description": "Turbo Module template with C++ from create-react-native-library",
@@ -451,7 +428,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["satya164"],
-    "notes": ""
+    "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library"
   },
   "create-react-native-library (fabric-view, kotlin-objc)": {
     "description": "Fabric View template with Kotlin & Objective-C from create-react-native-library",
@@ -460,7 +437,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["satya164"],
-    "notes": ""
+    "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library"
   },
   "create-react-native-library (nitro-module, kotlin-swift)": {
     "description": "Nitro Module template with Kotlin & Swift from create-react-native-library",
@@ -469,7 +446,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["satya164"],
-    "notes": ""
+    "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library"
   },
   "create-react-native-library (nitro-view, kotlin-swift)": {
     "description": "Nitro View template with Kotlin & Swift from create-react-native-library",
@@ -478,6 +455,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["satya164"],
-    "notes": ""
+    "notes": "",
+    "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library"
   }
 }
