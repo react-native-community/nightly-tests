@@ -46,6 +46,10 @@ const resultDates = Object.keys(
   tableRows[tableRows.length - 1].results
 ).reverse();
 
+function getRepositoryURL(library: LibraryType, packageName: string) {
+  return library.repositoryURLs?.[packageName] || library.githubUrl;
+}
+
 function formatStatus(
   info: CellContext<typeof features, LibraryType, PlatformStatus>
 ) {
@@ -97,30 +101,23 @@ export default function Table({ platform }: Props) {
           header: () => <span className="block">Library</span>,
           cell: info => {
             const entry = info.getValue();
-            const notes = info.row.original.notes;
+            const entryData = info.row.original;
+            const notes = entryData.notes;
 
-            if (info.row.original.setupScript) {
-              return (
-                <div className="flex items-center gap-1.5">
-                  {info.row.original.library}
-                  <div className="flex items-center gap-1.5 ml-auto">
-                    <EntryNotes notes={notes} />
-                  </div>
-                </div>
-              );
-            }
-
-            if (!entry.includes(' ')) {
+            if (!entry.includes(' ') || entryData.setupScript) {
               const packageName = getCleanPackageName(entry);
-              const repositoryURL =
-                info.row.original.repositoryURLs?.[packageName];
+              const fetchedRepositoryURL =
+                entryData.repositoryURLs?.[packageName];
+              const repositoryURL = getRepositoryURL(entryData, packageName);
               return (
                 <div className="flex items-center gap-1.5">
-                  {entry}
+                  {entryData.setupScript ? info.row.original.library : entry}
                   <div className="flex items-center gap-1.5 ml-auto">
                     <EntryNotes notes={notes} />
                     <DirectoryLink
-                      packageName={repositoryURL ? packageName : undefined}
+                      packageName={
+                        fetchedRepositoryURL ? packageName : undefined
+                      }
                     />
                     <GitHubRepoLink repositoryURL={repositoryURL} />
                   </div>
@@ -132,15 +129,21 @@ export default function Table({ platform }: Props) {
               <div className="flex flex-col">
                 {entry.split(' ').map((lib: string) => {
                   const packageName = getCleanPackageName(lib);
-                  const repositoryURL =
-                    info.row.original.repositoryURLs?.[packageName];
+                  const fetchedRepositoryURL =
+                    entryData.repositoryURLs?.[packageName];
+                  const repositoryURL = getRepositoryURL(
+                    entryData,
+                    packageName
+                  );
                   return (
                     <div className="flex items-center gap-1.5" key={lib}>
                       {lib}
                       <div className="flex items-center gap-1.5 ml-auto">
                         <EntryNotes notes={notes} />
                         <DirectoryLink
-                          packageName={repositoryURL ? packageName : undefined}
+                          packageName={
+                            fetchedRepositoryURL ? packageName : undefined
+                          }
                         />
                         <GitHubRepoLink repositoryURL={repositoryURL} />
                       </div>

@@ -88,6 +88,7 @@ async function main() {
               library,
               installCommand,
               repositoryURLs,
+              githubUrl: definitionsJSON[library].githubUrl,
               notes,
               setupScript,
               results: {},
@@ -96,6 +97,7 @@ async function main() {
             tableDataMap.set(library, {
               library,
               installCommand,
+              githubUrl: definitionsJSON[library].githubUrl,
               notes,
               setupScript,
               results: {},

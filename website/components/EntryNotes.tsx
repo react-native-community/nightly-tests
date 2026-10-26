@@ -1,11 +1,12 @@
 import InfoIcon from '~/public/icons/info-icon.svg';
+import { LibraryType } from '~/types/data-types';
 
 import Tooltip from './Tooltip';
 
-type Props = { notes: string };
+type Props = { notes: LibraryType['notes'] };
 
 export function EntryNotes({ notes }: Props) {
-  if (!notes.length) {
+  if (!notes || !notes.length) {
     return null;
   }
 

@@ -43,7 +43,7 @@
         },
         "notes": {
           "type": "string",
-          "description": "Notes about the state of the library or reason why it has been added.",
+          "description": "Optional notes about the state of the library or reason why it has been added.",
           "examples": [
             "Build currently broken due to X reason.",
             "One of top most used libraries according to the npm stats."
@@ -63,6 +63,11 @@
           "examples": [
             "scripts/create-react-native-library.js --type turbo-module --languages kotlin-objc"
           ]
+        },
+        "githubUrl": {
+          "type": "string",
+          "description": "Optional URL to the GitHub repository of the library.",
+          "examples": ["https://github.com/react/react-native"]
         }
       },
       "required": [
