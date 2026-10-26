@@ -5,7 +5,6 @@
     "repositoryURLs": {
       "@braze/react-native-sdk": "https://github.com/braze-inc/braze-react-native-sdk"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -43,7 +42,6 @@
     "repositoryURLs": {
       "@d11/react-native-fast-image": "https://github.com/dream-horizon-org/react-native-fast-image"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -119,7 +117,6 @@
     "repositoryURLs": {
       "@maplibre/maplibre-react-native": "https://github.com/maplibre/maplibre-react-native/tree/main/package"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -195,7 +192,6 @@
     "repositoryURLs": {
       "@react-native-clipboard/clipboard": "https://github.com/react-native-clipboard/clipboard"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -233,7 +229,6 @@
     "repositoryURLs": {
       "@react-native-community/datetimepicker": "https://github.com/react-native-datetimepicker/datetimepicker"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -313,7 +308,6 @@
     "repositoryURLs": {
       "@react-native-community/netinfo": "https://github.com/react-native-netinfo/react-native-netinfo"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -351,7 +345,6 @@
     "repositoryURLs": {
       "@react-native-community/slider": "https://github.com/callstack/react-native-slider/tree/main/package"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -389,7 +382,6 @@
     "repositoryURLs": {
       "@react-native-firebase/app": "https://github.com/invertase/react-native-firebase/tree/main/packages/app"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -427,7 +419,6 @@
     "repositoryURLs": {
       "@react-native-google-signin/google-signin": "https://github.com/react-native-google-signin/google-signin"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -465,7 +456,6 @@
     "repositoryURLs": {
       "@react-native-masked-view/masked-view": "https://github.com/callstack/masked-view"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -576,7 +566,7 @@
   {
     "library": "@shopify/react-native-skia",
     "installCommand": "@shopify/react-native-skia",
-    "notes": "One of top most used libraries according to the npm stats",
+    "notes": "No longer maintained package for Skia, still used by some projects",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -649,7 +639,7 @@
   {
     "library": "create-react-native-library (fabric-view, kotlin-objc)",
     "installCommand": "create-react-native-library",
-    "notes": "",
+    "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library",
     "setupScript": "scripts/create-react-native-library.js --type fabric-view --languages kotlin-objc",
     "results": {
       "2026-10-23": {
@@ -669,7 +659,7 @@
   {
     "library": "create-react-native-library (nitro-module, kotlin-swift)",
     "installCommand": "create-react-native-library",
-    "notes": "",
+    "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library",
     "setupScript": "scripts/create-react-native-library.js --type nitro-module --languages kotlin-swift",
     "results": {
       "2026-10-23": {
@@ -689,6 +679,7 @@
   {
     "library": "create-react-native-library (nitro-view, kotlin-swift)",
     "installCommand": "create-react-native-library",
+    "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library",
     "notes": "",
     "setupScript": "scripts/create-react-native-library.js --type nitro-view --languages kotlin-swift",
     "results": {
@@ -709,7 +700,7 @@
   {
     "library": "create-react-native-library (turbo-module, cpp)",
     "installCommand": "create-react-native-library",
-    "notes": "",
+    "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library",
     "setupScript": "scripts/create-react-native-library.js --type turbo-module --languages cpp",
     "results": {
       "2026-10-23": {
@@ -729,7 +720,7 @@
   {
     "library": "create-react-native-library (turbo-module, kotlin-objc)",
     "installCommand": "create-react-native-library",
-    "notes": "",
+    "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library",
     "setupScript": "scripts/create-react-native-library.js --type turbo-module --languages kotlin-objc",
     "results": {
       "2026-10-23": {
@@ -789,7 +780,6 @@
   {
     "library": "react-native-async-storage",
     "installCommand": "react-native-async-storage",
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -827,7 +817,6 @@
     "repositoryURLs": {
       "react-native-blob-util": "https://github.com/RonRadtke/react-native-blob-util"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -1055,7 +1044,6 @@
     "repositoryURLs": {
       "react-native-enriched-markdown": "https://github.com/software-mansion/react-native-enriched-markdown/tree/main/packages/react-native-enriched-markdown"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -1093,7 +1081,6 @@
     "repositoryURLs": {
       "react-native-file-access": "https://github.com/alpha0010/react-native-file-access"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -1131,7 +1118,6 @@
     "repositoryURLs": {
       "react-native-gesture-handler": "https://github.com/software-mansion/react-native-gesture-handler/tree/main/packages/react-native-gesture-handler"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -1170,7 +1156,6 @@
       "react-native-iap": "https://github.com/hyodotdev/openiap/tree/main/libraries/react-native-iap",
       "react-native-nitro-modules": "https://github.com/margelo/nitro/tree/main/packages/react-native-nitro-modules"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -1208,7 +1193,6 @@
     "repositoryURLs": {
       "react-native-image-picker": "https://github.com/react-native-image-picker/react-native-image-picker"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "failure",
@@ -1291,7 +1275,6 @@
     "repositoryURLs": {
       "react-native-linear-gradient": "https://github.com/react-native-linear-gradient/react-native-linear-gradient"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -1441,7 +1424,6 @@
       "react-native-mmkv": "https://github.com/margelo/react-native-mmkv/tree/main/packages/react-native-mmkv",
       "react-native-nitro-modules": "https://github.com/margelo/nitro/tree/main/packages/react-native-nitro-modules"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -1480,7 +1462,6 @@
       "react-native-nitro-fetch": "https://github.com/margelo/react-native-nitro-fetch/tree/main/packages/react-native-nitro-fetch",
       "react-native-nitro-modules": "https://github.com/margelo/nitro/tree/main/packages/react-native-nitro-modules"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -1518,7 +1499,6 @@
     "repositoryURLs": {
       "react-native-nitro-modules": "https://github.com/margelo/nitro/tree/main/packages/react-native-nitro-modules"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -1557,7 +1537,6 @@
       "react-native-nitro-sound": "https://github.com/hyochan/react-native-nitro-sound",
       "react-native-nitro-modules": "https://github.com/margelo/nitro/tree/main/packages/react-native-nitro-modules"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -1595,7 +1574,6 @@
     "repositoryURLs": {
       "react-native-pager-view": "https://github.com/callstack/react-native-pager-view"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -1633,7 +1611,6 @@
     "repositoryURLs": {
       "react-native-pdf": "https://github.com/wonday/react-native-pdf"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -1710,7 +1687,6 @@
       "react-native-reanimated": "https://github.com/software-mansion/react-native-reanimated/tree/main/packages/react-native-reanimated",
       "react-native-worklets": "https://github.com/software-mansion/react-native-reanimated/tree/main/packages/react-native-worklets"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -1786,7 +1762,6 @@
     "repositoryURLs": {
       "react-native-screens": "https://github.com/software-mansion/react-native-screens"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -1862,7 +1837,6 @@
     "repositoryURLs": {
       "react-native-svg": "https://github.com/software-mansion/react-native-svg"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -1975,7 +1949,6 @@
     "repositoryURLs": {
       "react-native-video": "https://github.com/TheWidlarzGroup/react-native-video/tree/master/packages/react-native-video"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -2053,7 +2026,6 @@
     "repositoryURLs": {
       "react-native-webview": "https://github.com/react-native-webview/react-native-webview"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
@@ -2091,7 +2063,6 @@
     "repositoryURLs": {
       "react-native-worklets": "https://github.com/software-mansion/react-native-reanimated/tree/main/packages/react-native-worklets"
     },
-    "notes": "",
     "results": {
       "2026-10-18": {
         "android": "success",
