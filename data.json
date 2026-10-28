@@ -564,9 +564,6 @@
   {
     "library": "@shopify/react-native-skia",
     "installCommand": "@shopify/react-native-skia",
-    "repositoryURLs": {
-      "@shopify/react-native-skia": "https://github.com/Shopify/react-native-skia/tree/main/packages/skia"
-    },
     "notes": "No longer maintained package for Skia, still used by some projects",
     "results": {
       "2026-10-20": {
