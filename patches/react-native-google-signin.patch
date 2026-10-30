@@ -6,7 +6,7 @@ index b4aa3be..e93f3bc 100644
  target 'RNApp' do
    config = use_native_modules!
  
-+  pod 'AppCheckCore', '11.2.0'
++  pod 'AppCheckCore', '11.2.0', :modular_headers => true
 +
    use_react_native!(
      :path => config[:reactNativePath],
