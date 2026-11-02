@@ -143,13 +143,6 @@
     "ios": true,
     "maintainersUsernames": ["mrousavy"]
   },
-  "react-native-nitro-sqlite": {
-    "description": "Fast SQLite library for React Native built using Nitro Modules",
-    "installCommand": "react-native-nitro-sqlite react-native-nitro-modules",
-    "android": true,
-    "ios": true,
-    "maintainersUsernames": ["chrispader"]
-  },
   "react-native-screens": {
     "description": "Native navigation primitives for your React Native app",
     "installCommand": "react-native-screens@nightly",
