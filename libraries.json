@@ -119,6 +119,13 @@
     "ios": true,
     "maintainersUsernames": ["mrousavy"]
   },
+  "react-native-fast-tflite": {
+    "description": "High-performance TensorFlow Lite library for React Native, built with Nitro Modules",
+    "installCommand": "react-native-fast-tflite react-native-nitro-modules",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["mrousavy"]
+  },
   "react-native-screens": {
     "description": "Native navigation primitives for your React Native app",
     "installCommand": "react-native-screens@nightly",
