@@ -136,13 +136,6 @@
     "maintainersUsernames": ["mrousavy"],
     "notes": ""
   },
-  "react-native-quick-crypto": {
-    "description": "A fast implementation of Node's `crypto` module written in C/C++ JSI",
-    "installCommand": "react-native-quick-crypto react-native-nitro-modules react-native-quick-base64",
-    "android": true,
-    "ios": true,
-    "maintainersUsernames": ["boorad"]
-  },
   "react-native-fast-tflite": {
     "description": "High-performance TensorFlow Lite library for React Native, built with Nitro Modules",
     "installCommand": "react-native-fast-tflite react-native-nitro-modules",
