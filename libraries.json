@@ -227,6 +227,13 @@
     "maintainersUsernames": [],
     "notes": "One of top most used libraries according to the npm stats"
   },
+  "react-native-nitro-sqlite": {
+    "description": "Fast SQLite library for React Native built using Nitro Modules",
+    "installCommand": "react-native-nitro-sqlite react-native-nitro-modules",
+    "android": true,
+    "ios": true,
+    "maintainersUsernames": ["chrispader"]
+  },
   "react-native-edge-to-edge": {
     "description": "Enable edge-to-edge display in React Native",
     "installCommand": "react-native-edge-to-edge",
