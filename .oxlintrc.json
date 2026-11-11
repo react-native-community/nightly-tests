@@ -383,11 +383,6 @@
     "react-doctor/url-prefilled-privileged-action": "error",
     "react-doctor/use-lazy-motion": "error",
     "react-doctor/void-dom-elements-no-children": "error",
-    "small-rules/ban-react-fc": "error",
-    "small-rules/no-dead-store": "error",
-    "small-rules/no-reduce-accumulator-copy": "error",
-    "small-rules/prefer-early-return": ["error", { "maximumStatements": 1 }],
-    "small-rules/prefer-optional-parameter": "error",
     "typescript/await-thenable": "error",
     "typescript/ban-ts-comment": [
       "error",

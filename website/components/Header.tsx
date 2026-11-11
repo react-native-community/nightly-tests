@@ -2,7 +2,7 @@
 
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
-import { useEffect, useState, useTransition } from 'react';
+import { useEffect, useRef, useTransition } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import { useSearch } from '~/context/SearchContext';
@@ -18,12 +18,21 @@ import Tooltip from './Tooltip';
 export default function Header() {
   const { resolvedTheme, setTheme } = useTheme();
   const { query, setQuery } = useSearch();
-  const [inputValue, setInputValue] = useState(query);
+  const inputRef = useRef<HTMLInputElement>(null);
   const [, startTransition] = useTransition();
 
   useEffect(() => {
-    setInputValue(query);
+    if (inputRef.current) {
+      inputRef.current.value = query;
+    }
   }, [query]);
+
+  function clearSearch() {
+    if (inputRef.current) {
+      inputRef.current.value = '';
+    }
+    startTransition(() => setQuery(''));
+  }
 
   return (
     <header className="border-b-border bg-background/75 sticky top-0 z-10 border-b backdrop-blur-lg">
@@ -33,24 +42,23 @@ export default function Header() {
           <p className="font-normal whitespace-nowrap max-sm:hidden">React Native Nightly Tests</p>
           <p className="hidden whitespace-nowrap max-sm:block">RNNT</p>
         </div>
-        <div className="relative min-w-0 flex-1 max-sm:order-3 max-sm:basis-full">
+        <div className="group relative min-w-0 flex-1 max-sm:order-3 max-sm:basis-full">
           <SearchIcon className="text-secondary/60 pointer-events-none absolute top-2.75 left-3.5 size-4" />
           <input
+            ref={inputRef}
             type="text"
             id="search"
             autoComplete="off"
-            value={inputValue}
+            defaultValue={query}
             onChange={event => {
-              setInputValue(event.target.value);
               startTransition(() => setQuery(event.target.value));
             }}
             onKeyDown={event => {
-              if (event.key !== 'Escape' || inputValue.length === 0) {
+              if (event.key !== 'Escape' || event.currentTarget.value.length === 0) {
                 return;
               }
 
-              setInputValue('');
-              startTransition(() => setQuery(''));
+              clearSearch();
             }}
             className={twMerge(
               'w-full bg-subtle border border-border rounded-3xl pl-10 pr-3 py-1.5',
@@ -58,18 +66,13 @@ export default function Header() {
             )}
             placeholder="Search…"
           />
-          {inputValue.length > 0 && (
-            <button
-              type="button"
-              aria-label="Clear search value"
-              onClick={() => {
-                setInputValue('');
-                startTransition(() => setQuery(''));
-              }}
-              className="hover:bg-hover absolute top-1.25 right-1.5 cursor-pointer rounded-full p-1.5">
-              <PlusIcon className="text-secondary size-4 rotate-45" />
-            </button>
-          )}
+          <button
+            type="button"
+            aria-label="Clear search value"
+            onClick={clearSearch}
+            className="hover:bg-hover absolute top-1.25 right-1.5 hidden cursor-pointer rounded-full p-1.5 group-has-[input:not(:placeholder-shown)]:block">
+            <PlusIcon className="text-secondary size-4 rotate-45" />
+          </button>
         </div>
         <div className="ml-auto flex flex-row gap-2 max-sm:order-2">
           <Tooltip content="Add package to the program" side="bottom" sideOffset={4}>
