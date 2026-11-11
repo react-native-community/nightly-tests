@@ -23,22 +23,22 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: 24
-          cache: 'yarn'
 
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
       - name: 🚚️ Install dependencies
-        working-directory: website
-        run: yarn install --frozen-lockfile
+        run: bun install --frozen-lockfile
 
       - name: ⬇️ Fetch the latest test results
         working-directory: website
-        run: yarn data:fetch
+        run: bun run data:fetch
         env:
           FIREBASE_APP_PROJECTNAME: ${{ secrets.FIREBASE_APP_PROJECTNAME }}
           FIREBASE_APP_SERVICE_KEY: ${{ secrets.FIREBASE_APP_SERVICE_KEY }}
 
       - name: 📦️ Build website app
         working-directory: website
-        run: yarn build
+        run: bun run build
         env:
           REPOSITORY_NAME: 'nightly-tests'
 
