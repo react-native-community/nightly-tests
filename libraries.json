@@ -426,13 +426,6 @@
     "ios": true,
     "maintainersUsernames": ["hryhoriiK97"]
   },
-  "react-native-view-shot": {
-    "description": "Snapshot a React Native view and save it to an image",
-    "installCommand": "react-native-view-shot",
-    "android": true,
-    "ios": true,
-    "maintainersUsernames": []
-  },
   "create-react-native-library (turbo-module, kotlin-objc)": {
     "description": "Turbo Module template with Kotlin & Objective-C from create-react-native-library",
     "installCommand": "create-react-native-library",
