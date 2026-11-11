@@ -1,15 +1,14 @@
-import type { Metadata } from 'next';
+import '~/styles/globals.css';
+
+import { type Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
 import localFont from 'next/font/local';
-
 import { PropsWithChildren, Suspense } from 'react';
 
 import Footer from '~/components/Footer';
 import Header from '~/components/Header';
 import { SearchProvider } from '~/context/SearchContext';
 import getAssetPath from '~/utils/getAssetPath';
-
-import '~/styles/globals.css';
 
 const optimisticDisplay = localFont({
   src: [
@@ -63,16 +62,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={optimisticDisplay.variable}>
-      <body className="relative min-h-dvh antialiased font-sans text-primary bg-background">
+    <html lang="en" suppressHydrationWarning className={optimisticDisplay.variable}>
+      <body className="text-primary bg-background relative min-h-dvh font-sans antialiased">
         <ThemeProvider attribute="data-theme">
           <Suspense>
             <SearchProvider>
               <Header />
-              <div className="min-h-[calc(100dvh-60px)] grid grid-rows-[1fr_min-content]">
+              <div className="grid min-h-[calc(100dvh-60px)] grid-rows-[1fr_min-content]">
                 {children}
                 <Footer />
               </div>

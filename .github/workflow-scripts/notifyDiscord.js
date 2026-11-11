@@ -33,9 +33,7 @@ async function sendMessageToDiscord(webHook, message) {
       console.log('Successfully sent message to Discord');
     } else {
       const errorText = await response.text();
-      console.error(
-        `Failed to send message to Discord: ${response.status} ${errorText}`
-      );
+      console.error(`Failed to send message to Discord: ${response.status} ${errorText}`);
       throw new Error(`HTTP status code: ${response.status}`);
     }
   }
@@ -106,8 +104,7 @@ function sortResultsByPlatformAndLibrary(jobs) {
 function prepareFailurePayload(failures) {
   if (!failures || failures.length === 0) {
     return {
-      content:
-        '✅ **React Native Nightly Integration Success** ✅\n\nAll builds are green on both platforms.',
+      content: '✅ **React Native Nightly Integration Success** ✅\n\nAll builds are green on both platforms.',
     };
   }
 
@@ -138,8 +135,7 @@ function prepareComparisonPayload(broken, recovered) {
   let content = '📊 **React Native Nightly Integration Status Update** 📊\n\n';
 
   if (broken.length === 0 && recovered.length === 0) {
-    content +=
-      'No changes from yesterday - all nightly jobs maintained their previous status.';
+    content += 'No changes from yesterday - all nightly jobs maintained their previous status.';
   } else {
     if (broken.length > 0) {
       content += '🔴 **Newly Broken Jobs:**\n';

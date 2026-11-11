@@ -40,7 +40,7 @@ To learn more about website app, see [the README file](./website/README.md) in t
 The repository includes Jest tests for the workflow scripts. To run the tests locally, use the following commands:
 
 ```bash
-yarn install && yarn test
+bun install && bun run test
 ```
 
 ### Working with Patch Files

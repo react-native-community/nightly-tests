@@ -36,7 +36,7 @@ node ../../scripts/make-patch.js ../../patches/react-native-turbo-encryption.pat
 
 This will generate a patch file in the `patches` folder.
 
-**Note:** Remove any lock files like `yarn.lock`, `Podfile.lock`, or any generated files that are tracked before generating the patch file, as these can lead to an excessively long patch file.
+**Note:** Remove any lock files like `bun.lock`, `Podfile.lock`, or any generated files that are tracked before generating the patch file, as these can lead to an excessively long patch file.
 
 ### Step 5: Verify the Patch File
 

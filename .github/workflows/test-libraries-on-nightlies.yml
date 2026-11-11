@@ -14,7 +14,6 @@ on:
       firebase_app_projectname:
         required: true
 
-
 # We use the matrix.library entry to specify the dependency we want to use
 # The key is used directly as the <pkg> in the `yarn add <pkg>` command.
 jobs:
@@ -36,7 +35,7 @@ jobs:
           echo "library-data=$(cat libraries.json | tr -d '\n')" >> $GITHUB_OUTPUT
 
   test-library-on-nightly:
-    name: "[${{ matrix.platform }}] ${{ matrix.library }}"
+    name: '[${{ matrix.platform }}] ${{ matrix.library }}'
     needs: runner-setup
     runs-on: ${{ fromJSON(needs.runner-setup.outputs.runners)[matrix.platform] }}
     continue-on-error: true

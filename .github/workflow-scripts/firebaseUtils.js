@@ -21,9 +21,7 @@ class FirebaseClient {
 
   async authenticate() {
     if (!this.email || !this.password) {
-      throw new Error(
-        'Firebase credentials not found in environment variables'
-      );
+      throw new Error('Firebase credentials not found in environment variables');
     }
 
     const authData = {
@@ -103,16 +101,12 @@ class FirebaseClient {
       checkDate.setDate(checkDate.getDate() - daysBack);
       const checkDateStr = checkDate.toISOString().split('T')[0];
 
-      console.log(
-        `Checking for results on ${checkDateStr} (${daysBack} days back)...`
-      );
+      console.log(`Checking for results on ${checkDateStr} (${daysBack} days back)...`);
 
       try {
         const results = await this.getResults(checkDateStr);
         if (results && results.length > 0) {
-          console.log(
-            `Found results from ${checkDateStr} (${daysBack} days back)`
-          );
+          console.log(`Found results from ${checkDateStr} (${daysBack} days back)`);
           return { results, date: checkDateStr };
         }
       } catch (error) {
@@ -121,9 +115,7 @@ class FirebaseClient {
       }
     }
 
-    console.log(
-      `No previous results found within the last ${maxDaysBack} days`
-    );
+    console.log(`No previous results found within the last ${maxDaysBack} days`);
     return { results: null, date: null };
   }
 
@@ -198,10 +190,7 @@ function compareResults(currentResults, previousResults) {
   for (const [key, currentResult] of currentMap) {
     const previousResult = previousMap.get(key);
     if (previousResult) {
-      if (
-        previousResult.status === 'success' &&
-        currentResult.status !== 'success'
-      ) {
+      if (previousResult.status === 'success' && currentResult.status !== 'success') {
         broken.push({
           library: currentResult.library,
           platform: currentResult.platform,
@@ -216,10 +205,7 @@ function compareResults(currentResults, previousResults) {
   for (const [key, currentResult] of currentMap) {
     const previousResult = previousMap.get(key);
     if (previousResult) {
-      if (
-        previousResult.status !== 'success' &&
-        currentResult.status === 'success'
-      ) {
+      if (previousResult.status !== 'success' && currentResult.status === 'success') {
         recovered.push({
           library: currentResult.library,
           platform: currentResult.platform,

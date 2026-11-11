@@ -1,18 +1,17 @@
 'use client';
 
-import { useEffect, useState, useTransition } from 'react';
-import Link from 'next/link';
-import { twMerge } from 'tailwind-merge';
 import { useTheme } from 'next-themes';
+import Link from 'next/link';
+import { useEffect, useState, useTransition } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 import { useSearch } from '~/context/SearchContext';
-
 import GitHubLogo from '~/public/icons/github-icon.svg';
-import Logo from '~/public/logo.svg';
 import PlusIcon from '~/public/icons/plus-icon.svg';
 import SearchIcon from '~/public/icons/search-icon.svg';
 import ThemeDarkIcon from '~/public/icons/theme-dark-icon.svg';
 import ThemeLightIcon from '~/public/icons/theme-light-icon.svg';
+import Logo from '~/public/logo.svg';
 
 import Tooltip from './Tooltip';
 
@@ -27,17 +26,15 @@ export default function Header() {
   }, [query]);
 
   return (
-    <header className="border-b border-b-border sticky bg-background/75 backdrop-blur-lg top-0 z-10">
-      <div className="flex flex-row flex-wrap min-h-[58px] items-center gap-6 max-sm:gap-x-4 max-sm:gap-y-2 max-w-[1280px] w-full mx-auto px-4 max-sm:pt-1.5 max-sm:pb-2.5">
-        <div className="flex gap-2 items-center max-sm:order-1">
+    <header className="border-b-border bg-background/75 sticky top-0 z-10 border-b backdrop-blur-lg">
+      <div className="mx-auto flex min-h-[58px] w-full max-w-[1280px] flex-row flex-wrap items-center gap-6 px-4 max-sm:gap-x-4 max-sm:gap-y-2 max-sm:pt-1.5 max-sm:pb-2.5">
+        <div className="flex items-center gap-2 max-sm:order-1">
           <Logo className="text-brand size-8" />
-          <p className="whitespace-nowrap font-normal max-sm:hidden">
-            React Native Nightly Tests
-          </p>
-          <p className="whitespace-nowrap hidden max-sm:block">RNNT</p>
+          <p className="font-normal whitespace-nowrap max-sm:hidden">React Native Nightly Tests</p>
+          <p className="hidden whitespace-nowrap max-sm:block">RNNT</p>
         </div>
         <div className="relative min-w-0 flex-1 max-sm:order-3 max-sm:basis-full">
-          <SearchIcon className="absolute left-3.5 top-2.75 size-4 text-secondary/60 pointer-events-none" />
+          <SearchIcon className="text-secondary/60 pointer-events-none absolute top-2.75 left-3.5 size-4" />
           <input
             type="text"
             id="search"
@@ -48,10 +45,12 @@ export default function Header() {
               startTransition(() => setQuery(event.target.value));
             }}
             onKeyDown={event => {
-              if (event.key === 'Escape' && inputValue.length > 0) {
-                setInputValue('');
-                startTransition(() => setQuery(''));
+              if (event.key !== 'Escape' || inputValue.length === 0) {
+                return;
               }
+
+              setInputValue('');
+              startTransition(() => setQuery(''));
             }}
             className={twMerge(
               'w-full bg-subtle border border-border rounded-3xl pl-10 pr-3 py-1.5',
@@ -60,48 +59,51 @@ export default function Header() {
             placeholder="Search…"
           />
           {inputValue.length > 0 && (
-            <div
+            <button
+              type="button"
+              aria-label="Clear search value"
               onClick={() => {
                 setInputValue('');
                 startTransition(() => setQuery(''));
               }}
-              className="absolute right-1.5 top-1.25 cursor-pointer p-1.5 rounded-full hover:bg-hover">
+              className="hover:bg-hover absolute top-1.25 right-1.5 cursor-pointer rounded-full p-1.5">
               <PlusIcon className="text-secondary size-4 rotate-45" />
-            </div>
+            </button>
           )}
         </div>
-        <div className="flex flex-row gap-2 ml-auto max-sm:order-2">
-          <Tooltip
-            content="Add package to the program"
-            side="bottom"
-            sideOffset={4}>
+        <div className="ml-auto flex flex-row gap-2 max-sm:order-2">
+          <Tooltip content="Add package to the program" side="bottom" sideOffset={4}>
             <Link
               href="https://github.com/react-native-community/discussions-and-proposals/discussions/931#discussion-8827727"
               target="_blank"
               aria-label="Add package to the program"
-              className="p-1.5 rounded-full hover:bg-hover">
+              className="hover:bg-hover rounded-full p-1.5">
               <PlusIcon className="text-secondary size-6" />
             </Link>
           </Tooltip>
           <Tooltip content="Toggle theme" side="bottom" sideOffset={4}>
-            <div
-              role="button"
+            <button
+              type="button"
               tabIndex={0}
               aria-label="Toggle theme"
-              className="cursor-pointer p-1.5 rounded-full hover:bg-hover"
+              className="hover:bg-hover cursor-pointer rounded-full p-1.5"
               onClick={() => {
-                resolvedTheme === 'dark' ? setTheme('light') : setTheme('dark');
+                if (resolvedTheme === 'dark') {
+                  setTheme('light');
+                } else {
+                  setTheme('dark');
+                }
               }}>
-              <ThemeLightIcon className="text-secondary size-6 hidden dark:block" />
+              <ThemeLightIcon className="text-secondary hidden size-6 dark:block" />
               <ThemeDarkIcon className="text-secondary size-6 dark:hidden" />
-            </div>
+            </button>
           </Tooltip>
           <Tooltip content="GitHub" side="bottom" sideOffset={4}>
             <Link
               href="https://github.com/react-native-community/nightly-tests"
               target="_blank"
               aria-label="Visit GitHub repository"
-              className="p-1.5 rounded-full hover:bg-hover">
+              className="hover:bg-hover rounded-full p-1.5">
               <GitHubLogo className="text-secondary size-6" />
             </Link>
           </Tooltip>

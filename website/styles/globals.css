@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
@@ -15,7 +15,7 @@
   --selection: #58c4dc40;
 }
 
-[data-theme=dark] {
+[data-theme='dark'] {
   --bg-primary: #23272f;
   --bg-secondary: #1f2329;
   --bg-hover: #303440;
@@ -33,20 +33,20 @@
   --color-secondary: var(--text-secondary);
   --color-brand: var(--brand);
   --color-border: var(--border-primary);
-  --font-sans: var(--font-optimistic-display), "Optimistic Display", system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-optimistic-display), 'Optimistic Display', system-ui, -apple-system, sans-serif;
   --font-mono: Source Code Pro, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace;
 }
 
 /* Global styles */
 
 html {
-  @apply scrollbar-thin scrollbar-thumb-secondary scrollbar-track-transparent;
+  @apply scrollbar-thumb-secondary scrollbar-thin scrollbar-track-transparent;
 }
 
 body {
-  @apply selection:bg-(--selection) font-light;
+  @apply font-light selection:bg-(--selection);
 }
 
 * {
-  @apply focus-visible:outline-2 focus-visible:outline-brand/75 focus-visible:outline-offset-[3px];
+  @apply focus-visible:outline-brand/75 focus-visible:outline-2 focus-visible:outline-offset-[3px];
 }

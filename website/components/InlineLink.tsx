@@ -6,15 +6,8 @@ import ExternalLinkIcon from '~/public/icons/external-link-icon.svg';
 
 type Props = LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>;
 
-export default function InlineLink({
-  children,
-  className,
-  target,
-  href,
-  ...rest
-}: Props) {
-  const computedTarget =
-    (target ?? href?.startsWith('http')) ? '_blank' : undefined;
+export default function InlineLink({ children, className, target, href, ...rest }: Props) {
+  const computedTarget = (target ?? href?.startsWith('http')) ? '_blank' : undefined;
   return (
     <Link
       href={href}
@@ -26,9 +19,7 @@ export default function InlineLink({
       )}
       {...rest}>
       {children}
-      {computedTarget === '_blank' && (
-        <ExternalLinkIcon className="size-3.5 text-secondary/50" />
-      )}
+      {computedTarget === '_blank' && <ExternalLinkIcon className="text-secondary/50 size-3.5" />}
     </Link>
   );
 }

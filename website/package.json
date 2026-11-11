@@ -8,8 +8,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "npx serve out",
-    "lint": "eslint",
+    "start": "bunx serve out",
+    "lint": "oxlint",
     "data:fetch": "node ./scripts/fetch-data.mjs"
   },
   "dependencies": {
@@ -22,7 +22,6 @@
     "tailwind-merge": "^3.7.0"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "16.4.6",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4.3.5",
     "@types/node": "^24.19.1",
@@ -30,8 +29,6 @@
     "@types/react-dom": "^19.3.0",
     "babel-plugin-react-compiler": "^1.0.0",
     "dotenv": "^18.0.10",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-svgo": "^0.14.1",
     "firebase-admin": "^14.4.0",
     "tailwindcss": "^4.3.5"
   }

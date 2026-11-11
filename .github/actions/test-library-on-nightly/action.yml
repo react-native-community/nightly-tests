@@ -27,7 +27,6 @@ runs:
       run: |
         cd /tmp
         npx @react-native-community/cli init RNApp --skip-install --version nightly
-    
 
     - name: Apply patch if specified
       if: ${{ inputs.patch-file != '' }}

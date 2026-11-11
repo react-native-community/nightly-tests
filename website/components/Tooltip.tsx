@@ -16,20 +16,14 @@ type Props = TooltipProps & {
   sideOffset?: TooltipContentProps['sideOffset'];
 };
 
-export default function Tooltip({
-  children,
-  content,
-  side = 'top',
-  sideOffset = 1,
-  delayDuration = 0,
-}: Props) {
+export default function Tooltip({ children, content, side = 'top', sideOffset = 1, delayDuration = 0 }: Props) {
   return (
     <Provider>
       <Root delayDuration={delayDuration}>
         <Trigger asChild>{children}</Trigger>
         <Portal>
           <Content
-            className="bg-black/90 backdrop-blur-lg font-light px-2.5 py-1.5 rounded-md text-xs text-white max-w-[220px] text-center z-20 dark:bg-black/60 "
+            className="z-20 max-w-[220px] rounded-md bg-black/90 px-2.5 py-1.5 text-center text-xs font-light text-white backdrop-blur-lg dark:bg-black/60"
             sideOffset={sideOffset}
             side={side}>
             {content}

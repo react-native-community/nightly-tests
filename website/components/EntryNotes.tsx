@@ -13,7 +13,7 @@ export function EntryNotes({ notes }: Props) {
   return (
     <Tooltip content={notes}>
       <button type="button" aria-label="Notes" className="rounded-sm">
-        <InfoIcon className="size-3.5 text-secondary" />
+        <InfoIcon className="text-secondary size-3.5" />
       </button>
     </Tooltip>
   );

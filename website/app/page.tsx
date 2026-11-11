@@ -4,10 +4,9 @@ import Table from '~/components/Table';
 
 export default function Home() {
   return (
-    <main className="max-w-[1280px] w-full mx-auto flex flex-col gap-4 pt-6 pb-8 px-4 overflow-auto">
-      <h2 className="flex justify-between items-center max-lg:flex-col gap-x-2 max-lg:gap-y-3">
-        Results of automated GitHub Actions workflows testing React Native
-        ecosystem libraries against nightly builds.
+    <main className="mx-auto flex w-full max-w-[1280px] flex-col gap-4 overflow-auto px-4 pt-6 pb-8">
+      <h2 className="flex items-center justify-between gap-x-2 max-lg:flex-col max-lg:gap-y-3">
+        Results of automated GitHub Actions workflows testing React Native ecosystem libraries against nightly builds.
         <DisplayModeSelector />
       </h2>
       <PlatformHeading platform="android" />

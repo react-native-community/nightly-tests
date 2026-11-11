@@ -1,16 +1,8 @@
 'use client';
 
-import {
-  Dispatch,
-  PropsWithChildren,
-  SetStateAction,
-  createContext,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { createContext, Dispatch, PropsWithChildren, SetStateAction, useCallback, useContext, useMemo } from 'react';
+
 import { DisplayMode } from '~/types/data-types';
 
 function parseDisplayMode(value: string | null): DisplayMode {
@@ -31,77 +23,65 @@ export function SearchProvider({ children }: PropsWithChildren) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const [query, setQuery] = useState(searchParams.get('q') ?? '');
-  const [displayMode, setDisplayMode] = useState<DisplayMode>(() =>
-    parseDisplayMode(searchParams.get('mode'))
+  const query = searchParams.get('q') ?? '';
+  const displayMode = parseDisplayMode(searchParams.get('mode'));
+
+  const updateSearchParams = useCallback(
+    (update: (params: URLSearchParams) => void) => {
+      const currentSearchParams = searchParams.toString();
+      const nextSearchParams = new URLSearchParams(currentSearchParams);
+      update(nextSearchParams);
+
+      const queryString = nextSearchParams.toString();
+      if (queryString === currentSearchParams) {
+        return;
+      }
+
+      router.replace(queryString ? `${pathname}?${queryString}` : pathname, {
+        scroll: false,
+      });
+    },
+    [pathname, router, searchParams]
   );
-  const previousQueryRef = useRef<string>(query);
-  const previousDisplayModeRef = useRef<DisplayMode>(displayMode);
 
-  useEffect(() => {
-    const searchParamsQuery = searchParams.get('q') ?? '';
-    if (
-      searchParamsQuery === previousQueryRef.current ||
-      searchParamsQuery === query
-    ) {
-      return;
-    }
+  const setQuery = useCallback<Dispatch<SetStateAction<string>>>(
+    action => {
+      const currentQuery = searchParams.get('q') ?? '';
+      const nextQuery = typeof action === 'function' ? action(currentQuery) : action;
 
-    setQuery(searchParamsQuery);
-  }, [searchParams, query]);
-
-  useEffect(() => {
-    const searchParamsDisplayMode = parseDisplayMode(searchParams.get('mode'));
-    if (
-      searchParamsDisplayMode === previousDisplayModeRef.current ||
-      searchParamsDisplayMode === displayMode
-    ) {
-      return;
-    }
-
-    setDisplayMode(searchParamsDisplayMode);
-  }, [displayMode, searchParams]);
-
-  useEffect(() => {
-    const searchParamsQuery = searchParams.get('q') ?? '';
-    const searchParamsDisplayMode = searchParams.get('mode');
-    const expectedDisplayModeParam = displayMode === 'all' ? null : displayMode;
-
-    if (
-      query === searchParamsQuery &&
-      searchParamsDisplayMode === expectedDisplayModeParam
-    ) {
-      return;
-    }
-
-    const newSearchParams = new URLSearchParams(searchParams.toString());
-    if (query) {
-      newSearchParams.set('q', query);
-    } else {
-      newSearchParams.delete('q');
-    }
-
-    if (displayMode === 'all') {
-      newSearchParams.delete('mode');
-    } else {
-      newSearchParams.set('mode', displayMode);
-    }
-
-    previousQueryRef.current = query;
-    previousDisplayModeRef.current = displayMode;
-
-    const queryString = newSearchParams.toString();
-    router.replace(queryString ? `${pathname}?${queryString}` : pathname, {
-      scroll: false,
-    });
-  }, [displayMode, query, pathname, router, searchParams]);
-
-  return (
-    <SearchContext.Provider
-      value={{ query, setQuery, displayMode, setDisplayMode }}>
-      {children}
-    </SearchContext.Provider>
+      updateSearchParams(params => {
+        if (nextQuery) {
+          params.set('q', nextQuery);
+        } else {
+          params.delete('q');
+        }
+      });
+    },
+    [searchParams, updateSearchParams]
   );
+
+  const setDisplayMode = useCallback<Dispatch<SetStateAction<DisplayMode>>>(
+    action => {
+      const currentDisplayMode = parseDisplayMode(searchParams.get('mode'));
+      const nextDisplayMode = typeof action === 'function' ? action(currentDisplayMode) : action;
+
+      updateSearchParams(params => {
+        if (nextDisplayMode === 'all') {
+          params.delete('mode');
+        } else {
+          params.set('mode', nextDisplayMode);
+        }
+      });
+    },
+    [searchParams, updateSearchParams]
+  );
+
+  const value = useMemo(
+    () => ({ query, setQuery, displayMode, setDisplayMode }),
+    [displayMode, query, setDisplayMode, setQuery]
+  );
+
+  return <SearchContext.Provider value={value}>{children}</SearchContext.Provider>;
 }
 
 export function useSearch() {
