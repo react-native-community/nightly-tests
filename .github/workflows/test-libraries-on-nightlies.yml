@@ -15,7 +15,7 @@ on:
         required: true
 
 # We use the matrix.library entry to specify the dependency we want to use
-# The key is used directly as the <pkg> in the `yarn add <pkg>` command.
+# The key is used directly as the <pkg> in the `bun add <pkg>` command.
 jobs:
   runner-setup:
     runs-on: ubuntu-latest
@@ -50,7 +50,6 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: 24
-          cache: yarn
       - name: Test ${{ matrix.library }}
         id: run-test
         uses: ./.github/actions/test-library-on-nightly
