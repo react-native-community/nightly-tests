@@ -13,18 +13,16 @@ import {
   tableFeatures,
   useTable,
 } from '@tanstack/react-table';
-import { twMerge } from 'tailwind-merge';
 import { useMemo } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 import { DirectoryLink } from '~/components/DirectoryLink';
 import { EntryNotes } from '~/components/EntryNotes';
 import { GitHubRepoLink } from '~/components/GitHubRepoLink';
 import { useSearch } from '~/context/SearchContext';
-
+import data from '~/public/data.json';
 import CheckIcon from '~/public/icons/check-icon.svg';
 import XIcon from '~/public/icons/x-icon.svg';
-import data from '~/public/data.json';
-
 import { type LibraryType, PlatformStatus } from '~/types/data-types';
 import getCleanPackageName from '~/utils/getCleanPackageName';
 
@@ -42,35 +40,28 @@ const features = tableFeatures({
 });
 const columnHelper = createColumnHelper<typeof features, LibraryType>();
 const tableRows = data as LibraryType[];
-const resultDates = Object.keys(
-  tableRows[tableRows.length - 1].results
-).reverse();
+const resultDates = Object.keys(tableRows[tableRows.length - 1].results).reverse();
 
 function getRepositoryURL(library: LibraryType, packageName: string) {
   return library.repositoryURLs?.[packageName] || library.githubUrl;
 }
 
-function formatStatus(
-  info: CellContext<typeof features, LibraryType, PlatformStatus>
-) {
+function formatStatus(info: CellContext<typeof features, LibraryType, PlatformStatus>) {
   switch (info.getValue()) {
     case 'success':
-      return (
-        <CheckIcon className="select-none size-5 text-green-500 mx-auto" />
-      );
+      return <CheckIcon className="mx-auto size-5 text-green-500 select-none" />;
     case 'failure':
-      const runUrl =
-        info.row.original.results[info.cell.id.split('.')[1]]?.runUrl;
+      const runUrl = info.row.original.results[info.cell.id.split('.')[1]]?.runUrl;
       if (runUrl) {
         return (
           <Tooltip content="See the GitHub action run">
-            <a href={runUrl} target="_blank" className="rounded-sm">
-              <XIcon className="select-none size-5 text-red-500 mx-auto" />
+            <a href={runUrl} target="_blank" className="rounded-sm" aria-label="See the GitHub action run">
+              <XIcon className="mx-auto size-5 text-red-500 select-none" />
             </a>
           </Tooltip>
         );
       } else {
-        return <XIcon className="select-none size-5 text-red-500 mx-auto" />;
+        return <XIcon className="mx-auto size-5 text-red-500 select-none" />;
       }
     default:
       return <span className="text-secondary select-none">-</span>;
@@ -81,90 +72,75 @@ type Props = {
   platform: 'android' | 'ios';
 };
 
+function createColumns(platform: Props['platform']) {
+  return columnHelper.columns([
+    columnHelper.accessor(`installCommand`, {
+      header: () => <span className="block">Library</span>,
+      cell: info => {
+        const entry = info.getValue();
+        const entryData = info.row.original;
+        const notes = entryData.notes;
+
+        if (!entry.includes(' ') || entryData.setupScript) {
+          const packageName = getCleanPackageName(entry);
+          const fetchedRepositoryURL = entryData.repositoryURLs?.[packageName];
+          const repositoryURL = getRepositoryURL(entryData, packageName);
+          return (
+            <div className="flex items-center gap-1.5">
+              {entryData.setupScript ? info.row.original.library : entry}
+              <div className="ml-auto flex items-center gap-1.5">
+                <EntryNotes notes={notes} />
+                <DirectoryLink packageName={fetchedRepositoryURL ? packageName : undefined} />
+                <GitHubRepoLink repositoryURL={repositoryURL} />
+              </div>
+            </div>
+          );
+        }
+
+        return (
+          <div className="flex flex-col">
+            {entry.split(' ').map((lib: string) => {
+              const packageName = getCleanPackageName(lib);
+              const fetchedRepositoryURL = entryData.repositoryURLs?.[packageName];
+              const repositoryURL = getRepositoryURL(entryData, packageName);
+              return (
+                <div className="flex items-center gap-1.5" key={lib}>
+                  {lib}
+                  <div className="ml-auto flex items-center gap-1.5">
+                    <EntryNotes notes={notes} />
+                    <DirectoryLink packageName={fetchedRepositoryURL ? packageName : undefined} />
+                    <GitHubRepoLink repositoryURL={repositoryURL} />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        );
+      },
+      filterFn: 'includesString',
+    }),
+    ...resultDates.map(date =>
+      columnHelper.accessor(row => row.results?.[date]?.[platform], {
+        id: `results.${date}.${platform}`,
+        header: () => <span className="block text-xs">{date}</span>,
+        cell: formatStatus,
+      })
+    ),
+  ]);
+}
+
 export default function Table({ platform }: Props) {
   const { query, displayMode } = useSearch();
   const firstResultDate = resultDates[0];
   const tableData = useMemo(
     () =>
       displayMode === 'failing'
-        ? tableRows.filter(
-            row => row.results?.[firstResultDate]?.[platform] === 'failure'
-          )
+        ? tableRows.filter(row => row.results?.[firstResultDate]?.[platform] === 'failure')
         : tableRows,
     [displayMode, firstResultDate, platform]
   );
 
-  const columns = useMemo(
-    () =>
-      columnHelper.columns([
-        columnHelper.accessor(`installCommand`, {
-          header: () => <span className="block">Library</span>,
-          cell: info => {
-            const entry = info.getValue();
-            const entryData = info.row.original;
-            const notes = entryData.notes;
-
-            if (!entry.includes(' ') || entryData.setupScript) {
-              const packageName = getCleanPackageName(entry);
-              const fetchedRepositoryURL =
-                entryData.repositoryURLs?.[packageName];
-              const repositoryURL = getRepositoryURL(entryData, packageName);
-              return (
-                <div className="flex items-center gap-1.5">
-                  {entryData.setupScript ? info.row.original.library : entry}
-                  <div className="flex items-center gap-1.5 ml-auto">
-                    <EntryNotes notes={notes} />
-                    <DirectoryLink
-                      packageName={
-                        fetchedRepositoryURL ? packageName : undefined
-                      }
-                    />
-                    <GitHubRepoLink repositoryURL={repositoryURL} />
-                  </div>
-                </div>
-              );
-            }
-
-            return (
-              <div className="flex flex-col">
-                {entry.split(' ').map((lib: string) => {
-                  const packageName = getCleanPackageName(lib);
-                  const fetchedRepositoryURL =
-                    entryData.repositoryURLs?.[packageName];
-                  const repositoryURL = getRepositoryURL(
-                    entryData,
-                    packageName
-                  );
-                  return (
-                    <div className="flex items-center gap-1.5" key={lib}>
-                      {lib}
-                      <div className="flex items-center gap-1.5 ml-auto">
-                        <EntryNotes notes={notes} />
-                        <DirectoryLink
-                          packageName={
-                            fetchedRepositoryURL ? packageName : undefined
-                          }
-                        />
-                        <GitHubRepoLink repositoryURL={repositoryURL} />
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            );
-          },
-          filterFn: 'includesString',
-        }),
-        ...resultDates.map(date =>
-          columnHelper.accessor(row => row.results?.[date]?.[platform], {
-            id: `results.${date}.${platform}`,
-            header: () => <span className="block text-xs">{date}</span>,
-            cell: formatStatus,
-          })
-        ),
-      ]),
-    [platform]
-  );
+  const columns = useMemo(() => createColumns(platform), [platform]);
 
   const table = useTable({
     data: tableData,
@@ -179,27 +155,22 @@ export default function Table({ platform }: Props) {
   const rowsCount = table.getRowModel().rows.length;
 
   return (
-    <div className="border border-border rounded-lg shadow-xs scrollbar-thin overflow-hidden overflow-x-auto mb-4 dark:shadow-sm">
+    <div className="border-border mb-4 scrollbar-thin overflow-hidden overflow-x-auto rounded-lg border shadow-xs dark:shadow-sm">
       <table className="w-full">
         <thead className="bg-subtle">
           {table.getHeaderGroups().map(headerGroup => (
-            <tr key={headerGroup.id} className="border-b border-border">
+            <tr key={headerGroup.id} className="border-border border-b">
               {headerGroup.headers.map(header => (
                 <th
                   className={twMerge(
                     'text-sm px-2 py-2 whitespace-nowrap border-r border-border tabular-nums',
                     'last:border-r-0!',
-                    header.index === 0
-                      ? 'text-left pl-3 min-w-[300px]'
-                      : 'text-center'
+                    header.index === 0 ? 'text-left pl-3 min-w-[300px]' : 'text-center'
                   )}
                   colSpan={header.colSpan}
                   rowSpan={header.index === 0 ? 2 : 1}
                   key={header.id}>
-                  {flexRender(
-                    header.column.columnDef.header,
-                    header.getContext()
-                  )}
+                  {flexRender(header.column.columnDef.header, header.getContext())}
                 </th>
               ))}
             </tr>
@@ -218,9 +189,7 @@ export default function Table({ platform }: Props) {
                       row.index === 0 && 'pt-1',
                       row.index === rowsCount - 1 && 'pb-1',
                       cell.getValue() === 'failure' && 'bg-red-600/10',
-                      cell.column.getIsFirstColumn()
-                        ? 'text-left whitespace-nowrap pl-3'
-                        : 'text-center'
+                      cell.column.getIsFirstColumn() ? 'text-left whitespace-nowrap pl-3' : 'text-center'
                     )}>
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </td>
@@ -229,7 +198,7 @@ export default function Table({ platform }: Props) {
             ))
           ) : (
             <tr>
-              <td className="text-center text-secondary/50 py-6" colSpan={8}>
+              <td className="text-secondary/50 py-6 text-center" colSpan={8}>
                 {query.length === 0 && displayMode === 'failing'
                   ? 'No libraries failing the checks.'
                   : `No libraries matching "${query}" query.`}

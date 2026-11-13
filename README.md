@@ -37,10 +37,11 @@ To learn more about website app, see [the README file](./website/README.md) in t
 
 ## Contributing
 
-The repository includes Jest tests for the workflow scripts. To run the tests locally, use the following commands:
+The repository includes Bun tests for the workflow scripts. To run the tests locally, use the following commands:
 
 ```bash
-yarn install && yarn test
+bun install --frozen-lockfile
+bun run test
 ```
 
 ### Working with Patch Files

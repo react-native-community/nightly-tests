@@ -7,21 +7,16 @@
  * @format
  */
 
-'use strict';
+import { afterEach, beforeEach, describe, expect, mock, spyOn, test } from 'bun:test';
 
-const {
-  FirebaseClient,
-  compareResults,
-  getYesterdayDate,
-  getTodayDate,
-} = require('../firebaseUtils');
+const { FirebaseClient, compareResults, getYesterdayDate, getTodayDate } = require('../firebaseUtils');
 
 describe('FirebaseClient', () => {
   const originalFetch = global.fetch;
   const originalEnv = process.env;
 
   beforeEach(() => {
-    global.fetch = jest.fn();
+    global.fetch = mock();
     process.env = {
       ...originalEnv,
       FIREBASE_APP_EMAIL: 'test@example.com',
@@ -29,18 +24,18 @@ describe('FirebaseClient', () => {
       FIREBASE_APP_APIKEY: 'test-api-key',
       FIREBASE_APP_PROJECTNAME: 'test-project',
     };
-    jest.spyOn(console, 'log').mockImplementation(() => {});
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+    spyOn(console, 'log').mockImplementation(() => {});
+    spyOn(console, 'error').mockImplementation(() => {});
   });
 
   afterEach(() => {
     global.fetch = originalFetch;
     process.env = originalEnv;
-    jest.restoreAllMocks();
+    mock.restore();
   });
 
   describe('constructor', () => {
-    it('should initialize with environment variables', () => {
+    test('should initialize with environment variables', () => {
       const client = new FirebaseClient();
       expect(client.email).toBe('test@example.com');
       expect(client.password).toBe('testpassword');
@@ -52,7 +47,7 @@ describe('FirebaseClient', () => {
   });
 
   describe('authenticate', () => {
-    it('should authenticate successfully', async () => {
+    test('should authenticate successfully', async () => {
       const mockResponse = {
         idToken: 'mock-id-token',
         refreshToken: 'mock-refresh-token',
@@ -60,7 +55,7 @@ describe('FirebaseClient', () => {
 
       global.fetch.mockResolvedValueOnce({
         ok: true,
-        text: jest.fn().mockResolvedValueOnce(JSON.stringify(mockResponse)),
+        text: mock().mockResolvedValueOnce(JSON.stringify(mockResponse)),
       });
 
       const client = new FirebaseClient();
@@ -83,29 +78,25 @@ describe('FirebaseClient', () => {
       );
     });
 
-    it('should throw error when email is missing', async () => {
+    test('should throw error when email is missing', async () => {
       delete process.env.FIREBASE_APP_EMAIL;
       const client = new FirebaseClient();
 
-      await expect(client.authenticate()).rejects.toThrow(
-        'Firebase credentials not found in environment variables'
-      );
+      await expect(client.authenticate()).rejects.toThrow('Firebase credentials not found in environment variables');
     });
 
-    it('should throw error when password is missing', async () => {
+    test('should throw error when password is missing', async () => {
       delete process.env.FIREBASE_APP_PASS;
       const client = new FirebaseClient();
 
-      await expect(client.authenticate()).rejects.toThrow(
-        'Firebase credentials not found in environment variables'
-      );
+      await expect(client.authenticate()).rejects.toThrow('Firebase credentials not found in environment variables');
     });
 
-    it('should handle authentication failure', async () => {
+    test('should handle authentication failure', async () => {
       global.fetch.mockResolvedValueOnce({
         ok: false,
         status: 400,
-        text: jest.fn().mockResolvedValueOnce(
+        text: mock().mockResolvedValueOnce(
           JSON.stringify({
             error: { message: 'Invalid credentials' },
           })
@@ -114,18 +105,16 @@ describe('FirebaseClient', () => {
 
       const client = new FirebaseClient();
 
-      await expect(client.authenticate()).rejects.toThrow(
-        'HTTP 400: Invalid credentials'
-      );
+      await expect(client.authenticate()).rejects.toThrow('HTTP 400: Invalid credentials');
     });
   });
 
   describe('makeRequest', () => {
-    it('should make successful GET request', async () => {
+    test('should make successful GET request', async () => {
       const mockData = { test: 'data' };
       global.fetch.mockResolvedValueOnce({
         ok: true,
-        text: jest.fn().mockResolvedValueOnce(JSON.stringify(mockData)),
+        text: mock().mockResolvedValueOnce(JSON.stringify(mockData)),
       });
 
       const client = new FirebaseClient();
@@ -140,22 +129,17 @@ describe('FirebaseClient', () => {
       });
     });
 
-    it('should make successful POST request with data', async () => {
+    test('should make successful POST request with data', async () => {
       const mockData = { success: true };
       const postData = { test: 'post data' };
 
       global.fetch.mockResolvedValueOnce({
         ok: true,
-        text: jest.fn().mockResolvedValueOnce(JSON.stringify(mockData)),
+        text: mock().mockResolvedValueOnce(JSON.stringify(mockData)),
       });
 
       const client = new FirebaseClient();
-      const result = await client.makeRequest(
-        'example.com',
-        '/test',
-        'POST',
-        postData
-      );
+      const result = await client.makeRequest('example.com', '/test', 'POST', postData);
 
       expect(result).toEqual(mockData);
       expect(global.fetch).toHaveBeenCalledWith('https://example.com/test', {
@@ -167,11 +151,11 @@ describe('FirebaseClient', () => {
       });
     });
 
-    it('should handle non-JSON response', async () => {
+    test('should handle non-JSON response', async () => {
       const textResponse = 'plain text response';
       global.fetch.mockResolvedValueOnce({
         ok: true,
-        text: jest.fn().mockResolvedValueOnce(textResponse),
+        text: mock().mockResolvedValueOnce(textResponse),
       });
 
       const client = new FirebaseClient();
@@ -180,11 +164,11 @@ describe('FirebaseClient', () => {
       expect(result).toBe(textResponse);
     });
 
-    it('should handle HTTP error with JSON error message', async () => {
+    test('should handle HTTP error with JSON error message', async () => {
       global.fetch.mockResolvedValueOnce({
         ok: false,
         status: 404,
-        text: jest.fn().mockResolvedValueOnce(
+        text: mock().mockResolvedValueOnce(
           JSON.stringify({
             error: { message: 'Not found' },
           })
@@ -193,32 +177,30 @@ describe('FirebaseClient', () => {
 
       const client = new FirebaseClient();
 
-      await expect(
-        client.makeRequest('example.com', '/test', 'GET')
-      ).rejects.toThrow('HTTP 404: Not found');
+      await expect(client.makeRequest('example.com', '/test', 'GET')).rejects.toThrow('HTTP 404: Not found');
     });
 
-    it('should handle HTTP error with plain text error message', async () => {
+    test('should handle HTTP error with plain text error message', async () => {
       global.fetch.mockResolvedValueOnce({
         ok: false,
         status: 500,
-        text: jest.fn().mockResolvedValueOnce('Internal Server Error'),
+        text: mock().mockResolvedValueOnce('Internal Server Error'),
       });
 
       const client = new FirebaseClient();
 
-      await expect(
-        client.makeRequest('example.com', '/test', 'GET')
-      ).rejects.toThrow('HTTP 500: Internal Server Error');
+      await expect(client.makeRequest('example.com', '/test', 'GET')).rejects.toThrow(
+        'HTTP 500: Internal Server Error'
+      );
     });
   });
 
   describe('makeDatabaseRequest', () => {
-    it('should make database request with existing token', async () => {
+    test('should make database request with existing token', async () => {
       const mockData = { test: 'data' };
       global.fetch.mockResolvedValueOnce({
         ok: true,
-        text: jest.fn().mockResolvedValueOnce(JSON.stringify(mockData)),
+        text: mock().mockResolvedValueOnce(JSON.stringify(mockData)),
       });
 
       const client = new FirebaseClient();
@@ -238,18 +220,18 @@ describe('FirebaseClient', () => {
       );
     });
 
-    it('should authenticate before making request if no token exists', async () => {
+    test('should authenticate before making request if no token exists', async () => {
       const authResponse = { idToken: 'new-token' };
       const dataResponse = { test: 'data' };
 
       global.fetch
         .mockResolvedValueOnce({
           ok: true,
-          text: jest.fn().mockResolvedValueOnce(JSON.stringify(authResponse)),
+          text: mock().mockResolvedValueOnce(JSON.stringify(authResponse)),
         })
         .mockResolvedValueOnce({
           ok: true,
-          text: jest.fn().mockResolvedValueOnce(JSON.stringify(dataResponse)),
+          text: mock().mockResolvedValueOnce(JSON.stringify(dataResponse)),
         });
 
       const client = new FirebaseClient();
@@ -260,10 +242,10 @@ describe('FirebaseClient', () => {
       expect(client.idToken).toBe('new-token');
     });
 
-    it('should make PUT request with data', async () => {
+    test('should make PUT request with data', async () => {
       global.fetch.mockResolvedValueOnce({
         ok: true,
-        text: jest.fn().mockResolvedValueOnce('null'),
+        text: mock().mockResolvedValueOnce('null'),
       });
 
       const client = new FirebaseClient();
@@ -286,10 +268,10 @@ describe('FirebaseClient', () => {
   });
 
   describe('storeResults', () => {
-    it('should store results successfully', async () => {
+    test('should store results successfully', async () => {
       global.fetch.mockResolvedValueOnce({
         ok: true,
-        text: jest.fn().mockResolvedValueOnce('null'),
+        text: mock().mockResolvedValueOnce('null'),
       });
 
       const client = new FirebaseClient();
@@ -308,18 +290,16 @@ describe('FirebaseClient', () => {
           body: JSON.stringify(results),
         }
       );
-      expect(console.log).toHaveBeenCalledWith(
-        'Successfully stored results for 2023-12-01'
-      );
+      expect(console.log).toHaveBeenCalledWith('Successfully stored results for 2023-12-01');
     });
   });
 
   describe('getResults', () => {
-    it('should retrieve results successfully', async () => {
+    test('should retrieve results successfully', async () => {
       const mockResults = [{ library: 'test', status: 'success' }];
       global.fetch.mockResolvedValueOnce({
         ok: true,
-        text: jest.fn().mockResolvedValueOnce(JSON.stringify(mockResults)),
+        text: mock().mockResolvedValueOnce(JSON.stringify(mockResults)),
       });
 
       const client = new FirebaseClient();
@@ -330,11 +310,11 @@ describe('FirebaseClient', () => {
       expect(results).toEqual(mockResults);
     });
 
-    it('should return null for 404 errors', async () => {
+    test('should return null for 404 errors', async () => {
       global.fetch.mockResolvedValueOnce({
         ok: false,
         status: 404,
-        text: jest.fn().mockResolvedValueOnce('Not Found'),
+        text: mock().mockResolvedValueOnce('Not Found'),
       });
 
       const client = new FirebaseClient();
@@ -345,35 +325,33 @@ describe('FirebaseClient', () => {
       expect(results).toBeNull();
     });
 
-    it('should throw error for non-404 HTTP errors', async () => {
+    test('should throw error for non-404 HTTP errors', async () => {
       global.fetch.mockResolvedValueOnce({
         ok: false,
         status: 500,
-        text: jest.fn().mockResolvedValueOnce('Internal Server Error'),
+        text: mock().mockResolvedValueOnce('Internal Server Error'),
       });
 
       const client = new FirebaseClient();
       client.idToken = 'existing-token';
 
-      await expect(client.getResults('2023-12-01')).rejects.toThrow(
-        'HTTP 500: Internal Server Error'
-      );
+      await expect(client.getResults('2023-12-01')).rejects.toThrow('HTTP 500: Internal Server Error');
     });
   });
 
   describe('getLatestResults', () => {
-    it('should authenticate before making requests if no token exists', async () => {
+    test('should authenticate before making requests if no token exists', async () => {
       const authResponse = { idToken: 'new-token' };
       const mockResults = [{ library: 'test', status: 'success' }];
 
       global.fetch
         .mockResolvedValueOnce({
           ok: true,
-          text: jest.fn().mockResolvedValueOnce(JSON.stringify(authResponse)),
+          text: mock().mockResolvedValueOnce(JSON.stringify(authResponse)),
         })
         .mockResolvedValueOnce({
           ok: true,
-          text: jest.fn().mockResolvedValueOnce(JSON.stringify(mockResults)),
+          text: mock().mockResolvedValueOnce(JSON.stringify(mockResults)),
         });
 
       const client = new FirebaseClient();
@@ -384,19 +362,15 @@ describe('FirebaseClient', () => {
         date: '2023-12-14',
       });
       expect(client.idToken).toBe('new-token');
-      expect(console.log).toHaveBeenCalledWith(
-        'Checking for results on 2023-12-14 (1 days back)...'
-      );
-      expect(console.log).toHaveBeenCalledWith(
-        'Found results from 2023-12-14 (1 days back)'
-      );
+      expect(console.log).toHaveBeenCalledWith('Checking for results on 2023-12-14 (1 days back)...');
+      expect(console.log).toHaveBeenCalledWith('Found results from 2023-12-14 (1 days back)');
     });
 
-    it('should find results from the previous day', async () => {
+    test('should find results from the previous day', async () => {
       const mockResults = [{ library: 'test', status: 'success' }];
       global.fetch.mockResolvedValueOnce({
         ok: true,
-        text: jest.fn().mockResolvedValueOnce(JSON.stringify(mockResults)),
+        text: mock().mockResolvedValueOnce(JSON.stringify(mockResults)),
       });
 
       const client = new FirebaseClient();
@@ -408,15 +382,11 @@ describe('FirebaseClient', () => {
         results: mockResults,
         date: '2023-12-14',
       });
-      expect(console.log).toHaveBeenCalledWith(
-        'Checking for results on 2023-12-14 (1 days back)...'
-      );
-      expect(console.log).toHaveBeenCalledWith(
-        'Found results from 2023-12-14 (1 days back)'
-      );
+      expect(console.log).toHaveBeenCalledWith('Checking for results on 2023-12-14 (1 days back)...');
+      expect(console.log).toHaveBeenCalledWith('Found results from 2023-12-14 (1 days back)');
     });
 
-    it('should find results from several days back', async () => {
+    test('should find results from several days back', async () => {
       const mockResults = [{ library: 'test', status: 'success' }];
 
       // Mock 404 responses for first 2 days, then success on 3rd day
@@ -424,16 +394,16 @@ describe('FirebaseClient', () => {
         .mockResolvedValueOnce({
           ok: false,
           status: 404,
-          text: jest.fn().mockResolvedValueOnce('Not Found'),
+          text: mock().mockResolvedValueOnce('Not Found'),
         })
         .mockResolvedValueOnce({
           ok: false,
           status: 404,
-          text: jest.fn().mockResolvedValueOnce('Not Found'),
+          text: mock().mockResolvedValueOnce('Not Found'),
         })
         .mockResolvedValueOnce({
           ok: true,
-          text: jest.fn().mockResolvedValueOnce(JSON.stringify(mockResults)),
+          text: mock().mockResolvedValueOnce(JSON.stringify(mockResults)),
         });
 
       const client = new FirebaseClient();
@@ -445,32 +415,24 @@ describe('FirebaseClient', () => {
         results: mockResults,
         date: '2023-12-12',
       });
-      expect(console.log).toHaveBeenCalledWith(
-        'Checking for results on 2023-12-14 (1 days back)...'
-      );
-      expect(console.log).toHaveBeenCalledWith(
-        'Checking for results on 2023-12-13 (2 days back)...'
-      );
-      expect(console.log).toHaveBeenCalledWith(
-        'Checking for results on 2023-12-12 (3 days back)...'
-      );
-      expect(console.log).toHaveBeenCalledWith(
-        'Found results from 2023-12-12 (3 days back)'
-      );
+      expect(console.log).toHaveBeenCalledWith('Checking for results on 2023-12-14 (1 days back)...');
+      expect(console.log).toHaveBeenCalledWith('Checking for results on 2023-12-13 (2 days back)...');
+      expect(console.log).toHaveBeenCalledWith('Checking for results on 2023-12-12 (3 days back)...');
+      expect(console.log).toHaveBeenCalledWith('Found results from 2023-12-12 (3 days back)');
     });
 
-    it('should skip empty results and continue searching', async () => {
+    test('should skip empty results and continue searching', async () => {
       const mockResults = [{ library: 'test', status: 'success' }];
 
       // Mock empty array for first day, then valid results on second day
       global.fetch
         .mockResolvedValueOnce({
           ok: true,
-          text: jest.fn().mockResolvedValueOnce(JSON.stringify([])),
+          text: mock().mockResolvedValueOnce(JSON.stringify([])),
         })
         .mockResolvedValueOnce({
           ok: true,
-          text: jest.fn().mockResolvedValueOnce(JSON.stringify(mockResults)),
+          text: mock().mockResolvedValueOnce(JSON.stringify(mockResults)),
         });
 
       const client = new FirebaseClient();
@@ -482,23 +444,17 @@ describe('FirebaseClient', () => {
         results: mockResults,
         date: '2023-12-13',
       });
-      expect(console.log).toHaveBeenCalledWith(
-        'Checking for results on 2023-12-14 (1 days back)...'
-      );
-      expect(console.log).toHaveBeenCalledWith(
-        'Checking for results on 2023-12-13 (2 days back)...'
-      );
-      expect(console.log).toHaveBeenCalledWith(
-        'Found results from 2023-12-13 (2 days back)'
-      );
+      expect(console.log).toHaveBeenCalledWith('Checking for results on 2023-12-14 (1 days back)...');
+      expect(console.log).toHaveBeenCalledWith('Checking for results on 2023-12-13 (2 days back)...');
+      expect(console.log).toHaveBeenCalledWith('Found results from 2023-12-13 (2 days back)');
     });
 
-    it('should return null when no results found within maxDaysBack', async () => {
+    test('should return null when no results found within maxDaysBack', async () => {
       // Mock 404 responses for all days
       global.fetch.mockResolvedValue({
         ok: false,
         status: 404,
-        text: jest.fn().mockResolvedValue('Not Found'),
+        text: mock().mockResolvedValue('Not Found'),
       });
 
       const client = new FirebaseClient();
@@ -510,18 +466,16 @@ describe('FirebaseClient', () => {
         results: null,
         date: null,
       });
-      expect(console.log).toHaveBeenCalledWith(
-        'No previous results found within the last 3 days'
-      );
+      expect(console.log).toHaveBeenCalledWith('No previous results found within the last 3 days');
       expect(global.fetch).toHaveBeenCalledTimes(3);
     });
 
-    it('should use default maxDaysBack of 7 when not specified', async () => {
+    test('should use default maxDaysBack of 7 when not specified', async () => {
       // Mock 404 responses for all days
       global.fetch.mockResolvedValue({
         ok: false,
         status: 404,
-        text: jest.fn().mockResolvedValue('Not Found'),
+        text: mock().mockResolvedValue('Not Found'),
       });
 
       const client = new FirebaseClient();
@@ -533,13 +487,11 @@ describe('FirebaseClient', () => {
         results: null,
         date: null,
       });
-      expect(console.log).toHaveBeenCalledWith(
-        'No previous results found within the last 7 days'
-      );
+      expect(console.log).toHaveBeenCalledWith('No previous results found within the last 7 days');
       expect(global.fetch).toHaveBeenCalledTimes(7);
     });
 
-    it('should handle non-404 errors and continue searching', async () => {
+    test('should handle non-404 errors and continue searching', async () => {
       const mockResults = [{ library: 'test', status: 'success' }];
 
       // Mock 500 error for first day, then success on second day
@@ -547,11 +499,11 @@ describe('FirebaseClient', () => {
         .mockResolvedValueOnce({
           ok: false,
           status: 500,
-          text: jest.fn().mockResolvedValueOnce('Internal Server Error'),
+          text: mock().mockResolvedValueOnce('Internal Server Error'),
         })
         .mockResolvedValueOnce({
           ok: true,
-          text: jest.fn().mockResolvedValueOnce(JSON.stringify(mockResults)),
+          text: mock().mockResolvedValueOnce(JSON.stringify(mockResults)),
         });
 
       const client = new FirebaseClient();
@@ -563,19 +515,15 @@ describe('FirebaseClient', () => {
         results: mockResults,
         date: '2023-12-13',
       });
-      expect(console.log).toHaveBeenCalledWith(
-        'No results found for 2023-12-14: HTTP 500: Internal Server Error'
-      );
-      expect(console.log).toHaveBeenCalledWith(
-        'Found results from 2023-12-13 (2 days back)'
-      );
+      expect(console.log).toHaveBeenCalledWith('No results found for 2023-12-14: HTTP 500: Internal Server Error');
+      expect(console.log).toHaveBeenCalledWith('Found results from 2023-12-13 (2 days back)');
     });
 
-    it('should handle date boundaries correctly', async () => {
+    test('should handle date boundaries correctly', async () => {
       const mockResults = [{ library: 'test', status: 'success' }];
       global.fetch.mockResolvedValueOnce({
         ok: true,
-        text: jest.fn().mockResolvedValueOnce(JSON.stringify(mockResults)),
+        text: mock().mockResolvedValueOnce(JSON.stringify(mockResults)),
       });
 
       const client = new FirebaseClient();
@@ -588,16 +536,14 @@ describe('FirebaseClient', () => {
         results: mockResults,
         date: '2023-11-30',
       });
-      expect(console.log).toHaveBeenCalledWith(
-        'Checking for results on 2023-11-30 (1 days back)...'
-      );
+      expect(console.log).toHaveBeenCalledWith('Checking for results on 2023-11-30 (1 days back)...');
     });
 
-    it('should handle year boundary correctly', async () => {
+    test('should handle year boundary correctly', async () => {
       const mockResults = [{ library: 'test', status: 'success' }];
       global.fetch.mockResolvedValueOnce({
         ok: true,
-        text: jest.fn().mockResolvedValueOnce(JSON.stringify(mockResults)),
+        text: mock().mockResolvedValueOnce(JSON.stringify(mockResults)),
       });
 
       const client = new FirebaseClient();
@@ -610,23 +556,21 @@ describe('FirebaseClient', () => {
         results: mockResults,
         date: '2023-12-31',
       });
-      expect(console.log).toHaveBeenCalledWith(
-        'Checking for results on 2023-12-31 (1 days back)...'
-      );
+      expect(console.log).toHaveBeenCalledWith('Checking for results on 2023-12-31 (1 days back)...');
     });
 
-    it('should handle null results and continue searching', async () => {
+    test('should handle null results and continue searching', async () => {
       const mockResults = [{ library: 'test', status: 'success' }];
 
       // Mock null for first day, then valid results on second day
       global.fetch
         .mockResolvedValueOnce({
           ok: true,
-          text: jest.fn().mockResolvedValueOnce('null'),
+          text: mock().mockResolvedValueOnce('null'),
         })
         .mockResolvedValueOnce({
           ok: true,
-          text: jest.fn().mockResolvedValueOnce(JSON.stringify(mockResults)),
+          text: mock().mockResolvedValueOnce(JSON.stringify(mockResults)),
         });
 
       const client = new FirebaseClient();
@@ -643,7 +587,7 @@ describe('FirebaseClient', () => {
 });
 
 describe('compareResults', () => {
-  it('should handle null previous results', () => {
+  test('should handle null previous results', () => {
     const currentResults = [
       { library: 'lib1', platform: 'iOS', status: 'failed' },
       { library: 'lib2', platform: 'Android', status: 'success' },
@@ -658,10 +602,8 @@ describe('compareResults', () => {
     });
   });
 
-  it('should handle undefined previous results', () => {
-    const currentResults = [
-      { library: 'lib1', platform: 'iOS', status: 'failed' },
-    ];
+  test('should handle undefined previous results', () => {
+    const currentResults = [{ library: 'lib1', platform: 'iOS', status: 'failed' }];
 
     const result = compareResults(currentResults, undefined);
 
@@ -672,7 +614,7 @@ describe('compareResults', () => {
     });
   });
 
-  it('should identify broken tests', () => {
+  test('should identify broken tests', () => {
     const currentResults = [
       { library: 'lib1', platform: 'iOS', status: 'failed' },
       { library: 'lib2', platform: 'Android', status: 'success' },
@@ -696,7 +638,7 @@ describe('compareResults', () => {
     expect(result.recovered).toEqual([]);
   });
 
-  it('should identify recovered tests', () => {
+  test('should identify recovered tests', () => {
     const currentResults = [
       { library: 'lib1', platform: 'iOS', status: 'success' },
       { library: 'lib2', platform: 'Android', status: 'success' },
@@ -720,7 +662,7 @@ describe('compareResults', () => {
     ]);
   });
 
-  it('should identify both broken and recovered tests', () => {
+  test('should identify both broken and recovered tests', () => {
     const currentResults = [
       { library: 'lib1', platform: 'iOS', status: 'failed' },
       { library: 'lib2', platform: 'Android', status: 'success' },
@@ -753,15 +695,13 @@ describe('compareResults', () => {
     ]);
   });
 
-  it('should handle tests that are not in previous results', () => {
+  test('should handle tests that are not in previous results', () => {
     const currentResults = [
       { library: 'lib1', platform: 'iOS', status: 'failed' },
       { library: 'lib2', platform: 'Android', status: 'success' },
     ];
 
-    const previousResults = [
-      { library: 'lib1', platform: 'iOS', status: 'success' },
-    ];
+    const previousResults = [{ library: 'lib1', platform: 'iOS', status: 'success' }];
 
     const result = compareResults(currentResults, previousResults);
 
@@ -776,11 +716,9 @@ describe('compareResults', () => {
     expect(result.recovered).toEqual([]);
   });
 
-  it('should handle empty current results', () => {
+  test('should handle empty current results', () => {
     const currentResults = [];
-    const previousResults = [
-      { library: 'lib1', platform: 'iOS', status: 'success' },
-    ];
+    const previousResults = [{ library: 'lib1', platform: 'iOS', status: 'success' }];
 
     const result = compareResults(currentResults, previousResults);
 
@@ -788,10 +726,8 @@ describe('compareResults', () => {
     expect(result.recovered).toEqual([]);
   });
 
-  it('should handle empty previous results', () => {
-    const currentResults = [
-      { library: 'lib1', platform: 'iOS', status: 'failed' },
-    ];
+  test('should handle empty previous results', () => {
+    const currentResults = [{ library: 'lib1', platform: 'iOS', status: 'failed' }];
     const previousResults = [];
 
     const result = compareResults(currentResults, previousResults);
@@ -803,7 +739,7 @@ describe('compareResults', () => {
     expect(result.newFailures).toBeUndefined();
   });
 
-  it('should handle different status values', () => {
+  test('should handle different status values', () => {
     const currentResults = [
       { library: 'lib1', platform: 'iOS', status: 'timeout' },
       { library: 'lib2', platform: 'Android', status: 'success' },
@@ -836,60 +772,60 @@ describe('compareResults', () => {
 });
 
 describe('getYesterdayDate', () => {
-  it("should return yesterday's date in YYYY-MM-DD format", () => {
+  test("should return yesterday's date in YYYY-MM-DD format", () => {
     const mockDate = new Date('2023-12-15T10:30:00Z');
-    jest.spyOn(global, 'Date').mockImplementation(() => mockDate);
+    spyOn(global, 'Date').mockImplementation(() => mockDate);
 
     const result = getYesterdayDate();
 
     expect(result).toBe('2023-12-14');
 
-    global.Date.mockRestore();
+    mock.restore();
   });
 
-  it('should handle month boundary correctly', () => {
+  test('should handle month boundary correctly', () => {
     const mockDate = new Date('2023-12-01T10:30:00Z');
-    jest.spyOn(global, 'Date').mockImplementation(() => mockDate);
+    spyOn(global, 'Date').mockImplementation(() => mockDate);
 
     const result = getYesterdayDate();
 
     expect(result).toBe('2023-11-30');
 
-    global.Date.mockRestore();
+    mock.restore();
   });
 
-  it('should handle year boundary correctly', () => {
+  test('should handle year boundary correctly', () => {
     const mockDate = new Date('2024-01-01T10:30:00Z');
-    jest.spyOn(global, 'Date').mockImplementation(() => mockDate);
+    spyOn(global, 'Date').mockImplementation(() => mockDate);
 
     const result = getYesterdayDate();
 
     expect(result).toBe('2023-12-31');
 
-    global.Date.mockRestore();
+    mock.restore();
   });
 });
 
 describe('getTodayDate', () => {
-  it("should return today's date in YYYY-MM-DD format", () => {
+  test("should return today's date in YYYY-MM-DD format", () => {
     const mockDate = new Date('2023-12-15T10:30:00Z');
-    jest.spyOn(global, 'Date').mockImplementation(() => mockDate);
+    spyOn(global, 'Date').mockImplementation(() => mockDate);
 
     const result = getTodayDate();
 
     expect(result).toBe('2023-12-15');
 
-    global.Date.mockRestore();
+    mock.restore();
   });
 
-  it('should handle different times of day correctly', () => {
+  test('should handle different times of day correctly', () => {
     const mockDate = new Date('2023-12-15T23:59:59Z');
-    jest.spyOn(global, 'Date').mockImplementation(() => mockDate);
+    spyOn(global, 'Date').mockImplementation(() => mockDate);
 
     const result = getTodayDate();
 
     expect(result).toBe('2023-12-15');
 
-    global.Date.mockRestore();
+    mock.restore();
   });
 });

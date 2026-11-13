@@ -16,21 +16,15 @@ const path = require('node:path');
 const args = process.argv.slice(2);
 
 if (args.length === 0) {
-  console.error(
-    'Usage: node scripts/create-react-native-library.js <create-react-native-library options>'
-  );
-  console.error(
-    'Example: node scripts/create-react-native-library.js --type turbo-module --languages kotlin-objc'
-  );
+  console.error('Usage: node scripts/create-react-native-library.js <create-react-native-library options>');
+  console.error('Example: node scripts/create-react-native-library.js --type turbo-module --languages kotlin-objc');
   process.exit(1);
 }
 
 const appDir = process.cwd();
 
 // A new directory on each run, so retries don't reuse a partially created library
-const tempDir = fs.mkdtempSync(
-  path.join(os.tmpdir(), 'create-react-native-library-')
-);
+const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'create-react-native-library-'));
 const libraryDir = path.join(tempDir, 'react-native-test-library');
 
 execFileSync(
@@ -82,9 +76,7 @@ execFileSync('npm', ['pack', '--pack-destination', tempDir], {
   stdio: 'inherit',
 });
 
-const pkg = JSON.parse(
-  fs.readFileSync(path.join(libraryDir, 'package.json'), 'utf8')
-);
+const pkg = JSON.parse(fs.readFileSync(path.join(libraryDir, 'package.json'), 'utf8'));
 
 // Peer dependencies such as react-native-nitro-modules are needed in the app,
 // react and react-native are excluded since the app already has the nightly.
@@ -92,12 +84,7 @@ const peerDependencies = Object.entries(pkg.peerDependencies ?? {})
   .filter(([name]) => name !== 'react' && name !== 'react-native')
   .map(([name, version]) => `${name}@${version}`);
 
-execFileSync(
-  'yarn',
-  [
-    'add',
-    `file:${path.join(tempDir, `${pkg.name}-${pkg.version}.tgz`)}`,
-    ...peerDependencies,
-  ],
-  { cwd: appDir, stdio: 'inherit' }
-);
+execFileSync('yarn', ['add', `file:${path.join(tempDir, `${pkg.name}-${pkg.version}.tgz`)}`, ...peerDependencies], {
+  cwd: appDir,
+  stdio: 'inherit',
+});

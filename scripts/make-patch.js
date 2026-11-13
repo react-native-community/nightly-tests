@@ -13,12 +13,15 @@ const { execSync } = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
 
+function pad(n) {
+  return String(n).padStart(2, '0');
+}
+
 // Get output filename from args or generate timestamp-based name
 const outputFile =
   process.argv[2] ||
   (() => {
     const d = new Date();
-    const pad = n => String(n).padStart(2, '0');
     return `patch-${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}-${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}.patch`;
   })();
 

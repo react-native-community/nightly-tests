@@ -6,11 +6,7 @@ type Props = { packageName?: string };
 
 export function DirectoryLink({ packageName }: Props) {
   if (!packageName) {
-    return (
-      <span className="w-3.5 flex justify-center text-secondary opacity-60 select-none">
-        -
-      </span>
-    );
+    return <span className="text-secondary flex w-3.5 justify-center opacity-60 select-none">-</span>;
   }
 
   return (
@@ -20,7 +16,7 @@ export function DirectoryLink({ packageName }: Props) {
         target="_blank"
         aria-label="Visit React Native Directory page"
         className="rounded-sm transition-opacity hover:opacity-70">
-        <DirectoryLogo className="size-3.5 text-secondary" />
+        <DirectoryLogo className="text-secondary size-3.5" />
       </a>
     </Tooltip>
   );

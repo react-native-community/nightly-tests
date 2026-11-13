@@ -1,7 +1,7 @@
-import { cert, initializeApp } from 'firebase-admin';
 import dotenv from 'dotenv';
-import fs from 'node:fs/promises';
+import { cert, initializeApp } from 'firebase-admin';
 import { getDatabase } from 'firebase-admin/database';
+import fs from 'node:fs/promises';
 import path from 'node:path';
 
 const DAYS_TO_SHOW = 7;
@@ -12,9 +12,7 @@ dotenv.config({
   quiet: true,
 });
 
-const credential = JSON.parse(
-  Buffer.from(process.env.FIREBASE_APP_SERVICE_KEY, 'base64').toString(ENCODING)
-);
+const credential = JSON.parse(Buffer.from(process.env.FIREBASE_APP_SERVICE_KEY, 'base64').toString(ENCODING));
 
 const definitions = await fs.readFile('../libraries.json', ENCODING);
 const definitionsJSON = JSON.parse(definitions);
@@ -22,14 +20,10 @@ const definitionsJSON = JSON.parse(definitions);
 async function fetchDirectoryData(libraries) {
   const packageNames = libraries.map(lib => getCleanPackageName(lib));
   try {
-    const response = await fetch(
-      `https://reactnative.directory/api/library?name=${packageNames.join(',')}`
-    );
+    const response = await fetch(`https://reactnative.directory/api/library?name=${packageNames.join(',')}`);
 
     if (!response.ok) {
-      throw new Error(
-        `❌ HTTP ${response.status} - Cannot fetch directory data for ${packageNames.join(', ')}`
-      );
+      throw new Error(`❌ HTTP ${response.status} - Cannot fetch directory data for ${packageNames.join(', ')}`);
     }
 
     return await response.json();
@@ -40,9 +34,7 @@ async function fetchDirectoryData(libraries) {
 }
 
 function getCleanPackageName(packageName) {
-  return packageName.includes('@') && !packageName.startsWith('@')
-    ? packageName.split('@')[0]
-    : packageName;
+  return packageName.includes('@') && !packageName.startsWith('@') ? packageName.split('@')[0] : packageName;
 }
 
 async function main() {
@@ -56,32 +48,23 @@ async function main() {
   const data = snapshot.val() ?? {};
 
   const tableDataMap = new Map();
-  const trimmedData = Object.entries(data['nightly-results']).slice(
-    -DAYS_TO_SHOW
-  );
+  const trimmedData = Object.entries(data['nightly-results']).slice(-DAYS_TO_SHOW);
 
   for (const [date, entries] of trimmedData) {
     for (const { library, platform, status, runUrl } of entries) {
       if (definitionsJSON[library]) {
         if (!tableDataMap.has(library)) {
-          const installCommand = definitionsJSON[library].installCommand
-            .replace('--dev', '')
-            .trim();
+          const installCommand = definitionsJSON[library].installCommand.replace('--dev', '').trim();
           const notes = definitionsJSON[library].notes;
           const setupScript = definitionsJSON[library].setupScript;
 
           const directoryData = await fetchDirectoryData(
-            installCommand.includes(' ')
-              ? installCommand.split(' ')
-              : [installCommand]
+            installCommand.includes(' ') ? installCommand.split(' ') : [installCommand]
           );
 
           if (Object.keys(directoryData).length > 0) {
             const repositoryURLs = Object.fromEntries(
-              Object.values(directoryData).map(lib => [
-                lib.npmPkg,
-                lib.githubUrl,
-              ])
+              Object.values(directoryData).map(lib => [lib.npmPkg, lib.githubUrl])
             );
 
             tableDataMap.set(library, {
@@ -116,9 +99,7 @@ async function main() {
     }
   }
 
-  const sortedData = Array.from(tableDataMap.values()).sort((a, b) =>
-    a.installCommand.localeCompare(b.installCommand)
-  );
+  const sortedData = Array.from(tableDataMap.values()).sort((a, b) => a.installCommand.localeCompare(b.installCommand));
 
   const outPath = path.resolve('public/data.json');
   await fs.writeFile(outPath, JSON.stringify(sortedData, null, 2), ENCODING);

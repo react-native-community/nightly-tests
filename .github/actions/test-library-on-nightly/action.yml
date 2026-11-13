@@ -22,12 +22,14 @@ inputs:
 runs:
   using: composite
   steps:
+    - name: Setup Bun
+      uses: oven-sh/setup-bun@v2
+
     - name: Create new app
       shell: bash
       run: |
         cd /tmp
         npx @react-native-community/cli init RNApp --skip-install --version nightly
-    
 
     - name: Apply patch if specified
       if: ${{ inputs.patch-file != '' }}
@@ -55,13 +57,13 @@ runs:
           if [ -n "${{ inputs.setup-script }}" ]; then
             node $GITHUB_WORKSPACE/${{ inputs.setup-script }}
           else
-            yarn add ${{ inputs.library-npm-package }}
+            bun add ${{ inputs.library-npm-package }}
           fi
         on_retry_command: |
-          echo "Cleaning up for yarn retry..."
+          echo "Cleaning up for Bun retry..."
           cd /tmp/RNApp
-          rm -rf node_modules yarn.lock || true
-          yarn cache clean || true
+          rm -rf node_modules bun.lock bun.lockb yarn.lock || true
+          bun pm cache rm || true
 
     # iOS
     - name: Setup xcode

@@ -1,9 +1,7 @@
-import type { NextConfig } from 'next';
+import { type NextConfig } from 'next';
 import path from 'node:path';
 
-const basePath = process.env.REPOSITORY_NAME
-  ? `/${process.env.REPOSITORY_NAME}`
-  : undefined;
+const basePath = process.env.REPOSITORY_NAME ? `/${process.env.REPOSITORY_NAME}` : undefined;
 
 const PACKAGES_TO_OPTIMIZE = ['@radix-ui/*', '@tenstack/*'];
 

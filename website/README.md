@@ -1,12 +1,16 @@
 # Getting Started
 
-Run the development server:
+Install the workspace dependencies from the repository root, then start the website from its directory:
 
 ```bash
-yarn dev
+bun install --frozen-lockfile
+cd website
+bun run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+To fetch the latest results and refresh `public/data.json`, configure the Firebase credentials below, then run `bun run data:fetch` from the `website` directory. You can also build the static site there with `bun run build`.
 
 ## Stack
 
@@ -20,28 +24,23 @@ The high-level overview of relevant files and folders.
 
 ```text
 website/
-├── app/
-│   └── [Next App Router]
-├── components/
-│   └── [Shareable Components]
+├── app/            # Next.js App Router pages and layout
+├── components/     # Shared UI components
+├── context/        # Search and display-mode state
 ├── public/
-│   │   // Pre-fetched results data for development.
-│   ├── data.json
-│   └── [Other App Static Data]
+│   ├── data.json   # Fetched results used by the website
+│   └── ...         # Icons, fonts, and other static assets
 ├── scripts/
-│   │   // Node script for fetching and reformatting latest data from Firebase.
-│   │   // Requires Firebase Service Key in `.env` file.
 │   └── fetch-data.mjs
 ├── styles/
-│   │   // Global Styles and Tailwind Setup.
-│   └── global.css
-└── types/
-    └── [Shareable Type Definitions]
+│   └── globals.css
+├── types/          # Shared TypeScript types
+└── utils/          # Shared utilities
 ```
 
 ## Credentials
 
-To set up credentials for data fetching you will need to add `.env` file in `website` directory, which includes `FIREBASE_APP_PROJECTNAME` and `FIREBASE_APP_SERVICE_KEY` environment variables. For example:
+To fetch data, add a `.env` file in the `website` directory with `FIREBASE_APP_PROJECTNAME` and `FIREBASE_APP_SERVICE_KEY`. The service key must be the Base64-encoded Firebase service-account JSON. For example:
 
 ```bash
 FIREBASE_APP_PROJECTNAME=[my-nightly-tests-project]

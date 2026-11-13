@@ -10,36 +10,22 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
-const {
-  FirebaseClient,
-  compareResults,
-  getTodayDate,
-} = require('./firebaseUtils');
-const {
-  prepareFailurePayload,
-  prepareComparisonPayload,
-  sendMessageToDiscord,
-} = require('./notifyDiscord');
+const { FirebaseClient, compareResults, getTodayDate } = require('./firebaseUtils');
+const { prepareFailurePayload, prepareComparisonPayload, sendMessageToDiscord } = require('./notifyDiscord');
 
 function readOutcomes() {
   const baseDir = '/tmp';
-  let outcomes = [];
+  const outcomes = [];
   fs.readdirSync(baseDir).forEach(file => {
     const fullPath = path.join(baseDir, file);
     if (fullPath.endsWith('outcome') && fs.statSync(fullPath).isDirectory) {
       fs.readdirSync(fullPath).forEach(subFile => {
         const subFullPath = path.join(fullPath, subFile);
         if (subFullPath.endsWith('outcome')) {
-          const [library, status, url] = String(
-            fs.readFileSync(subFullPath, 'utf8')
-          )
-            .trim()
-            .split('|');
+          const [library, status, url] = String(fs.readFileSync(subFullPath, 'utf8')).trim().split('|');
           const platform = subFile.includes('android') ? 'Android' : 'iOS';
           const runUrl = status.trim() === 'failure' ? url : undefined;
-          console.log(
-            `[${platform}] ${library} completed with status ${status}`
-          );
+          console.log(`[${platform}] ${library} completed with status ${status}`);
           outcomes.push({
             library: library.trim(),
             platform,
@@ -49,9 +35,7 @@ function readOutcomes() {
         }
       });
     } else if (fullPath.endsWith('outcome')) {
-      const [library, status, url] = String(fs.readFileSync(fullPath, 'utf8'))
-        .trim()
-        .split('|');
+      const [library, status, url] = String(fs.readFileSync(fullPath, 'utf8')).trim().split('|');
       const platform = file.includes('android') ? 'Android' : 'iOS';
       const runUrl = status.trim() === 'failure' ? url.trim() : undefined;
       console.log(`[${platform}] ${library} completed with status ${status}`);
@@ -68,17 +52,17 @@ function readOutcomes() {
 
 function printFailures(outcomes) {
   console.log('Printing failures...');
-  let failedLibraries = [];
+  const failedLibraries = [];
   outcomes.forEach(entry => {
-    if (entry.status !== 'success') {
-      console.log(
-        `❌ [${entry.platform}] ${entry.library} failed with status ${entry.status}`
-      );
-      failedLibraries.push({
-        library: entry.library,
-        platform: entry.platform,
-      });
+    if (entry.status === 'success') {
+      return;
     }
+
+    console.log(`❌ [${entry.platform}] ${entry.library} failed with status ${entry.status}`);
+    failedLibraries.push({
+      library: entry.library,
+      platform: entry.platform,
+    });
   });
   return failedLibraries;
 }
@@ -130,8 +114,7 @@ async function collectResults(discordWebHook) {
 
     // Get the most recent previous results for comparison
     console.log(`Looking for most recent previous results before ${today}...`);
-    const { results: previousResults, date: previousDate } =
-      await firebaseClient.getLatestResults(today);
+    const { results: previousResults, date: previousDate } = await firebaseClient.getLatestResults(today);
 
     let broken = [];
     let recovered = [];
@@ -147,9 +130,7 @@ async function collectResults(discordWebHook) {
         `Found ${broken.length} newly broken jobs and ${recovered.length} recovered jobs compared to ${previousDate}`
       );
     } else {
-      console.log(
-        'No previous results found for comparison - this might be the first run or no recent data available'
-      );
+      console.log('No previous results found for comparison - this might be the first run or no recent data available');
     }
 
     // Send comparison message to Discord if there are changes

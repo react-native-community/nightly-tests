@@ -6,11 +6,7 @@ type Props = { repositoryURL?: string };
 
 export function GitHubRepoLink({ repositoryURL }: Props) {
   if (!repositoryURL) {
-    return (
-      <span className="w-3.5 flex justify-center text-secondary opacity-60 select-none">
-        -
-      </span>
-    );
+    return <span className="text-secondary flex w-3.5 justify-center opacity-60 select-none">-</span>;
   }
 
   return (
@@ -20,7 +16,7 @@ export function GitHubRepoLink({ repositoryURL }: Props) {
         target="_blank"
         aria-label="Visit package GitHub repository"
         className="rounded-sm transition-opacity hover:opacity-70">
-        <GitHubLogo className="size-3.5 text-secondary" />
+        <GitHubLogo className="text-secondary size-3.5" />
       </a>
     </Tooltip>
   );

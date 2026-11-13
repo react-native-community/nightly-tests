@@ -7,31 +7,26 @@
  * @format
  */
 
-'use strict';
+import { afterEach, beforeEach, describe, expect, mock, spyOn, test } from 'bun:test';
 
-const {
-  prepareFailurePayload,
-  sendMessageToDiscord,
-} = require('../notifyDiscord');
+const { prepareFailurePayload, sendMessageToDiscord } = require('../notifyDiscord');
 
 describe('prepareFailurePayload', () => {
-  it('should handle undefined failures', () => {
+  test('should handle undefined failures', () => {
     const message = prepareFailurePayload(undefined);
     expect(message).toEqual({
-      content:
-        '✅ **React Native Nightly Integration Success** ✅\n\nAll builds are green on both platforms.',
+      content: '✅ **React Native Nightly Integration Success** ✅\n\nAll builds are green on both platforms.',
     });
   });
 
-  it('should handle empty failures array', () => {
+  test('should handle empty failures array', () => {
     const message = prepareFailurePayload([]);
     expect(message).toEqual({
-      content:
-        '✅ **React Native Nightly Integration Success** ✅\n\nAll builds are green on both platforms.',
+      content: '✅ **React Native Nightly Integration Success** ✅\n\nAll builds are green on both platforms.',
     });
   });
 
-  it('should format a single failure correctly', () => {
+  test('should format a single failure correctly', () => {
     const failures = [
       {
         library: 'react-native-reanimated',
@@ -46,7 +41,7 @@ describe('prepareFailurePayload', () => {
     });
   });
 
-  it('should sort multiple failures by platform and library name', () => {
+  test('should sort multiple failures by platform and library name', () => {
     const failures = [
       {
         library: 'react-native-reanimated',
@@ -76,7 +71,7 @@ describe('prepareFailurePayload', () => {
     });
   });
 
-  it('should handle failures with missing properties', () => {
+  test('should handle failures with missing properties', () => {
     const failures = [
       {
         // Missing library
@@ -107,26 +102,24 @@ describe('sendMessageToDiscord', () => {
   // Setup and teardown for each test
   beforeEach(() => {
     // Mock the global fetch function
-    global.fetch = jest.fn();
+    global.fetch = mock();
     // Silence console logs during tests
-    jest.spyOn(console, 'log').mockImplementation(() => {});
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+    spyOn(console, 'log').mockImplementation(() => {});
+    spyOn(console, 'error').mockImplementation(() => {});
   });
 
   afterEach(() => {
     // Restore the original fetch function
     global.fetch = originalFetch;
     // Restore console functions
-    jest.restoreAllMocks();
+    mock.restore();
   });
 
-  it('should throw an error if webhook URL is missing', async () => {
-    await expect(sendMessageToDiscord(null, {})).rejects.toThrow(
-      'Discord webhook URL is missing'
-    );
+  test('should throw an error if webhook URL is missing', async () => {
+    await expect(sendMessageToDiscord(null, {})).rejects.toThrow('Discord webhook URL is missing');
   });
 
-  it('should send a message successfully', async () => {
+  test('should send a message successfully', async () => {
     // Mock a successful response
     global.fetch.mockResolvedValueOnce({
       ok: true,
@@ -136,7 +129,7 @@ describe('sendMessageToDiscord', () => {
     const webhook = 'https://discord.com/api/webhooks/123/abc';
     const message = { content: 'Test message' };
 
-    await expect(sendMessageToDiscord(webhook, message)).resolves.not.toThrow();
+    await sendMessageToDiscord(webhook, message);
 
     // Verify fetch was called with the right arguments
     expect(global.fetch).toHaveBeenCalledWith(webhook, {
@@ -148,12 +141,10 @@ describe('sendMessageToDiscord', () => {
     });
 
     // Verify console.log was called
-    expect(console.log).toHaveBeenCalledWith(
-      'Successfully sent message to Discord'
-    );
+    expect(console.log).toHaveBeenCalledWith('Successfully sent message to Discord');
   });
 
-  it('should split messages that exceed the Discord content limit', async () => {
+  test('should split messages that exceed the Discord content limit', async () => {
     global.fetch.mockResolvedValue({
       ok: true,
       status: 200,
@@ -161,44 +152,35 @@ describe('sendMessageToDiscord', () => {
 
     const webhook = 'https://discord.com/api/webhooks/123/abc';
     const message = {
-      content: Array.from(
-        { length: 100 },
-        (_, index) => `❌ [Android] react-native-library-${index}`
-      ).join('\n'),
+      content: Array.from({ length: 100 }, (_, index) => `❌ [Android] react-native-library-${index}`).join('\n'),
     };
 
     await sendMessageToDiscord(webhook, message);
 
-    const sentContents = global.fetch.mock.calls.map(
-      ([, options]) => JSON.parse(options.body).content
-    );
+    const sentContents = global.fetch.mock.calls.map(([, options]) => JSON.parse(options.body).content);
     expect(sentContents.length).toBeGreaterThan(1);
     expect(sentContents.every(content => content.length <= 2000)).toBe(true);
     expect(sentContents.join('\n')).toBe(message.content);
   });
 
-  it('should throw an error if the response is not ok', async () => {
+  test('should throw an error if the response is not ok', async () => {
     // Mock a failed response
     global.fetch.mockResolvedValueOnce({
       ok: false,
       status: 400,
-      text: jest.fn().mockResolvedValueOnce('Bad Request'),
+      text: mock().mockResolvedValueOnce('Bad Request'),
     });
 
     const webhook = 'https://discord.com/api/webhooks/123/abc';
     const message = { content: 'Test message' };
 
-    await expect(sendMessageToDiscord(webhook, message)).rejects.toThrow(
-      'HTTP status code: 400'
-    );
+    await expect(sendMessageToDiscord(webhook, message)).rejects.toThrow('HTTP status code: 400');
 
     // Verify console.error was called
-    expect(console.error).toHaveBeenCalledWith(
-      'Failed to send message to Discord: 400 Bad Request'
-    );
+    expect(console.error).toHaveBeenCalledWith('Failed to send message to Discord: 400 Bad Request');
   });
 
-  it('should throw an error if fetch fails', async () => {
+  test('should throw an error if fetch fails', async () => {
     // Mock a network error
     const networkError = new Error('Network error');
     global.fetch.mockRejectedValueOnce(networkError);
@@ -206,8 +188,6 @@ describe('sendMessageToDiscord', () => {
     const webhook = 'https://discord.com/api/webhooks/123/abc';
     const message = { content: 'Test message' };
 
-    await expect(sendMessageToDiscord(webhook, message)).rejects.toThrow(
-      'Network error'
-    );
+    await expect(sendMessageToDiscord(webhook, message)).rejects.toThrow('Network error');
   });
 });
