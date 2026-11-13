@@ -102,6 +102,11 @@ runs:
       with:
         java-version: '17'
         distribution: 'zulu'
+    - name: Use compatible KSP for Async Storage on Android
+      if: ${{ inputs.platform == 'android' && inputs.library-npm-package == '@react-native-async-storage/async-storage' }}
+      shell: bash
+      # Async Storage 3.1.1 falls back to KSP 2.1.0 when Kotlin is newer than 2.2.20.
+      run: echo 'AsyncStorage_kspVersion=2.3.12' >> /tmp/RNApp/android/gradle.properties
     - name: Build Android with retry
       if: ${{ inputs.platform == 'android' }}
       uses: nick-fields/retry@v4
