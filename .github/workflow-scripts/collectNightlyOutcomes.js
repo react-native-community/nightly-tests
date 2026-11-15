@@ -62,9 +62,26 @@ function printFailures(outcomes) {
     failedLibraries.push({
       library: entry.library,
       platform: entry.platform,
+      runUrl: entry.runUrl,
     });
   });
   return failedLibraries;
+}
+
+function attachFailureJobUrls(outcomes, jobUrls) {
+  return outcomes.map(entry => {
+    if (entry.status !== 'failure') {
+      return entry;
+    }
+
+    const jobName = `[${entry.platform.toLowerCase()}] ${entry.library}`;
+    const runUrl = jobUrls[jobName] ?? Object.entries(jobUrls).find(([name]) => name.endsWith(` / ${jobName}`))?.[1];
+    if (!runUrl) {
+      throw new Error(`Could not find a failed GitHub Actions step for ${jobName}`);
+    }
+
+    return { ...entry, runUrl };
+  });
 }
 
 /**
@@ -91,8 +108,8 @@ async function notifyDiscord(webHook, failures) {
   }
 }
 
-async function collectResults(discordWebHook) {
-  const outcomes = readOutcomes();
+async function collectResults(discordWebHook, jobUrls) {
+  const outcomes = attachFailureJobUrls(readOutcomes(), jobUrls);
   const failures = printFailures(outcomes);
 
   // Send failure notification if there are current failures
@@ -149,6 +166,7 @@ async function collectResults(discordWebHook) {
 }
 
 module.exports = {
+  attachFailureJobUrls,
   collectResults,
   notifyDiscord,
 };

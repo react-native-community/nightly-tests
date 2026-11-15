@@ -74,6 +74,9 @@ jobs:
 
   collect-results:
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
     needs: [test-library-on-nightly]
     steps:
       - name: Checkout
@@ -92,5 +95,23 @@ jobs:
           FIREBASE_APP_PROJECTNAME: ${{ secrets.firebase_app_projectname }}
         with:
           script: |
+            const jobs = await github.paginate(github.rest.actions.listJobsForWorkflowRun, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              run_id: context.runId,
+              per_page: 100,
+            });
+            const failedJobUrls = Object.fromEntries(
+              jobs.flatMap(job => {
+                const failedStep = job.steps?.find(step => step.conclusion === 'failure');
+                if (!failedStep) {
+                  return [];
+                }
+                return [[
+                  job.name,
+                  `${process.env.GITHUB_SERVER_URL}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}/job/${job.id}#step:${failedStep.number}:1`,
+                ]];
+              })
+            );
             const {collectResults} = require('./.github/workflow-scripts/collectNightlyOutcomes.js');
-            await collectResults('${{secrets.discord_webhook_url}}');
+            await collectResults('${{secrets.discord_webhook_url}}', failedJobUrls);

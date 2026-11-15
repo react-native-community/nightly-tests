@@ -616,7 +616,7 @@ describe('compareResults', () => {
 
   test('should identify broken tests', () => {
     const currentResults = [
-      { library: 'lib1', platform: 'iOS', status: 'failed' },
+      { library: 'lib1', platform: 'iOS', status: 'failed', runUrl: 'job-step-url' },
       { library: 'lib2', platform: 'Android', status: 'success' },
     ];
 
@@ -633,6 +633,7 @@ describe('compareResults', () => {
         platform: 'iOS',
         previousStatus: 'success',
         currentStatus: 'failed',
+        runUrl: 'job-step-url',
       },
     ]);
     expect(result.recovered).toEqual([]);

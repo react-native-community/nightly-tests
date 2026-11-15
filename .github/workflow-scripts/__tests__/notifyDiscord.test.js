@@ -9,7 +9,7 @@
 
 import { afterEach, beforeEach, describe, expect, mock, spyOn, test } from 'bun:test';
 
-const { prepareFailurePayload, sendMessageToDiscord } = require('../notifyDiscord');
+const { prepareFailurePayload, prepareComparisonPayload, sendMessageToDiscord } = require('../notifyDiscord');
 
 describe('prepareFailurePayload', () => {
   test('should handle undefined failures', () => {
@@ -39,6 +39,20 @@ describe('prepareFailurePayload', () => {
       content:
         '⚠️ **React Native Nightly Integration Failures** ⚠️\n\nThe integration of libraries with React Native nightly failed for the following libraries:\n\n❌ [iOS] react-native-reanimated',
     });
+  });
+
+  test('should link a failure to its GitHub job step', () => {
+    const message = prepareFailurePayload([
+      {
+        library: 'react-native-reanimated',
+        platform: 'iOS',
+        runUrl: 'https://github.com/owner/repo/actions/runs/123/job/456#step:4:1',
+      },
+    ]);
+
+    expect(message.content).toContain(
+      '❌ [iOS] [react-native-reanimated](https://github.com/owner/repo/actions/runs/123/job/456#step:4:1)'
+    );
   });
 
   test('should sort multiple failures by platform and library name', () => {
@@ -92,6 +106,27 @@ describe('prepareFailurePayload', () => {
       content:
         '⚠️ **React Native Nightly Integration Failures** ⚠️\n\nThe integration of libraries with React Native nightly failed for the following libraries:\n\n❌ [iOS] Unknown\n❌ [Unknown] react-native-gesture-handler\n❌ [Unknown] Unknown',
     });
+  });
+});
+
+describe('prepareComparisonPayload', () => {
+  test('should link newly broken jobs to their GitHub job step', () => {
+    const message = prepareComparisonPayload(
+      [
+        {
+          library: 'react-native-reanimated',
+          platform: 'iOS',
+          previousStatus: 'success',
+          currentStatus: 'failure',
+          runUrl: 'https://github.com/owner/repo/actions/runs/123/job/456#step:4:1',
+        },
+      ],
+      []
+    );
+
+    expect(message.content).toContain(
+      '❌ [iOS] [react-native-reanimated](https://github.com/owner/repo/actions/runs/123/job/456#step:4:1) (was success, now failure)'
+    );
   });
 });
 
