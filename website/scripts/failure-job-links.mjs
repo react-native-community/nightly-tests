@@ -1,5 +1,6 @@
 const MAX_ATTEMPTS = 4;
 const RETRY_DELAY_MS = 250;
+const PAGE_SIZE = 100;
 
 function createFailureJobUrlResolver({
   fetchImpl = fetch,
@@ -8,61 +9,40 @@ function createFailureJobUrlResolver({
 } = {}) {
   const jobsByRun = new Map();
 
-  async function fetchJobsPage(url, headers) {
-    for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt += 1) {
-      const response = await fetchImpl(url, { headers });
-      if (response.ok) {
-        return response;
-      }
-
-      const error = new Error(`GitHub Actions API request failed: ${response.status} ${await response.text()}`);
-      if (response.status < 500 || response.status > 599 || attempt === MAX_ATTEMPTS - 1) {
-        throw error;
-      }
-
-      await sleep(RETRY_DELAY_MS * 2 ** attempt);
+  async function fetchJobs(repository, runId) {
+    const jobs = [];
+    const headers = { Accept: 'application/vnd.github+json' };
+    if (token) {
+      headers.Authorization = `Bearer ${token}`;
     }
 
-    throw new Error('GitHub Actions API request failed after retries');
-  }
+    for (let page = 1; ; page += 1) {
+      const url = `https://api.github.com/repos/${repository}/actions/runs/${runId}/jobs?per_page=${PAGE_SIZE}&page=${page}`;
+      let response;
+      for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt += 1) {
+        response = await fetchImpl(url, { headers });
+        if (response.ok) {
+          break;
+        }
 
-  async function getJobs(apiOrigin, repository, runId) {
-    const key = `${apiOrigin}/${repository}/actions/runs/${runId}`;
-    if (!jobsByRun.has(key)) {
-      jobsByRun.set(
-        key,
-        (async () => {
-          const jobs = [];
-          let page = 1;
-          let pageJobs;
+        const errorMessage = await response.text();
+        if (response.status < 500 || response.status > 599 || attempt === MAX_ATTEMPTS - 1) {
+          throw new Error(`GitHub Actions API request failed: ${response.status} ${errorMessage}`);
+        }
 
-          do {
-            const headers = { Accept: 'application/vnd.github+json' };
-            if (token) {
-              headers.Authorization = `Bearer ${token}`;
-            }
+        await sleep(RETRY_DELAY_MS * 2 ** attempt);
+      }
 
-            const response = await fetchJobsPage(
-              `${apiOrigin}/repos/${repository}/actions/runs/${runId}/jobs?per_page=100&page=${page}`,
-              headers
-            );
+      const result = await response.json();
+      if (!Array.isArray(result.jobs)) {
+        throw new Error(`GitHub Actions API returned no jobs for workflow run ${runId}`);
+      }
 
-            const result = await response.json();
-            if (!Array.isArray(result.jobs)) {
-              throw new Error(`GitHub Actions API returned no jobs for workflow run ${runId}`);
-            }
-
-            pageJobs = result.jobs;
-            jobs.push(...pageJobs);
-            page += 1;
-          } while (pageJobs.length === 100);
-
-          return jobs;
-        })()
-      );
+      jobs.push(...result.jobs);
+      if (result.jobs.length < PAGE_SIZE) {
+        return jobs;
+      }
     }
-
-    return jobsByRun.get(key);
   }
 
   return async function resolveFailureJobUrl({ library, platform, runUrl }) {
@@ -85,9 +65,13 @@ function createFailureJobUrlResolver({
     }
 
     const [, repository, runId] = runMatch;
-    const apiOrigin = 'https://api.github.com';
-    const jobs = await getJobs(apiOrigin, repository, runId);
+    const cacheKey = `${repository}/${runId}`;
+    if (!jobsByRun.has(cacheKey)) {
+      jobsByRun.set(cacheKey, fetchJobs(repository, runId));
+    }
+
     const jobName = `[${platform.toLowerCase()}] ${library}`;
+    const jobs = await jobsByRun.get(cacheKey);
     const job = jobs.find(candidate => candidate.name === jobName || candidate.name.endsWith(` / ${jobName}`));
     const failedStep = job?.steps?.find(step => step.conclusion === 'failure');
 
