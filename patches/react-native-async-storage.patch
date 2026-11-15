@@ -16,3 +16,15 @@ index dad99b0..f3cba6f 100644
 +}
 +
  apply plugin: "com.facebook.react.rootproject"
+diff --git a/android/gradle.properties b/android/gradle.properties
+index 50a0ed6..1578940 100644
+--- a/android/gradle.properties
++++ b/android/gradle.properties
+@@ -46,4 +46,5 @@ edgeToEdgeEnabled=true
+ # Opt out of built-in kotlin and new DSL behavior that ships with AGP 9.
+ # Starting from AGP 10.x these opt outs will be removed.
+ android.builtInKotlin=false
+-android.newDsl=false
+\ No newline at end of file
++android.newDsl=false
++AsyncStorage_kspVersion=2.3.12
