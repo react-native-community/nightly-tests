@@ -6,10 +6,6 @@
       "@braze/react-native-sdk": "https://github.com/braze-inc/braze-react-native-sdk"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -31,6 +27,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -43,10 +43,6 @@
       "@d11/react-native-fast-image": "https://github.com/dream-horizon-org/react-native-fast-image"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -68,6 +64,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -81,10 +81,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -106,6 +102,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -118,10 +118,6 @@
       "@maplibre/maplibre-react-native": "https://github.com/maplibre/maplibre-react-native/tree/main/package"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -143,6 +139,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -156,10 +156,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "failure",
         "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42816774085",
@@ -186,8 +182,11 @@
         "ios": "success"
       },
       "2026-11-15": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43711180821",
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
+        "android": "success",
         "ios": "success"
       }
     }
@@ -199,10 +198,6 @@
       "@react-native-clipboard/clipboard": "https://github.com/react-native-clipboard/clipboard"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -224,6 +219,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -236,10 +235,6 @@
       "@react-native-community/datetimepicker": "https://github.com/react-native-datetimepicker/datetimepicker"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -261,6 +256,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -274,10 +273,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -299,8 +294,11 @@
         "ios": "success"
       },
       "2026-11-15": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43711180821",
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
+        "android": "success",
         "ios": "success"
       }
     }
@@ -312,10 +310,6 @@
       "@react-native-community/netinfo": "https://github.com/react-native-netinfo/react-native-netinfo"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -337,6 +331,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -346,10 +344,6 @@
     "library": "@react-native-community/slider",
     "installCommand": "@react-native-community/slider",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -371,6 +365,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -383,11 +381,6 @@
       "@react-native-firebase/app": "https://github.com/invertase/react-native-firebase/tree/main/packages/app"
     },
     "results": {
-      "2026-11-09": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42619824557",
-        "ios": "failure"
-      },
       "2026-11-10": {
         "android": "failure",
         "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42816774085",
@@ -415,7 +408,12 @@
       },
       "2026-11-15": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43711180821",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43739130899",
+        "ios": "success"
+      },
+      "2026-11-16": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43868708153",
         "ios": "success"
       }
     }
@@ -427,10 +425,6 @@
       "@react-native-google-signin/google-signin": "https://github.com/react-native-google-signin/google-signin"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -452,6 +446,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -464,10 +462,6 @@
       "@react-native-masked-view/masked-view": "https://github.com/callstack/masked-view"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -489,6 +483,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -502,10 +500,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -527,6 +521,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -540,10 +538,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -565,6 +559,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -575,10 +573,6 @@
     "installCommand": "@shopify/react-native-skia",
     "notes": "No longer maintained package for Skia, still used by some projects",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -600,6 +594,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -613,10 +611,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -638,6 +632,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -649,10 +647,6 @@
     "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library",
     "setupScript": "scripts/create-react-native-library.js --type fabric-view --languages kotlin-objc",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -674,6 +668,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -685,10 +683,6 @@
     "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library",
     "setupScript": "scripts/create-react-native-library.js --type nitro-module --languages kotlin-swift",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -712,6 +706,11 @@
       "2026-11-15": {
         "android": "success",
         "ios": "success"
+      },
+      "2026-11-16": {
+        "android": "success",
+        "ios": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43868708153"
       }
     }
   },
@@ -722,10 +721,6 @@
     "notes": "",
     "setupScript": "scripts/create-react-native-library.js --type nitro-view --languages kotlin-swift",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -747,6 +742,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -758,10 +757,6 @@
     "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library",
     "setupScript": "scripts/create-react-native-library.js --type turbo-module --languages cpp",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -783,6 +778,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -794,10 +793,6 @@
     "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library",
     "setupScript": "scripts/create-react-native-library.js --type turbo-module --languages kotlin-objc",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -819,6 +814,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -832,11 +831,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42619824557"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "failure",
@@ -864,6 +858,10 @@
       "2026-11-15": {
         "android": "success",
         "ios": "success"
+      },
+      "2026-11-16": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -871,10 +869,6 @@
     "library": "react-native-async-storage",
     "installCommand": "react-native-async-storage",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -896,6 +890,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -908,10 +906,6 @@
       "react-native-blob-util": "https://github.com/RonRadtke/react-native-blob-util"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -933,6 +927,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -946,10 +944,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -971,6 +965,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -984,10 +982,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1009,6 +1003,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1022,10 +1020,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1047,6 +1041,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1060,10 +1058,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1085,6 +1079,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1098,10 +1096,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1123,6 +1117,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1135,10 +1133,6 @@
       "react-native-enriched-markdown": "https://github.com/software-mansion/react-native-enriched-markdown/tree/main/packages/react-native-enriched-markdown"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1160,6 +1154,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1173,10 +1171,6 @@
       "react-native-nitro-modules": "https://github.com/margelo/nitro/tree/main/packages/react-native-nitro-modules"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1198,6 +1192,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1210,10 +1208,6 @@
       "react-native-file-access": "https://github.com/alpha0010/react-native-file-access"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1237,6 +1231,10 @@
       "2026-11-15": {
         "android": "success",
         "ios": "success"
+      },
+      "2026-11-16": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1247,10 +1245,6 @@
       "react-native-gesture-handler": "https://github.com/software-mansion/react-native-gesture-handler/tree/main/packages/react-native-gesture-handler"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "failure",
         "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42816774085",
@@ -1273,6 +1267,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1286,10 +1284,6 @@
       "react-native-nitro-modules": "https://github.com/margelo/nitro/tree/main/packages/react-native-nitro-modules"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1313,6 +1307,10 @@
       "2026-11-15": {
         "android": "success",
         "ios": "success"
+      },
+      "2026-11-16": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1323,11 +1321,6 @@
       "react-native-image-picker": "https://github.com/react-native-image-picker/react-native-image-picker"
     },
     "results": {
-      "2026-11-09": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42619824557",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "failure",
         "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42816774085",
@@ -1355,7 +1348,12 @@
       },
       "2026-11-15": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43711180821",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43739130899",
+        "ios": "success"
+      },
+      "2026-11-16": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43868708153",
         "ios": "success"
       }
     }
@@ -1368,10 +1366,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1393,6 +1387,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1405,10 +1403,6 @@
       "react-native-linear-gradient": "https://github.com/react-native-linear-gradient/react-native-linear-gradient"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1430,6 +1424,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1443,10 +1441,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1470,6 +1464,10 @@
       "2026-11-15": {
         "android": "success",
         "ios": "success"
+      },
+      "2026-11-16": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1481,11 +1479,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-11-09": {
-        "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42619824557",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "failure",
         "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42816774085",
@@ -1513,7 +1506,12 @@
       },
       "2026-11-15": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43711180821",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43739130899",
+        "ios": "success"
+      },
+      "2026-11-16": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43868708153",
         "ios": "success"
       }
     }
@@ -1523,10 +1521,6 @@
     "installCommand": "react-native-masked-view",
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1548,6 +1542,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1561,10 +1559,6 @@
       "react-native-nitro-modules": "https://github.com/margelo/nitro/tree/main/packages/react-native-nitro-modules"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1586,6 +1580,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1599,10 +1597,6 @@
       "react-native-nitro-modules": "https://github.com/margelo/nitro/tree/main/packages/react-native-nitro-modules"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1626,6 +1620,10 @@
       "2026-11-15": {
         "android": "success",
         "ios": "success"
+      },
+      "2026-11-16": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1636,10 +1634,6 @@
       "react-native-nitro-modules": "https://github.com/margelo/nitro/tree/main/packages/react-native-nitro-modules"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1664,6 +1658,10 @@
       "2026-11-15": {
         "android": "success",
         "ios": "success"
+      },
+      "2026-11-16": {
+        "android": "success",
+        "ios": "success"
       }
     }
   },
@@ -1675,10 +1673,6 @@
       "react-native-nitro-modules": "https://github.com/margelo/nitro/tree/main/packages/react-native-nitro-modules"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1700,6 +1694,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1713,10 +1711,6 @@
       "react-native-nitro-modules": "https://github.com/margelo/nitro/tree/main/packages/react-native-nitro-modules"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1738,6 +1732,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1750,10 +1748,6 @@
       "react-native-pager-view": "https://github.com/callstack/react-native-pager-view"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1775,6 +1769,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1787,10 +1785,6 @@
       "react-native-pdf": "https://github.com/wonday/react-native-pdf"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1812,6 +1806,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1825,10 +1823,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1850,6 +1844,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1863,10 +1861,6 @@
       "react-native-worklets": "https://github.com/software-mansion/react-native-reanimated/tree/main/packages/react-native-worklets"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1888,6 +1882,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1901,10 +1899,6 @@
     },
     "notes": "A popular library for React Native projects built with the New Architecture.",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1926,6 +1920,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1938,10 +1936,6 @@
       "react-native-screens": "https://github.com/software-mansion/react-native-screens"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -1963,6 +1957,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -1976,10 +1974,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -2001,6 +1995,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -2014,10 +2012,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -2039,6 +2033,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -2051,10 +2049,6 @@
       "react-native-svg": "https://github.com/software-mansion/react-native-svg"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -2076,6 +2070,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -2091,10 +2089,6 @@
     },
     "notes": "Popular styling library for React Native",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -2116,6 +2110,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -2126,10 +2124,6 @@
     "installCommand": "react-native-vector-icons",
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -2151,6 +2145,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -2163,10 +2161,6 @@
       "react-native-video": "https://github.com/TheWidlarzGroup/react-native-video/tree/master/packages/react-native-video"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -2188,6 +2182,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -2203,10 +2201,6 @@
     },
     "notes": "One of top most used libraries according to the npm stats",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -2231,7 +2225,12 @@
       },
       "2026-11-15": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43711180821",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43739130899",
+        "ios": "success"
+      },
+      "2026-11-16": {
+        "android": "failure",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43868708153",
         "ios": "success"
       }
     }
@@ -2243,10 +2242,6 @@
       "react-native-webview": "https://github.com/react-native-webview/react-native-webview/tree/master/packages/react-native-webview"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -2268,6 +2263,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -2280,10 +2279,6 @@
       "react-native-worklets": "https://github.com/software-mansion/react-native-reanimated/tree/main/packages/react-native-worklets"
     },
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -2305,6 +2300,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
@@ -2319,10 +2318,6 @@
     },
     "notes": "Additional OSS libs used internally",
     "results": {
-      "2026-11-09": {
-        "android": "success",
-        "ios": "success"
-      },
       "2026-11-10": {
         "android": "success",
         "ios": "success"
@@ -2344,6 +2339,10 @@
         "ios": "success"
       },
       "2026-11-15": {
+        "android": "success",
+        "ios": "success"
+      },
+      "2026-11-16": {
         "android": "success",
         "ios": "success"
       }
