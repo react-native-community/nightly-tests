@@ -54,8 +54,8 @@ function formatStatus(info: CellContext<typeof features, LibraryType, PlatformSt
       const runUrl = info.row.original.results[info.cell.id.split('.')[1]]?.runUrl;
       if (runUrl) {
         return (
-          <Tooltip content="See the GitHub action run">
-            <a href={runUrl} target="_blank" className="rounded-sm" aria-label="See the GitHub action run">
+          <Tooltip content="See the failed GitHub Actions run">
+            <a href={runUrl} target="_blank" className="rounded-sm" aria-label="See the failed GitHub Actions run">
               <XIcon className="mx-auto size-5 text-red-500 select-none" />
             </a>
           </Tooltip>

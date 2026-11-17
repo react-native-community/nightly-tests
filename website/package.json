@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "bunx serve out",
     "lint": "oxlint",
-    "data:fetch": "node ./scripts/fetch-data.mjs"
+    "data:fetch": "node ./scripts/fetch-data.mjs && oxfmt public/data.json"
   },
   "dependencies": {
     "@radix-ui/react-tooltip": "^1.4.1",

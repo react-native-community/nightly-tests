@@ -4,6 +4,8 @@ import { getDatabase } from 'firebase-admin/database';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
+import { createFailureJobUrlResolver } from './failure-job-links.mjs';
+
 const DAYS_TO_SHOW = 7;
 const ENCODING = 'utf8';
 
@@ -38,6 +40,8 @@ function getCleanPackageName(packageName) {
 }
 
 async function main() {
+  const resolveFailureJobUrl = createFailureJobUrlResolver();
+
   initializeApp({
     credential: cert(credential),
     databaseURL: `https://${process.env.FIREBASE_APP_PROJECTNAME}.firebaseio.com`,
@@ -93,7 +97,7 @@ async function main() {
         }
         rec.results[date][platform.toLowerCase()] = status;
         if (status === 'failure') {
-          rec.results[date].runUrl = runUrl;
+          rec.results[date].runUrl = await resolveFailureJobUrl({ library, platform, runUrl });
         }
       }
     }

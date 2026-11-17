@@ -196,6 +196,7 @@ function compareResults(currentResults, previousResults) {
           platform: currentResult.platform,
           previousStatus: previousResult.status,
           currentStatus: currentResult.status,
+          runUrl: currentResult.runUrl,
         });
       }
     }

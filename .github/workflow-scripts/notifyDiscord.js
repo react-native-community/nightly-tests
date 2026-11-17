@@ -96,6 +96,10 @@ function sortResultsByPlatformAndLibrary(jobs) {
   });
 }
 
+function formatFailureLibrary(library, runUrl) {
+  return runUrl ? `[${library}](${runUrl})` : library;
+}
+
 /**
  * Prepares a formatted Discord message payload from a list of failures.
  * @param {Array<Object>} failures - List of failures to format
@@ -116,7 +120,7 @@ function prepareFailurePayload(failures) {
     .map(failure => {
       const library = failure.library || 'Unknown';
       const platform = failure.platform || 'Unknown';
-      return `❌ [${platform}] ${library}`;
+      return `❌ [${platform}] ${formatFailureLibrary(library, failure.runUrl)}`;
     })
     .join('\n');
 
@@ -142,7 +146,8 @@ function prepareComparisonPayload(broken, recovered) {
       const sortedBroken = sortResultsByPlatformAndLibrary(broken);
 
       sortedBroken.forEach(job => {
-        content += `❌ [${job.platform}] ${job.library} (was ${job.previousStatus}, now ${job.currentStatus})\n`;
+        const library = formatFailureLibrary(job.library, job.runUrl);
+        content += `❌ [${job.platform}] ${library} (was ${job.previousStatus}, now ${job.currentStatus})\n`;
       });
       content += '\n';
     }
