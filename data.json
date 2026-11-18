@@ -158,27 +158,27 @@
     "results": {
       "2026-11-10": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42816774085",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42816774085/job/129831865527#step:4:1",
         "ios": "success"
       },
       "2026-11-11": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43015178202",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43015178202/job/130504453057#step:4:1",
         "ios": "success"
       },
       "2026-11-12": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43219554098",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43219554098/job/131187433957#step:4:1",
         "ios": "success"
       },
       "2026-11-13": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43422488381",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43422488381/job/131875780357#step:4:1",
         "ios": "success"
       },
       "2026-11-14": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43589931931",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43589931931/job/132432365244#step:4:1",
         "ios": "success"
       },
       "2026-11-15": {
@@ -383,37 +383,37 @@
     "results": {
       "2026-11-10": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42816774085",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42816774085/job/129831872296#step:4:1",
         "ios": "failure"
       },
       "2026-11-11": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43015178202",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43015178202/job/130504459789#step:4:1",
         "ios": "failure"
       },
       "2026-11-12": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43219554098",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43219554098/job/131187441497#step:4:1",
         "ios": "failure"
       },
       "2026-11-13": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43422488381",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43422488381/job/131875785275#step:4:1",
         "ios": "success"
       },
       "2026-11-14": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43589931931",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43589931931/job/132432368127#step:4:1",
         "ios": "success"
       },
       "2026-11-15": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43739130899",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43739130899/job/132888302120#step:4:1",
         "ios": "success"
       },
       "2026-11-16": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43868708153",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43868708153/job/133304070852#step:4:1",
         "ios": "success"
       }
     }
@@ -710,7 +710,7 @@
       "2026-11-16": {
         "android": "success",
         "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43868708153"
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43868708153/job/133304064999#step:4:1"
       }
     }
   },
@@ -834,22 +834,22 @@
       "2026-11-10": {
         "android": "success",
         "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42816774085"
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42816774085/job/129831866060#step:4:1"
       },
       "2026-11-11": {
         "android": "success",
         "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43015178202"
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43015178202/job/130504453671#step:4:1"
       },
       "2026-11-12": {
         "android": "success",
         "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43219554098"
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43219554098/job/131187434393#step:4:1"
       },
       "2026-11-13": {
         "android": "success",
         "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43422488381"
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43422488381/job/131875780344#step:4:1"
       },
       "2026-11-14": {
         "android": "success",
@@ -1247,7 +1247,7 @@
     "results": {
       "2026-11-10": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42816774085",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42816774085/job/129831872738#step:4:1",
         "ios": "success"
       },
       "2026-11-11": {
@@ -1323,37 +1323,37 @@
     "results": {
       "2026-11-10": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42816774085",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42816774085/job/129831872402#step:4:1",
         "ios": "success"
       },
       "2026-11-11": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43015178202",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43015178202/job/130504459847#step:4:1",
         "ios": "success"
       },
       "2026-11-12": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43219554098",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43219554098/job/131187442012#step:4:1",
         "ios": "success"
       },
       "2026-11-13": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43422488381",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43422488381/job/131875785625#step:4:1",
         "ios": "success"
       },
       "2026-11-14": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43589931931",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43589931931/job/132432368064#step:4:1",
         "ios": "success"
       },
       "2026-11-15": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43739130899",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43739130899/job/132888302236#step:4:1",
         "ios": "success"
       },
       "2026-11-16": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43868708153",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43868708153/job/133304070927#step:4:1",
         "ios": "success"
       }
     }
@@ -1481,37 +1481,37 @@
     "results": {
       "2026-11-10": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42816774085",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/42816774085/job/129831872562#step:4:1",
         "ios": "success"
       },
       "2026-11-11": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43015178202",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43015178202/job/130504459825#step:4:1",
         "ios": "success"
       },
       "2026-11-12": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43219554098",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43219554098/job/131187441389#step:4:1",
         "ios": "success"
       },
       "2026-11-13": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43422488381",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43422488381/job/131875785436#step:4:1",
         "ios": "success"
       },
       "2026-11-14": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43589931931",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43589931931/job/132432368086#step:4:1",
         "ios": "success"
       },
       "2026-11-15": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43739130899",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43739130899/job/132888302192#step:4:1",
         "ios": "success"
       },
       "2026-11-16": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43868708153",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43868708153/job/133304070983#step:4:1",
         "ios": "success"
       }
     }
@@ -1653,7 +1653,7 @@
       "2026-11-14": {
         "android": "success",
         "ios": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43589931931"
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43589931931/job/132432368137#step:4:1"
       },
       "2026-11-15": {
         "android": "success",
@@ -2215,22 +2215,22 @@
       },
       "2026-11-13": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43422488381",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43422488381/job/131875785669#step:4:1",
         "ios": "success"
       },
       "2026-11-14": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43589931931",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43589931931/job/132432368231#step:4:1",
         "ios": "success"
       },
       "2026-11-15": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43739130899",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43739130899/job/132888302344#step:4:1",
         "ios": "success"
       },
       "2026-11-16": {
         "android": "failure",
-        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43868708153",
+        "runUrl": "https://github.com/react-native-community/nightly-tests/actions/runs/43868708153/job/133304071349#step:4:1",
         "ios": "success"
       }
     }
