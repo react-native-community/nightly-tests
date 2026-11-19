@@ -7,6 +7,8 @@
  * @format
  */
 
+const { MessageFlags } = require('discord-api-types/v10');
+
 /**
  * Sends a message to Discord using the webhook URL.
  * @param {string} webHook - The Discord webhook URL
@@ -26,7 +28,11 @@ async function sendMessageToDiscord(webHook, message) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ ...message, content }),
+      body: JSON.stringify({
+        ...message,
+        content,
+        flags: MessageFlags.SuppressEmbeds,
+      }),
     });
 
     if (response.ok) {

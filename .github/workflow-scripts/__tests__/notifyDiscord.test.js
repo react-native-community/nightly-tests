@@ -8,8 +8,9 @@
  */
 
 import { afterEach, beforeEach, describe, expect, mock, spyOn, test } from 'bun:test';
+import { MessageFlags } from 'discord-api-types/v10';
 
-const { prepareFailurePayload, prepareComparisonPayload, sendMessageToDiscord } = require('../notifyDiscord');
+import { prepareComparisonPayload, prepareFailurePayload, sendMessageToDiscord } from '../notifyDiscord';
 
 describe('prepareFailurePayload', () => {
   test('should handle undefined failures', () => {
@@ -162,7 +163,7 @@ describe('sendMessageToDiscord', () => {
     });
 
     const webhook = 'https://discord.com/api/webhooks/123/abc';
-    const message = { content: 'Test message' };
+    const message = { content: 'Test message https://example.com' };
 
     await sendMessageToDiscord(webhook, message);
 
@@ -172,7 +173,7 @@ describe('sendMessageToDiscord', () => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(message),
+      body: JSON.stringify({ ...message, flags: MessageFlags.SuppressEmbeds }),
     });
 
     // Verify console.log was called

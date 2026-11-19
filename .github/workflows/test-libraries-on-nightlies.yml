@@ -81,6 +81,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+      - name: Install runtime dependencies
+        run: bun install --frozen-lockfile --production
       - name: Restore outcomes
         uses: actions/download-artifact@v8
         with:
