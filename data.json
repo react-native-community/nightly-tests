@@ -715,7 +715,6 @@
     "library": "create-react-native-library (nitro-view, kotlin-swift)",
     "installCommand": "create-react-native-library",
     "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library",
-    "notes": "",
     "setupScript": "scripts/create-react-native-library.js --type nitro-view --languages kotlin-swift",
     "results": {
       "2026-11-14": {
