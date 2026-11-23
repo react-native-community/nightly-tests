@@ -32,8 +32,17 @@
           "items": {
             "type": "string"
           },
-          "description": "Array of GitHub usernames. We will use it in the future to communicate with library maintainers (e.g. ping for build failures).",
+          "description": "Array of GitHub usernames. We will use it in the future to communicate with library maintainers.",
           "examples": [["frodo", "bilbo", "pippin", "merry", "sam"]]
+        },
+        "maintainersDiscordIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9]{17,20}$"
+          },
+          "description": "Array of Discord User IDs used for pinging maintainers on failures. Discord User IDs can be found by right clicking your profile picture in Discord and selecting 'Copy ID'.",
+          "examples": [["630693930370859008", "182225423562833920"]]
         },
         "notes": {
           "type": "string",

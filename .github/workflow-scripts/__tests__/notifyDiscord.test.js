@@ -56,6 +56,27 @@ describe('prepareFailurePayload', () => {
     );
   });
 
+  test('should mention library maintainers if Discord User ID is specified', () => {
+    const message = prepareFailurePayload(
+      [
+        {
+          library: 'react-native-unistyles',
+          platform: 'iOS',
+          runUrl: 'https://github.com/owner/repo/actions/runs/123/job/456#step:4:1',
+        },
+      ],
+      {
+        'react-native-unistyles': {
+          maintainersDiscordIds: ['12345678901234567', '23456789012345678'],
+        },
+      }
+    );
+
+    expect(message.content).toContain(
+      '❌ [iOS] [react-native-unistyles](https://github.com/owner/repo/actions/runs/123/job/456#step:4:1) <@12345678901234567> <@23456789012345678>'
+    );
+  });
+
   test('should sort multiple failures by platform and library name', () => {
     const failures = [
       {
@@ -173,7 +194,12 @@ describe('sendMessageToDiscord', () => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ ...message, flags: MessageFlags.SuppressEmbeds }),
+      body: JSON.stringify({
+        ...message,
+        content: message.content,
+        allowed_mentions: { parse: ['users'] },
+        flags: MessageFlags.SuppressEmbeds,
+      }),
     });
 
     // Verify console.log was called
