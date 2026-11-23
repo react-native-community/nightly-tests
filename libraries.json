@@ -110,21 +110,24 @@
     "installCommand": "react-native-mmkv react-native-nitro-modules",
     "android": true,
     "ios": true,
-    "maintainersUsernames": ["mrousavy"]
+    "maintainersUsernames": ["mrousavy"],
+    "maintainersDiscordIds": ["266162606161526784"]
   },
   "react-native-nitro-modules": {
     "description": "Insanely fast native C++, Swift or Kotlin modules with a statically compiled binding layer to JSI",
     "installCommand": "react-native-nitro-modules",
     "android": true,
     "ios": true,
-    "maintainersUsernames": ["mrousavy"]
+    "maintainersUsernames": ["mrousavy"],
+    "maintainersDiscordIds": ["266162606161526784"]
   },
   "react-native-fast-tflite": {
     "description": "High-performance TensorFlow Lite library for React Native, built with Nitro Modules",
     "installCommand": "react-native-fast-tflite react-native-nitro-modules",
     "android": true,
     "ios": true,
-    "maintainersUsernames": ["mrousavy"]
+    "maintainersUsernames": ["mrousavy"],
+    "maintainersDiscordIds": ["266162606161526784"]
   },
   "react-native-screens": {
     "description": "Native navigation primitives for your React Native app",
@@ -232,7 +235,8 @@
     "installCommand": "react-native-nitro-sqlite react-native-nitro-modules",
     "android": true,
     "ios": true,
-    "maintainersUsernames": ["chrispader"]
+    "maintainersUsernames": ["chrispader"],
+    "maintainersDiscordIds": ["310113823094996993"]
   },
   "react-native-edge-to-edge": {
     "description": "Enable edge-to-edge display in React Native",
@@ -295,14 +299,16 @@
     "installCommand": "react-native-iap react-native-nitro-modules",
     "android": true,
     "ios": true,
-    "maintainersUsernames": ["hyochan"]
+    "maintainersUsernames": ["hyochan"],
+    "maintainersDiscordIds": ["1343521908603355238"]
   },
   "react-native-nitro-sound": {
     "description": "Audio recorder & player with native backends. Provides modern hook APIs, supports multiple instances, and ensures stable performance.",
     "installCommand": "react-native-nitro-sound react-native-nitro-modules",
     "android": true,
     "ios": true,
-    "maintainersUsernames": ["hyochan"]
+    "maintainersUsernames": ["hyochan"],
+    "maintainersDiscordIds": ["1343521908603355238"]
   },
   "react-native-vision-camera": {
     "description": "A powerful, high-performance React Native Camera library",
@@ -318,6 +324,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["mdjastrzebski"],
+    "maintainersDiscordIds": ["706763277337755708"],
     "notes": "One of top most used libraries according to the npm stats"
   },
   "react-native-maps": {
@@ -325,7 +332,7 @@
     "installCommand": "react-native-maps",
     "android": true,
     "ios": true,
-    "maintainersUsernames": [""],
+    "maintainersUsernames": [],
     "notes": "One of top most used libraries according to the npm stats"
   },
   "react-native-bootsplash": {
@@ -334,6 +341,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["zoontek"],
+    "maintainersDiscordIds": ["154539927550296064"],
     "notes": "One of top most used libraries according to the npm stats"
   },
   "react-native-localize": {
@@ -342,6 +350,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["zoontek"],
+    "maintainersDiscordIds": ["154539927550296064"],
     "notes": "One of top most used libraries according to the npm stats"
   },
   "react-native-unistyles": {
@@ -350,6 +359,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["jpudysz", "brentlok"],
+    "maintainersDiscordIds": ["535567269888000002"],
     "notes": "Popular styling library for React Native"
   },
   "@react-native-picker/picker": {
@@ -358,6 +368,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["Naturalclar"],
+    "maintainersDiscordIds": ["630693930370859008"],
     "notes": "One of top most used libraries according to the npm stats"
   },
   "react-native-fast-image": {
@@ -388,6 +399,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["vonovak"],
+    "maintainersDiscordIds": ["182225423562833920"],
     "patchFile": "patches/react-native-google-signin.patch"
   },
   "react-native-pdf": {
@@ -417,7 +429,8 @@
     "installCommand": "react-native-nitro-fetch react-native-nitro-modules",
     "android": true,
     "ios": true,
-    "maintainersUsernames": ["riteshshukla04", "szymon20000"]
+    "maintainersUsernames": ["riteshshukla04", "szymon20000"],
+    "maintainersDiscordIds": ["711480771352854569", "732570680817876993"]
   },
   "react-native-enriched-markdown": {
     "description": "Markdown Input & Text for React Native",
@@ -433,6 +446,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["satya164"],
+    "maintainersDiscordIds": ["108650210762162176"],
     "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library"
   },
   "create-react-native-library (turbo-module, cpp)": {
@@ -442,6 +456,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["satya164"],
+    "maintainersDiscordIds": ["108650210762162176"],
     "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library"
   },
   "create-react-native-library (fabric-view, kotlin-objc)": {
@@ -451,6 +466,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["satya164"],
+    "maintainersDiscordIds": ["108650210762162176"],
     "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library"
   },
   "create-react-native-library (nitro-module, kotlin-swift)": {
@@ -460,6 +476,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["satya164"],
+    "maintainersDiscordIds": ["108650210762162176"],
     "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library"
   },
   "create-react-native-library (nitro-view, kotlin-swift)": {
@@ -469,7 +486,7 @@
     "android": true,
     "ios": true,
     "maintainersUsernames": ["satya164"],
-    "notes": "",
+    "maintainersDiscordIds": ["108650210762162176"],
     "githubUrl": "https://github.com/callstack/react-native-builder-bob/tree/main/packages/create-react-native-library"
   }
 }

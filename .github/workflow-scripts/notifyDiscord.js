@@ -8,6 +8,7 @@
  */
 
 const { MessageFlags } = require('discord-api-types/v10');
+const libraries = require('../../libraries.json');
 
 /**
  * Sends a message to Discord using the webhook URL.
@@ -31,6 +32,7 @@ async function sendMessageToDiscord(webHook, message) {
       body: JSON.stringify({
         ...message,
         content,
+        allowed_mentions: { parse: ['users'] },
         flags: MessageFlags.SuppressEmbeds,
       }),
     });
@@ -109,9 +111,10 @@ function formatFailureLibrary(library, runUrl) {
 /**
  * Prepares a formatted Discord message payload from a list of failures.
  * @param {Array<Object>} failures - List of failures to format
+ * @param librariesData - Libraries definitions data
  * @returns {Object} - The formatted Discord message payload
  */
-function prepareFailurePayload(failures) {
+function prepareFailurePayload(failures, librariesData = libraries) {
   if (!failures || failures.length === 0) {
     return {
       content: '✅ **React Native Nightly Integration Success** ✅\n\nAll builds are green on both platforms.',
@@ -126,7 +129,8 @@ function prepareFailurePayload(failures) {
     .map(failure => {
       const library = failure.library || 'Unknown';
       const platform = failure.platform || 'Unknown';
-      return `❌ [${platform}] ${formatFailureLibrary(library, failure.runUrl)}`;
+      const maintainers = (librariesData[library]?.maintainersDiscordIds || []).map(userId => `<@${userId}>`).join(' ');
+      return `❌ [${platform}] ${formatFailureLibrary(library, failure.runUrl)}${maintainers ? ` ${maintainers}` : ''}`;
     })
     .join('\n');
 
